@@ -21,8 +21,8 @@ const Leaflet = window.L;
 
 /** The same six uses in every popup, so zones compare at a glance. */
 const HEADLINE_USES = [
-  { label: "Home", use: "Dwelling, single-family (detached)" },
-  { label: "Apts", use: "Dwelling, multifamily" },
+  { label: "House", use: "Dwelling, single-family (detached)" },
+  { label: "Apartments", use: "Dwelling, multifamily" },
   { label: "Retail", use: "Retail sales, less than 15,000 sq. ft. GFA" },
   { label: "Restaurant", use: "Restaurant" },
   { label: "Office", use: "Office" },
@@ -126,10 +126,15 @@ function renderZoneList(data, polygonsByZone) {
 async function initMap() {
   const data = await loadSiteData();
   const zoneShapes = await loadJson("data/zones.geojson");
-  const map = Leaflet.map("map", { zoomSnap: 0.25, preferCanvas: true }); // canvas keeps hover smooth with hundreds of polygons
-  Leaflet.tileLayer(TILES, { maxZoom: 19, attribution: TILE_CREDIT }).addTo(
-    map,
-  );
+  const map = Leaflet.map("map", {
+    renderer: Leaflet.canvas({ padding: 0.5 }),
+  }); // canvas keeps hover smooth with hundreds of polygons
+  Leaflet.tileLayer(TILES, {
+    maxZoom: 19,
+    attribution: TILE_CREDIT,
+    keepBuffer: 4, // keep more already-loaded tiles around the view (default 2), so panning back is instant
+    updateInterval: 100, // start loading new tiles sooner while dragging (default 200 ms)
+  }).addTo(map);
 
   const polygonsByZone = new Map(); // zone id -> all of its polygons, so hover lights them all
   const setZoneOpacity = (zoneId, opacity) =>

@@ -1,5 +1,6 @@
 // Detail page for one zone: zone.html?id=CG or zone.html?id=PD%20461
 import {
+  NAME_SEPARATOR,
   PERMISSIONS,
   escapeHtml,
   evidenceLink,
@@ -28,7 +29,7 @@ function renderFacts(zone, base) {
     const name = base.districts[zone.base]?.name || "";
     rows.push([
       "Base district",
-      `<a href="${zonePageUrl(zone.base)}">${escapeHtml(`${zone.base} · ${name}`)}</a>`,
+      `<a href="${zonePageUrl(zone.base)}">${escapeHtml(`${zone.base}${NAME_SEPARATOR}${name}`)}</a>`,
     ]);
   }
   for (const name of zone.index.placeTypes) {
@@ -59,7 +60,8 @@ function renderPdRules(zone, base) {
   const items = [];
   if (pd.base) {
     // Without a base, the PD's uses and dimensions already appear in the sections below.
-    for (const use of pd.uses) {
+    // A PD that lists all its own uses (usesOnly) shows them once, under Allowed uses.
+    for (const use of pd.usesOnly ? [] : pd.uses) {
       const change =
         use.permission === "none"
           ? "Removes"
@@ -85,8 +87,15 @@ function renderPdRules(zone, base) {
       `${mark}${escapeHtml(use.text)} ${evidenceLink(use, zone, base)}`,
     );
   }
+  // Notes shown elsewhere: dimension notes next to their value, use notes under Allowed uses.
+  const shownElsewhere = new Set([
+    "uses",
+    "legacyUses",
+    "dimensions",
+    ...Object.keys(pd.dimensions),
+  ]);
   const reviewItems = Object.entries(pd.review)
-    .filter(([key]) => !(key in pd.dimensions)) // dimension notes show next to their value
+    .filter(([key]) => !shownElsewhere.has(key))
     .map(([, text]) => reviewNote(text));
   const heading = pd.base ? "Changes from base" : "Other uses and rules";
   const list = items.length
@@ -154,7 +163,7 @@ async function initZonePage() {
     return;
   }
   const { base } = await loadSiteData();
-  document.title = `${zone.id} · Addison Zoning`;
+  document.title = `${zone.id}${NAME_SEPARATOR}Addison Zoning`;
   page.innerHTML = [
     renderHeading(zone),
     renderFacts(zone, base),

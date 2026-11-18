@@ -72,10 +72,13 @@ export function showError(element, error) {
   element.innerHTML = `<p class="error">Couldn't load data. Try reloading the page.</p>`;
 }
 
-/** "CG · Commercial General" or "PD 007-034 · Brookhaven Village". */
+/** Goes between a zone id and its name, as in the UDC headings ("R-1 – Residential"). */
+export const NAME_SEPARATOR = " – ";
+
+/** "CG – Commercial General" or "PD 461 – Midway Meadows". */
 export function zoneLabel(zoneId, { base, zoneIndex }) {
   const name = base.districts[zoneId]?.name || zoneIndex.zones[zoneId]?.name;
-  return name ? `${zoneId} · ${name}` : zoneId;
+  return name ? `${zoneId}${NAME_SEPARATOR}${name}` : zoneId;
 }
 
 export const zonePageUrl = (zoneId) =>
@@ -149,7 +152,7 @@ export async function getZone(zoneId) {
 }
 
 export const zoneTitle = (zone) =>
-  [zone.id, zone.name].filter(Boolean).join(" · ");
+  [zone.id, zone.name].filter(Boolean).join(NAME_SEPARATOR);
 
 /** The one source to show in a popup: the UDC section, or the PD's own ordinance (latest if unknown). */
 export function mainSource(zone) {

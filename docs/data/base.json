@@ -673,7 +673,7 @@
       "name": "Residential 1",
       "section": "3.4.1",
       "page": 101,
-      "purpose": "Single-family homes on large suburban lots.",
+      "purpose": "The R-1 district is intended to accommodate single-family detached residential development on large suburban lots.",
       "uses": {
         "Dwelling, single-family (detached)": "P",
         "Group care home, FHAA small": "P",
@@ -736,7 +736,7 @@
       "name": "Residential 2",
       "section": "3.4.2",
       "page": 102,
-      "purpose": "Compact single-family homes in a low-density urban setting.",
+      "purpose": "The R-2 district is intended to accommodate moderately compact single-family detached residential development in a low-density urban neighborhood context.",
       "uses": {
         "Dwelling, live/work": "S",
         "Dwelling, single-family (detached)": "P",
@@ -804,7 +804,7 @@
         }
       },
       "review": {
-        "buildTo": "Homes may not front arterials; collector only with rear-entry garage. Front-entry garages need 20 ft",
+        "buildTo": "“Residential dwellings are not permitted to front on arterial streets. Residential dwellings shall be permitted to front on collector streets if a rear-entry garage is provided.” “Minimum of 20-feet for garages of front-entry residential dwellings.”",
         "sideSetbackMin": "No side setback, but 10 ft building separation required"
       }
     },
@@ -812,7 +812,7 @@
       "name": "Residential 3",
       "section": "3.4.3",
       "page": 103,
-      "purpose": "Mixed housing: houses, townhomes, duplex to fourplex, small apartments, live/work.",
+      "purpose": "The R-3 district is intended to accommodate a variety of compatible residential housing types including single-family detached, single-family attached, duplex, triplex, fourplex, small-scale multifamily, and live/work dwellings.",
       "uses": {
         "Cottage development": "S",
         "Dwelling, duplex": "P",
@@ -856,31 +856,31 @@
       "dimensions": {
         "lotWidthMin": {
           "value": {
-            "House": 30,
-            "Townhome": 20,
+            "Single-Family (detached)": 30,
+            "Single-Family (attached)": 20,
             "Duplex": 30,
-            "Tri/fourplex": 40,
-            "Apartment, live/work": "none"
+            "Triplex/Fourplex": 40,
+            "Multifamily Live/Work": "none"
           },
           "page": 103
         },
         "lotWidthMax": {
           "value": {
-            "House": 55,
-            "Townhome": 30,
+            "Single-Family (detached)": 55,
+            "Single-Family (attached)": 30,
             "Duplex": 55,
-            "Tri/fourplex": 75,
-            "Apartment, live/work": "none"
+            "Triplex/Fourplex": 75,
+            "Multifamily Live/Work": "none"
           },
           "page": 103
         },
         "lotDepthMin": {
           "value": {
-            "House": 75,
-            "Townhome": 75,
+            "Single-Family (detached)": 75,
+            "Single-Family (attached)": 75,
             "Duplex": 75,
-            "Tri/fourplex": 75,
-            "Apartment, live/work": "none"
+            "Triplex/Fourplex": 75,
+            "Multifamily Live/Work": "none"
           },
           "page": 103
         },
@@ -890,11 +890,11 @@
         },
         "sideSetbackMin": {
           "value": {
-            "House": 5,
-            "Townhome": "none",
+            "Single-Family (detached)": 5,
+            "Single-Family (attached)": "none",
             "Duplex": 5,
-            "Tri/fourplex": 5,
-            "Apartment, live/work": 5
+            "Triplex/Fourplex": 5,
+            "Multifamily Live/Work": 5
           },
           "page": 103
         },
@@ -904,21 +904,21 @@
         },
         "heightMax": {
           "value": {
-            "House": 35,
-            "Townhome": 40,
+            "Single-Family (detached)": 35,
+            "Single-Family (attached)": 40,
             "Duplex": 40,
-            "Tri/fourplex": 40,
-            "Apartment, live/work": 48
+            "Triplex/Fourplex": 40,
+            "Multifamily Live/Work": 48
           },
           "page": 103
         },
         "facadeAtBuildToMin": {
           "value": {
-            "House": 60,
-            "Townhome": 75,
+            "Single-Family (detached)": 60,
+            "Single-Family (attached)": 75,
             "Duplex": 75,
-            "Tri/fourplex": 60,
-            "Apartment, live/work": 75
+            "Triplex/Fourplex": 60,
+            "Multifamily Live/Work": 75
           },
           "page": 103
         }
@@ -933,7 +933,7 @@
       "name": "Mixed-Use Neighborhood",
       "section": "3.5.1",
       "page": 105,
-      "purpose": "Small to medium walkable mixed-use infill.",
+      "purpose": "The M-1 district is intended to accommodate small- to medium-scale mixed-use development that supports a comfortable and safe bicycle and pedestrian friendly development pattern and that accommodates infill and redevelopment.",
       "uses": {
         "Cottage development": "S",
         "Dwelling, fourplex": "P",
@@ -1050,7 +1050,7 @@
       "name": "Mixed-Use Suburban Corridor",
       "section": "3.5.2",
       "page": 107,
-      "purpose": "Mixed-use redevelopment of older commercial corridors.",
+      "purpose": "The M-2 district is intended to accommodate a mix of small- to medium-scale mixed-use development that promotes sustainable infill and redevelopment of older commercial sites, while ensuring that the site design, uses, and scale are consistent with adjacent residential neighborhoods.",
       "uses": {
         "Dwelling, live/work": "P",
         "Dwelling, multifamily": "P",
@@ -1178,7 +1178,7 @@
       "name": "Mixed-Use Urban Corridor",
       "section": "3.5.3",
       "page": 109,
-      "purpose": "Medium to large transit- and pedestrian-oriented mixed use.",
+      "purpose": "The M-3 district is intended to accommodate a mix of medium- to large-scale mixed-use development that supports pedestrian- and transit-oriented uses.",
       "uses": {
         "Dwelling, live/work": "P",
         "Dwelling, multifamily": "P",
@@ -1298,7 +1298,7 @@
       "name": "Mixed-Use Center",
       "section": "3.5.4",
       "page": 111,
-      "purpose": "Most intensive, transit-supportive mixed use around the DART station.",
+      "purpose": "The M-4 district is intended to support the most intensive, transit supportive development to create a unique, mixed-use, and integrated regional destination.",
       "uses": {
         "Dwelling, live/work": "P",
         "Dwelling, multifamily": "P",
@@ -1412,7 +1412,7 @@
       "name": "Commercial Limited",
       "section": "3.6.1",
       "page": 113,
-      "purpose": "Small-scale commercial, retail, office, and services.",
+      "purpose": "The CL district is intended to accommodate small-scale commercial, retail, office, service-oriented, and accessory uses.",
       "uses": {
         "Assisted living facility": "S",
         "Continuing care facility": "S",
@@ -1517,7 +1517,7 @@
       "name": "Commercial General",
       "section": "3.6.2",
       "page": 114,
-      "purpose": "Medium to large-scale commercial, retail, office, and services.",
+      "purpose": "The CG district is intended to accommodate medium- to large-scale commercial, retail, office, service-oriented, and accessory uses.",
       "uses": {
         "Assisted living facility": "S",
         "Continuing care facility": "S",
@@ -1630,7 +1630,7 @@
       "name": "Light Industrial",
       "section": "3.6.3",
       "page": 115,
-      "purpose": "Light manufacturing, warehousing, R&D, offices, showrooms.",
+      "purpose": "The LI district is intended to accommodate a mix of light manufacturing, warehousing and distribution, auto-oriented uses, research and development operations, offices, showrooms, and a limited range of associated retail services, and accessory uses.",
       "uses": {
         "Day care center, adult or child": "A",
         "Library": "P",
@@ -1749,7 +1749,7 @@
       "name": "Addison Airport",
       "section": "3.6.4",
       "page": 115,
-      "purpose": "Addison Airport operations and airport-supporting uses.",
+      "purpose": "The AA district is intended to support and optimize operational efficiency of the Addison Airport and to support the airport’s role as a key economic engine for the Town and region.",
       "uses": {
         "Club or lodge": "S",
         "Day care center, adult or child": "A",
@@ -1851,7 +1851,7 @@
       "name": "Apartment (legacy)",
       "section": "8.1",
       "page": 311,
-      "purpose": "Legacy district: existing apartments continue; no new rezoning to A.",
+      "purpose": "The Apartment district is prohibited from future use.",
       "uses": {
         "Dwelling, duplex": "P",
         "Dwelling, multifamily": "P"
@@ -1920,10 +1920,10 @@
       }
     },
     "PD-TH": {
-      "name": "Townhouse/Condo PD (legacy)",
+      "name": "Planned Development, Townhouse/Condominium (legacy)",
       "section": "8.2",
       "page": 315,
-      "purpose": "Legacy townhouse and condominium district; no new rezoning to it.",
+      "purpose": "The Planned Development Townhouse/Condominium district is prohibited from future use.",
       "uses": {
         "Dwelling, multifamily": "P",
         "Dwelling, single-family (attached)": "P"
@@ -1943,8 +1943,8 @@
         "sideSetbackMin": {
           "value": {
             "Townhouse": "none",
-            "1-story condo": 10,
-            "2-story condo": 15
+            "1-story condominium": 10,
+            "2-story condominium": 15
           },
           "page": 316
         },
@@ -1977,10 +1977,10 @@
       }
     },
     "PD-CC": {
-      "name": "Condo Conversion PD (legacy)",
+      "name": "Planned Development, Condominium Conversions (legacy)",
       "section": "8.3",
       "page": 318,
-      "purpose": "Legacy district for converting apartments to condominiums.",
+      "purpose": "The Planned Development Condominium Conversions district is prohibited from future use.",
       "uses": {
         "Dwelling, multifamily": "P"
       },
@@ -1999,24 +1999,24 @@
   },
   "placeTypes": {
     "Residential Living": {
-      "definition": "Protect existing neighborhoods; mostly low-density housing with better walk and bike links.",
-      "page": 3
+      "definition": "The Residential Living Place Type protects existing, traditional neighborhoods from inappropriate types of redevelopment.",
+      "page": 1
     },
     "Urban Village": {
-      "definition": "Redevelop aging areas into walkable, mixed-use neighborhoods.",
-      "page": 5
+      "definition": "The Urban Village Place Type is bifurcated into a suburban and urbanizing context, but both types of Urban Village require strategic redevelopments that transform aging areas into cohesive, mixed-use, well-connected neighborhoods.",
+      "page": 1
     },
     "High Intensity Urban Center": {
-      "definition": "Most intense place type: dense mixed use along the Dallas North Tollway.",
-      "page": 7
+      "definition": "The High Intensity Urban Center place type is the most intense, and it requires heavy mixed-use development and redevelopment along the Dallas North Tollway (DNT).",
+      "page": 1
     },
     "Aviation and Industry": {
-      "definition": "Light and heavy industry, offices, and aviation uses around Addison Airport.",
-      "page": 9
+      "definition": "The Aviation and Industry Place Type encourages an increasingly competitive mix of lighter industrial uses (offices, clean technology) and heavier industrial uses (aircraft fueling, warehouses) in our aging industrial areas of Town that surround the Addison Airport.",
+      "page": 1
     },
     "Inwood Innovation Area": {
-      "definition": "Flexible, parcel-by-parcel redevelopment along Inwood: culture, creative retail, innovation.",
-      "page": 11
+      "definition": "Due to its storied past and slower redevelopment progress, the Inwood Innovation Area has been positioned as a distinct Placet Type focusing on cultural enrichment, innovation in industry, creative retail, and other special services.",
+      "page": 1
     }
   }
 }

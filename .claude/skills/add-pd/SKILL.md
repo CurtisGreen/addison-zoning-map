@@ -84,8 +84,8 @@ Rules:
 - **`dimensions`**: keys must be one of `base.json` → `dimensionFields` (for example `heightMax`, `frontSetbackMin`, `buildTo`, `lotCoverageMax`, `unitSizeMin`, `floorAreaMax`); each field there has its label and unit. `value` is a number, `"none"`, a short string (`"5-15"`), or an object for values that vary by area, use, or building type (`{"Tract A": 70, "Tract B": 45}`). Include only values the PD itself sets. A value you calculate (e.g. 70% from "no more than 30% may vary") needs a `review` note showing the math. Standards with no field (block length, parking): put in `notes`.
 - **`review`** = anything the user should check: conflicts, amendments that cover only part of the PD, unreadable pages, values only shown on a site plan, guessed mappings. Any key works. Keys that match a `dimensions` field show next to that value; all others show under the PD's rules.
 - **`name`** = the development name the ordinance uses, if any. Otherwise `""`.
-- **`purpose`** = one plain sentence (under 20 words) restating the ordinance's stated intent, or `""`.
-- Plain short text. No marketing words.
+- **`purpose`** = the ordinance's own purpose or intent sentence, word for word (the site shows it in quotation marks). Shorten only by cutting words and marking the cut with `…`. Use `""` if the ordinance states none. The checker looks for it in the ordinance text.
+- Plain short text in neutral terms (house, townhouse, apartment, condominium), except inside quotes. No marketing words.
 
 ### Old district → UDC district (typical, from the current GIS map; not an official table)
 

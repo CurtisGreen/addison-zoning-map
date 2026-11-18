@@ -50,6 +50,9 @@ footer {
 .leaflet-tile-pane {
   filter: grayscale(1) brightness(1.06);
 }
+.leaflet-container {
+  background: #ececec; /* matches the greyed basemap, so tiles still loading don't flash darker */
+}
 .legend {
   background: #fff;
   padding: 6px 8px;

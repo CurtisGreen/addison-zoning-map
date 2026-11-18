@@ -17,6 +17,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "docs" / "data"
 PDFS = ROOT / "pdfs"
 PERMISSIONS = {"P", "S", "A", "T"}  # by right, special use permit, accessory, temporary
+GARBLED_CHARACTERS = "~=^"  # common junk in old, poor-quality text layers ("Lo= area", "50~")
+GARBLED_THRESHOLD = 8  # this many junk characters on a page means: OCR it ourselves
 MIN_QUOTE_LENGTH = 12  # short quotes like "Bank" match anywhere and prove nothing
 QUOTE_MATCH_RATIO = 0.85  # tolerance for OCR noise
 SKELETON = {"id": "", "name": "", "base": None, "usesOnly": False, "purpose": "", "uses": [], "otherUses": [],
@@ -41,7 +43,8 @@ def file_slug(pd_id):
 
 
 def page_texts(pdf):
-    """Text of each page, cached in pdfs/<pd>/<ordinance>/pNNN.txt. Pages with no text layer are OCR'd.
+    """Text of each page, cached in pdfs/<pd>/<ordinance>/pNNN.txt. Pages with no text layer, or a garbled one,
+    are OCR'd.
     Returns (texts, list of OCR'd page numbers, text folder)."""
     folder = pdf.with_suffix("")
     folder.mkdir(exist_ok=True)
@@ -51,7 +54,8 @@ def page_texts(pdf):
         text_file = folder / f"p{number:03d}.txt"
         if not text_file.exists():
             text = run("pdftotext", "-layout", "-f", str(number), "-l", str(number), str(pdf), "-")
-            if len(text.strip()) < 40:  # scanned page
+            garbled = sum(text.count(character) for character in GARBLED_CHARACTERS) >= GARBLED_THRESHOLD
+            if len(text.strip()) < 40 or garbled:  # scanned page, or a poor text layer
                 image = folder / f"p{number:03d}"
                 run("pdftoppm", "-r", "300", "-gray", "-png", "-singlefile", "-f", str(number), "-l", str(number),
                     str(pdf), str(image))
@@ -101,9 +105,16 @@ def quote_on_page(quote, page_text):
         return True
     match = difflib.SequenceMatcher(None, page_text, quote, autojunk=False).find_longest_match(
         0, len(page_text), 0, len(quote))
-    start = max(0, match.a - match.b)
-    window = page_text[start: start + len(quote) + 20]
-    return difflib.SequenceMatcher(None, window, quote).ratio() >= QUOTE_MATCH_RATIO
+    start = match.a - match.b  # where the quote would begin on the page
+    # Compare same-length stretches of page text near that spot, allowing a few dropped or extra characters.
+    ratio, offset = max((difflib.SequenceMatcher(None, page_text[max(0, s): max(0, s) + len(quote)], quote).ratio(), s)
+                        for s in range(start - 5, start + 6))
+    if ratio < QUOTE_MATCH_RATIO:
+        return False
+    # Letters may differ a little (OCR noise), but numbers must match exactly.
+    quote_numbers = re.findall(r"\d+", quote)
+    nearby_numbers = re.findall(r"\d+", page_text[max(0, offset - 5): max(0, offset) + len(quote) + 5])
+    return any(nearby_numbers[i: i + len(quote_numbers)] == quote_numbers for i in range(len(nearby_numbers) + 1))
 
 
 def check(pd_id, pd, index):
@@ -135,6 +146,13 @@ def check(pd_id, pd, index):
         if not quote_on_page(quote, pages[page - 1]):
             errors.append(f"{label}: quote not found on {ordinance_id} p.{page}: {quote[:80]!r}")
 
+    purpose = pd_data.get("purpose", "")
+    if purpose:
+        # Exact wording, possibly shortened with "…": every piece must appear in the ordinance text.
+        all_text = " ".join(" ".join(pages) for pages in pages_by_ordinance.values())
+        for piece in re.split(r"…|\.\.\.", purpose):
+            if normalize(piece) and normalize(piece) not in normalize(all_text):
+                errors.append(f"purpose: not found word for word in the ordinances: {piece.strip()[:80]!r}")
     if pd_data.get("id") != pd_id:
         errors.append(f"id should be {pd_id!r}")
     if pd_data.get("base") is None:
