@@ -66,7 +66,7 @@ Slug = id with spaces as `-` and `?` removed (`PD 461` -> `PD-461.json`).
     }
   },
   "review": { "heightMax": "Exhibit B shows 6 stories; text says 70 ft" },
-  "notes": "Building locations follow the approved site plan."
+  "notes": ["Building locations follow the approved site plan."]
 }
 ```
 
@@ -81,8 +81,11 @@ Rules:
   - Several ordinance items that fit one UDC use: one entry with the clearest quote; put the rest in `otherUses` only if they add meaning.
 - **`usesOnly: true`** when the PD gives a complete list of allowed uses instead of adding to a base district. Then list every allowed use (usually with `base: null`).
 - **`otherUses`** for ordinance uses with no clear UDC match: `{text, permission?, ordinance, page, quote}`. `permission` is optional (`P` default, or `S`, `A`, `T`). Do not force a match.
-- **`dimensions`**: keys must be one of `base.json` → `dimensionFields` (for example `heightMax`, `frontSetbackMin`, `buildTo`, `lotCoverageMax`, `unitSizeMin`, `floorAreaMax`); each field there has its label and unit. `value` is a number, `"none"`, a short string (`"5-15"`), or an object for values that vary by area, use, or building type (`{"Tract A": 70, "Tract B": 45}`). Include only values the PD itself sets. A value you calculate (e.g. 70% from "no more than 30% may vary") needs a `review` note showing the math. Standards with no field (block length, parking): put in `notes`.
-- **`review`** = anything the user should check: conflicts, amendments that cover only part of the PD, unreadable pages, values only shown on a site plan, guessed mappings. Any key works. Keys that match a `dimensions` field show next to that value; all others show under the PD's rules.
+- **`dimensions`**: keys must be one of `base.json` → `dimensionFields` (for example `heightMax`, `frontSetbackMin`, `buildTo`, `lotCoverageMax`, `unitSizeMin`, `floorAreaMax`); each field there has its label and unit. `value` is a number, `"none"`, a short string (`"5-15"`), or an object for values that vary by area, use, or building type (`{"Tract A": 70, "Tract B": 45}`). Include only values the PD itself sets. A value you calculate (e.g. 70% from "no more than 30% may vary") needs a `review` note showing the math. Standards with no field (block length, parking, masonry, sidewalks) go in `notes`: a list, one short sentence per item, shown under an "Other requirements" heading.
+- **`review`** = notes for readers of the site, shown next to the value they are about. Write what a reader needs to know about the zoning (a condition, an exception, a conflict in the ordinance). Do not describe how you got the data (OCR, text quality, reading page images, mapping choices, the ordinance's history, or how the base district was chosen). Put anything the user should verify in your report instead. Other guidance on what to flag: conflicts, amendments that cover only part of the PD, unreadable pages, values only shown on a site plan, guessed mappings. Any key works. Keys that match a `dimensions` field show next to that value; all others show under the PD's rules.
+- **`acresWithRoads`** = the acreage the ordinance states, only when its boundary encloses the roads inside the PD (the map's acreage leaves roads out). The site shows it as "46.4 acres (59.6 including roads)". Leave it out otherwise.
+- **`curtisNotes`** = the user's own commentary, shown above Allowed uses. Never write or change it.
+- **`history`** (optional) = a short description per ordinance, keyed by ordinance id, for the "History" list at the bottom of the page. Without it the page shows the town map's own description of the ordinance. Write what the ordinance did, in under 15 words.
 - **`name`** = the development name the ordinance uses, if any. Otherwise `""`.
 - **`purpose`** = the ordinance's own purpose or intent sentence, word for word (the site shows it in quotation marks). Shorten only by cutting words and marking the cut with `…`. Use `""` if the ordinance states none. The checker looks for it in the ordinance text.
 - Plain short text in neutral terms (house, townhouse, apartment, condominium), except inside quotes. No marketing words.

@@ -4,6 +4,7 @@
   --line: #d1d9e0;
   --bg: #fff;
   --link: #0b5cad;
+  --table-head: #f3f5f7;
   --ok: #1a7f37;
   --sup: #9a6700;
 }
@@ -26,6 +27,8 @@ a {
 header,
 main,
 footer {
+  max-width: 760px; /* one centered column */
+  margin: 0 auto;
   padding: 0 16px;
 }
 header {
@@ -51,7 +54,7 @@ footer {
   filter: grayscale(1) brightness(1.06);
 }
 .leaflet-container {
-  background: #ececec; /* matches the greyed basemap, so tiles still loading don't flash darker */
+  background: #ececec; /* matches the greyed basemap */
 }
 .legend {
   background: #fff;
@@ -126,9 +129,6 @@ details summary {
   font-weight: 600;
 }
 
-main {
-  max-width: 760px;
-}
 main h1 {
   font-size: 22px;
   margin: 18px 0 6px;
@@ -172,17 +172,27 @@ th,
 td {
   text-align: left;
   vertical-align: top;
-  padding: 5px 8px 5px 0;
+  padding: 5px 8px;
   border-bottom: 1px solid var(--line);
   font-weight: normal;
 }
 th {
   color: var(--muted);
-  width: 38%;
 }
-td:last-child {
+tr.head th,
+tr.head td {
+  background: var(--table-head);
+  color: var(--ink);
+  font-weight: 600;
+}
+.source {
   white-space: nowrap;
   font-size: 13px;
+  text-align: right;
+}
+.table-wrap {
+  overflow-x: auto;
+  margin-bottom: 12px;
 }
 .note {
   margin: 2px 0 0;
@@ -191,4 +201,37 @@ td:last-child {
 .error {
   padding: 16px;
   color: #b42318;
+}
+
+sup {
+  line-height: 0;
+}
+
+.external-icon {
+  width: 0.75em;
+  height: 0.75em;
+  vertical-align: baseline;
+}
+
+.standard {
+  list-style: none;
+  margin: 4px 0;
+  padding-left: 16px;
+}
+.standard .label {
+  color: var(--muted);
+}
+
+.extra-requirements,
+.standard-fold {
+  margin: 8px 0;
+}
+.extra-requirements > summary {
+  font-weight: 600;
+}
+.standard-fold {
+  margin-left: 24px;
+}
+summary {
+  cursor: pointer;
 }

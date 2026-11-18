@@ -22,12 +22,13 @@ Open http://127.0.0.1:8765
 
 ## Data
 
-| File                      | What                                                     | Source                            |
-| ------------------------- | -------------------------------------------------------- | --------------------------------- |
-| `docs/data/zones.geojson` | Zone polygons, place type, SUP code                      | Town GIS (`scripts/fetch_gis.py`) |
-| `docs/data/zones.json`    | Every zone: acres, place types, SUPs; PD ordinance links | Town GIS (`scripts/fetch_gis.py`) |
-| `docs/data/base.json`     | Uses (UDC Table 4.2-1), district dimensions, place types | UDC O25-004, Advance Addison 2050 |
-| `docs/data/pd/<id>.json`  | One PD's changes from its base district                  | PD ordinances (`add-pd` skill)    |
+| File                       | What                                                     | Source                            |
+| -------------------------- | -------------------------------------------------------- | --------------------------------- |
+| `docs/data/zones.geojson`  | Zone polygons and place type                             | Town GIS (`scripts/fetch_gis.py`) |
+| `docs/data/zones.json`     | Every zone: acres, place types, SUPs; PD ordinance links | Town GIS (`scripts/fetch_gis.py`) |
+| `docs/data/standards.json` | Use-specific standards, UDC Article 4 (word for word)    | UDC O25-004                       |
+| `docs/data/base.json`      | Uses (UDC Table 4.2-1), district dimensions, place types | UDC O25-004, Advance Addison 2050 |
+| `docs/data/pd/<id>.json`   | One PD's changes from its base district                  | PD ordinances (`add-pd` skill)    |
 
 Every value stores its source page. `review` entries flag values to double-check.
 

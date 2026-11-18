@@ -74,6 +74,10 @@
       "label": "Unit size, min",
       "unit": "sq ft"
     },
+    "livingAreaMin": {
+      "label": "Living area, min",
+      "unit": "sq ft"
+    },
     "floorAreaRatioMax": {
       "label": "Floor area ratio, max",
       "unit": ""
@@ -803,9 +807,14 @@
           "page": 102
         }
       },
-      "review": {
-        "buildTo": "“Residential dwellings are not permitted to front on arterial streets. Residential dwellings shall be permitted to front on collector streets if a rear-entry garage is provided.” “Minimum of 20-feet for garages of front-entry residential dwellings.”",
-        "sideSetbackMin": "No side setback, but 10 ft building separation required"
+      "tableNotes": {
+        "1": "Residential dwellings are not permitted to front on arterial streets. Residential dwellings shall be permitted to front on collector streets if a rear-entry garage is provided.",
+        "2": "Minimum of 20-feet for garages of front-entry residential dwellings.",
+        "3": "Minimum 10-foot building separation required."
+      },
+      "noteRefs": {
+        "buildTo": [1, 2],
+        "sideSetbackMin": [3]
       }
     },
     "R-3": {
@@ -923,10 +932,18 @@
           "page": 103
         }
       },
-      "review": {
-        "buildTo": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)",
-        "heightMax": "Table note [4] on height says 'minimum 20 ft for garages of front-entry dwellings' - looks like a misplaced note",
-        "lotWidthMin": "Cottage developments have extra limits (§4.3.2.A); apartments have minimum unit sizes (§4.3.2.D)"
+      "tableNotes": {
+        "1": "See §4.3.2.A: Cottage Development for additional height, setback, and density limitations for cottage developments.",
+        "2": "See §4.3.2.D: Dwelling, Multifamily for minimum dwelling unit size requirements.",
+        "3": "See §5.7.6: Neighborhood Transition Standards for additional setback and height limitations.",
+        "4": "Minimum of 20 feet for garages of front-entry residential dwellings."
+      },
+      "noteRefs": {
+        "dimensions": [1, 2],
+        "buildTo": [3],
+        "sideSetbackMin": [3],
+        "rearSetbackMin": [3],
+        "heightMax": [4]
       }
     },
     "M-1": {
@@ -1040,10 +1057,16 @@
           "page": 105
         }
       },
-      "review": {
-        "buildTo": "Local street value read from a misaligned table row; arterial may extend for one parking row. Strip between curb and inside edge of sidewalk must be public right-of-way or easement",
-        "lotWidthMin": "Values are for mixed-use/nonresidential buildings; residential buildings use R-3 standards",
-        "heightMax": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)"
+      "tableNotes": {
+        "1": "The area between the street back-of-curb and the inside edge of the public sidewalk shall be dedicated as public right-of-way or have a public access easement.",
+        "2": "The build-to-line may be extended to accommodate one row of parking spaces in accordance with §5.5: Parking and Loading.",
+        "3": "Buildings abutting a property in the R-1, R-2, or R-3 zoning districts shall comply with the neighborhood transition standards in §5.7.6."
+      },
+      "noteRefs": {
+        "buildTo": [1, 2],
+        "sideSetbackMin": [3],
+        "rearSetbackMin": [3],
+        "heightMax": [3]
       }
     },
     "M-2": {
@@ -1169,9 +1192,15 @@
           "page": 107
         }
       },
-      "review": {
-        "heightMax": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)",
-        "buildTo": "Strip between curb and inside edge of sidewalk must be public right-of-way or easement"
+      "tableNotes": {
+        "1": "The area between the street back-of-curb and the inside edge of the public sidewalk shall be dedicated as public rightof-way or have a public access easement.",
+        "2": "Buildings abutting a property in the R-1, R-2, or R-3 zoning districts shall comply with the neighborhood transition standards in §5.7.6."
+      },
+      "noteRefs": {
+        "buildTo": [1],
+        "sideSetbackMin": [2],
+        "rearSetbackMin": [2],
+        "heightMax": [2]
       }
     },
     "M-3": {
@@ -1289,9 +1318,16 @@
           "page": 109
         }
       },
-      "review": {
-        "heightMax": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)",
-        "buildTo": "Patios may extend to build-to line. Strip between curb and inside edge of sidewalk must be public right-of-way or easement"
+      "tableNotes": {
+        "1": "The area between the street back-of-curb and the inside edge of the public sidewalk shall be dedicated as public rightof-way or have a public access easement.",
+        "2": "Activated outdoor patio areas serve as an extension of the building façade and may abut the build-to line.",
+        "3": "Buildings abutting a property in the R-1, R-2, or R-3 zoning districts shall comply with the neighborhood transition standards in §5.7.6."
+      },
+      "noteRefs": {
+        "buildTo": [1, 2],
+        "sideSetbackMin": [3],
+        "rearSetbackMin": [2],
+        "heightMax": [3]
       }
     },
     "M-4": {
@@ -1404,8 +1440,18 @@
         }
       },
       "review": {
-        "heightMax": "No district limit, but Airport Overlay height limits apply",
-        "uses": "Use table note [1]: max 70% of a development's acreage may be residential or mixed-use with residential (p. 133)"
+        "uses": "A maximum of 70 percent of the acreage of a proposed development may be used for residential or mixed-use with residential uses."
+      },
+      "tableNotes": {
+        "1": "The area between the street back-of-curb and the inside edge of the public sidewalk shall be dedicated as public rightof-way or have a public access easement.",
+        "2": "Buildings abutting a property in the R-1, R-2, or R-3 zoning districts shall comply with the neighborhood transition standards in §5.7.6.",
+        "3": "Subject to the height limitations of the Airport Overlay District."
+      },
+      "noteRefs": {
+        "buildTo": [1],
+        "sideSetbackMin": [2],
+        "rearSetbackMin": [2],
+        "heightMax": [3]
       }
     },
     "CL": {
@@ -1508,9 +1554,14 @@
           "page": 113
         }
       },
-      "review": {
-        "sideSetbackMin": "Side/rear at least 10 ft next to R-1, R-2, R-3, A, or PDs referencing them",
-        "heightMax": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)"
+      "tableNotes": {
+        "1": "Minimum of 10 feet when adjoining the R-1, R-2, R-3, or A zoning districts or Planned Developments that reference those zoning districts.",
+        "2": "Buildings abutting a property in the R-1, R-2, or R-3 zoning districts shall comply with the neighborhood transition standards in §5.7.6."
+      },
+      "noteRefs": {
+        "sideSetbackMin": [1, 2],
+        "rearSetbackMin": [1, 2],
+        "heightMax": [2]
       }
     },
     "CG": {
@@ -1621,9 +1672,15 @@
           "page": 114
         }
       },
-      "review": {
-        "sideSetbackMin": "Side/rear at least 10 ft next to R-1, R-2, R-3, A, or PDs referencing them",
-        "heightMax": "No limit, but above 70 ft needs 1 ft more setback per 2 ft of height. Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)"
+      "tableNotes": {
+        "1": "Minimum of 10 feet when adjoining the R-1, R-2, R-3 or A zoning districts or Planned Developments that reference those zoning districts.",
+        "2": "Buildings abutting a property in the R-1, R-2, or R-3 zoning districts shall comply with the neighborhood transition standards in §5.7.6.",
+        "3": "Buildings may exceed 70 feet in height if the additional height is set back from the setback line one additional foot for each two feet of height above 70 feet."
+      },
+      "noteRefs": {
+        "sideSetbackMin": [1, 2],
+        "rearSetbackMin": [1, 2],
+        "heightMax": [2, 3]
       }
     },
     "LI": {
@@ -1740,9 +1797,14 @@
           "page": 115
         }
       },
-      "review": {
-        "sideSetbackMin": "Side/rear at least 10 ft next to R-1, R-2, R-3, A, or PDs referencing them",
-        "heightMax": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)"
+      "tableNotes": {
+        "1": "Minimum of 10 feet when adjoining the R-1, R-2, R-3, or A zoning districts or Planned Developments that reference those zoning districts .",
+        "2": "Buildings abutting a property in the R-1, R-2, or R-3 zoning districts shall comply with the neighborhood transition standards in §5.7.6."
+      },
+      "noteRefs": {
+        "sideSetbackMin": [1, 2],
+        "rearSetbackMin": [1, 2],
+        "heightMax": [2]
       }
     },
     "AA": {
@@ -1842,9 +1904,15 @@
           "page": 116
         }
       },
-      "review": {
-        "sideSetbackMin": "Table says 25 ft, but its note [1] says minimum 10 ft next to residential - check intent",
-        "heightMax": "FAA height standards also apply"
+      "tableNotes": {
+        "1": "Minimum of 10 feet when adjoining the R-1, R-2, R-3, or A zoning districts or Planned Developments that reference those zoning districts.",
+        "2": "Buildings abutting a property in the R-1, R-2, or R-3 zoning districts shall comply with the neighborhood transition standards in §5.7.6: Neighborhood Transition Standards.",
+        "3": "All buildings shall comply with FAA height standards and regulations."
+      },
+      "noteRefs": {
+        "sideSetbackMin": [1, 2],
+        "rearSetbackMin": [1, 2],
+        "heightMax": [2, 3]
       }
     },
     "A": {
@@ -1920,7 +1988,7 @@
       }
     },
     "PD-TH": {
-      "name": "Planned Development, Townhouse/Condominium (legacy)",
+      "name": "Townhouse/Condominium (legacy)",
       "section": "8.2",
       "page": 315,
       "purpose": "The Planned Development Townhouse/Condominium district is prohibited from future use.",
@@ -1977,7 +2045,7 @@
       }
     },
     "PD-CC": {
-      "name": "Planned Development, Condominium Conversions (legacy)",
+      "name": "Condominium Conversions (legacy)",
       "section": "8.3",
       "page": 318,
       "purpose": "The Planned Development Condominium Conversions district is prohibited from future use.",
@@ -1999,24 +2067,61 @@
   },
   "placeTypes": {
     "Residential Living": {
-      "definition": "The Residential Living Place Type protects existing, traditional neighborhoods from inappropriate types of redevelopment.",
-      "page": 1
+      "page": 3,
+      "typologies": {
+        "Residential": [
+          "Single-Family Detached",
+          "Accessory Dwelling Units",
+          "Townhomes"
+        ],
+        "Mixed Use": ["Live-Work"]
+      },
+      "faaReview": []
     },
     "Urban Village": {
-      "definition": "The Urban Village Place Type is bifurcated into a suburban and urbanizing context, but both types of Urban Village require strategic redevelopments that transform aging areas into cohesive, mixed-use, well-connected neighborhoods.",
-      "page": 1
+      "page": 5,
+      "typologies": {
+        "Residential": ["Townhomes", "Smallplex", "Urban Apartments"],
+        "Mixed Use": ["Live-Work", "Few-Over", "Many-Over"],
+        "Non-Residential": ["Neighborhood Scale", "Regional Scale"]
+      },
+      "faaReview": ["Townhomes", "Smallplex", "Urban Apartments"]
     },
     "High Intensity Urban Center": {
-      "definition": "The High Intensity Urban Center place type is the most intense, and it requires heavy mixed-use development and redevelopment along the Dallas North Tollway (DNT).",
-      "page": 1
+      "page": 7,
+      "typologies": {
+        "Residential": ["Urban Apartments", "Condo Tower"],
+        "Mixed Use": ["Many-Over", "Mixed Use Tower"],
+        "Non-Residential": ["Regional Scale"]
+      },
+      "faaReview": []
     },
     "Aviation and Industry": {
-      "definition": "The Aviation and Industry Place Type encourages an increasingly competitive mix of lighter industrial uses (offices, clean technology) and heavier industrial uses (aircraft fueling, warehouses) in our aging industrial areas of Town that surround the Addison Airport.",
-      "page": 1
+      "page": 9,
+      "typologies": {
+        "Residential": ["Urban Apartments"],
+        "Mixed Use": ["Live-Work", "Few-Over", "Many-Over"],
+        "Non-Residential": ["Neighborhood Scale", "Industrial"]
+      },
+      "faaReview": ["Urban Apartments"]
     },
     "Inwood Innovation Area": {
-      "definition": "Due to its storied past and slower redevelopment progress, the Inwood Innovation Area has been positioned as a distinct Placet Type focusing on cultural enrichment, innovation in industry, creative retail, and other special services.",
-      "page": 1
+      "page": 11,
+      "typologies": {
+        "Residential": [
+          "Accessory Dwelling Units",
+          "Townhomes",
+          "Urban Apartments"
+        ],
+        "Mixed Use": ["Live-Work", "Few-Over", "Many-Over"],
+        "Non-Residential": [
+          "Neighborhood Scale",
+          "Regional Scale",
+          "Industrial"
+        ]
+      },
+      "faaReview": ["Accessory Dwelling Units", "Townhomes", "Urban Apartments"]
     }
-  }
+  },
+  "faaNote": "No residential uses are permitted within the Addison Airport noise contour and height restrictions set by the FAA. Any proposed residential uses will undergo the necessary review to ensure compliance."
 }

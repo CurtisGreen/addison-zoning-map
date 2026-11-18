@@ -16,7 +16,7 @@ import {
   zoneTitle,
 } from "./data.js";
 
-// Leaflet map library. index.html loads it with a <script> tag (with an integrity check), which sets window.L.
+// Leaflet, loaded by index.html as window.L.
 const Leaflet = window.L;
 
 /** The same six uses in every popup, so zones compare at a glance. */
@@ -68,7 +68,7 @@ function renderKeyLimits(zone, dimensionFields) {
     if (!field) return null;
     return `${label} ${summarizeValue(zone.dimensions[field].value, dimensionFields[field].unit)}`;
   }).filter(Boolean);
-  return limits.length ? `<div>${limits.join(" · ")}</div>` : "";
+  return limits.length ? `<div>${limits.join(", ")}</div>` : "";
 }
 
 async function renderPopup(zoneId, placeTypeName) {
@@ -128,15 +128,15 @@ async function initMap() {
   const zoneShapes = await loadJson("data/zones.geojson");
   const map = Leaflet.map("map", {
     renderer: Leaflet.canvas({ padding: 0.5 }),
-  }); // canvas keeps hover smooth with hundreds of polygons
+  });
   Leaflet.tileLayer(TILES, {
     maxZoom: 19,
     attribution: TILE_CREDIT,
-    keepBuffer: 4, // keep more already-loaded tiles around the view (default 2), so panning back is instant
-    updateInterval: 100, // start loading new tiles sooner while dragging (default 200 ms)
+    keepBuffer: 4,
+    updateInterval: 100,
   }).addTo(map);
 
-  const polygonsByZone = new Map(); // zone id -> all of its polygons, so hover lights them all
+  const polygonsByZone = new Map(); // zone id -> its polygons
   const setZoneOpacity = (zoneId, opacity) =>
     polygonsByZone
       .get(zoneId)

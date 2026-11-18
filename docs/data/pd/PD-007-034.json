@@ -336,5 +336,19 @@
     "unitSizeMin": "Table row is 'Minimum area per Residential dwelling unit'; read as unit floor area, not lot area per unit. The same cell block also lists 'Office uses 500,000 sq. ft.', which looks like part of the max nonresidential floor area row.",
     "lotCoverageMax": "Porches and arcades fronting a street are excluded; above-grade parking structures are included (p.16)."
   },
-  "notes": "Max nonresidential floor area: office 500,000 sq ft; retail, restaurant, and personal service 500,000 sq ft. Must follow the Concept Plan (Exhibit C), street standards (Exhibit D), street lighting and furnishings (Exhibit E), and sustainability program (Exhibit F). A development plan is required before permits. Block length 200-750 ft. At least 80% masonry on walls facing streets. Public open space: 2 ac per 1,000 residents up to 2,250 residents, then 1.5 ac per 1,000."
+  "notes": [
+    "Max nonresidential floor area: office 500,000 sq ft; retail, restaurant, and personal service 500,000 sq ft.",
+    "Must follow the Concept Plan (Exhibit C), street standards (Exhibit D), street lighting and furnishings (Exhibit E), and sustainability program (Exhibit F).",
+    "Street A (residential boulevard, 100 ft right-of-way) has three cross-sections in Exhibit D: A1, A2 (exception, Phase I South), and A3 (exception, Brookhaven Townhomes), as replaced by Ordinance 009-002.",
+    "A development plan is required before permits.",
+    "Block length 200-750 ft.",
+    "At least 80% masonry on walls facing streets.",
+    "Public open space: 2 ac per 1,000 residents up to 2,250 residents, then 1.5 ac per 1,000."
+  ],
+  "history": {
+    "074-171": "Rezoned to Apartment (A) for 3-story apartments",
+    "076-267": "Variance to Apartment (A) zoning for smaller 3-story units (The Pier Apartments)",
+    "007-034": "Rezoned to Planned Development for a phased mixed-use development",
+    "009-002": "Updated street designs for the main boulevard"
+  }
 }

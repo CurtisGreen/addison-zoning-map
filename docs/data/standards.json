@@ -1,0 +1,2796 @@
+{
+  "4.3.2.A": {
+    "title": "Cottage Development",
+    "page": 134,
+    "items": [
+      {
+        "label": "1",
+        "text": "Dimensional Standards",
+        "items": [
+          {
+            "label": null,
+            "table": {
+              "title": "Table 4.3-1: Cottage Development Dimensional Standards",
+              "columns": ["Lot or Building Element", "Standard"],
+              "rows": [
+                ["Maximum density", "10 dwelling units per gross acre"],
+                [
+                  "Minimum building setback",
+                  "As required for single-family detached structures in the underlying zoning district (applied to project site as a whole, not individual units)"
+                ],
+                ["Minimum parking area setback", "10 ft."],
+                ["Minimum dwelling separation", "10 ft."],
+                ["Maximum building height", "2 stories, not to exceed 25 ft."],
+                ["Minimum shared open space", "400 sq. ft. per dwelling unit"]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "label": "2",
+        "text": "Parking and Access",
+        "items": [
+          {
+            "label": "a",
+            "text": "Parking shall be designed to limit curb cuts and most efficiently park vehicles."
+          },
+          {
+            "label": "b",
+            "text": "Parking may take place on a shared, paved parking lot or in shared or individual driveways."
+          },
+          {
+            "label": "c",
+            "text": "Shared driveways may access individual garages."
+          },
+          {
+            "label": "d",
+            "text": "Project perimeter sidewalks are required, and internal walkways shall connect each cottage unit to the project perimeter sidewalks."
+          }
+        ]
+      },
+      {
+        "label": "3",
+        "text": "Architecture",
+        "items": [
+          {
+            "label": "a",
+            "text": "All structures shall meet the design standards applicable to single-family homes in the zoning district where the property is located."
+          },
+          {
+            "label": "b",
+            "text": "Dwelling units shall have a maximum 1:3 width to depth ratio for the first floor."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.2.B": {
+    "title": "Dwelling, Fourplex",
+    "page": 134,
+    "items": [
+      {
+        "label": null,
+        "text": "A fourplex dwelling may develop with a single staircase only if a 13D or 13R NFPA (National Fire Protection Association) system is installed, subject to Director approval."
+      }
+    ]
+  },
+  "4.3.2.C": {
+    "title": "Dwelling, Live/Work",
+    "page": 134,
+    "items": [
+      {
+        "label": "1",
+        "text": "Signs are limited to a maximum of two non-illuminated wall or window signs that shall not exceed six square feet in total combined area and shall not include moving elements."
+      },
+      {
+        "label": "2",
+        "text": "The residential dwelling unit shall have a minimum of 400 square feet of gross floor area."
+      },
+      {
+        "label": "3",
+        "text": "The work activities shall not create adverse noise or operational impacts or create additional traffic on adjacent residential properties."
+      },
+      {
+        "label": "4",
+        "text": "The nonresidential use shall be occupied and operated by a resident of the live/work dwelling. Individuals that do not reside at the live/work dwelling may be employed by the owner."
+      }
+    ]
+  },
+  "4.3.2.D": {
+    "title": "Dwelling, Multifamily",
+    "page": 135,
+    "items": [
+      {
+        "label": "1",
+        "text": "Dwelling Unit Size",
+        "items": [
+          {
+            "label": "a",
+            "text": "The gross floor area for each unit shall average 800 square feet per building, based upon the following minimum gross floor area requirements:",
+            "items": [
+              {
+                "label": null,
+                "table": {
+                  "title": "Table 4.3-2: Minimum Gross Floor Area by Multifamily Bedroom Type",
+                  "columns": ["Unit Type", "Minimum Gross Floor Area per Unit"],
+                  "rows": [
+                    ["Efficiency", "300 sq. ft."],
+                    ["1-bedroom", "450 sq. ft."],
+                    ["2-bedroom", "700 sq. ft."],
+                    ["3-bedroom", "850 sq. ft."]
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "label": "b",
+            "text": "The minimum gross floor area for up to five percent of each unit type may be reduced by 25 percent, provided the overall unit mix per building averages a minimum of 750 square feet."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.2.E": {
+    "title": "Dwelling, Single-Family (Attached)",
+    "page": 135,
+    "items": [
+      {
+        "label": "1",
+        "text": "Any tandem parking provided in a garage shall not be counted toward the minimum parking requirements."
+      },
+      {
+        "label": "2",
+        "text": "Direct driveway access (ingress or egress) from any lot to any arterial street or commercial collector street is prohibited, unless no other legal access alternative is available."
+      },
+      {
+        "label": "3",
+        "text": "In the M-1 and M-2 zoning districts, site access and curb cuts shall be limited to one curb cut per lot.",
+        "districts": ["M-1", "M-2"]
+      }
+    ]
+  },
+  "4.3.2.F": {
+    "title": "Dwelling, Single-Family (Detached)",
+    "page": 135,
+    "items": [
+      {
+        "label": "1",
+        "text": "Direct driveway access (ingress or egress) from any lot to any arterial street or commercial collector street is prohibited, unless no other legal access alternative is available."
+      },
+      {
+        "label": "2",
+        "text": "In the R-1, R-2, and R-3 districts, single-family detached dwellings shall be a minimum of 1,000 square feet in gross floor area.",
+        "districts": ["R-1", "R-2", "R-3"]
+      },
+      {
+        "label": "3",
+        "text": "In the M-1 and M-2 zoning districts, site access and curb cuts shall be limited to one curb cut per lot.",
+        "districts": ["M-1", "M-2"]
+      }
+    ]
+  },
+  "4.3.2.G": {
+    "title": "Dwelling, Triplex",
+    "page": 135,
+    "items": [
+      {
+        "label": null,
+        "text": "A triplex dwelling may develop with a single staircase only if a 13D or 13R NFPA (National Fire Protection Association) system is installed, subject to Director approval."
+      }
+    ]
+  },
+  "4.3.2.H": {
+    "title": "Manufactured Home Development (HUD-Code)",
+    "page": 135,
+    "items": [
+      {
+        "label": null,
+        "text": "The minimum lot area required for a manufactured home development (HUD-Code) shall be 20 acres."
+      }
+    ]
+  },
+  "4.3.2.I": {
+    "title": "Group Care Home, FHAA (Small and Large)",
+    "page": 135,
+    "items": [
+      {
+        "label": "1",
+        "text": "Group care homes for the exclusive use of citizens protected by the provisions of the Federal Fair Housing Act Amendments of 1988 (FHAA), as defined in that Act and interpreted by the courts, or by any similar legislation of the State of Texas, may be established in any Residential zoning district or portion of a Mixed-Use zoning district or PD district that permits residential dwellings, provided that they meet the definition of “small” and “large” facilities in Article 7: Definitions and are located in zoning districts where facilities of that size are allowed pursuant to §4.2.7: Table of Allowed Uses, and subject to the licensing requirements of the state and the Town."
+      },
+      {
+        "label": "2",
+        "text": "In the R-3 and M-1 zoning districts, group homes shall not be designed for or occupied by more than 20 residents living together.",
+        "districts": ["R-3", "M-1"]
+      }
+    ]
+  },
+  "4.3.3.A": {
+    "title": "Daycare Center, Adult or Child",
+    "page": 136,
+    "items": [
+      {
+        "label": "1",
+        "text": "Where required by state law, day care centers shall be and remain licensed by the state and shall operate in accordance with their license and all applicable state laws."
+      },
+      {
+        "label": "2",
+        "text": "In the M-4 zoning district, the following shall apply:",
+        "districts": ["M-4"],
+        "items": [
+          {
+            "label": "a",
+            "text": "Freestanding day care facilities shall not be permitted."
+          },
+          {
+            "label": "b",
+            "text": "Daycare facilities shall only be permitted on the ground level floor."
+          },
+          {
+            "label": "c",
+            "text": "Daycare facilities shall not exceed 5,000 square feet GFA."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.3.B": {
+    "title": "Daycare Home, Adult or Child",
+    "page": 136,
+    "items": [
+      {
+        "label": "1",
+        "text": "Where required by state law, daycare homes shall be and remain licensed by the state and shall operate in accordance with their license and all applicable state laws."
+      },
+      {
+        "label": "2",
+        "text": "Daycare homes shall be registered with the state and the Town."
+      },
+      {
+        "label": "3",
+        "text": "The care of more than six persons, including the caregiver’s dependent(s), at one time (up to the maximum number of persons allowed by state law) requires Special Use Permit approval pursuant to §2.5.1."
+      },
+      {
+        "label": "4",
+        "text": "Daycare homes shall only operate between the hours of 6:00 a.m. and 12:00 a.m."
+      }
+    ]
+  },
+  "4.3.3.C": {
+    "title": "Park or Open Space, Active and Passive",
+    "page": 136,
+    "items": [
+      {
+        "label": "1",
+        "text": "Parks or open space owned by the Town or dedicated to the Town shall not be subject to the dimensional standards of the underlying zoning district, but shall be subject to the height and setback limitations established in §5.7.6: Neighborhood Transition Standards."
+      },
+      {
+        "label": "2",
+        "text": "All dedicated parkland shall be subject to the standards in §6.4.7: Dedication of Land for Parks, Trails, and Recreational Areas and Assessment of Park Development Fees."
+      }
+    ]
+  },
+  "4.3.3.D": {
+    "title": "Police, Fire, or Rescue Facility (Public)",
+    "page": 136,
+    "items": [
+      {
+        "label": null,
+        "text": "Police, fire, or rescue facilities owned by the Town shall not be subject to the dimensional standards of the underlying zoning district, but shall be subject to the height and setback limitations established in §5.7.6:"
+      },
+      {
+        "label": null,
+        "text": "Neighborhood Transition Standards."
+      }
+    ]
+  },
+  "4.3.3.E": {
+    "title": "Medical Clinic",
+    "page": 136,
+    "items": [
+      {
+        "label": null,
+        "text": "In the M-4 zoning district the following shall apply:",
+        "districts": ["M-4"],
+        "items": [
+          {
+            "label": "1",
+            "text": "Freestanding medical clinics shall not be permitted."
+          },
+          {
+            "label": "2",
+            "text": "Medical clinic facilities shall not exceed 3,000 square feet GFA."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.4.A": {
+    "title": "Kennel, Commercial",
+    "page": 136,
+    "items": [
+      {
+        "label": "1",
+        "text": "Enclosed Building Requirement The parts of a building where animals are boarded shall be fully enclosed, with solid core doors and no operable windows, and shall be sufficiently insulated so no unreasonable noise or odor can be detected off premises."
+      },
+      {
+        "label": "2",
+        "text": "Kennels with Outdoor Facilities Outdoor facilities, including outdoor runs, shall not be located within 150 feet of any residential use or Residential zoning district."
+      }
+    ]
+  },
+  "4.3.4.B": {
+    "title": "Urban Agriculture, Noncommercial",
+    "page": 137,
+    "items": [
+      {
+        "label": "1",
+        "text": "Generally",
+        "items": [
+          {
+            "label": "a",
+            "text": "Retail sales shall be prohibited on the noncommercial urban agriculture site, except for the sale of produce grown on that site."
+          },
+          {
+            "label": "b",
+            "text": "The site drainage and maintenance shall prevent water and fertilizer from draining onto adjacent property that is not part of the contiguous land in the urban agricultural use."
+          },
+          {
+            "label": "c",
+            "text": "Compost piles shall not exceed six feet in height. Refuse and compost area shall be enclosed at ground level to be rodent-resistant."
+          },
+          {
+            "label": "d",
+            "text": "No outdoor work activity that involves power equipment or generators may occur between 10:00 p.m. to 7:00 a.m. unless otherwise allowed by the Director."
+          },
+          {
+            "label": "e",
+            "text": "Noncommercial animal keeping shall be subject to the standards in Chapter 10 of the Code of Ordinances."
+          }
+        ]
+      },
+      {
+        "label": "2",
+        "text": "Backyard Chickens and Bees",
+        "items": [
+          {
+            "label": "a",
+            "text": "Where Allowed The keeping or raising of chickens or bees shall be allowed as an accessory use subject to City permitting requirements. In Residential zoning districts, it shall be allowed only on lots with an occupied dwelling unit."
+          },
+          {
+            "label": "b",
+            "text": "Permitting",
+            "items": [
+              {
+                "label": "i",
+                "text": "It is unlawful to keep backyard chickens without a permit pursuant to the Code of Ordinances."
+              },
+              {
+                "label": "ii",
+                "text": "For the keeping of chickens as an accessory use, permits may only be issued to properties with dedicated rear yards."
+              },
+              {
+                "label": "iii",
+                "text": "Shared outdoor spaces for single-family attached or multifamily dwellings shall not be eligible for permits."
+              }
+            ]
+          },
+          {
+            "label": "c",
+            "text": "Number and Type of Chickens Allowed",
+            "items": [
+              {
+                "label": "i",
+                "text": "It shall be unlawful for any owner to keep or harbor a three or more fowl within the corporate limits of the Town in any pen, stable, shed, coop or enclosure, if any part of such enclosure or structure is within 150 feet of any residence, business or commercial establishment or office (other than the owner's residence, business or commercial establishment or office), grocery store, restaurant, school, hospital, assisted living facility, or continuing care facility."
+              },
+              {
+                "label": "ii",
+                "text": "Roosters are prohibited."
+              }
+            ]
+          },
+          {
+            "label": "d",
+            "text": "Chicken Coop Standards No free-range chickens are allowed. All chickens shall be kept in a coop. A coop is a physical structure providing protection and shelter to chickens. Coops shall comply with the following:",
+            "items": [
+              {
+                "label": "i",
+                "text": "Chickens shall be kept in a coop from 7:00 a.m. to 10:00 p.m. unless otherwise allowed by the Director."
+              },
+              {
+                "label": "ii",
+                "text": "No chickens shall be kept in any part of any dwelling or building used for human occupation."
+              },
+              {
+                "label": "iii",
+                "text": "The coop size shall not exceed 120 square feet and shall provide at least four square feet of space per chicken."
+              },
+              {
+                "label": "iv",
+                "text": "The coop height shall not exceed six feet in height."
+              },
+              {
+                "label": "v",
+                "text": "The coop shall be located in the rear yard and shall be a minimum of 15 feet from side and rear property lines and a minimum of 25 feet from adjacent dwellings."
+              },
+              {
+                "label": "vi",
+                "text": "The coop shall be designed to be resistant to predators."
+              },
+              {
+                "label": "vii",
+                "text": "The coop shall be kept clean and free from offensive odors."
+              },
+              {
+                "label": "viii",
+                "text": "Feed shall be stored within a structure in a rodent-proof, fastened container."
+              }
+            ]
+          },
+          {
+            "label": "e",
+            "text": "Ranging Standards",
+            "items": [
+              {
+                "label": "i",
+                "text": "If a chicken run or other enclosure is used, a minimum of 20 square feet of permeable surface per chicken shall be provided within the enclosure, and access to bare earth shall also be provided."
+              },
+              {
+                "label": "ii",
+                "text": "Chickens are allowed to range in the rear yard up to the side and rear property line, provided a fence around such yard is a minimum of four feet in height and adequate for containing animals."
+              }
+            ]
+          },
+          {
+            "label": "f",
+            "text": "Slaughtering Prohibited Slaughtering shall be prohibited within the Addison City limits."
+          }
+        ]
+      },
+      {
+        "label": "3",
+        "text": "Livestock It shall be unlawful for any owner to keep or harbor any livestock within the corporate limits of the Town:",
+        "items": [
+          {
+            "label": "a",
+            "text": "In any pen, stable, shed, coop or enclosure, if any part of such enclosure or structure is within 150 feet of any residence, business or commercial establishment or office (other than the owner's residence, business or commercial establishment or office), grocery store, restaurant, school, hospital, assisted living facility, or continuing care facility; and"
+          },
+          {
+            "label": "b",
+            "text": "Where there is less than 5,000 square feet for each animal. It shall be unlawful for any owner to keep or harbor three or more fowl within the corporate limits of the Town where there is less than 100 square feet for each fowl."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.4.C": {
+    "title": "Veterinary Hospital or Clinic",
+    "page": 138,
+    "items": [
+      {
+        "label": null,
+        "text": "A veterinary hospital or clinic shall comply with the same requirements for a commercial kennel in 4.3.4.A."
+      },
+      {
+        "label": null,
+        "text": "The following additional standards shall apply:",
+        "items": [
+          {
+            "label": "1",
+            "text": "Outdoor kennel facilities are prohibited in the M-2 zoning district.",
+            "districts": ["M-2"]
+          },
+          {
+            "label": "2",
+            "text": "Kennels and/or boarding areas are limited to 50 percent of the gross floor area of the building."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.4.D": {
+    "title": "Recreation Facility, Indoor",
+    "page": 138,
+    "items": [
+      {
+        "label": null,
+        "text": "In the R-1, R-2, R-3, and M-1 zoning districts, indoor recreation facilities are only allowed as an accessory use to a principal residential dwelling unit(s) the same lot, or as a shared amenity on a parcel under common ownership.",
+        "districts": ["R-1", "R-2", "R-3", "M-1"]
+      }
+    ]
+  },
+  "4.3.4.E": {
+    "title": "Recreation Facility, Outdoor",
+    "page": 138,
+    "items": [
+      {
+        "label": null,
+        "text": "In the R-1, R-2, R-3, and M-1 zoning districts, outdoor recreation facilities are only allowed as an accessory use to principal residential dwelling unit(s), or as a shared amenity on a parcel under common ownership.",
+        "districts": ["R-1", "R-2", "R-3", "M-1"]
+      }
+    ]
+  },
+  "4.3.4.F": {
+    "title": "Sexually Oriented Businesses",
+    "page": 138,
+    "items": [
+      {
+        "label": "1",
+        "text": "Purpose and Intent",
+        "items": [
+          {
+            "label": "a",
+            "text": "It is the purpose of this §4.3.4.F, to regulate sexually oriented businesses to promote the health, safety, morals, and general welfare of the citizens of the Town, and to establish reasonable and uniform regulations to prevent the continued concentration of sexually oriented businesses within the Town. The provisions of this §4.3.4.F, have neither the purpose nor the effect of imposing a limitation or restriction on the content of any communicative materials, including sexually oriented materials. Similarly, it is not the intent or the effect of this article to restrict or deny access by adults to sexually oriented materials protected by the First Amendment, or to deny access by the distributors and exhibitors of sexually oriented entertainment to their intended market."
+          },
+          {
+            "label": "b",
+            "text": "It is the intent of the City Council that the locational regulations of §4.3.4.F.3.b are promulgated pursuant to TLGC Chapter 243. It is the intent of the City Council that all other provisions of this §4.3.4.F, are promulgated pursuant to the Town Charter and TLGC §§51.072, 54.004, and 215.075."
+          },
+          {
+            "label": "c",
+            "text": "Defense to Prosecution",
+            "items": [
+              {
+                "label": "i",
+                "text": "It is a defense to prosecution under §§4.3.4.F.2.a, 4.3.4.F.3.b, and 4.3.4.F.3.c that a person appearing in a state of nudity did so in a modeling class operated:",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "By a proprietary school licensed by the state; a college, junior college, or university supported entirely or partly by taxation;"
+                  },
+                  {
+                    "label": "b",
+                    "text": "By a private college or university which maintains and operates educational programs in which credits are transferrable to a college junior college, or university supported entirely or partly by taxation; or"
+                  },
+                  {
+                    "label": "c",
+                    "text": "In a structure:",
+                    "items": [
+                      {
+                        "label": "i",
+                        "text": "Which has no sign visible from the exterior of the structure and no other advertising that indicates a nude person is available for viewing;"
+                      },
+                      {
+                        "label": "ii",
+                        "text": "Where in order to participate in a class a student must enroll at least three days in advance of the class; and"
+                      },
+                      {
+                        "label": "iii",
+                        "text": "Where no more than one nude model is on the premises at any one time."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "ii",
+                "text": "It is a defense to prosecution under §§4.3.4.F.2.a and 4.3.4.F.3.b that each item of descriptive printed film, or video material offered for sale or rental, taken as a whole, contains serious literary, artistic, political or scientific value."
+              }
+            ]
+          },
+          {
+            "label": "d",
+            "text": "Classification Sexually oriented businesses are classified as follows:",
+            "items": [
+              {
+                "label": "i",
+                "text": "Adult arcades;"
+              },
+              {
+                "label": "ii",
+                "text": "Adult bookstores or adult video stores;"
+              },
+              {
+                "label": "iii",
+                "text": "Adult cabarets;"
+              },
+              {
+                "label": "iv",
+                "text": "Adult motels;"
+              },
+              {
+                "label": "v",
+                "text": "Adult motion picture theatres;"
+              },
+              {
+                "label": "vi",
+                "text": "Adult theatres;"
+              },
+              {
+                "label": "vii",
+                "text": "Escort agencies;"
+              },
+              {
+                "label": "viii",
+                "text": "Nude model studios; and"
+              },
+              {
+                "label": "ix",
+                "text": "Sexual encounter centers."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "2",
+        "text": "Permit",
+        "items": [
+          {
+            "label": "a",
+            "text": "Required A person commits an offense if he/she operates a sexually oriented business without a valid permit, issued by the Town for the particular type of business."
+          },
+          {
+            "label": "b",
+            "text": "Application",
+            "items": [
+              {
+                "label": "i",
+                "text": "An application for a sexually oriented business permit must be made on a form provided by the Chief of Police. The application form shall be sworn to and shall include:",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "The name and address of the applicant;"
+                  },
+                  {
+                    "label": "b",
+                    "text": "A statement as to whether or not the applicant meets each of the requirements set forth in §4.3.4.F.2.c;"
+                  },
+                  {
+                    "label": "c",
+                    "text": "The name and address of each person required to sign the application pursuant to §4.3.4.F.2.b.iv below, and the name, address and type of entity of each entity required to sign the application pursuant to §4.3.4.F.2.b.iv below, and, as to each entity which is required to sign the application, the name and address of each person or entity which owns an interest in each such entity;"
+                  },
+                  {
+                    "label": "d",
+                    "text": "The name and address of each employee, agent and independent contractor of the sexually oriented business; and"
+                  },
+                  {
+                    "label": "e",
+                    "text": "Such other matters, consistent with this §4.3.4.F, as may be specified in the application form, including, without limitation, driver's license numbers, dates of birth and identifying photographs of each person required to be identified in the application."
+                  }
+                ]
+              },
+              {
+                "label": "ii",
+                "text": "The application shall be accompanied by a sketch or diagram showing the configuration of the premises, including a statement of total floor space occupied by the business. The sketch or diagram need not be professionally prepared but must be drawn to a designated scale or drawn with marked dimensions of the interior of the premises to an accuracy of plus or minus six inches."
+              },
+              {
+                "label": "iii",
+                "text": "The applicant shall be qualified according to the provisions of this §4.3.4.F."
+              },
+              {
+                "label": "iv",
+                "text": "If a person who wishes to operate a sexually oriented business is an individual, he/she shall sign the application for a permit as applicant. If a person who wishes to operate a sexually oriented business is other than an individual, each individual who directly or indirectly through one or more intermediaries owns or controls a 20 percent or greater interest in the business shall sign the application for a permit as applicant. Each applicant shall be qualified under §4.3.4.F.2.c and each applicant shall be considered a permittee if a permit is granted."
+              }
+            ]
+          },
+          {
+            "label": "c",
+            "text": "Issuance",
+            "items": [
+              {
+                "label": "i",
+                "text": "The Chief of Police shall approve the issuance of a sexually oriented business permit to an applicant within 30 days after receipt of an application unless the Chief of Police finds one or more of the following to be true:",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "An applicant is under 18 years of age;"
+                  },
+                  {
+                    "label": "b",
+                    "text": "An applicant or an applicant's spouse is overdue in payment to the Town of taxes, fees, fines, or penalties assessed against or imposed upon the applicant or the applicant's spouse in relation to a sexually oriented business;"
+                  },
+                  {
+                    "label": "c",
+                    "text": "An applicant has failed to provide information reasonably necessary for issuance of the permit or has falsely answered a question or request for information on the application form;"
+                  },
+                  {
+                    "label": "d",
+                    "text": "An applicant or an applicant's spouse has been convicted of a violation of a provision of this §4.3.4.F, within two years immediately preceding the application. The fact that a conviction is being appealed shall have no effect;"
+                  },
+                  {
+                    "label": "e",
+                    "text": "An applicant is residing with a person who has been denied a permit by the Town to operate a sexually oriented business within the preceding 12 months, or residing with a person whose permit to operate a sexually oriented business has been revoked within the preceding 12 months;"
+                  },
+                  {
+                    "label": "f",
+                    "text": "The permit fee required by this §4.3.4.F, has not been paid;"
+                  },
+                  {
+                    "label": "g",
+                    "text": "An applicant has been employed in a sexually oriented business in a managerial capacity within the preceding 12 months and has demonstrated an inability to operate or manage a sexually oriented business premises in a peaceful and law- abiding manner, thus necessitating action by law enforcement officers;"
+                  },
+                  {
+                    "label": "h",
+                    "text": "An applicant or the proposed establishment is in violation of or is not in compliance with paragraphs:",
+                    "items": [
+                      {
+                        "label": "i",
+                        "text": "4.3.4.F.2.e;"
+                      },
+                      {
+                        "label": "ii",
+                        "text": "4.3.4.F.3.a;"
+                      },
+                      {
+                        "label": "iii",
+                        "text": "4.3.4.F.3.b;"
+                      },
+                      {
+                        "label": "iv",
+                        "text": "4.3.4.F.3.d;"
+                      },
+                      {
+                        "label": "v",
+                        "text": "4.3.4.F.3.e;"
+                      },
+                      {
+                        "label": "vi",
+                        "text": "4.3.4.F.3.f;"
+                      },
+                      {
+                        "label": "vii",
+                        "text": "4.3.4.F.3.g; or"
+                      },
+                      {
+                        "label": "viii",
+                        "text": "4.3.4.F.3.h."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "i",
+                    "text": "The proposed location for the sexually oriented business is not provided by or is not in accordance with this UDC for such use;"
+                  },
+                  {
+                    "label": "j",
+                    "text": "An applicant or an applicant's spouse has been convicted of a crime involving any of the following offenses as described in V.T.C.A., Penal Code Ch. 43:",
+                    "items": [
+                      {
+                        "label": "i",
+                        "text": "Prostitution;"
+                      },
+                      {
+                        "label": "ii",
+                        "text": "Promotion of prostitution;"
+                      },
+                      {
+                        "label": "iii",
+                        "text": "Aggravated promotion of prostitution;"
+                      },
+                      {
+                        "label": "iv",
+                        "text": "Compelling prostitution;"
+                      },
+                      {
+                        "label": "v",
+                        "text": "Obscenity;"
+                      },
+                      {
+                        "label": "vi",
+                        "text": "Sale, distribution, or display of harmful material to a minor;"
+                      },
+                      {
+                        "label": "vii",
+                        "text": "Sexual performance by a child;"
+                      },
+                      {
+                        "label": "viii",
+                        "text": "Possession of child pornography;"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "k",
+                    "text": "An applicant or an applicant's spouse has been convicted of a crime involving any of the following offenses as described in V.T.C.A., Penal Code Ch. 21:",
+                    "items": [
+                      {
+                        "label": "i",
+                        "text": "Public lewdness;"
+                      },
+                      {
+                        "label": "ii",
+                        "text": "Indecent exposure;"
+                      },
+                      {
+                        "label": "iii",
+                        "text": "Indecency with a child;"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "l",
+                    "text": "An applicant or an applicant's spouse has been convicted of a crime involving sexual assault or aggravated sexual assault as described in V.T.C.A., Penal Code Ch. 22;"
+                  },
+                  {
+                    "label": "m",
+                    "text": "An applicant or an applicant's spouse has been convicted of a crime involving incest, solicitation of a child, or harboring a runaway child as described in V.T.C.A., Penal Code Ch. 25;"
+                  },
+                  {
+                    "label": "n",
+                    "text": "An applicant or an applicant's spouse has been convicted of a crime involving criminal attempt, conspiracy, or solicitation to commit any of the foregoing offenses described herein;"
+                  },
+                  {
+                    "label": "o",
+                    "text": "An applicant or an applicant's spouse has been convicted of a crime for which less than five years have elapsed since the date of conviction or the date of release from confinement imposed for the conviction, whichever is the later date, if the conviction is of a misdemeanor offense;"
+                  },
+                  {
+                    "label": "p",
+                    "text": "An applicant or an applicant's spouse has been convicted of a crime for which less than 10 years have elapsed since the date of conviction or the date of release from confinement for the conviction, whichever is the later date, if the conviction is of a felony offense; or"
+                  },
+                  {
+                    "label": "q",
+                    "text": "An applicant or an applicant's spouse has been convicted of a crime for which less than 10 years have elapsed since the date of the last conviction or the date of release from confinement for the last conviction, whichever is the later date, if the convictions are of two or more misdemeanor offenses or combination of two or more felony or misdemeanor offenses, occurring within any 36-month period."
+                  }
+                ]
+              },
+              {
+                "label": "ii",
+                "text": "The fact that a conviction is being appealed shall have no effect on the disqualification of the applicant or applicant's spouse."
+              },
+              {
+                "label": "iii",
+                "text": "An applicant who has been convicted or whose spouse has been convicted of an offense listed herein may qualify for a sexually oriented business permit only when the time period required by §§4.3.4.F.2.c.i.o, 4.3.4.F.2.c.i.p, and 4.3.4.F.2.c.i.q above have elapsed."
+              },
+              {
+                "label": "iv",
+                "text": "The permit, if granted, shall state on its face the name of the person to whom it is granted, the expiration date, and the address of the sexually oriented business. The permit shall be posted in a conspicuous place at or near the entrance to the sexually oriented business so that it may be easily read at any time."
+              }
+            ]
+          },
+          {
+            "label": "d",
+            "text": "Expiration",
+            "items": [
+              {
+                "label": "i",
+                "text": "Each sexually oriented business permit shall expire one year from the date of issuance and may be renewed only by making application as provided in §4.3.4.F.2.b. Application for renewal should be made at least 30 days before the expiration date."
+              },
+              {
+                "label": "ii",
+                "text": "When the Chief of Police denies renewal of a sexually oriented business permit, the applicant shall not be issued a permit for one year from the date of denial. If, subsequent to denial, the Chief of Police finds that the basis for denial of the renewal permit has been corrected or abated, the applicant may be granted a permit if at least 90 days have elapsed since the date denial became final."
+              }
+            ]
+          },
+          {
+            "label": "e",
+            "text": "Transfer A permittee under this §4.3.4.F, shall not transfer their permit to another, nor shall a permittee operate a sexually oriented business under the authority of a permit at any place other than the address designated in the application."
+          },
+          {
+            "label": "f",
+            "text": "Suspension The Chief of Police shall suspend a sexually oriented business permit for a period not to exceed 30 days if they determines that a permittee or an employee of a permittee has engaged in any one of the following activities and/or occurrences:",
+            "items": [
+              {
+                "label": "i",
+                "text": "Has violated or is not in compliance with any one of the following paragraphs:",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "4.3.4.F.2.e;"
+                  },
+                  {
+                    "label": "b",
+                    "text": "4.3.4.F.3.a;"
+                  },
+                  {
+                    "label": "c",
+                    "text": "4.3.4.F.3.b;"
+                  },
+                  {
+                    "label": "d",
+                    "text": "4.3.4.F.3.d;"
+                  },
+                  {
+                    "label": "e",
+                    "text": "4.3.4.F.3.e;"
+                  },
+                  {
+                    "label": "f",
+                    "text": "4.3.4.F.3.f;"
+                  },
+                  {
+                    "label": "g",
+                    "text": "4.3.4.F.3.g; or"
+                  },
+                  {
+                    "label": "h",
+                    "text": "4.3.4.F.3.h."
+                  }
+                ]
+              },
+              {
+                "label": "ii",
+                "text": "Has been \"legally intoxicated,\" as such term is defined by the laws of the state pertaining to driving while intoxicated, while on the sexually oriented business premises."
+              },
+              {
+                "label": "iii",
+                "text": "Has refused to allow an inspection of the sexually oriented business premises as authorized by this §4.3.4.F."
+              },
+              {
+                "label": "iv",
+                "text": "Has knowingly permitted gambling by any person on the sexually oriented business premises."
+              }
+            ]
+          },
+          {
+            "label": "g",
+            "text": "Revocation",
+            "items": [
+              {
+                "label": "i",
+                "text": "The Chief of Police shall revoke a sexually oriented business permit if a cause of suspension in §4.3.4.F.2.f occurs after the permit has previously been suspended and within 12 months following the date of such previous suspension."
+              },
+              {
+                "label": "ii",
+                "text": "The Chief of Police shall revoke a permit if he determines that any one of the following situations, activities, or events has occurred:",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "A permittee gave false or misleading information in the material submitted to the Chief of Police during the application process;"
+                  },
+                  {
+                    "label": "b",
+                    "text": "A permittee or an employee has knowingly allowed possession, use or sale of controlled substances on the premises;"
+                  },
+                  {
+                    "label": "c",
+                    "text": "A permittee or an employee has knowingly allowed prostitution on the premises;"
+                  },
+                  {
+                    "label": "d",
+                    "text": "A permittee or an employee operated the sexually oriented business during a period of time when the permittee's permit was suspended;"
+                  },
+                  {
+                    "label": "e",
+                    "text": "A permittee has been convicted of an offense listed in §4.3.4.F.2.f.i, for which the time period required in §4.3.4.F.2.c.i.o through §4.3.4.F.2.c.i.q has not elapsed;"
+                  },
+                  {
+                    "label": "f",
+                    "text": "On two or more occasions within a 12-month period, a person committed an offense occurring in or on the permitted premises of a crime listed in §4.3.4.F.2.c.i for which a conviction has been obtained, and the person was an employee of the sexually oriented business at the time the offense was committed;"
+                  },
+                  {
+                    "label": "g",
+                    "text": "A permittee or an employee has knowingly allowed any act of sexual intercourse, sodomy, oral copulation, masturbation, or sexual contact to occur in or on the permitted premises. The term \"sexual contact\" shall have the same meaning as it is defined in V.T.C.A., Penal Code §21.01; or"
+                  },
+                  {
+                    "label": "h",
+                    "text": "A permittee is delinquent in payment to the Town for hotel occupancy taxes, ad valorem taxes, or sales taxes related to the sexually oriented business."
+                  }
+                ]
+              },
+              {
+                "label": "iii",
+                "text": "The fact that a conviction is being appealed shall have no effect on the revocation of the permit."
+              },
+              {
+                "label": "iv",
+                "text": "§4.3.4.F.2.g.ii.g does not apply to adult motels as a ground for revoking the permit unless the permittee or employee knowingly allowed the act of sexual intercourse, sodomy, oral copulation, masturbation, or sexual contact to occur in a public place or within public view."
+              },
+              {
+                "label": "v",
+                "text": "When the Chief of Police revokes a permit, the revocation shall continue for one year and the permittee shall not be issued a sexually oriented business permit for one year from the date revocation became effective. If, subsequent to revocation, the Chief of Police finds that the basis for the revocation has been corrected or abated, an applicant may be granted a permit if at least 90 days have elapsed since the date the revocation became effective. If the permit was revoked under §4.3.4.F.2.g.ii.e, an applicant may not be granted another permit until the appropriate number of years required under has elapsed."
+              }
+            ]
+          },
+          {
+            "label": "h",
+            "text": "Appeal",
+            "items": [
+              {
+                "label": "i",
+                "text": "Generally If the Chief of Police denies the issuance of a sexually oriented business permit or suspends or revokes a permit, the Chief of Police shall send to one applicant or permittee, by certified mail, return receipt requested, written notice of the action and the right to an appeal."
+              },
+              {
+                "label": "ii",
+                "text": "Appeal Procedure",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "The aggrieved party may, not later than 10 days after such notice is mailed, appeal the decision of the Chief of Police to the City Council."
+                  },
+                  {
+                    "label": "b",
+                    "text": "The filing of an appeal stays the action of the Chief of Police in suspending or revoking a permit until the City Council makes a final decision."
+                  },
+                  {
+                    "label": "c",
+                    "text": "The appeal shall be filed with the City Secretary."
+                  },
+                  {
+                    "label": "d",
+                    "text": "The City Council shall set a time and place for a hearing on such appeal and notice of such hearing shall be mailed, postage prepaid, to one applicant or permittee, at their last known address, at least five days prior to the date of the hearing."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "3",
+        "text": "Operational Restrictions and Requirements",
+        "items": [
+          {
+            "label": "a",
+            "text": "Inspection",
+            "items": [
+              {
+                "label": "i",
+                "text": "An applicant or permittee under this §4.3.4.F shall permit representatives of the Police Department, Health Department, Fire Department, and Building Inspection Division to inspect the premises of a sexually oriented business for the purpose of ensuring compliance with the law, at any time it is occupied or open for business."
+              },
+              {
+                "label": "ii",
+                "text": "A person who operates a sexually oriented business or their agent or employee commits an offense if he refuses to permit a lawful inspection of the premises by a representative of the Police Department at any time it is occupied or open for business."
+              },
+              {
+                "label": "iii",
+                "text": "The provisions of this section do not apply to areas of an adult motel which are, at the time of such inspection, being rented by a customer for use for a period longer than 10 hours, and then actually occupied by such customer, unless one-hour notice is provided to such customer."
+              }
+            ]
+          },
+          {
+            "label": "b",
+            "text": "Location of Sexually Oriented Businesses",
+            "items": [
+              {
+                "label": "i",
+                "text": "A person commits an offense if they operate or cause to be operated a sexually oriented business within 1,000 feet of:",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "A place of worship;"
+                  },
+                  {
+                    "label": "b",
+                    "text": "A school, college or university; school, public or private; or school, vocational or trade;"
+                  },
+                  {
+                    "label": "c",
+                    "text": "A boundary of a Residential zoning district as established in §3.1: Zoning Districts Established;"
+                  },
+                  {
+                    "label": "d",
+                    "text": "A park or open space (not including a private open space) adjacent to a Residential zoning district as established in §3.1: Zoning Districts Established; or"
+                  },
+                  {
+                    "label": "e",
+                    "text": "The property line of a lot devoted to a residential use. These locational provisions apply whether or not the uses listed above are located within or outside the Town."
+                  }
+                ]
+              },
+              {
+                "label": "ii",
+                "text": "A person commits an offense if they cause or permit the operation, establishment, substantial enlargement or transfer of ownership or control of a sexually oriented business within 1,000 feet of another sexually oriented business."
+              },
+              {
+                "label": "iii",
+                "text": "A person commits an offense if they cause or permit the operation, establishment or maintenance of more than one sexually oriented business in the same building, structure, or portion thereof, or they increase the gross floor area of any sexually oriented business in any building structure, or portion thereof, to contain another sexually oriented business."
+              },
+              {
+                "label": "iv",
+                "text": "For the purposes of §4.3.4.F.3.b.i, measurement shall be made in a straight line, without regard to intervening structures or objects, from the nearest portion of the building or structure used as a part of the premises where a sexually oriented business is conducted, to the nearest property line of the premises of a uses listed in §4.3.4.F.3.b.i."
+              },
+              {
+                "label": "v",
+                "text": "For purposes of §4.3.4.F.3.b.ii, the distance between any two sexually oriented businesses shall be measured in a straight line, without regard to intervening structures or objects, from the closest exterior wall of the structure in which each business is located."
+              },
+              {
+                "label": "vi",
+                "text": "A sexually oriented business lawfully operating as a conforming use is not rendered a nonconforming use by the new location of those uses listed in §4.3.4.F.3.b.i.a through §4.3.4.F.3.b.i.e within 1,000 feet of the sexually oriented business subsequent to the grant or renewal of the sexually oriented business permit. This provision applies only to the renewal of a valid permit and does not apply when an application for a permit is submitted after a permit has expired or has been revoked."
+              },
+              {
+                "label": "vii",
+                "text": "§§4.3.4.F.3.b.ii and 4.3.4.F.3.b.iv shall apply to any sexually oriented business located within the Town, whether or not the measurement of the 1,000 feet is made wholly within the boundaries of the Town, or includes within such 1,000 feet area within the boundaries of any municipality adjoining the boundaries of the Town."
+              },
+              {
+                "label": "viii",
+                "text": "A sexually oriented business shall be located or operated only where such use is provided by and is in accordance with this UDC."
+              }
+            ]
+          },
+          {
+            "label": "c",
+            "text": "Exemption from Location Restrictions",
+            "items": [
+              {
+                "label": "i",
+                "text": "If the Chief of Police denies the issuance of a permit under this §4.3.4.F, to an applicant because the location of the sexually oriented business is in violation of §4.3.4.F.3.b, then the applicant may, not later than 10 calendar days after the mailing of the notice of the denial, file with the Town a written request for any exemption from the locational restrictions of §4.3.4.F.3.b."
+              },
+              {
+                "label": "ii",
+                "text": "If the written request is filed with the City Secretary within the 10-day limit, the City Council shall consider the request. The City Secretary shall set a date for the hearing within 60 days from the date the written request is received."
+              },
+              {
+                "label": "iii",
+                "text": "The City Council shall hear and consider evidence offered by any interested person. The formal rules of evidence do not apply."
+              },
+              {
+                "label": "iv",
+                "text": "The City Council may, in its discretion, grant an exemption from the locational restrictions of §4.3.4.F.3.b if it makes the following findings:",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "The location of the proposed sexually oriented business will not have a detrimental effect on nearby properties or be contrary to the public safety or welfare;"
+                  },
+                  {
+                    "label": "b",
+                    "text": "The granting of the exemption will not violate the spirit and intent of this §4.3.4.F;"
+                  },
+                  {
+                    "label": "c",
+                    "text": "The location of the proposed sexually oriented business will not downgrade the property values or quality of life in the adjacent areas or encourage the development of urban blight;"
+                  },
+                  {
+                    "label": "d",
+                    "text": "The location of an additional sexually oriented business in the area will not be contrary to any program of neighborhood conservation or interfere with any efforts of urban renewal or restoration; and"
+                  },
+                  {
+                    "label": "e",
+                    "text": "All other applicable provisions of this §4.3.4.F will be observed."
+                  }
+                ]
+              },
+              {
+                "label": "v",
+                "text": "The City Council shall grant or deny the exemption by a majority vote. Failure to reach a majority vote shall result in denial of the exemption. Disputes of fact shall be decided on the basis of a preponderance of the evidence. The decision of the City Council is final."
+              },
+              {
+                "label": "vi",
+                "text": "If the City Council grants the exemption, the exemption is valid for one year from the date of the Council's action. Upon the expiration of an exemption, the sexually oriented business is in violation of the locational restrictions of §4.3.4.F.3.b until the applicant applies for and receives another exemption."
+              },
+              {
+                "label": "vii",
+                "text": "If the City Council denies the exemption, the applicant may not re-apply for an exemption until at least 12 months have elapsed since the date of the Council's action."
+              },
+              {
+                "label": "viii",
+                "text": "The grant of an exemption does not exempt the applicant from any other provisions of this §4.3.4.F, other than the locational restrictions of §4.3.4.F.3.b."
+              }
+            ]
+          },
+          {
+            "label": "d",
+            "text": "Escort Agencies",
+            "items": [
+              {
+                "label": "i",
+                "text": "An escort agency shall not employ any person under the age of 21 years."
+              },
+              {
+                "label": "ii",
+                "text": "A person commits an offense if they act as an escort or agree to act as an escort for any person under the age of 21 years."
+              }
+            ]
+          },
+          {
+            "label": "e",
+            "text": "Nude Model Studios",
+            "items": [
+              {
+                "label": "i",
+                "text": "A nude model studio shall not employ any person under the age of 21 years."
+              },
+              {
+                "label": "ii",
+                "text": "A person under the age of 21 years commits an offense if they appear in a state of nudity in or on the premises of a nude model studio. It is a defense to prosecution under this section if the person under 21 years was in a restroom not open to public view or persons of the opposite sex."
+              },
+              {
+                "label": "iii",
+                "text": "A person commits an offense if they appear in a state of nudity or knowingly allows another to appear in a state of nudity in an area of a nude model studio premises which can be viewed from the public right-of-way."
+              },
+              {
+                "label": "iv",
+                "text": "A nude model studio shall not place or permit a bed, sofa or mattress in any room on the premises, except that a sofa may be placed in a reception room open to the public."
+              }
+            ]
+          },
+          {
+            "label": "f",
+            "text": "Adult Theaters and Adult Motion Picture Theaters",
+            "items": [
+              {
+                "label": "i",
+                "text": "A person commits an offense if they knowingly allow a person under the age of 21 years to appear in a state of nudity in or on the premises of an adult theater or adult motion picture theater."
+              },
+              {
+                "label": "ii",
+                "text": "A person under the age of 21 years commits an offense if they knowingly appear in a state of nudity in or on the premises of an adult theater or adult motion picture theater."
+              },
+              {
+                "label": "iii",
+                "text": "It is a defense to prosecution under §§4.3.4.F.3.a and 4.3.4.F.3.b if the person under 21 years was in a restroom not open to public view or persons of the opposite sex."
+              }
+            ]
+          },
+          {
+            "label": "g",
+            "text": "Adult Motels",
+            "items": [
+              {
+                "label": "i",
+                "text": "Evidence that a sleeping room in a hotel, motel, or similar commercial establishment has been rented and vacated two or more times in a period of time that is less than 10 hours creates a rebuttable presumption that the establishment is an adult motel."
+              },
+              {
+                "label": "ii",
+                "text": "A person commits an offense if, as the person in control of a sleeping room in a hotel, motel, or similar commercial establishment that does not have a sexually oriented business license, they rent or subrent a sleeping room to a person and, within 10 hours from the time the room is rented to such person, they rent or subrent the same sleeping room again to another different person. The terms \"rent\" or \"subrent\" mean the act of permitting a room to be occupied for any form of consideration."
+              }
+            ]
+          },
+          {
+            "label": "h",
+            "text": "Exhibition of Sexually Explicit Films or Videos",
+            "items": [
+              {
+                "label": "i",
+                "text": "A person who operates or causes to be operated a sexually oriented business other than an adult motel, which exhibits on the premises in a viewing room of less than 150 square feet of floor space, a film, video cassette, or other video reproduction which depicts specified sexual activities or specified anatomical areas, shall comply with the following requirements:",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "Upon application for a sexually oriented business license, the application shall be accompanied by a diagram of the premises showing a plan thereof specifying the location of one or more manager's stations and the location of all overhead lighting fixtures and designating any portion of the premises in which patrons will not be permitted. A manager's station may not exceed 32 square feet of gross floor area. The diagram shall also designate the place at which the permit will be conspicuously posted, if granted. A professionally prepared diagram in the nature of an engineer's or architect's blueprint shall not be required; however each diagram should be oriented to the north or to some designated street or object and should be drawn to a designated scale or with marked dimensions of all areas of the interior of the premises to an accuracy of plus or minus six inches. The Chief of Police may waive the foregoing diagram for renewal applications if the applicant adopts a diagram that was previously submitted and certifies that the configuration of the premises has not been altered since it was prepared."
+                  },
+                  {
+                    "label": "b",
+                    "text": "The application shall be sworn to be true and correct by the applicant."
+                  },
+                  {
+                    "label": "c",
+                    "text": "No alteration in the configuration or location of a manager's station may be made without the prior approval of the Chief of Police."
+                  },
+                  {
+                    "label": "d",
+                    "text": "It is the duty of the owners and operator of the premises to ensure that at least one employee is on duty and situated in each manager's station at all times that any patron is present inside the premises."
+                  },
+                  {
+                    "label": "e",
+                    "text": "The interior of the premises shall be configured in such a manner that there is an unobstructed view from a manager's station of every area of the premises to which any patron is permitted access for any purpose excluding restrooms. Restrooms may not contain video reproduction equipment. If the premises has two or more manager's stations designated, then the interior of the premises shall be configured in such manner that there is an unobstructed view of each area of the premises to which any patron is permitted access for any purpose from at least one of the manager's stations. The view required in this section must be by direct line of sight from the manager's station."
+                  },
+                  {
+                    "label": "f",
+                    "text": "It shall be the duty of the owners and the operator, and it shall also be the duty of any agents and employees present in the premises to ensure that the view area specified in §4.3.4.F.3.h.i.e remains unobstructed by any doors, walls, merchandise, display racks, or other materials at all times that any patron is present in the premises and to ensure that no patron is permitted access to any area of the premises which has been designated as an area in which patrons will not be permitted in application filed pursuant to §4.3.4.F.3.h.i.a."
+                  },
+                  {
+                    "label": "g",
+                    "text": "The premises shall be equipped with overhead lighting fixtures of sufficient intensity to illuminate every place to which patrons are permitted access at an illumination of not less than one footcandle as measured at the floor level."
+                  },
+                  {
+                    "label": "h",
+                    "text": "It shall be the duty of the owners and operator, and it shall also be the duty of any agents and employees present on the premises, to ensure that the illumination described in §4.3.4.F.3.h.i.g is maintained at all times that any patron is present in the premises."
+                  }
+                ]
+              },
+              {
+                "label": "ii",
+                "text": "A person having a duty under §4.3.4.F.3.h.i.a through §4.3.4.F.3.h.i.h commits an offense if they knowingly fail to fulfill that duty."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.4.G": {
+    "title": "Hookah Bar",
+    "page": 147,
+    "items": [
+      {
+        "label": "1",
+        "text": "Hookah bars that intend to operate after 11:00 p.m. shall specifically request so within their Special Use Permit application."
+      },
+      {
+        "label": "2",
+        "text": "Hookah bars shall turn off amplified sound by 11:00 p.m."
+      }
+    ]
+  },
+  "4.3.4.H": {
+    "title": "Microbrewery",
+    "page": 147,
+    "items": [
+      {
+        "label": null,
+        "text": "In the M zoning districts, microbreweries shall maintain at least 25 percent of the gross floor area of the facility for public use as a restaurant or tasting area.",
+        "districts": ["M-1", "M-2", "M-3", "M-4"]
+      }
+    ]
+  },
+  "4.3.4.I": {
+    "title": "Mobile Food Truck Park",
+    "page": 148,
+    "items": [
+      {
+        "label": "1",
+        "text": "Number and Location",
+        "items": [
+          {
+            "label": "a",
+            "text": "Food trucks and associated seating areas shall not be located in any required landscaping area, access easement, driveway, or fire lane(s)."
+          },
+          {
+            "label": "b",
+            "text": "All eating, drinking, service, and delivery activity shall occur outside of setbacks, landscaping, and the public right-of-way."
+          }
+        ]
+      },
+      {
+        "label": "2",
+        "text": "Site Design",
+        "items": [
+          {
+            "label": "a",
+            "text": "Mobile food trucks and all required parking shall be placed on an improved surface."
+          },
+          {
+            "label": "b",
+            "text": "The site shall provide at least 250 square feet in space for each individual food truck."
+          },
+          {
+            "label": "c",
+            "text": "There shall be at least three feet of clearance between each individual food truck and between each permanent or accessory structure and at least 10 feet of unobstructed clearance for food trucks parked side-by-side."
+          },
+          {
+            "label": "d",
+            "text": "Each mobile food truck shall provide trash receptables sized to meet expected demand and shall empty or remove them on a daily basis. The site shall include a trash collection facility such as a designated dumpster location accessible by trash collection vehicles."
+          },
+          {
+            "label": "e",
+            "text": "Seating for the consumption of food and drink shall be provided."
+          },
+          {
+            "label": "f",
+            "text": "Accessible restroom facilities, including handwashing facilities, shall be provided."
+          },
+          {
+            "label": "g",
+            "text": "The site shall maintain access to water for the mobile food trucks to refill retention tanks."
+          }
+        ]
+      },
+      {
+        "label": "3",
+        "text": "Operational Standards",
+        "items": [
+          {
+            "label": "a",
+            "text": "A food service license is required and shall be available on site for inspection by government officials."
+          },
+          {
+            "label": "b",
+            "text": "When located adjacent to a Residential zoning district, the hours of operation shall be limited between 7:00 a.m. and 10:00 p.m."
+          },
+          {
+            "label": "c",
+            "text": "Any amplified sound shall comply with Chapter 34, Article III of the Code of Ordinances."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.4.J": {
+    "title": "Restaurant",
+    "page": 148,
+    "items": [
+      {
+        "label": "1",
+        "text": "Restaurants that operate after 11:00 p.m. shall require a Special Use Permit pursuant to §2.5.1: Special Use Permit."
+      },
+      {
+        "label": "2",
+        "text": "Restaurants shall turn off amplified sound by 11:00 p.m."
+      },
+      {
+        "label": "3",
+        "text": "In the M-3 and M-4 zoning districts, freestanding restaurants are not permitted.",
+        "districts": ["M-3", "M-4"]
+      }
+    ]
+  },
+  "4.3.4.K": {
+    "title": "Bed and Breakfast",
+    "page": 149,
+    "items": [
+      {
+        "label": "1",
+        "text": "Bed and breakfast lodging shall not be allowed in any dwelling unit(s) permitted as an Accessory Dwelling Unit."
+      },
+      {
+        "label": "2",
+        "text": "The structure shall be owner-occupied or shall be occupied by a resident manager."
+      },
+      {
+        "label": "3",
+        "text": "Guest stays shall be limited to a maximum of 30 days."
+      },
+      {
+        "label": "4",
+        "text": "Any kitchen and dining facilities shall not be operated in the manner of a commercial restaurant and shall serve only residents and guests. No cooking facilities such as stoves, hot plates, or microwave ovens are permitted in the guest rooms."
+      },
+      {
+        "label": "5",
+        "text": "Any signage on the subject property shall be non-illuminated and shall comply with applicable sign regulations in §5.9."
+      },
+      {
+        "label": "6",
+        "text": "Other than serving guests, a bed and breakfast shall not conduct any other commercial activities such as for-profit private parties or receptions, retail sales, or similar activities."
+      }
+    ]
+  },
+  "4.3.4.L": {
+    "title": "Hotel, Full Service",
+    "page": 149,
+    "items": [
+      {
+        "label": "1",
+        "text": "The entrance to each guest room shall only be gained from a completely enclosed area, except first floor units which may also have direct access from an interior courtyard or swimming pool area."
+      },
+      {
+        "label": "2",
+        "text": "The structure shall contain a lobby, fitness center, full commercial kitchen and a minimum of 5,000 square feet of meeting facilities, and may contain a restaurant, business center, gift shop and other various personal services as accessory uses."
+      },
+      {
+        "label": "3",
+        "text": "Not more than 30 percent of the rooms in a full-service hotel may contain a kitchenette or a parlor and sleeping area separated by a floor to ceiling partition."
+      },
+      {
+        "label": "4",
+        "text": "Customary hotel services such as daily linen, maid services, and upkeep of furniture shall be provided."
+      }
+    ]
+  },
+  "4.3.4.M": {
+    "title": "Credit Access Business",
+    "page": 149,
+    "items": [
+      {
+        "label": null,
+        "text": "Credit access businesses shall not be located within 1,000 feet of another credit access business, measured in a direct line from property line to property line."
+      }
+    ]
+  },
+  "4.3.4.N": {
+    "title": "Retail Sales",
+    "page": 149,
+    "items": [
+      {
+        "label": "1",
+        "text": "In the M-2 zoning district, the ground floor adjacent to the street shall be constructed to Commercial Building Code standards for a depth of at least 50 feet. A smaller depth may be allowed by the Director if the retail is serving as a liner use to mask a parking garage.",
+        "districts": ["M-2"]
+      },
+      {
+        "label": "2",
+        "text": "In the M-3 and M-4 zoning districts, a stand-alone building containing retail sales is prohibited along Spectrum Drive.",
+        "districts": ["M-3", "M-4"]
+      }
+    ]
+  },
+  "4.3.4.O": {
+    "title": "Equipment Sales or Rental and Fleet Services",
+    "page": 149,
+    "items": [
+      {
+        "label": "1",
+        "text": "Maintenance of equipment shall be conducted entirely within an enclosed building."
+      },
+      {
+        "label": "2",
+        "text": "The storage of inoperable or wrecked equipment or materials outside of an enclosed building shall be prohibited."
+      },
+      {
+        "label": "3",
+        "text": "Equipment stored outside of an enclosed structure shall be screened from public view in accordance with §5.6.9.D: Outdoor Storage Areas."
+      }
+    ]
+  },
+  "4.3.4.P": {
+    "title": "Vehicle Fuel Station",
+    "page": 149,
+    "items": [
+      {
+        "label": "1",
+        "text": "A vehicle fuel station shall only be allowed on a lot or parcel with a minimum of 100 feet of frontage along an existing or future arterial street, as indicated in the Master Transportation Plan. Access to the vehicle fuel station shall be gained from the arterial street."
+      },
+      {
+        "label": "2",
+        "text": "Fuel dispensers shall be located not less than 20 feet from the street right-of-way and not less than 30 feet from all other property lines."
+      },
+      {
+        "label": "3",
+        "text": "In the CL zoning district, vehicle fuel stations shall be limited to a total of four metered fuel dispenser units.",
+        "districts": ["CL"]
+      }
+    ]
+  },
+  "4.3.4.Q": {
+    "title": "Vehicle Repair, Minor",
+    "page": 150,
+    "items": [
+      {
+        "label": "1",
+        "text": "Maintenance of vehicles and equipment shall be conducted entirely within an enclosed building."
+      },
+      {
+        "label": "2",
+        "text": "The storage of repair equipment and materials outside of an enclosed building shall be prohibited. Inoperable or wrecked vehicles or vehicles waiting for repair may be stored outside for a maximum of one week."
+      },
+      {
+        "label": "3",
+        "text": "The sale or leasing of vehicles shall be prohibited."
+      }
+    ]
+  },
+  "4.3.4.R": {
+    "title": "Vehicle Wash",
+    "page": 150,
+    "items": [
+      {
+        "label": "1",
+        "text": "A vehicle wash shall only be allowed on a lot or parcel with a minimum of 100 feet of frontage along an arterial street, as indicated in the Master Transportation Plan. Access to the vehicle wash shall be gained from the arterial street."
+      },
+      {
+        "label": "2",
+        "text": "In the CL zoning district, a vehicle wash shall only be allowed on a lot or parcel with a lot area of less than or equal to one acre.",
+        "districts": ["CL"]
+      }
+    ]
+  },
+  "4.3.5.A": {
+    "title": "Data Center",
+    "page": 150,
+    "items": [
+      {
+        "label": null,
+        "text": "All activities shall occur entirely within an enclosed structure, excluding generators."
+      }
+    ]
+  },
+  "4.3.5.B": {
+    "title": "Food Production or Processing",
+    "page": 150,
+    "items": [
+      {
+        "label": "1",
+        "text": "Special Use Permit Food production or processing facilities located within 200 feet of the R-1, R-2, or R-3 zoning districts require Special Use Permit approval pursuant to §2.5.1."
+      },
+      {
+        "label": "2",
+        "text": "M-1, M-2, M-4, and CL Districts",
+        "districts": ["M-1", "M-2", "M-4", "CL"],
+        "items": [
+          {
+            "label": "a",
+            "text": "Only on-premises sales shall be allowed. Distribution, warehousing, or wholesaling activities are prohibited."
+          },
+          {
+            "label": "b",
+            "text": "Food production or processing facilities larger than 5,000 square feet GFA require Special Use Permit approval pursuant to §2.5.1."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.5.C": {
+    "title": "Manufacturing, Artisan",
+    "page": 150,
+    "items": [
+      {
+        "label": null,
+        "text": "All activities shall occur entirely within an enclosed structure."
+      }
+    ]
+  },
+  "4.3.5.D": {
+    "title": "Manufacturing, Low-Impact",
+    "page": 150,
+    "items": [
+      {
+        "label": "1",
+        "text": "Layout and Design All activities shall occur entirely within an enclosed structure."
+      },
+      {
+        "label": "2",
+        "text": "CG and AA Districts",
+        "districts": ["CG", "AA"],
+        "items": [
+          {
+            "label": "a",
+            "text": "Retail sales associated with low-impact manufacturing is allowed; however, distribution, warehousing, and/or wholesaling activities are prohibited."
+          },
+          {
+            "label": "b",
+            "text": "Low-impact manufacturing establishments shall be limited to 10,000 square feet GFA."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.5.E": {
+    "title": "Storage, Self-Service",
+    "page": 151,
+    "items": [
+      {
+        "label": "1",
+        "text": "Layout and Design All storage shall be contained within a fully enclosed structure and access doors to storage units shall be accessed from interior hallways."
+      },
+      {
+        "label": "2",
+        "text": "Operations",
+        "items": [
+          {
+            "label": "a",
+            "text": "Self-service storage facilities within 150 feet of the R-1, R-2, or R-3 zoning district shall have operating hours not earlier than 5:00 a.m. and not later than 10:00 p.m."
+          },
+          {
+            "label": "b",
+            "text": "The incidental retail sale of products associated with the business (e.g., boxes, moving supplies, locks, bubble wrap) is allowed."
+          },
+          {
+            "label": "c",
+            "text": "No business activity other than the rental of storage units shall be conducted on the premises."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.5.F": {
+    "title": "Storage, Outdoor",
+    "page": 151,
+    "items": [
+      {
+        "label": "1",
+        "text": "LI, AA, and CF Districts",
+        "districts": ["LI", "AA", "CF"],
+        "items": [
+          {
+            "label": "a",
+            "text": "Outdoor storage areas shall be located in the rear yard, material shall be set back from all property lines a minimum of five feet and shall not exceed six feet in height."
+          },
+          {
+            "label": "b",
+            "text": "Outdoor storage areas shall not obstruct access to recorded easements or vehicular or pedestrian circulation routes."
+          },
+          {
+            "label": "c",
+            "text": "Outdoor storage shall be opaquely screened from public view pursuant to the screening standards in §5.6.9.D."
+          }
+        ]
+      },
+      {
+        "label": "2",
+        "text": "R-1, R-2, R-3, and M-1 Districts Outdoor storage shall be prohibited, except that one recreational vehicle per lot or parcel may be stored behind the front building line if:",
+        "districts": ["R-1", "R-2", "R-3", "M-1"],
+        "items": [
+          {
+            "label": "a",
+            "text": "The principal use on the lot or parcel is residential, except multifamily; and"
+          },
+          {
+            "label": "b",
+            "text": "The recreational vehicle is screened from public view by a fence or wall not less than six feet in height."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.5.G": {
+    "title": "Warehouse or Wholesale Facility",
+    "page": 151,
+    "items": [
+      {
+        "label": null,
+        "text": "Warehouse or wholesale facilities larger than 50,000 square feet GFA require Special Use Permit approval pursuant to §2.5.1."
+      }
+    ]
+  },
+  "4.3.6.A": {
+    "title": "Public Utility, Major and Minor",
+    "page": 151,
+    "items": [
+      {
+        "label": "1",
+        "text": "Major and minor public utilities owned by the Town shall not be subject to the dimensional standards of the underlying zoning district, but shall be subject to the height and setback limitations established in §5.7.6: Neighborhood Transition Standards."
+      },
+      {
+        "label": "2",
+        "text": "In addition to the screening requirements set forth in §5.6.9.B: Mechanical and Utility Equipment, screening of electric substation shall include enhanced landscaping that is greater in the number and/or size of required plants."
+      }
+    ]
+  },
+  "4.3.6.B": {
+    "title": "Satellite Earth Station",
+    "page": 151,
+    "items": [
+      {
+        "label": "1",
+        "text": "Purpose",
+        "items": [
+          {
+            "label": "a",
+            "text": "The City Council finds that the maintenance and integrity of neighborhood beauty is important to all citizens. The uncontrolled proliferation of receive-only satellite television antennas is likely and such proliferation will adversely affect the health, safety, and general welfare of the citizens of the Town. Receive-only satellite earth stations are distinct from conventional television and/or radio antennas in that satellite television earth stations:",
+            "items": [
+              {
+                "label": "i",
+                "text": "Are less likely to blend in with their surroundings, thereby creating visual blight and potentially reducing the economic value of adjacent properties; and"
+              },
+              {
+                "label": "ii",
+                "text": "Create safety concerns as a result of their size (e.g., such earth stations may be subject to a high amount of wind force as a result of the shape of the earth station; therefore, both the satellite dish and the supporting structure must be constructed in a manner that will allow for great amounts of wind force)."
+              }
+            ]
+          },
+          {
+            "label": "b",
+            "text": "These standards are adopted for these reasons and based upon these findings."
+          }
+        ]
+      },
+      {
+        "label": "2",
+        "text": "Permit Required No person shall install, construct, or place a satellite earth station on any property within the Town without first obtaining a Building Permit from the Town."
+      },
+      {
+        "label": "3",
+        "text": "Size, Location, Number, and Design",
+        "items": [
+          {
+            "label": "a",
+            "text": "Satellite earth stations shall:",
+            "items": [
+              {
+                "label": "i",
+                "text": "Not exceed 10 feet in height from the ground to the highest point of the station;"
+              },
+              {
+                "label": "ii",
+                "text": "Not exceed 10 feet in diameter;"
+              },
+              {
+                "label": "iii",
+                "text": "Be installed, constructed, or placed in the back one-half of the lot;"
+              },
+              {
+                "label": "iv",
+                "text": "Be screened from view on all sides by a solid fence, wall, or landscaping to a minimum height that shall be equal to the tallest point of the structure at its operating height; provided, however, that no fence or wall used as a screening device shall exceed the height permitted by the Town's fence regulations, and to the extent that the maximum operating height of the satellite dish exceeds the permitted maximum height of a fence or wall, landscaping shall be used as a screening device. Screening shall be of a material that is compatible with the building materials or landscaping, as appropriate, used in the area;"
+              },
+              {
+                "label": "v",
+                "text": "Conform to all Building and Electrical Codes, including proper grounding;"
+              },
+              {
+                "label": "vi",
+                "text": "Shall not be portable or moveable; and"
+              },
+              {
+                "label": "vii",
+                "text": "Shall be of a neutral color designed to blend in with the surroundings."
+              }
+            ]
+          },
+          {
+            "label": "b",
+            "text": "A satellite earth station that is one meter or less in diameter:",
+            "items": [
+              {
+                "label": "i",
+                "text": "Is to be located or placed on property zoned for residential use shall not be required to comply with §4.3.6.B.3.a.ior §4.3.6.B.3.a.iv; provided, however, that no such satellite earth station shall be located or placed on or within property so that the satellite earth station is visible from a public street or other public right-of-way (exclusive of public alleys); or"
+              },
+              {
+                "label": "ii",
+                "text": "Is to be located or placed on property zoned for commercial or industrial use shall be exempt from these standards."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.6.C": {
+    "title": "Solar Energy System",
+    "page": 152,
+    "items": [
+      {
+        "label": "1",
+        "text": "Purpose The City Council finds that the maintenance and integrity of neighborhood beauty is important to all citizens. The uncontrolled proliferation of solar energy systems is likely and such proliferation will adversely affect the health, safety, and general welfare of the citizens of the Town."
+      },
+      {
+        "label": "2",
+        "text": "Permit Required No person shall install, construct, or place solar energy systems on any property within the Town without first obtaining a Building Permit from the Town."
+      },
+      {
+        "label": "3",
+        "text": "Size, Location, Design",
+        "items": [
+          {
+            "label": "a",
+            "text": "Ground-Mounted Solar Energy Systems Ground-mounted solar energy systems shall:",
+            "items": [
+              {
+                "label": "i",
+                "text": "Be installed, constructed, or placed in the back one-half of residential lots or parcels (excluding multifamily) and behind the front building line on multifamily and nonresidential lots or parcels."
+              },
+              {
+                "label": "ii",
+                "text": "Be screened from view on all sides by a solid fence, wall, or landscaping to a minimum height that shall be equal to the tallest point of the structure at its operating height; provided, however, that no fence or wall used as a screening device shall exceed the height permitted by the Town’s fence regulations, and to the extent that the maximum operating height of the system exceeds the permitted maximum height of a fence or wall, landscaping shall be used as a screening device. Screening shall be of a material that is compatible with the building materials or landscaping, as appropriate, used in the area;"
+              },
+              {
+                "label": "iii",
+                "text": "Conform to all adopted Building, Electrical, Plumbing, and Mechanical Codes;"
+              },
+              {
+                "label": "iv",
+                "text": "Not be portable or moveable;"
+              },
+              {
+                "label": "v",
+                "text": "Not be pole-mounted; and"
+              },
+              {
+                "label": "vi",
+                "text": "Be of a neutral color designed to blend in with the surroundings."
+              }
+            ]
+          },
+          {
+            "label": "b",
+            "text": "Roof-Mounted Solar Energy Systems Roof-mounted solar energy systems shall:",
+            "items": [
+              {
+                "label": "i",
+                "text": "Not be installed greater than six inches between the panel and the roof."
+              },
+              {
+                "label": "ii",
+                "text": "Conform to all adopted Building, Electrical, Plumbing, and Mechanical Codes."
+              },
+              {
+                "label": "iii",
+                "text": "Not be portable or moveable; and"
+              },
+              {
+                "label": "iv",
+                "text": "Have a neutral-color panel frame designed to blend in with the surroundings."
+              }
+            ]
+          },
+          {
+            "label": "c",
+            "text": "Freestanding Solar Collection Systems Freestanding solar collector systems shall not exceed 20 feet in height."
+          }
+        ]
+      }
+    ]
+  },
+  "4.3.6.D": {
+    "title": "Wind Energy Systems (all)",
+    "page": 153,
+    "items": [
+      {
+        "label": "1",
+        "text": "In the R-1, R-2, or R-3 zoning districts, wind energy systems may exceed the maximum building height of the underlying zoning district by 10 feet.",
+        "districts": ["R-1", "R-2", "R-3"]
+      },
+      {
+        "label": "2",
+        "text": "In the M-1, M-2 and M-4 zoning districts, wind energy systems may exceed the maximum building height of the underlying zoning district by 20 feet.",
+        "districts": ["M-1", "M-2", "M-4"]
+      },
+      {
+        "label": "3",
+        "text": "In in the CL, CG, LI, MA, CF, and PO zoning districts, wind energy systems may exceed the maximum building height of the underlying zoning district by 40 feet.",
+        "districts": ["CL", "CG", "LI", "MA", "CF", "PO"]
+      },
+      {
+        "label": "4",
+        "text": "Wind energy systems shall be set back from all property lines at least a distance equal to the height of the tower and blade with the blade in its highest vertical position."
+      }
+    ]
+  },
+  "4.3.6.E": {
+    "title": "Wireless Communication Facilities (WCF)",
+    "page": 153,
+    "items": [
+      {
+        "label": "1",
+        "text": "Purpose The purpose of this section is to establish development standards that comply with the requirements of state and federal law for public and private telecommunication service and to:",
+        "items": [
+          {
+            "label": "a",
+            "text": "Protect the public safety and welfare, safeguard community land values, and promote orderly planning and development;"
+          },
+          {
+            "label": "b",
+            "text": "Provide for the managed development, installation, maintenance, modification, and removal of wireless communications infrastructure in the Town with the fewest number of WCFs to complete a network without unreasonably discriminating against wireless communications providers of functionally equivalent service;"
+          },
+          {
+            "label": "c",
+            "text": "Encourage the joint use and location of new and existing WCFs; and"
+          },
+          {
+            "label": "d",
+            "text": "Mitigate any adverse, undesirable visual impacts on the community."
+          }
+        ]
+      },
+      {
+        "label": "2",
+        "text": "Applicability",
+        "items": [
+          {
+            "label": "a",
+            "text": "This section shall apply to all WCF applications as indicated in §4.2.7: Table of Allowed Uses and shall not preempt underlying zoning regulations unless explicitly stated in this section or as explicitly stated in federal and/or state law."
+          },
+          {
+            "label": "b",
+            "text": "The requirements set forth in this section shall not apply to:",
+            "items": [
+              {
+                "label": "i",
+                "text": "Network nodes and network support poles as regulated by Chapter 70, Article III, Division 6 of the Code of Ordinances."
+              },
+              {
+                "label": "ii",
+                "text": "Amateur radio antennas that are owned and operated by a federally licensed amateur radio station operator or are used exclusively for receive-only antennas, provided that the height be no more than the distance from the base of the antenna to the property line is met."
+              },
+              {
+                "label": "iii",
+                "text": "Any WCF for which a permit has been properly issued prior to the effective date of this UDC shall not be required to meet the requirements of this section, other than the operational standards set forth in this section. Changes and additions to pre-existing WCFs shall meet applicable operational standards set forth in this section."
+              },
+              {
+                "label": "iv",
+                "text": "Antennas used for reception of television, multi-channel video programming and radio such as over the air reception devices (\"OTARD\") antennas, television broadcast band antennas, and broadcast radio antennas."
+              },
+              {
+                "label": "v",
+                "text": "A WCF installed upon the declaration of a state of emergency by the federal, state, or local government, or a written determination of public necessity by the Director."
+              },
+              {
+                "label": "vi",
+                "text": "A temporary WCF installed for providing coverage of a special event such as a news coverage or sporting event."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "3",
+        "text": "General Provisions",
+        "items": [
+          {
+            "label": "a",
+            "text": "Federal Requirements All WCFs shall meet the current standards and regulations of the Federal Aviation Administration (FAA), the Federal Communications Commission (FCC), and any other agency of the federal government with the authority to regulate WCFs. If such standards and regulations are changed, then the owners of the WCF shall bring such facility into compliance with such revised standards and regulations within the time period mandated by the controlling federal agency."
+          },
+          {
+            "label": "b",
+            "text": "Radio Frequency Standards All WCFs shall comply with federal standards for radio frequency emissions. If concerns regarding compliance with radio frequency emissions standards for a WCF have been made to the Town, the Town may request that the owner or operator of the WCF provide information demonstrating compliance. If such information suggests, in the reasonable discretion of the Town, that the WCF may not be in compliance, the Town may request and the owner or operator of the WCF shall then submit a project implementation report which provides cumulative field measurements of radio frequency emissions of all antennas installed at the subject site, and which compares the results with established federal standards. If, upon review, the Town finds that the facility does not meet federal standards, the Town may require corrective action within a reasonable period of time, and if not corrected, may require removal of the WCF pursuant to this section. Any reasonable costs incurred by the Town, including reasonable consulting costs to verify compliance with these requirements, shall be paid by the owner or operator."
+          },
+          {
+            "label": "c",
+            "text": "Signal Interference All WCFs shall be designed and sited, consistent with applicable federal regulations, so as not to cause interference with the normal operation of radio, television, telephone, and other communication services utilized by adjacent residential and nonresidential properties; nor shall any such facilities interfere with any public safety communications."
+          },
+          {
+            "label": "d",
+            "text": "Operation and Maintenance To ensure the structural integrity of WCFs, the owner of a WCF shall ensure that it is maintained in compliance with standards contained in applicable local building and safety codes. If upon inspection, the Town concludes that a WCF fails to comply with such codes and constitutes a danger to persons or property, then, upon written notice being provided to the owner of the WCF, the owner shall have 30 days from the date of notice to bring such WCF into compliance. Upon good cause shown by the owner, the Building Official may extend such compliance period not to exceed 90 days from the date of said notice. If the owner fails to bring such WCF into compliance within said time period, the Town may remove such WCF at the owner's expense."
+          },
+          {
+            "label": "e",
+            "text": "Abandonment and Removal",
+            "items": [
+              {
+                "label": "i",
+                "text": "For any WCF constructed after the effective date of this UDC, if the WCF is not used to transmit, receive, or relay voice and data signals to or from wireless communication devices for a period of six months, the WCF shall be considered abandoned and the owner of record shall notify the Building Official and apply for a permit to remove the structure at which point the prior permit approval shall be voided."
+              },
+              {
+                "label": "ii",
+                "text": "All WCFs shall be restored to service or removed by the person who constructed the facility, by the person who operated the facility, or by the property owner within 18 months from the time the WCF ceased being used to transmit, receive or relay voice and data signals to or from wireless communication devices."
+              },
+              {
+                "label": "iii",
+                "text": "If the use of the WCF has not been restored within an 18-month period from the time the WCF have ceased being used to transmit, receive or relay voice and data signals to or from wireless communication devices, the WCF shall be removed and the WCF site restored to its original or better condition, at the property owner's expense."
+              }
+            ]
+          },
+          {
+            "label": "f",
+            "text": "Collocation Preferred Whenever possible, new WCFs shall be sited on existing WCFs or in areas already in use for telecommunications and/or utility distribution lines in order to preserve the aesthetic and scenic value of the Town."
+          }
+        ]
+      },
+      {
+        "label": "4",
+        "text": "Eligible Facilities Request",
+        "items": [
+          {
+            "label": "a",
+            "text": "Timing",
+            "items": [
+              {
+                "label": "i",
+                "text": "Within 60 days of the date on which an applicant submits an application seeking approval of an eligible facilities request, the Director shall approve an application unless the Director determines that the application is not an eligible facilities request."
+              },
+              {
+                "label": "ii",
+                "text": "The 60 -day review period begins to run when the application is filed. The Director and the applicant may agree to stop the review period. The 60-day review period shall also be stopped where the Director determines that the application is incomplete. The review period is stopped for incompleteness pursuant to the following standards:",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "Within 30 days of receipt of the application, the Director shall notify the applicant in writing, clearly and specifically delineating all missing documents or information required for determination of an eligible facilities request"
+                  },
+                  {
+                    "label": "b",
+                    "text": "The written incompleteness notice stops the timeframe for review;"
+                  },
+                  {
+                    "label": "c",
+                    "text": "The timeframe for review begins running again when the applicant makes a supplemental submission in response to the Director’s notice of incompleteness"
+                  },
+                  {
+                    "label": "d",
+                    "text": "Within 10 days of the supplemental submission, the Director shall notify the applicant in writing that the supplemental submission did not provide the information identified in the original incompleteness notice; and"
+                  },
+                  {
+                    "label": "e",
+                    "text": "The timeframe is stopped in the case of a second or subsequent incompleteness notice pursuant to the procedures for the first incompleteness notice. Second or subsequent incompleteness notices may not specify missing documents or information that were not delineated in the original incompleteness notice."
+                  }
+                ]
+              },
+              {
+                "label": "iii",
+                "text": "Failure to Act",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "In the event that the Director fails to act on a request seeking approval for an eligible facilities request within the timeframe for review, accounting for any stopping, the request shall be deemed granted."
+                  },
+                  {
+                    "label": "b",
+                    "text": "The effective date of a deemed-granted approval shall be the day the Town receives written notice from the applicant, after the review period, accounting for any stopping, has expired, that the application has been deemed granted."
+                  }
+                ]
+              },
+              {
+                "label": "iv",
+                "text": "Review Criteria The Director shall approve an eligible facilities request if the request:",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "Is an eligible facilities request for an eligible support structure;"
+                  },
+                  {
+                    "label": "b",
+                    "text": "Complies with the originally approved design elements and other conditions of approval, including but not limited to colors, textures, surfaces, scale, character, mounting, projection and siting, or any approved amendments thereto, except where noncompliance with those elements or conditions is solely limited to the thresholds of increase in height, increase in width, addition of cabinets or new excavation or deployment area identified in the definition of substantial change;"
+                  },
+                  {
+                    "label": "c",
+                    "text": "Does not defeat the concealment elements of the eligible support structure. Any design element that places the wireless communications facility out of view, hides it from being noticed, blends it with its surroundings or otherwise minimizes the visual or aesthetic impact of the facility is a concealment element of the eligible support structure; and"
+                  },
+                  {
+                    "label": "d",
+                    "text": "Does not result in a substantial change. A substantial change is a modification that substantially changes the physical dimensions of an eligible support structure that meets any of the following criteria:",
+                    "items": [
+                      {
+                        "label": "i",
+                        "text": "For ground-mounted WCFs, an increase in the height of the facility by more than 10 percent or by the height of one additional antenna array with separation from the nearest existing antenna not to exceed 20 feet, whichever is greater; for roof- and building-mounted WCFs, it increases the height of the structure by more than 10 percent or more than 10 feet, whichever is greater. Changes in height should be measured from the original support structure in cases where deployments are or will be separated horizontally, such as on buildings' rooftops; in other circumstances, changes in height should be measured from the dimensions of the WCF, inclusive of originally approved appurtenances and any modifications that were approved prior to the passage of the Spectrum Act."
+                      },
+                      {
+                        "label": "ii",
+                        "text": "For ground-mounted WCFs, it involves adding an appurtenance to the body of the facility that would protrude from the edge of the facility more than 20 feet, or more than the width of the facility at the level of the appurtenance, whichever is greater for eligible support structures, it involves adding an appurtenance to the body of the structure that would protrude from the edge of the structure by more than six feet;"
+                      },
+                      {
+                        "label": "iii",
+                        "text": "For any eligible support structure, it involves installation of more than the standard number of new equipment cabinets for the technology involved, but not to exceed four cabinets; or roof- and building-mounted WCFs, it involves installation of any new equipment cabinets on the ground if there are no pre- existing ground cabinets associated with the structure, or else involves installation of ground cabinets that are more than 10 percent larger in height or overall volume than any other ground cabinets associated with the structure;"
+                      },
+                      {
+                        "label": "iv",
+                        "text": "For any eligible support structure, it entails any excavation or deployment outside the current site; or would impair the concealment elements of the eligible support structure;"
+                      },
+                      {
+                        "label": "v",
+                        "text": "It entails any excavation or deployment outside of the current site, except that, for ground-mounted WCFs, it entails any excavation or deployment of transmission equipment outside of the current site by more than 30 feet in any direction. The site boundary from which the 30 feet is measured excludes any access or utility easements currently related to the site;"
+                      },
+                      {
+                        "label": "vi",
+                        "text": "It would defeat the camouflaging elements of the eligible support structure;"
+                      },
+                      {
+                        "label": "vii",
+                        "text": "For any eligible support structure, it does not comply with conditions associated with the siting approval of the construction or modification of the eligible support structure or WCF equipment, unless the non-compliance is due to an increase in height, increase in width, addition of cabinets, or new excavation that would not exceed the thresholds identified in §§4.3.6.E.4.a.iv.d.i, 4.3.6.E.4.a.iv.d.ii, or 4.3.6.E.4.a.iv.d.iii of this definition."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "v",
+                "text": "Decision If the Director finds the review criteria are met, the Director shall approve the eligible facilities request. If the Director finds that the applicant's request does not meet the review criteria, the Director may approve with conditions or deny the eligible facilities request and provide a written disposition with the reasons for conditional approval or denial to the applicant. The Director's decision shall be supported by substantial evidence in the written record."
+              },
+              {
+                "label": "vi",
+                "text": "Compliance with Other Laws All work done in association with the approved eligible facility request application shall be completed in accordance with all generally applicable laws, regulations or other rules reasonably related to public health and safety, including but not limited to, building and safety codes."
+              },
+              {
+                "label": "vii",
+                "text": "Remedies The applicant and the Town may bring a claim related to §6409 of the Spectrum Act (codified at 47 U.S.C. 1455) to any court of competent jurisdiction."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "5",
+        "text": "Standards for Specific Facility Types All new WCFs or collocations that do not meet the definition of an eligible facilities request shall be subject to the standards below.",
+        "items": [
+          {
+            "label": "a",
+            "text": "All WCF Types",
+            "items": [
+              {
+                "label": "i",
+                "text": "Review Required",
+                "items": [
+                  {
+                    "label": null,
+                    "table": {
+                      "title": "Table 4.3-3: Review Required by WCF Type and Zoning District",
+                      "columns": [
+                        "WCF Type",
+                        "Residential",
+                        "Mixed-Use",
+                        "Nonresidential"
+                      ],
+                      "byZoneType": true,
+                      "rows": [
+                        [
+                          "Building-Mounted Facilities",
+                          "Special Use Permit",
+                          "Building Permit",
+                          "Building Permit"
+                        ],
+                        [
+                          "Roof-Mounted Facilities",
+                          "Special Use Permit",
+                          "Building Permit",
+                          "Building Permit"
+                        ],
+                        [
+                          "Ground-Mounted Facilities",
+                          "Special Use Permit",
+                          "Special Use Permit",
+                          "Building Permit"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "ii",
+                "text": "Maximum Height"
+              }
+            ]
+          },
+          {
+            "label": null,
+            "table": {
+              "title": "Table 4.3-4: Maximum Height by WCF Type and Zoning District",
+              "columns": [
+                "WCF Type",
+                "Residential",
+                "Mixed-Use",
+                "Nonresidential"
+              ],
+              "byZoneType": true,
+              "rows": [
+                [
+                  "Building-Mounted Facilities [1]",
+                  "Maximum height permitted in the underlying zoning district",
+                  "Maximum height permitted in the underlying zoning district",
+                  "Maximum height permitted in the underlying zoning district"
+                ],
+                [
+                  "Roof-Mounted Facilities",
+                  "10 feet above the existing roofline [1] [2]",
+                  "10 feet above the existing roofline [1] [2]",
+                  "10 feet above the existing roofline [1] [2]"
+                ],
+                [
+                  "Ground-Mounted Facilities [3]",
+                  "Maximum height permitted in the underlying zoning district",
+                  "45 feet",
+                  "60 feet"
+                ]
+              ],
+              "notes": [
+                "[1] Height measured to top of antenna.",
+                "[2] In the Mixed-Use and Nonresidential zoning districts, an additional five feet (up to 15 feet) above the existing roofline is allowed by-right for buildings of seven or more stories and by Special Use Permit for all other buildings.",
+                "[3] Height measured from base of facility to top of antenna."
+              ]
+            },
+            "items": [
+              {
+                "label": "iii",
+                "text": "Camouflage Techniques",
+                "items": [
+                  {
+                    "label": "a",
+                    "text": "WCFs shall be camouflaged by minimizing the visibility of antennae and transmission equipment and be screened from view by materials that are consistent and compatible with the building design, color and materials. Camouflaging includes locating facilities in bell steeples or clock towers, or on similar alternative design mounting structures."
+                  },
+                  {
+                    "label": "b",
+                    "text": "Metallic surfaces shall be painted to reduce glare and reflections. No exterior paint colors shall be used which have a light reflecting value (LRV) greater than 40 percent. The LRV of a paint is available from paint manufacturers and it measures the amount of light reflected by a certain color."
+                  }
+                ]
+              },
+              {
+                "label": "iv",
+                "text": "Transmission and Accessory Equipment Transmission and accessory equipment, including equipment enclosures, shall be visually similar to the architectural style of the surrounding building environment with consideration given to exterior materials, roof form, scale, mass, color, texture and character or screened using natural or manmade features that are consistent with surrounding landscaping, trees, and foliage."
+              },
+              {
+                "label": "v",
+                "text": "Lighting WCFs shall not be lighted, unless required by the FAA or other applicable governmental authority, or the WCF is mounted on a light pole or other similar structure primarily used for lighting purposes. If lighting is required, the Town may review the available lighting alternatives and approve the design that would cause the least disturbance to the surrounding views. Lighting shall be shielded or directed to the greatest extent possible so as to minimize the amount of glare and light falling onto nearby properties as required by this Code."
+              },
+              {
+                "label": "vi",
+                "text": "Noise Noise generated on the site shall not exceed the standards permitted in the Code of Ordinances, except that a WCF owner or operator shall be permitted to exceed Code noise standards for a reasonable period of time during repairs, not to exceed two hours without prior authorization from the Town."
+              }
+            ]
+          },
+          {
+            "label": "b",
+            "text": "Additional Standards for Building-Mounted WCFs A building-mounted facility shall be mounted on a wall of an existing building in a configuration as flush to the wall as technically possible. The antenna and any associated screening or transmission equipment shall not project above the wall on which is mounted, excluding any conduit that may extend over and behind the roofline or parapet wall."
+          },
+          {
+            "label": "c",
+            "text": "Additional Standards for Roof-Mounted WCFs Screening of roof-mounted WCFs includes the use of existing parapets, walls, or similar architectural elements provided that it is painted and texturized to integrate with the architecture of the surrounding structure. Screening may be waived by the Director on buildings where the height of the roofline is 35 feet or less based on evidence provided by the applicant that the roof cannot structurally support the screen."
+          },
+          {
+            "label": "d",
+            "text": "Additional Standards for Ground-Mounted WCFs",
+            "items": [
+              {
+                "label": "i",
+                "text": "Ground-mounted WCFS shall be subject to the minimum setback and separation requirements set forth below."
+              }
+            ]
+          },
+          {
+            "label": null,
+            "table": {
+              "title": "Table 4.3-5: Ground-Mounted WCF Standards",
+              "columns": ["", "Residential", "Mixed-Use", "Nonresidential"],
+              "byZoneType": true,
+              "rows": [
+                [
+                  "Minimum Setback",
+                  "3 feet from any abutting property line for every 1 foot of tower height or the minimum setback required in the underlying zoning district, whichever is greater",
+                  "2 feet from any abutting property line for every 1 foot of tower height or the minimum setback required in the underlying zoning district, whichever is greater",
+                  "1 foot from any abutting property line for every 1 foot of tower height or the minimum setback required in the underlying zoning district, whichever is greater"
+                ],
+                [
+                  "Minimum Separation [1]",
+                  "One-half mile",
+                  "2,000 feet",
+                  "1,760 feet"
+                ]
+              ],
+              "notes": [
+                "[1] Separation measured from the outermost portion of the base of existing facility to the outermost portion of the base of proposed facility."
+              ]
+            },
+            "items": [
+              {
+                "label": "ii",
+                "text": "Ground-mounted WCFs shall be enclosed by security fencing or wall and shall also be equipped with an appropriate anti-climbing device."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "4.4.4.A": {
+    "title": "Drive-Through",
+    "page": 160,
+    "items": [
+      {
+        "label": "1",
+        "text": "Drive-through facilities located within 200 linear feet of a residential use shall require a Special Use Permit approval pursuant to §2.5.1."
+      },
+      {
+        "label": "2",
+        "text": "Drive-through lanes and stacking spaces are prohibited between the building façade and the adjacent right(s)-of-way."
+      },
+      {
+        "label": "3",
+        "text": "Audible electronic devices such as loudspeakers, vehicle service order devices, and similar instruments shall not be audible beyond the property line of the site."
+      }
+    ]
+  },
+  "4.4.4.B": {
+    "title": "Donation Box",
+    "page": 161,
+    "items": [
+      {
+        "label": null,
+        "text": "A donation box shall not restrict the use or access of any pedestrian, bicycle, or vehicular route or bicycle or vehicle parking spaces that are required for the principal use on the lot and shall be screened from the public right-of-way pursuant to §5.6.9.C."
+      }
+    ]
+  },
+  "4.4.4.C": {
+    "title": "Dwelling, Accessory (ADU)",
+    "page": 161,
+    "items": [
+      {
+        "label": "1",
+        "text": "Purpose These accessory dwelling unit (\"ADU\") standards are intended to permit the creation of legal ADUs that are compatible with residential neighborhoods while also adding housing options for the Town’s workforce, seniors, families with changing needs, and others."
+      },
+      {
+        "label": "2",
+        "text": "Generally",
+        "items": [
+          {
+            "label": "a",
+            "text": "ADUs shall only be permitted on lots or parcels where the principal use is a single-family detached dwelling. An ADU is not allowed on a site without a principal dwelling unit."
+          },
+          {
+            "label": "b",
+            "text": "Not more than one ADU may be located on one lot or parcel."
+          },
+          {
+            "label": "c",
+            "text": "ADUs shall not have more than one bedroom."
+          },
+          {
+            "label": "d",
+            "text": "Parking for the ADU shall be provided on the principal lot or parcel."
+          },
+          {
+            "label": "e",
+            "text": "ADUs shall not exceed 40 percent of the square footage of the principal dwelling unit."
+          },
+          {
+            "label": "f",
+            "text": "ADUs shall have a separate exterior entrance from the principal dwelling unit and shall contain separate cooking, sleeping, and sanitary facilities."
+          }
+        ]
+      },
+      {
+        "label": "3",
+        "text": "Standards for Detached ADUs",
+        "items": [
+          {
+            "label": "a",
+            "text": "Detached ADUs shall meet the setback requirements of the principal building."
+          },
+          {
+            "label": "b",
+            "text": "The building design standards applicable to the principal structure on the lot shall apply."
+          },
+          {
+            "label": "c",
+            "text": "The maximum height of any detached ADU shall be 25 feet."
+          },
+          {
+            "label": "d",
+            "text": "Detached ADUs shall comply with the requirements for accessory structures in §4.4. Where one or more of the standards in §4.4 conflict with these use-specific standards, these use-specific standards shall govern."
+          }
+        ]
+      },
+      {
+        "label": "4",
+        "text": "Owner Occupancy",
+        "items": [
+          {
+            "label": "a",
+            "text": "Ownership of the ADU may not be legally severed from ownership of the associated lot and any other structures on such lot."
+          },
+          {
+            "label": "b",
+            "text": "The owner of each property on which an ADU is located shall sign an affidavit pledging agreement with the terms of this section. The affidavit shall specify which dwelling unit (either the primary dwelling unit or the ADU) the owner will occupy. If at any time the owner moves from one dwelling unit to the other, the owner shall file an updated affidavit. Otherwise, all affidavits shall be filed annually with the Development and Neighborhood Services Department."
+          }
+        ]
+      },
+      {
+        "label": "5",
+        "text": "Noticing",
+        "items": [
+          {
+            "label": "a",
+            "text": "The Town shall notice to all persons owning land within 200 linear feet from the subject parcel(s) for which an ADU is being requested."
+          },
+          {
+            "label": "b",
+            "text": "Mailed notices shall be postmarked and sent via first class mail after the application is deemed complete and prior to final approval."
+          },
+          {
+            "label": "c",
+            "text": "The mailed notice shall include:",
+            "items": [
+              {
+                "label": "i",
+                "text": "The physical address, zoning designation, and principal use of the subject property;"
+              },
+              {
+                "label": "ii",
+                "text": "A brief narrative summarizing the request and demonstrating compliance with this section;"
+              },
+              {
+                "label": "iii",
+                "text": "The location and hours where a copy of the application can be examined by the public; and"
+              },
+              {
+                "label": "iv",
+                "text": "Any other information pertinent to the petition as deemed appropriate by the Director."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "4.4.4.D": {
+    "title": "Home Occupation",
+    "page": 162,
+    "items": [
+      {
+        "label": "1",
+        "text": "Operator Residency Required The operator of the home occupation shall reside in the dwelling unit."
+      },
+      {
+        "label": "2",
+        "text": "Maximum Number of Nonresident Employees Any home occupation shall be permitted a maximum of one employee who does not reside in the dwelling unit."
+      },
+      {
+        "label": "3",
+        "text": "Maximum Gross Floor Area",
+        "items": [
+          {
+            "label": "a",
+            "text": "No more than 15 percent of the total gross floor area of the dwelling unit may be used in connection with the home occupation. However, no home occupation shall be limited to less than 200 square feet, nor shall the area of a home occupation exceed 500 square feet."
+          },
+          {
+            "label": "b",
+            "text": "If there is more than one home occupation being conducted within a dwelling unit, then all home occupations within the dwelling unit shall cumulatively use no more than 15 percent or 500 square feet of the dwelling unit, whichever is less."
+          },
+          {
+            "label": "c",
+            "text": "Area used for storage of materials or products used in the home occupation shall be included in this calculation."
+          }
+        ]
+      },
+      {
+        "label": "4",
+        "text": "Multiple Home Occupations",
+        "items": [
+          {
+            "label": "a",
+            "text": "More than one home occupation may be permitted within an individual dwelling unit."
+          },
+          {
+            "label": "b",
+            "text": "Where multiple home occupations are conducted within an individual dwelling unit, the operations standards of this section shall be applied to the combined total of all home occupation activities, not to each home occupation individually."
+          }
+        ]
+      },
+      {
+        "label": "5",
+        "text": "Residential Character There shall not be any interior or exterior, structural or aesthetic, alterations that change the residential character of the dwelling unit within which the home occupation operates."
+      },
+      {
+        "label": "6",
+        "text": "Location and Entrance",
+        "items": [
+          {
+            "label": "a",
+            "text": "The home occupation shall be conducted entirely within the principal structure or attached garage."
+          },
+          {
+            "label": "b",
+            "text": "The use of an attached garage for a home occupation shall not interfere with the provision of any required off-street parking."
+          }
+        ]
+      },
+      {
+        "label": "7",
+        "text": "Outdoor Display and Storage Outdoor display of goods, materials, supplies, or equipment is prohibited."
+      },
+      {
+        "label": "8",
+        "text": "Off-Street Parking and Loading No additional driveway to serve the home occupation shall be permitted."
+      },
+      {
+        "label": "9",
+        "text": "Commercially Licensed Vehicles No vehicles requiring the operator to have a commercial driver's license shall be allowed in conjunction with any home occupation."
+      },
+      {
+        "label": "10",
+        "text": "Deliveries Deliveries to the property shall not be permitted, except those by typical residential delivery services at a similar frequency as homes that do not operate a home occupation."
+      }
+    ]
+  },
+  "4.4.4.E": {
+    "title": "Valet Parking Services",
+    "page": 162,
+    "items": [
+      {
+        "label": null,
+        "text": "Any valet parking service provided in connection with a commercial establishment or commercial activity shall obtain a license and comply with the standards established in the Administrative Manual. A license shall not be required for occasional valet parking service provided:",
+        "items": [
+          {
+            "label": "1",
+            "text": "At a private residence; or"
+          },
+          {
+            "label": "2",
+            "text": "In connection with a social or fund-raising activity."
+          }
+        ]
+      }
+    ]
+  },
+  "4.5.5.A": {
+    "title": "Construction Support Activities",
+    "page": 163,
+    "items": [
+      {
+        "label": null,
+        "text": "Contractor's offices, equipment storage, and portable lavatories are permitted on or adjacent to construction sites on lots or parcels owned or controlled by the owner of the lot or parcel on which the construction is taking place, subject to following:",
+        "items": [
+          {
+            "label": "1",
+            "text": "Construction support activities may only be approved for licensed contractors working on construction projects for which permits have been issued. They shall be located on the same lot or parcel and within the same project area where the work is being performed and shall not encroach into any public right-of-way. Field or construction or offices shall be required to meet all applicable state and local building and set-up codes."
+          },
+          {
+            "label": "2",
+            "text": "The use shall only occur between 14 days before and 14 days after the construction activity. All temporary facilities shall be removed within 14 days after completion of construction."
+          },
+          {
+            "label": "3",
+            "text": "The Building Official may order the construction support activities to be discontinued."
+          },
+          {
+            "label": "4",
+            "text": "The structures shall not contain sleeping or cooking facilities."
+          },
+          {
+            "label": "5",
+            "text": "Portable lavatories shall be located on-site as to minimize impacts to adjacent uses."
+          }
+        ]
+      }
+    ]
+  },
+  "4.5.5.B": {
+    "title": "Mobile Food Truck",
+    "page": 164,
+    "items": [
+      {
+        "label": "1",
+        "text": "Location",
+        "items": [
+          {
+            "label": "a",
+            "text": "Food trucks and associated seating areas shall not be located in any required landscaping area, access easement, driveway, or fire lane(s)."
+          },
+          {
+            "label": "b",
+            "text": "All eating, drinking, service, and delivery activity shall occur outside of setbacks, landscaping, and the public right-of-way."
+          }
+        ]
+      },
+      {
+        "label": "2",
+        "text": "Site Design",
+        "items": [
+          {
+            "label": "a",
+            "text": "Mobile food vending equipment shall be placed on improved surfaces."
+          },
+          {
+            "label": "b",
+            "text": "The site shall provide at least 250 square feet in space for each individual food truck. There shall be at least three feet of clearance between each individual food truck and between each permanent or accessory structure and at least 10 feet of unobstructed clearance for food trucks parked side-by-side."
+          },
+          {
+            "label": "c",
+            "text": "There is no limit to the total number of food trucks allowed on a site provided adequate fire access is maintained on site."
+          },
+          {
+            "label": "d",
+            "text": "Each mobile food truck shall provide trash receptables sized to meet expected demand and shall empty or remove them on a daily basis."
+          }
+        ]
+      },
+      {
+        "label": "3",
+        "text": "Operational Standards",
+        "items": [
+          {
+            "label": "a",
+            "text": "A Temporary Use Permit for a mobile food truck shall not exceed 90 days."
+          },
+          {
+            "label": "b",
+            "text": "A food service license is required and shall be available on site for inspection by government officials."
+          },
+          {
+            "label": "c",
+            "text": "Each individual food truck shall contain an electrical hookup or generator, meet Fire Code, and maintain access to a commercial kitchen within Dallas County."
+          },
+          {
+            "label": "d",
+            "text": "When located adjacent to a Residential zoning district, the hours of operation shall be limited between 7:00 a.m. and 10:00 p.m."
+          },
+          {
+            "label": "e",
+            "text": "All mobile food trucks shall return to their associated restaurant, a commissary kitchen, or other base of operation for necessary vehicle servicing, cleaning, and restocking on a daily basis. Overnight parking is prohibited."
+          }
+        ]
+      }
+    ]
+  },
+  "4.5.5.C": {
+    "title": "Outdoor Retail and Display",
+    "page": 164,
+    "items": [
+      {
+        "label": "1",
+        "text": "Operational Standards",
+        "items": [
+          {
+            "label": "a",
+            "text": "A Temporary Use Permit shall only be issued to the operator of the associated permanent retail use."
+          },
+          {
+            "label": "b",
+            "text": "The outdoor retail and display uses shall be associated with an approved retail primary use on the property."
+          },
+          {
+            "label": "c",
+            "text": "The outdoor retail and display area shall be of the same nature as the permanent retail activity conducted on the property."
+          },
+          {
+            "label": "d",
+            "text": "The outdoor retail and display areas shall be kept clean and free from litter, refuse, and debris;"
+          },
+          {
+            "label": "e",
+            "text": "Outdoor retail and display operations shall comply with all applicable federal, state, and local regulations, including but not limited to those regulating the sale of alcohol, preparation and sale of food, and noise ordinances."
+          },
+          {
+            "label": "f",
+            "text": "The outdoor retail and display areas shall comply with all other reasonable conditions imposed by the Development and Neighborhood Services Department."
+          }
+        ]
+      },
+      {
+        "label": "2",
+        "text": "Location and Design",
+        "items": [
+          {
+            "label": "a",
+            "text": "The outdoor retail and display area shall be contained on an improved surface such as asphalt, concrete, or pavers, and such areas shall be limited to 15 percent of the gross floor area of the principle structure."
+          },
+          {
+            "label": "b",
+            "text": "The outdoor retail and display area shall not block handicapped parking areas, parking lot access aisles, sidewalk areas, fire lanes, required landscape areas, public rights-of-way, pedestrian ways, and shall not reduce the number of parking spaces below any minimum requirement for the use in this UDC."
+          }
+        ]
+      },
+      {
+        "label": "3",
+        "text": "Duration and Frequency In those zoning districts where §4.2.7: Table of Allowed Uses, indicates that outdoor retail and display is a temporary use:",
+        "items": [
+          {
+            "label": "a",
+            "text": "Outdoor retail and display areas shall be allowed for a period not to exceed 14 days each calendar year, with a maximum of two permits issued per business, per calendar year."
+          },
+          {
+            "label": "b",
+            "text": "The 14-day time period is limited to the actual days and times of the event, except that set-up activities may occur up to 48 hours prior to the permitted event and take-down/clean-up activities may occur up to 24 hours after the permitted event."
+          }
+        ]
+      }
+    ]
+  },
+  "4.5.5.D": {
+    "title": "Portable Storage Structure",
+    "page": 165,
+    "items": [
+      {
+        "label": "1",
+        "text": "No more than one portable storage structure may be located on the same lot or parcel at one time."
+      },
+      {
+        "label": "2",
+        "text": "Portable storage structures shall be located no closer than 10 feet to any property line and shall be placed on an improved surface."
+      },
+      {
+        "label": "3",
+        "text": "A portable storage structure may be located on a lot or parcel for a period not exceeding 14 consecutive days, from the time of delivery to the time of removal."
+      },
+      {
+        "label": "4",
+        "text": "Portable storage structures shall not be located on the same lot or parcel more than one time in any given 30-calendar-day period. Each day that a portable storage structure remains after the removal date shall constitute a violation."
+      },
+      {
+        "label": "5",
+        "text": "Portable storage structures shall not exceed eight feet six inches in height, 10 feet in width, nor 20 feet in length."
+      },
+      {
+        "label": "6",
+        "text": "It shall be the obligation of the owner or user of the portable storage structure to secure it in a manner that does not endanger the safety of persons or property in the vicinity of the portable storage structure. In the event of high winds or other weather conditions in which such structure may become a physical danger to persons or property, the appropriate law enforcement officers may require the immediate removal of the portable storage structure."
+      },
+      {
+        "label": "7",
+        "text": "Any portable storage structure shall be removed immediately upon the direction of a law enforcement officer for removal of such temporary structure for safety reasons"
+      }
+    ]
+  },
+  "4.5.5.E": {
+    "title": "Real Estate Sales or Model Home",
+    "page": 165,
+    "items": [
+      {
+        "label": "1",
+        "text": "Real estate sales or model homes are permitted on the site of the development for which the sales are taking place. They are permitted to remain on the site of the development from 15 days before homes are offered for sale until 15 days after all home or home sites within the development are sold."
+      },
+      {
+        "label": "2",
+        "text": "The Building Official may order the removal or discontinuance of real estate sales or model home uses."
+      }
+    ]
+  },
+  "4.5.5.F": {
+    "title": "Seasonal Sales",
+    "page": 166,
+    "items": [
+      {
+        "label": "1",
+        "text": "Generally",
+        "items": [
+          {
+            "label": "a",
+            "text": "Except for seasonal sales allowed pursuant to F.2 below, seasonal sales shall be located on a lot or parcel that fronts a collector or arterial street."
+          },
+          {
+            "label": "b",
+            "text": "Seasonal sales areas shall not block handicapped parking areas, parking lot access aisles, sidewalk areas, fire lanes, required landscape areas, public rights-of-way, pedestrian ways, and shall not reduce the number of parking spaces below any minimum requirement for the use in this UDC;"
+          },
+          {
+            "label": "c",
+            "text": "Temporary tents, structures, or stands used for seasonal sales shall not exceed 150 square feet."
+          },
+          {
+            "label": "d",
+            "text": "Temporary Use Permits issued for seasonal sales shall be valid for a maximum of 30 consecutive days."
+          },
+          {
+            "label": "e",
+            "text": "No lot or parcel shall be issued more than three seasonal sales Temporary Use Permits in a calendar year."
+          }
+        ]
+      },
+      {
+        "label": "2",
+        "text": "R-1, R-2, and R-3 Zoning Districts Seasonal sales shall be limited to those activities that would not qualify as a special event, including the sale of fruits, vegetables, flowers, herbs, plants, jams, honey, pickled products, sauces, and/or baked goods where the vendors are individuals who have raised the produce or have crafted the product on the same lot or parcel where the seasonal sales are taking place.",
+        "districts": ["R-1", "R-2", "R-3"]
+      }
+    ]
+  },
+  "4.5.5.G": {
+    "title": "Special Event",
+    "page": 166,
+    "items": [
+      {
+        "label": "1",
+        "text": "Temporary use permits for other special events not listed separately in §4.2.7: Table of Allowed Uses, including but not limited to temporary wholesale activities, festivals, concerts, carnivals, and traveling circuses, shall be valid for a maximum of 14 consecutive days."
+      },
+      {
+        "label": "2",
+        "text": "No property shall be issued more than six Temporary Use Permit in a calendar year. Organized community events sponsored by the Town and located on publicly owned land are exempt from this requirement."
+      },
+      {
+        "label": null,
+        "text": ""
+      }
+    ]
+  }
+}

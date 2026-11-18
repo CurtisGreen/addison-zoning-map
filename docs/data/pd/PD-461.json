@@ -106,23 +106,20 @@
       "page": 7,
       "quote": "Maximum building height - 2 stories"
     },
-    "unitSizeMin": {
+    "livingAreaMin": {
       "value": 1200,
       "ordinance": "078-461",
       "page": 6,
       "quote": "Minimum dwelling unit area - 1200 sq. ft. of living area"
     }
   },
-  "review": {
-    "base": "Section 2 applies \"the use restrictions, height restriction, and area restrictions as setforth in R-1 Single Family Dwelling District\" of the 1978 Zoning Ordinance No. 66. Mapped to UDC R-1, so today's R-1 limits (such as 35 ft height) show where this PD sets none.",
-    "uses": "Section 2 allows only single-family and two-family residences plus incidental uses. Two-family mapped to duplex; zero-lot-line lots are single-family detached.",
-    "ordinances": "Ordinance 461 created Planned Development District No. 6. The Midway Meadows standards on pages 6-7 are attached development plans (Section 2(a)). Pages 6-7 have a poor text layer; values were read from the page images, including the zero-lot-line lot depth (115 ft) that the text layer dropped.",
-    "acres": "The ordinance describes 59.6144 acres; the current map shows 46.4 acres for PD 461.",
-    "frontSetbackMin": "Zero-lot-line: 20 ft at front-entry garages; 10 ft at screening walls, porte-cochere, or faces of the main residential building.",
-    "sideSetbackMin": "Zero-lot-line: 3 ft at the \"zero\" setback line, 7 ft on the opposite side. Single family detached and duplex: 10 ft on the street side of corner lots.",
-    "rearSetbackMin": "20 ft at rear-entry garages, all lot types.",
-    "lotCoverageMax": "Includes accessory buildings; excludes swimming pools and cabanas.",
-    "unitSizeMin": "Living area."
-  },
-  "notes": "70% masonry exterior below the first-floor ceiling plate line. Two off-street parking spaces per dwelling unit. 5 ft sidewalks in the single family detached area. Development phasing tied to Ordinance Nos. 459 and 460 (Section 2(b))."
+  "review": {},
+  "notes": [
+    "70% masonry exterior below the first-floor ceiling plate line.",
+    "Two off-street parking spaces per dwelling unit.",
+    "5 ft sidewalks in the single family detached area.",
+    "Development phasing tied to Ordinance Nos. 459 and 460 (Section 2(b))."
+  ],
+  "acresWithRoads": 59.6144,
+  "curtisNotes": "Midway Meadows has uses similar to R3 and dimensions similar to R2. It was originally based on the legacy R1, but modern R1 has drifted away from it."
 }

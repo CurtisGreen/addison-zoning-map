@@ -1,7 +1,7 @@
 """Pull Addison zoning, place types, and PD ordinance links from the Town GIS.
 
 Writes:
-  docs/data/zones.geojson  map polygons (zone, placeType, specialUsePermit)
+  docs/data/zones.geojson  map polygons (zone, placeType)
   docs/data/zones.json     one entry per zone: acres, place types, SUPs; PDs also get ordinances
 Zoning polygons that are all park (Town parks layer), railroad, or excluded parcels are left off the map.
 Keeps PD names, bases, and done flags already in zones.json. Re-run when the zoning map changes.
@@ -30,6 +30,10 @@ DATA = Path(__file__).resolve().parent.parent / "docs" / "data"
 TOWN_WIDE_ORDINANCES = {"025-015"}  # O25-015 rezoned the whole town to UDC districts; not PD-specific
 NOT_PARKS = ("Elmntry",)  # school grounds in the parks layer stay zoned
 # Zones that stay on the map even where the parks layer covers them
+# Ordinances that amend a PD but are missing from the town map's ordinance list for it
+EXTRA_ORDINANCES = {
+    "PD 007-034": ["009-002"],  # amends Exhibit D, Street A
+}
 KEEP_ZONES = {
     "PD 23-08": "Development site between Addison Circle Park and the DART Addison Transit Center; the parks layer's Addison Circle Park shape overlaps it",
 }
@@ -90,7 +94,6 @@ def is_all_excluded(geom, excluded):
 
 
 def place_type_areas(geom, place_types):
-    """Place type name -> overlapping area."""
     areas = {}
     for name, polygon in place_types:
         if polygon.intersects(geom):
@@ -151,13 +154,12 @@ def main():
         pd_code = record["ZONE_CODE"].strip().removeprefix("PD ")
         # '?' = GIS has no ZONE_CODE for this PD polygon; the id is guessed from its ordinance chain
         zone_id = district if district != "PD" else f"PD {pd_code or chain[0] + '?'}"
-        sup = record["SU_TOT"].strip()
 
         if district == "PD":
             kept = previous.get(zone_id, {})
             zone = zones.setdefault(zone_id, {"kind": "pd", "name": kept.get("name", ""), "base": kept.get("base"),
                                               "done": kept.get("done", False), "acres": 0, "mainOrdinance": None,
-                                              "ordinances": {}, "placeTypes": [], "specialUsePermits": []})
+                                              "ordinances": {}, "placeTypes": []})
             main_ordinance = find_ordinance(pd_code) if pd_code else None
             if main_ordinance:
                 zone["mainOrdinance"] = main_ordinance["id"]
@@ -167,11 +169,11 @@ def main():
                     zone["ordinances"][ordinance["id"]] = ordinance
                 else:
                     unmatched.add(f"{zone_id}: {code}")
+            for ordinance_id in EXTRA_ORDINANCES.get(zone_id, []):
+                zone["ordinances"][ordinance_id] = ordinances[ordinance_id]
         else:
-            zone = zones.setdefault(zone_id, {"kind": "district", "acres": 0, "placeTypes": [], "specialUsePermits": []})
+            zone = zones.setdefault(zone_id, {"kind": "district", "acres": 0, "placeTypes": []})
         zone["acres"] += record["Shape.STArea()"] / SQ_FT_PER_ACRE
-        if sup and sup not in zone["specialUsePermits"]:
-            zone["specialUsePermits"].append(sup)
 
         geom = shape(feature["geometry"]).buffer(0)
         if zone_id not in KEEP_ZONES and is_all_excluded(geom, excluded):  # partly-excluded polygons stay whole
@@ -183,8 +185,6 @@ def main():
         for name, area in areas.items():
             totals = place_type_totals.setdefault(zone_id, {})
             totals[name] = totals.get(name, 0) + area
-        if sup:
-            props["specialUsePermit"] = sup
         geometry = mapping(geom)
         features.append({"type": "Feature", "properties": props,
                          "geometry": {"type": geometry["type"], "coordinates": round_coordinates(geometry["coordinates"])}})

@@ -17,12 +17,12 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "docs" / "data"
 PDFS = ROOT / "pdfs"
 PERMISSIONS = {"P", "S", "A", "T"}  # by right, special use permit, accessory, temporary
-GARBLED_CHARACTERS = "~=^"  # common junk in old, poor-quality text layers ("Lo= area", "50~")
-GARBLED_THRESHOLD = 8  # this many junk characters on a page means: OCR it ourselves
-MIN_QUOTE_LENGTH = 12  # short quotes like "Bank" match anywhere and prove nothing
-QUOTE_MATCH_RATIO = 0.85  # tolerance for OCR noise
+GARBLED_CHARACTERS = "~=^"
+GARBLED_THRESHOLD = 8
+MIN_QUOTE_LENGTH = 12
+QUOTE_MATCH_RATIO = 0.85
 SKELETON = {"id": "", "name": "", "base": None, "usesOnly": False, "purpose": "", "uses": [], "otherUses": [],
-            "dimensions": {}, "review": {}, "notes": ""}
+            "dimensions": {}, "review": {}, "notes": []}
 
 
 def read_json(path):

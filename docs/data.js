@@ -1,6 +1,4 @@
-// Shared by map.js (map page) and zone.js (detail page).
-// Loads the data files and turns any zone id into one zone object with the same shape
-// for regular districts and planned developments (PDs).
+// Loads the data files and turns a zone id into one zone object, for districts and planned developments (PDs) alike.
 
 /** Permission codes from UDC Table 4.2-1, plus "none" for a use a PD removes. */
 export const PERMISSIONS = {
@@ -11,7 +9,6 @@ export const PERMISSIONS = {
   none: { mark: "—", label: "Not allowed", className: "not-allowed" },
 };
 
-/** Map colors by district family. */
 export const FAMILIES = {
   residential: { label: "Residential", color: "#f2c744" },
   mixed: { label: "Mixed use", color: "#f08c3a" },
@@ -72,13 +69,13 @@ export function showError(element, error) {
   element.innerHTML = `<p class="error">Couldn't load data. Try reloading the page.</p>`;
 }
 
-/** Goes between a zone id and its name, as in the UDC headings ("R-1 – Residential"). */
-export const NAME_SEPARATOR = " – ";
+/** "R-2: Residential 2", or just the id when there is no name. */
+export const idWithName = (id, name) => (name ? `${id}: ${name}` : id);
 
-/** "CG – Commercial General" or "PD 461 – Midway Meadows". */
+/** "CG: Commercial General" or "PD 461: Midway Meadows". */
 export function zoneLabel(zoneId, { base, zoneIndex }) {
   const name = base.districts[zoneId]?.name || zoneIndex.zones[zoneId]?.name;
-  return name ? `${zoneId}${NAME_SEPARATOR}${name}` : zoneId;
+  return idWithName(zoneId, name);
 }
 
 export const zonePageUrl = (zoneId) =>
@@ -97,7 +94,6 @@ export async function getZone(zoneId) {
   const { base, zoneIndex } = await loadSiteData();
   const index = zoneIndex.zones[zoneId] || {
     placeTypes: [],
-    specialUsePermits: [],
   };
   const district = base.districts[zoneId];
   if (district) {
@@ -109,6 +105,8 @@ export async function getZone(zoneId) {
       id: zoneId,
       kind: "district",
       review: {},
+      tableNotes: {},
+      noteRefs: {},
       ...district,
       index,
       sources: [udcLink],
@@ -129,6 +127,8 @@ export async function getZone(zoneId) {
     uses: null,
     dimensions: {},
     review: {},
+    tableNotes: {},
+    noteRefs: {},
   };
   if (!index.done) return zone;
 
@@ -139,6 +139,17 @@ export async function getZone(zoneId) {
     if (use.permission === "none") delete uses[use.name];
     else uses[use.name] = use.permission;
   }
+  // Base district notes are dropped for dimensions the PD sets itself.
+  const inheritedReview = Object.fromEntries(
+    Object.entries(baseDistrict?.review || {}).filter(
+      ([key]) => !(key in pdData.dimensions),
+    ),
+  );
+  const inheritedNoteRefs = Object.fromEntries(
+    Object.entries(baseDistrict?.noteRefs || {}).filter(
+      ([key]) => !(key in pdData.dimensions),
+    ),
+  );
   return {
     ...zone,
     pdData,
@@ -147,12 +158,13 @@ export async function getZone(zoneId) {
     base: pdData.base,
     uses,
     dimensions: { ...baseDistrict?.dimensions, ...pdData.dimensions },
-    review: { ...baseDistrict?.review, ...pdData.review },
+    review: { ...inheritedReview, ...pdData.review },
+    tableNotes: baseDistrict?.tableNotes || {},
+    noteRefs: inheritedNoteRefs,
   };
 }
 
-export const zoneTitle = (zone) =>
-  [zone.id, zone.name].filter(Boolean).join(NAME_SEPARATOR);
+export const zoneTitle = (zone) => idWithName(zone.id, zone.name);
 
 /** The one source to show in a popup: the UDC section, or the PD's own ordinance (latest if unknown). */
 export function mainSource(zone) {
@@ -175,15 +187,16 @@ export function placeTypeInfo(name, base) {
   );
 }
 
-// ---------- formatting ----------
-
 const HTML_ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" };
 export const escapeHtml = (text) =>
   String(text).replace(/[&<>"]/g, (character) => HTML_ESCAPES[character]);
 
+const EXTERNAL_LINK_ICON =
+  '<svg class="external-icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
 export function externalLink({ label, url }) {
   if (!url) return escapeHtml(label);
-  return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(label)} ↗</a>`;
+  return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(label)} ${EXTERNAL_LINK_ICON}</a>`;
 }
 
 /** Link to the PDF page a value came from: the PD ordinance it cites, else the UDC. */
@@ -210,12 +223,12 @@ function withUnit(text, unit) {
   return unit === "%" ? `${text}%` : `${text} ${unit}`;
 }
 
-/** 70 -> "70 ft", "none" -> "None", "5-15" -> "5–15 ft", {Interior: 5, Street: 20} -> "Interior 5 ft · Street 20 ft". */
+/** 70 -> "70 ft", "none" -> "None", "5-15" -> "5–15 ft", {Interior: 5, Street: 20} -> "Interior 5 ft, Street 20 ft". */
 export function formatValue(value, unit) {
   if (value && typeof value === "object") {
     return Object.entries(value)
       .map(([part, partValue]) => `${part} ${formatValue(partValue, unit)}`)
-      .join(" · ");
+      .join(", ");
   }
   if (value === "none") return "None";
   if (typeof value === "number") return withUnit(value.toLocaleString(), unit);
