@@ -1,0 +1,2022 @@
+{
+  "sources": {
+    "udc": {
+      "name": "UDC Ord. O25-004",
+      "url": "https://developmentservices.addisontx.gov/files/sharedassets/devservices/v/3/documents/adopted-codes/udc-adoption-draft-clean-clickable-adopted-3.25.2025.pdf"
+    },
+    "plan": {
+      "name": "Advance Addison 2050",
+      "url": "https://developmentservices.addisontx.gov/files/sharedassets/devservices/v/1/documents/adopted-codes/place-types-excerpt.pdf"
+    }
+  },
+  "dimensionFields": {
+    "lotAreaMin": {
+      "label": "Lot area, min",
+      "unit": "sq ft"
+    },
+    "lotAreaPerUnitMin": {
+      "label": "Lot area per unit, min",
+      "unit": "sq ft"
+    },
+    "lotWidthMin": {
+      "label": "Lot width, min",
+      "unit": "ft"
+    },
+    "lotWidthMax": {
+      "label": "Lot width, max",
+      "unit": "ft"
+    },
+    "lotDepthMin": {
+      "label": "Lot depth, min",
+      "unit": "ft"
+    },
+    "frontSetbackMin": {
+      "label": "Front setback, min",
+      "unit": "ft"
+    },
+    "buildTo": {
+      "label": "Build-to",
+      "unit": "ft"
+    },
+    "sideSetbackMin": {
+      "label": "Side setback, min",
+      "unit": "ft"
+    },
+    "rearSetbackMin": {
+      "label": "Rear setback, min",
+      "unit": "ft"
+    },
+    "heightMin": {
+      "label": "Height, min",
+      "unit": "ft"
+    },
+    "heightMax": {
+      "label": "Height, max",
+      "unit": "ft"
+    },
+    "heightMaxStories": {
+      "label": "Height, max",
+      "unit": "stories"
+    },
+    "lotCoverageMax": {
+      "label": "Lot coverage, max",
+      "unit": "%"
+    },
+    "facadeAtBuildToMin": {
+      "label": "Façade at build-to, min",
+      "unit": "%"
+    },
+    "densityMax": {
+      "label": "Density, max",
+      "unit": "units/acre"
+    },
+    "unitSizeMin": {
+      "label": "Unit size, min",
+      "unit": "sq ft"
+    },
+    "floorAreaRatioMax": {
+      "label": "Floor area ratio, max",
+      "unit": ""
+    },
+    "floorAreaMax": {
+      "label": "Floor area, max",
+      "unit": "sq ft"
+    }
+  },
+  "uses": [
+    {
+      "name": "Cottage development",
+      "category": "Household Living",
+      "page": 130,
+      "standard": "4.3.2.A"
+    },
+    {
+      "name": "Dwelling, duplex",
+      "category": "Household Living",
+      "page": 130
+    },
+    {
+      "name": "Dwelling, fourplex",
+      "category": "Household Living",
+      "page": 130,
+      "standard": "4.3.2.B"
+    },
+    {
+      "name": "Dwelling, live/work",
+      "category": "Household Living",
+      "page": 130,
+      "standard": "4.3.2.C"
+    },
+    {
+      "name": "Dwelling, multifamily",
+      "category": "Household Living",
+      "page": 130,
+      "standard": "4.3.2.D"
+    },
+    {
+      "name": "Dwelling, single-family (attached)",
+      "category": "Household Living",
+      "page": 130,
+      "standard": "4.3.2.E"
+    },
+    {
+      "name": "Dwelling, single-family (detached)",
+      "category": "Household Living",
+      "page": 130,
+      "standard": "4.3.2.F"
+    },
+    {
+      "name": "Dwelling, triplex",
+      "category": "Household Living",
+      "page": 130,
+      "standard": "4.3.2.G"
+    },
+    {
+      "name": "Manufactured home development (HUD-Code)",
+      "category": "Household Living",
+      "page": 130,
+      "standard": "4.3.2.H"
+    },
+    {
+      "name": "Assisted living facility",
+      "category": "Group Living",
+      "page": 130
+    },
+    {
+      "name": "Continuing care facility",
+      "category": "Group Living",
+      "page": 130
+    },
+    {
+      "name": "Group care home, FHAA small",
+      "category": "Group Living",
+      "page": 130,
+      "standard": "4.3.2.I"
+    },
+    {
+      "name": "Group care home, FHAA large",
+      "category": "Group Living",
+      "page": 130,
+      "standard": "4.3.2.I"
+    },
+    {
+      "name": "Supportive housing, small",
+      "category": "Group Living",
+      "page": 130
+    },
+    {
+      "name": "Supportive housing, large",
+      "category": "Group Living",
+      "page": 130
+    },
+    {
+      "name": "Club or lodge",
+      "category": "Community and Cultural Facilities",
+      "page": 130
+    },
+    {
+      "name": "Day care center, adult or child",
+      "category": "Community and Cultural Facilities",
+      "page": 130,
+      "standard": "4.3.3.A"
+    },
+    {
+      "name": "Day care home, adult or child",
+      "category": "Community and Cultural Facilities",
+      "page": 130,
+      "standard": "4.3.3.B"
+    },
+    {
+      "name": "Funeral facility",
+      "category": "Community and Cultural Facilities",
+      "page": 130
+    },
+    {
+      "name": "Library",
+      "category": "Community and Cultural Facilities",
+      "page": 130
+    },
+    {
+      "name": "Museum",
+      "category": "Community and Cultural Facilities",
+      "page": 130
+    },
+    {
+      "name": "Park or open space, active",
+      "category": "Community and Cultural Facilities",
+      "page": 130
+    },
+    {
+      "name": "Park or open space, passive",
+      "category": "Community and Cultural Facilities",
+      "page": 130,
+      "standard": "4.3.3.C"
+    },
+    {
+      "name": "Place of worship",
+      "category": "Community and Cultural Facilities",
+      "page": 130
+    },
+    {
+      "name": "Police, fire, or rescue facility (private)",
+      "category": "Community and Cultural Facilities",
+      "page": 130
+    },
+    {
+      "name": "Police, fire, or rescue facility (public)",
+      "category": "Community and Cultural Facilities",
+      "page": 130,
+      "standard": "4.3.3.D"
+    },
+    {
+      "name": "School, college or university",
+      "category": "Educational Facilities",
+      "page": 131
+    },
+    {
+      "name": "School, public or private",
+      "category": "Educational Facilities",
+      "page": 131
+    },
+    {
+      "name": "School, vocational or trade",
+      "category": "Educational Facilities",
+      "page": 131
+    },
+    {
+      "name": "Hospital",
+      "category": "Healthcare Facilities",
+      "page": 131
+    },
+    {
+      "name": "Medical clinic",
+      "category": "Healthcare Facilities",
+      "page": 131,
+      "standard": "4.3.3.E"
+    },
+    {
+      "name": "Kennel, commercial",
+      "category": "Agricultural and Animal",
+      "page": 131,
+      "standard": "4.3.4.A"
+    },
+    {
+      "name": "Plant nursery or greenhouse",
+      "category": "Agricultural and Animal",
+      "page": 131
+    },
+    {
+      "name": "Urban agriculture, noncommercial",
+      "category": "Agricultural and Animal",
+      "page": 131,
+      "standard": "4.3.4.B"
+    },
+    {
+      "name": "Veterinary hospital or clinic",
+      "category": "Agricultural and Animal",
+      "page": 131,
+      "standard": "4.3.4.C"
+    },
+    {
+      "name": "Recreation facility, indoor",
+      "category": "Recreation and Entertainment",
+      "page": 131,
+      "standard": "4.3.4.D"
+    },
+    {
+      "name": "Recreation facility, outdoor",
+      "category": "Recreation and Entertainment",
+      "page": 131,
+      "standard": "4.3.4.E"
+    },
+    {
+      "name": "Sexually oriented business",
+      "category": "Recreation and Entertainment",
+      "page": 131,
+      "standard": "4.3.4.F"
+    },
+    {
+      "name": "Beer and Wine sales, off-premise consumption",
+      "category": "Food and Beverage",
+      "page": 131
+    },
+    {
+      "name": "Brewpub, distillery, or winery",
+      "category": "Food and Beverage",
+      "page": 131
+    },
+    {
+      "name": "Catering establishment",
+      "category": "Food and Beverage",
+      "page": 131
+    },
+    {
+      "name": "Hookah bar",
+      "category": "Food and Beverage",
+      "page": 131,
+      "standard": "4.3.4.G"
+    },
+    {
+      "name": "Liquor sales, off-premise consumption",
+      "category": "Food and Beverage",
+      "page": 131,
+      "note": "See Code of Ordinances Ch. 6 (Alcoholic Beverages)"
+    },
+    {
+      "name": "Microbrewery",
+      "category": "Food and Beverage",
+      "page": 131,
+      "standard": "4.3.4.H"
+    },
+    {
+      "name": "Mobile food truck park",
+      "category": "Food and Beverage",
+      "page": 131,
+      "standard": "4.3.4.I"
+    },
+    {
+      "name": "Restaurant",
+      "category": "Food and Beverage",
+      "page": 131,
+      "standard": "4.3.4.J"
+    },
+    {
+      "name": "Bed and breakfast",
+      "category": "Lodging",
+      "page": 131,
+      "standard": "4.3.4.K"
+    },
+    {
+      "name": "Hotel, Full Service",
+      "category": "Lodging",
+      "page": 131,
+      "standard": "4.3.4.L"
+    },
+    {
+      "name": "Hotel, Limited Service",
+      "category": "Lodging",
+      "page": 131
+    },
+    {
+      "name": "Residence Hotel",
+      "category": "Lodging",
+      "page": 131
+    },
+    {
+      "name": "Bank or financial institution",
+      "category": "Office, Business, Professional, and Personal Services",
+      "page": 131
+    },
+    {
+      "name": "Credit access business",
+      "category": "Office, Business, Professional, and Personal Services",
+      "page": 131,
+      "standard": "4.3.4.M"
+    },
+    {
+      "name": "Laundromat, self-service",
+      "category": "Office, Business, Professional, and Personal Services",
+      "page": 132
+    },
+    {
+      "name": "Office",
+      "category": "Office, Business, Professional, and Personal Services",
+      "page": 132
+    },
+    {
+      "name": "Personal services",
+      "category": "Office, Business, Professional, and Personal Services",
+      "page": 132
+    },
+    {
+      "name": "Building supply store",
+      "category": "Retail Sales",
+      "page": 132
+    },
+    {
+      "name": "Pawn shop",
+      "category": "Retail Sales",
+      "page": 132
+    },
+    {
+      "name": "Retail sales, less than 15,000 sq. ft. GFA",
+      "category": "Retail Sales",
+      "page": 132,
+      "standard": "4.3.4.N"
+    },
+    {
+      "name": "Retail sales, 15,000 to 50,000 sq. ft. GFA",
+      "category": "Retail Sales",
+      "page": 132,
+      "standard": "4.3.4.N"
+    },
+    {
+      "name": "Retail sales, more than 50,000 sq. ft. GFA",
+      "category": "Retail Sales",
+      "page": 132,
+      "standard": "4.3.4.N"
+    },
+    {
+      "name": "Equipment sales or rental",
+      "category": "Transportation, Vehicles, and Equipment",
+      "page": 132,
+      "standard": "4.3.4.O"
+    },
+    {
+      "name": "Fleet services",
+      "category": "Transportation, Vehicles, and Equipment",
+      "page": 132
+    },
+    {
+      "name": "Parking facility, private",
+      "category": "Transportation, Vehicles, and Equipment",
+      "page": 132
+    },
+    {
+      "name": "Parking facility, public",
+      "category": "Transportation, Vehicles, and Equipment",
+      "page": 132
+    },
+    {
+      "name": "Transit terminal or station",
+      "category": "Transportation, Vehicles, and Equipment",
+      "page": 132
+    },
+    {
+      "name": "Vehicle fuel station",
+      "category": "Transportation, Vehicles, and Equipment",
+      "page": 132,
+      "standard": "4.3.4.P"
+    },
+    {
+      "name": "Vehicle repair, major",
+      "category": "Transportation, Vehicles, and Equipment",
+      "page": 132
+    },
+    {
+      "name": "Vehicle repair, minor",
+      "category": "Transportation, Vehicles, and Equipment",
+      "page": 132,
+      "standard": "4.3.4.Q"
+    },
+    {
+      "name": "Vehicle sales or leasing, indoors",
+      "category": "Transportation, Vehicles, and Equipment",
+      "page": 132
+    },
+    {
+      "name": "Vehicle wash",
+      "category": "Transportation, Vehicles, and Equipment",
+      "page": 132,
+      "standard": "4.3.4.R"
+    },
+    {
+      "name": "Airport, public-owned",
+      "category": "Aviation",
+      "page": 132
+    },
+    {
+      "name": "Commercial laundry facility",
+      "category": "Manufacturing and Processing",
+      "page": 132
+    },
+    {
+      "name": "Data center",
+      "category": "Manufacturing and Processing",
+      "page": 132,
+      "standard": "4.3.5.A"
+    },
+    {
+      "name": "Food production or processing",
+      "category": "Manufacturing and Processing",
+      "page": 132,
+      "standard": "4.3.5.B"
+    },
+    {
+      "name": "Manufacturing, artisan",
+      "category": "Manufacturing and Processing",
+      "page": 132,
+      "standard": "4.3.5.C"
+    },
+    {
+      "name": "Manufacturing, low-impact",
+      "category": "Manufacturing and Processing",
+      "page": 132,
+      "standard": "4.3.5.D"
+    },
+    {
+      "name": "Resource or mineral extraction",
+      "category": "Manufacturing and Processing",
+      "page": 132
+    },
+    {
+      "name": "Contractor’s office",
+      "category": "Storage and Warehousing",
+      "page": 132
+    },
+    {
+      "name": "Storage, self-service",
+      "category": "Storage and Warehousing",
+      "page": 132,
+      "standard": "4.3.5.E"
+    },
+    {
+      "name": "Storage, outdoor",
+      "category": "Storage and Warehousing",
+      "page": 132,
+      "standard": "4.3.5.F"
+    },
+    {
+      "name": "Warehouse or wholesale facility",
+      "category": "Storage and Warehousing",
+      "page": 133,
+      "standard": "4.3.5.G"
+    },
+    {
+      "name": "Public utility, major",
+      "category": "Utilities and Communication Uses",
+      "page": 133,
+      "standard": "4.3.6.A"
+    },
+    {
+      "name": "Public utility, minor",
+      "category": "Utilities and Communication Uses",
+      "page": 133,
+      "standard": "4.3.6.A"
+    },
+    {
+      "name": "Satellite earth station",
+      "category": "Utilities and Communication Uses",
+      "page": 133,
+      "standard": "4.3.6.B"
+    },
+    {
+      "name": "Solar energy system",
+      "category": "Utilities and Communication Uses",
+      "page": 133,
+      "standard": "4.3.6.C"
+    },
+    {
+      "name": "Wind energy system, more than 100 kW",
+      "category": "Utilities and Communication Uses",
+      "page": 133,
+      "standard": "4.3.6.D"
+    },
+    {
+      "name": "Wind energy system, less than 100 kW",
+      "category": "Utilities and Communication Uses",
+      "page": 133,
+      "standard": "4.3.6.D"
+    },
+    {
+      "name": "Wireless communication facility, building- or roof-mounted",
+      "category": "Utilities and Communication Uses",
+      "page": 133,
+      "standard": "4.3.6.E"
+    },
+    {
+      "name": "Wireless communication facility, ground-mounted",
+      "category": "Utilities and Communication Uses",
+      "page": 133,
+      "standard": "4.3.6.E"
+    },
+    {
+      "name": "Alcohol sales, on-premise consumption",
+      "category": "Accessory Uses",
+      "page": 133
+    },
+    {
+      "name": "Caretaker’s quarters",
+      "category": "Accessory Uses",
+      "page": 133
+    },
+    {
+      "name": "Drive-through",
+      "category": "Accessory Uses",
+      "page": 133,
+      "standard": "4.4.4.A"
+    },
+    {
+      "name": "Donation box",
+      "category": "Accessory Uses",
+      "page": 133,
+      "standard": "4.4.4.B"
+    },
+    {
+      "name": "Dwelling, accessory (ADU)",
+      "category": "Accessory Uses",
+      "page": 133,
+      "standard": "4.4.4.C"
+    },
+    {
+      "name": "Event space",
+      "category": "Accessory Uses",
+      "page": 133
+    },
+    {
+      "name": "Home occupation",
+      "category": "Accessory Uses",
+      "page": 133,
+      "standard": "4.4.4.D"
+    },
+    {
+      "name": "Valet parking service",
+      "category": "Accessory Uses",
+      "page": 133,
+      "standard": "4.4.4.E"
+    },
+    {
+      "name": "Construction support activities",
+      "category": "Temporary Uses",
+      "page": 133,
+      "standard": "4.5.5.A"
+    },
+    {
+      "name": "Mobile food truck",
+      "category": "Temporary Uses",
+      "page": 133,
+      "standard": "4.5.5.B"
+    },
+    {
+      "name": "Outdoor retail and display",
+      "category": "Temporary Uses",
+      "page": 133,
+      "standard": "4.5.5.C"
+    },
+    {
+      "name": "Portable storage structure",
+      "category": "Temporary Uses",
+      "page": 133,
+      "standard": "4.5.5.D"
+    },
+    {
+      "name": "Real estate sales or model home",
+      "category": "Temporary Uses",
+      "page": 133,
+      "standard": "4.5.5.E"
+    },
+    {
+      "name": "Seasonal sales",
+      "category": "Temporary Uses",
+      "page": 133,
+      "standard": "4.5.5.F"
+    },
+    {
+      "name": "Special event",
+      "category": "Temporary Uses",
+      "page": 133,
+      "standard": "4.5.5.G"
+    }
+  ],
+  "districts": {
+    "R-1": {
+      "name": "Residential 1",
+      "section": "3.4.1",
+      "page": 101,
+      "purpose": "Single-family homes on large suburban lots.",
+      "uses": {
+        "Dwelling, single-family (detached)": "P",
+        "Group care home, FHAA small": "P",
+        "Day care home, adult or child": "A",
+        "Park or open space, active": "P",
+        "Park or open space, passive": "P",
+        "Place of worship": "S",
+        "Police, fire, or rescue facility (public)": "S",
+        "School, public or private": "S",
+        "Urban agriculture, noncommercial": "P",
+        "Recreation facility, indoor": "A",
+        "Recreation facility, outdoor": "A",
+        "Resource or mineral extraction": "S",
+        "Storage, outdoor": "A",
+        "Public utility, major": "P",
+        "Public utility, minor": "P",
+        "Satellite earth station": "A",
+        "Solar energy system": "A",
+        "Wind energy system, less than 100 kW": "A",
+        "Dwelling, accessory (ADU)": "A",
+        "Home occupation": "A",
+        "Construction support activities": "T",
+        "Mobile food truck": "T",
+        "Portable storage structure": "T",
+        "Real estate sales or model home": "T",
+        "Seasonal sales": "T",
+        "Special event": "T"
+      },
+      "dimensions": {
+        "lotAreaMin": {
+          "value": 16000,
+          "page": 101
+        },
+        "lotWidthMin": {
+          "value": 80,
+          "page": 101
+        },
+        "frontSetbackMin": {
+          "value": 30,
+          "page": 101
+        },
+        "sideSetbackMin": {
+          "value": {
+            "Interior": 5,
+            "Street": 20
+          },
+          "page": 101
+        },
+        "rearSetbackMin": {
+          "value": 20,
+          "page": 101
+        },
+        "heightMax": {
+          "value": 35,
+          "page": 101
+        }
+      }
+    },
+    "R-2": {
+      "name": "Residential 2",
+      "section": "3.4.2",
+      "page": 102,
+      "purpose": "Compact single-family homes in a low-density urban setting.",
+      "uses": {
+        "Dwelling, live/work": "S",
+        "Dwelling, single-family (detached)": "P",
+        "Assisted living facility": "S",
+        "Group care home, FHAA small": "P",
+        "Day care home, adult or child": "A",
+        "Park or open space, active": "P",
+        "Park or open space, passive": "P",
+        "Place of worship": "S",
+        "Police, fire, or rescue facility (public)": "S",
+        "School, public or private": "S",
+        "Urban agriculture, noncommercial": "A",
+        "Recreation facility, indoor": "A",
+        "Recreation facility, outdoor": "A",
+        "Resource or mineral extraction": "S",
+        "Storage, outdoor": "A",
+        "Public utility, major": "P",
+        "Public utility, minor": "P",
+        "Satellite earth station": "A",
+        "Solar energy system": "A",
+        "Wind energy system, less than 100 kW": "A",
+        "Dwelling, accessory (ADU)": "A",
+        "Home occupation": "A",
+        "Construction support activities": "T",
+        "Mobile food truck": "T",
+        "Portable storage structure": "T",
+        "Real estate sales or model home": "T",
+        "Seasonal sales": "T",
+        "Special event": "T"
+      },
+      "dimensions": {
+        "lotAreaMin": {
+          "value": 5500,
+          "page": 102
+        },
+        "lotWidthMin": {
+          "value": 55,
+          "page": 102
+        },
+        "buildTo": {
+          "value": {
+            "Arterial or collector": 20,
+            "Other streets": "15 or 20"
+          },
+          "page": 102
+        },
+        "sideSetbackMin": {
+          "value": "none",
+          "page": 102
+        },
+        "rearSetbackMin": {
+          "value": {
+            "Front-entry": 10,
+            "Rear-entry": 5
+          },
+          "page": 102
+        },
+        "heightMax": {
+          "value": 35,
+          "page": 102
+        },
+        "facadeAtBuildToMin": {
+          "value": 60,
+          "page": 102
+        }
+      },
+      "review": {
+        "buildTo": "Homes may not front arterials; collector only with rear-entry garage. Front-entry garages need 20 ft",
+        "sideSetbackMin": "No side setback, but 10 ft building separation required"
+      }
+    },
+    "R-3": {
+      "name": "Residential 3",
+      "section": "3.4.3",
+      "page": 103,
+      "purpose": "Mixed housing: houses, townhomes, duplex to fourplex, small apartments, live/work.",
+      "uses": {
+        "Cottage development": "S",
+        "Dwelling, duplex": "P",
+        "Dwelling, fourplex": "P",
+        "Dwelling, live/work": "P",
+        "Dwelling, multifamily": "S",
+        "Dwelling, single-family (attached)": "P",
+        "Dwelling, single-family (detached)": "P",
+        "Dwelling, triplex": "P",
+        "Assisted living facility": "S",
+        "Continuing care facility": "S",
+        "Group care home, FHAA small": "P",
+        "Group care home, FHAA large": "P",
+        "Day care home, adult or child": "A",
+        "Park or open space, active": "P",
+        "Park or open space, passive": "P",
+        "Place of worship": "S",
+        "Police, fire, or rescue facility (public)": "S",
+        "School, public or private": "S",
+        "Urban agriculture, noncommercial": "A",
+        "Recreation facility, indoor": "A",
+        "Recreation facility, outdoor": "A",
+        "Bed and breakfast": "S",
+        "Laundromat, self-service": "A",
+        "Resource or mineral extraction": "S",
+        "Storage, outdoor": "A",
+        "Public utility, major": "P",
+        "Public utility, minor": "P",
+        "Satellite earth station": "A",
+        "Solar energy system": "A",
+        "Wind energy system, less than 100 kW": "A",
+        "Dwelling, accessory (ADU)": "A",
+        "Home occupation": "A",
+        "Construction support activities": "T",
+        "Mobile food truck": "T",
+        "Portable storage structure": "T",
+        "Real estate sales or model home": "T",
+        "Seasonal sales": "T",
+        "Special event": "T"
+      },
+      "dimensions": {
+        "lotWidthMin": {
+          "value": {
+            "House": 30,
+            "Townhome": 20,
+            "Duplex": 30,
+            "Tri/fourplex": 40,
+            "Apartment, live/work": "none"
+          },
+          "page": 103
+        },
+        "lotWidthMax": {
+          "value": {
+            "House": 55,
+            "Townhome": 30,
+            "Duplex": 55,
+            "Tri/fourplex": 75,
+            "Apartment, live/work": "none"
+          },
+          "page": 103
+        },
+        "lotDepthMin": {
+          "value": {
+            "House": 75,
+            "Townhome": 75,
+            "Duplex": 75,
+            "Tri/fourplex": 75,
+            "Apartment, live/work": "none"
+          },
+          "page": 103
+        },
+        "buildTo": {
+          "value": "5-15",
+          "page": 103
+        },
+        "sideSetbackMin": {
+          "value": {
+            "House": 5,
+            "Townhome": "none",
+            "Duplex": 5,
+            "Tri/fourplex": 5,
+            "Apartment, live/work": 5
+          },
+          "page": 103
+        },
+        "rearSetbackMin": {
+          "value": 10,
+          "page": 103
+        },
+        "heightMax": {
+          "value": {
+            "House": 35,
+            "Townhome": 40,
+            "Duplex": 40,
+            "Tri/fourplex": 40,
+            "Apartment, live/work": 48
+          },
+          "page": 103
+        },
+        "facadeAtBuildToMin": {
+          "value": {
+            "House": 60,
+            "Townhome": 75,
+            "Duplex": 75,
+            "Tri/fourplex": 60,
+            "Apartment, live/work": 75
+          },
+          "page": 103
+        }
+      },
+      "review": {
+        "buildTo": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)",
+        "heightMax": "Table note [4] on height says 'minimum 20 ft for garages of front-entry dwellings' - looks like a misplaced note",
+        "lotWidthMin": "Cottage developments have extra limits (§4.3.2.A); apartments have minimum unit sizes (§4.3.2.D)"
+      }
+    },
+    "M-1": {
+      "name": "Mixed-Use Neighborhood",
+      "section": "3.5.1",
+      "page": 105,
+      "purpose": "Small to medium walkable mixed-use infill.",
+      "uses": {
+        "Cottage development": "S",
+        "Dwelling, fourplex": "P",
+        "Dwelling, live/work": "P",
+        "Dwelling, multifamily": "P",
+        "Dwelling, single-family (attached)": "P",
+        "Dwelling, single-family (detached)": "P",
+        "Dwelling, triplex": "P",
+        "Manufactured home development (HUD-Code)": "S",
+        "Assisted living facility": "S",
+        "Continuing care facility": "P",
+        "Group care home, FHAA small": "P",
+        "Group care home, FHAA large": "P",
+        "Day care center, adult or child": "S",
+        "Day care home, adult or child": "A",
+        "Library": "P",
+        "Museum": "P",
+        "Park or open space, active": "P",
+        "Park or open space, passive": "P",
+        "Place of worship": "S",
+        "Police, fire, or rescue facility (private)": "S",
+        "Police, fire, or rescue facility (public)": "S",
+        "School, public or private": "S",
+        "Medical clinic": "P",
+        "Urban agriculture, noncommercial": "A",
+        "Recreation facility, indoor": "A",
+        "Recreation facility, outdoor": "A",
+        "Beer and Wine sales, off-premise consumption": "S",
+        "Hookah bar": "S",
+        "Microbrewery": "S",
+        "Mobile food truck park": "S",
+        "Restaurant": "P",
+        "Bed and breakfast": "S",
+        "Hotel, Full Service": "S",
+        "Bank or financial institution": "P",
+        "Laundromat, self-service": "A",
+        "Office": "P",
+        "Personal services": "P",
+        "Retail sales, less than 15,000 sq. ft. GFA": "P",
+        "Transit terminal or station": "S",
+        "Food production or processing": "P",
+        "Resource or mineral extraction": "S",
+        "Storage, outdoor": "A",
+        "Public utility, major": "P",
+        "Public utility, minor": "P",
+        "Satellite earth station": "A",
+        "Solar energy system": "A",
+        "Wind energy system, less than 100 kW": "A",
+        "Wireless communication facility, building- or roof-mounted": "P",
+        "Alcohol sales, on-premise consumption": "A",
+        "Caretaker’s quarters": "A",
+        "Dwelling, accessory (ADU)": "A",
+        "Home occupation": "A",
+        "Valet parking service": "A",
+        "Construction support activities": "T",
+        "Mobile food truck": "T",
+        "Outdoor retail and display": "T",
+        "Portable storage structure": "T",
+        "Real estate sales or model home": "T",
+        "Seasonal sales": "T",
+        "Special event": "T"
+      },
+      "dimensions": {
+        "lotWidthMin": {
+          "value": "none",
+          "page": 105
+        },
+        "lotDepthMin": {
+          "value": "none",
+          "page": 105
+        },
+        "buildTo": {
+          "value": {
+            "Arterial": "10-15",
+            "Collector": "10-15",
+            "Local": "5-10",
+            "Alley/mews": "0-5",
+            "Park/open space": "5-10"
+          },
+          "page": 105
+        },
+        "facadeAtBuildToMin": {
+          "value": 75,
+          "page": 105
+        },
+        "sideSetbackMin": {
+          "value": "none",
+          "page": 105
+        },
+        "rearSetbackMin": {
+          "value": "none",
+          "page": 105
+        },
+        "heightMin": {
+          "value": 25,
+          "page": 105
+        },
+        "heightMax": {
+          "value": 48,
+          "page": 105
+        },
+        "lotCoverageMax": {
+          "value": 95,
+          "page": 105
+        }
+      },
+      "review": {
+        "buildTo": "Local street value read from a misaligned table row; arterial may extend for one parking row. Strip between curb and inside edge of sidewalk must be public right-of-way or easement",
+        "lotWidthMin": "Values are for mixed-use/nonresidential buildings; residential buildings use R-3 standards",
+        "heightMax": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)"
+      }
+    },
+    "M-2": {
+      "name": "Mixed-Use Suburban Corridor",
+      "section": "3.5.2",
+      "page": 107,
+      "purpose": "Mixed-use redevelopment of older commercial corridors.",
+      "uses": {
+        "Dwelling, live/work": "P",
+        "Dwelling, multifamily": "P",
+        "Dwelling, single-family (attached)": "P",
+        "Manufactured home development (HUD-Code)": "S",
+        "Assisted living facility": "S",
+        "Continuing care facility": "P",
+        "Group care home, FHAA small": "P",
+        "Group care home, FHAA large": "P",
+        "Supportive housing, small": "S",
+        "Club or lodge": "S",
+        "Day care center, adult or child": "P",
+        "Day care home, adult or child": "A",
+        "Library": "P",
+        "Museum": "P",
+        "Park or open space, active": "P",
+        "Park or open space, passive": "P",
+        "Place of worship": "P",
+        "Police, fire, or rescue facility (private)": "S",
+        "Police, fire, or rescue facility (public)": "S",
+        "School, college or university": "S",
+        "School, public or private": "S",
+        "Hospital": "S",
+        "Medical clinic": "P",
+        "Kennel, commercial": "S",
+        "Plant nursery or greenhouse": "S",
+        "Urban agriculture, noncommercial": "A",
+        "Veterinary hospital or clinic": "P",
+        "Recreation facility, indoor": "P",
+        "Recreation facility, outdoor": "P",
+        "Beer and Wine sales, off-premise consumption": "S",
+        "Hookah bar": "S",
+        "Microbrewery": "S",
+        "Mobile food truck park": "S",
+        "Restaurant": "P",
+        "Hotel, Full Service": "S",
+        "Hotel, Limited Service": "S",
+        "Residence Hotel": "S",
+        "Bank or financial institution": "P",
+        "Laundromat, self-service": "P",
+        "Office": "P",
+        "Personal services": "P",
+        "Retail sales, less than 15,000 sq. ft. GFA": "P",
+        "Retail sales, 15,000 to 50,000 sq. ft. GFA": "S",
+        "Retail sales, more than 50,000 sq. ft. GFA": "S",
+        "Parking facility, private": "S",
+        "Parking facility, public": "P",
+        "Transit terminal or station": "S",
+        "Vehicle sales or leasing, indoors": "S",
+        "Food production or processing": "P",
+        "Manufacturing, artisan": "P",
+        "Resource or mineral extraction": "S",
+        "Storage, outdoor": "A",
+        "Public utility, major": "P",
+        "Public utility, minor": "P",
+        "Satellite earth station": "A",
+        "Solar energy system": "A",
+        "Wind energy system, less than 100 kW": "A",
+        "Wireless communication facility, building- or roof-mounted": "P",
+        "Wireless communication facility, ground-mounted": "S",
+        "Alcohol sales, on-premise consumption": "A",
+        "Caretaker’s quarters": "A",
+        "Drive-through": "A",
+        "Donation box": "A",
+        "Home occupation": "A",
+        "Valet parking service": "A",
+        "Construction support activities": "T",
+        "Mobile food truck": "T",
+        "Outdoor retail and display": "T",
+        "Portable storage structure": "T",
+        "Real estate sales or model home": "T",
+        "Seasonal sales": "T",
+        "Special event": "T"
+      },
+      "dimensions": {
+        "lotWidthMin": {
+          "value": "none",
+          "page": 107
+        },
+        "lotDepthMin": {
+          "value": "none",
+          "page": 107
+        },
+        "buildTo": {
+          "value": {
+            "Arterial": "10-90",
+            "Collector": "10-90",
+            "Local": "10-90",
+            "Alley/mews": "0-5",
+            "Park/open space": "0-5"
+          },
+          "page": 107
+        },
+        "facadeAtBuildToMin": {
+          "value": 80,
+          "page": 107
+        },
+        "sideSetbackMin": {
+          "value": "none",
+          "page": 107
+        },
+        "rearSetbackMin": {
+          "value": "none",
+          "page": 107
+        },
+        "heightMin": {
+          "value": 25,
+          "page": 107
+        },
+        "heightMax": {
+          "value": 70,
+          "page": 107
+        },
+        "lotCoverageMax": {
+          "value": 80,
+          "page": 107
+        }
+      },
+      "review": {
+        "heightMax": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)",
+        "buildTo": "Strip between curb and inside edge of sidewalk must be public right-of-way or easement"
+      }
+    },
+    "M-3": {
+      "name": "Mixed-Use Urban Corridor",
+      "section": "3.5.3",
+      "page": 109,
+      "purpose": "Medium to large transit- and pedestrian-oriented mixed use.",
+      "uses": {
+        "Dwelling, live/work": "P",
+        "Dwelling, multifamily": "P",
+        "Assisted living facility": "S",
+        "Continuing care facility": "P",
+        "Group care home, FHAA small": "P",
+        "Group care home, FHAA large": "P",
+        "Supportive housing, small": "S",
+        "Club or lodge": "S",
+        "Day care center, adult or child": "P",
+        "Day care home, adult or child": "A",
+        "Library": "P",
+        "Museum": "P",
+        "Park or open space, active": "P",
+        "Park or open space, passive": "P",
+        "Place of worship": "P",
+        "Police, fire, or rescue facility (private)": "P",
+        "Police, fire, or rescue facility (public)": "P",
+        "School, college or university": "S",
+        "School, public or private": "S",
+        "School, vocational or trade": "S",
+        "Hospital": "S",
+        "Medical clinic": "P",
+        "Plant nursery or greenhouse": "S",
+        "Urban agriculture, noncommercial": "A",
+        "Recreation facility, indoor": "P",
+        "Recreation facility, outdoor": "P",
+        "Beer and Wine sales, off-premise consumption": "S",
+        "Hookah bar": "S",
+        "Microbrewery": "S",
+        "Mobile food truck park": "S",
+        "Restaurant": "P",
+        "Hotel, Full Service": "S",
+        "Hotel, Limited Service": "S",
+        "Residence Hotel": "S",
+        "Bank or financial institution": "P",
+        "Laundromat, self-service": "P",
+        "Office": "P",
+        "Personal services": "P",
+        "Retail sales, less than 15,000 sq. ft. GFA": "P",
+        "Retail sales, 15,000 to 50,000 sq. ft. GFA": "S",
+        "Parking facility, private": "S",
+        "Parking facility, public": "P",
+        "Transit terminal or station": "S",
+        "Food production or processing": "P",
+        "Manufacturing, artisan": "P",
+        "Resource or mineral extraction": "S",
+        "Public utility, major": "P",
+        "Public utility, minor": "P",
+        "Satellite earth station": "A",
+        "Solar energy system": "A",
+        "Wind energy system, less than 100 kW": "A",
+        "Wireless communication facility, building- or roof-mounted": "P",
+        "Alcohol sales, on-premise consumption": "A",
+        "Caretaker’s quarters": "A",
+        "Donation box": "A",
+        "Home occupation": "A",
+        "Valet parking service": "A",
+        "Construction support activities": "T",
+        "Mobile food truck": "T",
+        "Outdoor retail and display": "T",
+        "Portable storage structure": "T",
+        "Real estate sales or model home": "T",
+        "Seasonal sales": "T",
+        "Special event": "T"
+      },
+      "dimensions": {
+        "lotWidthMin": {
+          "value": "none",
+          "page": 109
+        },
+        "lotDepthMin": {
+          "value": "none",
+          "page": 109
+        },
+        "buildTo": {
+          "value": {
+            "Arterial": "0-15",
+            "Collector": "0-10",
+            "Local": "0-10",
+            "Alley/mews": "0-5",
+            "Park/open space": "0-5"
+          },
+          "page": 109
+        },
+        "facadeAtBuildToMin": {
+          "value": 80,
+          "page": 109
+        },
+        "sideSetbackMin": {
+          "value": "none",
+          "page": 109
+        },
+        "rearSetbackMin": {
+          "value": "none",
+          "page": 109
+        },
+        "heightMin": {
+          "value": 25,
+          "page": 109
+        },
+        "heightMax": {
+          "value": 70,
+          "page": 109
+        },
+        "lotCoverageMax": {
+          "value": 85,
+          "page": 109
+        }
+      },
+      "review": {
+        "heightMax": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)",
+        "buildTo": "Patios may extend to build-to line. Strip between curb and inside edge of sidewalk must be public right-of-way or easement"
+      }
+    },
+    "M-4": {
+      "name": "Mixed-Use Center",
+      "section": "3.5.4",
+      "page": 111,
+      "purpose": "Most intensive, transit-supportive mixed use around the DART station.",
+      "uses": {
+        "Dwelling, live/work": "P",
+        "Dwelling, multifamily": "P",
+        "Assisted living facility": "S",
+        "Continuing care facility": "P",
+        "Group care home, FHAA small": "P",
+        "Group care home, FHAA large": "P",
+        "Supportive housing, small": "S",
+        "Supportive housing, large": "S",
+        "Club or lodge": "S",
+        "Day care center, adult or child": "P",
+        "Day care home, adult or child": "A",
+        "Library": "P",
+        "Museum": "P",
+        "Park or open space, active": "P",
+        "Park or open space, passive": "P",
+        "Place of worship": "P",
+        "Police, fire, or rescue facility (private)": "P",
+        "Police, fire, or rescue facility (public)": "P",
+        "School, public or private": "S",
+        "School, vocational or trade": "S",
+        "Hospital": "S",
+        "Medical clinic": "P",
+        "Urban agriculture, noncommercial": "A",
+        "Recreation facility, indoor": "P",
+        "Recreation facility, outdoor": "S",
+        "Beer and Wine sales, off-premise consumption": "S",
+        "Hookah bar": "S",
+        "Microbrewery": "S",
+        "Mobile food truck park": "S",
+        "Restaurant": "P",
+        "Hotel, Full Service": "S",
+        "Bank or financial institution": "P",
+        "Laundromat, self-service": "P",
+        "Office": "P",
+        "Personal services": "P",
+        "Retail sales, less than 15,000 sq. ft. GFA": "P",
+        "Retail sales, 15,000 to 50,000 sq. ft. GFA": "S",
+        "Retail sales, more than 50,000 sq. ft. GFA": "S",
+        "Parking facility, private": "S",
+        "Parking facility, public": "P",
+        "Transit terminal or station": "S",
+        "Food production or processing": "P",
+        "Manufacturing, artisan": "P",
+        "Resource or mineral extraction": "S",
+        "Public utility, major": "P",
+        "Public utility, minor": "P",
+        "Satellite earth station": "A",
+        "Solar energy system": "A",
+        "Wind energy system, less than 100 kW": "A",
+        "Wireless communication facility, building- or roof-mounted": "P",
+        "Alcohol sales, on-premise consumption": "A",
+        "Caretaker’s quarters": "A",
+        "Donation box": "A",
+        "Home occupation": "A",
+        "Valet parking service": "A",
+        "Construction support activities": "T",
+        "Mobile food truck": "T",
+        "Outdoor retail and display": "T",
+        "Portable storage structure": "T",
+        "Real estate sales or model home": "T",
+        "Seasonal sales": "T",
+        "Special event": "T"
+      },
+      "dimensions": {
+        "lotWidthMin": {
+          "value": "none",
+          "page": 111
+        },
+        "lotDepthMin": {
+          "value": "none",
+          "page": 111
+        },
+        "buildTo": {
+          "value": {
+            "Arterial": "0-10",
+            "Collector": "0-10",
+            "Local": "0-10",
+            "Alley/mews": "0-5",
+            "Park/open space": "0-5"
+          },
+          "page": 111
+        },
+        "facadeAtBuildToMin": {
+          "value": 80,
+          "page": 111
+        },
+        "sideSetbackMin": {
+          "value": "none",
+          "page": 111
+        },
+        "rearSetbackMin": {
+          "value": "none",
+          "page": 111
+        },
+        "heightMax": {
+          "value": "none",
+          "page": 111
+        },
+        "lotCoverageMax": {
+          "value": 100,
+          "page": 111
+        }
+      },
+      "review": {
+        "heightMax": "No district limit, but Airport Overlay height limits apply",
+        "uses": "Use table note [1]: max 70% of a development's acreage may be residential or mixed-use with residential (p. 133)"
+      }
+    },
+    "CL": {
+      "name": "Commercial Limited",
+      "section": "3.6.1",
+      "page": 113,
+      "purpose": "Small-scale commercial, retail, office, and services.",
+      "uses": {
+        "Assisted living facility": "S",
+        "Continuing care facility": "S",
+        "Club or lodge": "S",
+        "Day care center, adult or child": "P",
+        "Funeral facility": "P",
+        "Library": "P",
+        "Museum": "P",
+        "Park or open space, active": "P",
+        "Park or open space, passive": "P",
+        "Place of worship": "P",
+        "Police, fire, or rescue facility (private)": "P",
+        "Police, fire, or rescue facility (public)": "P",
+        "School, public or private": "S",
+        "Hospital": "S",
+        "Medical clinic": "P",
+        "Kennel, commercial": "S",
+        "Plant nursery or greenhouse": "P",
+        "Urban agriculture, noncommercial": "A",
+        "Veterinary hospital or clinic": "P",
+        "Recreation facility, indoor": "P",
+        "Recreation facility, outdoor": "P",
+        "Beer and Wine sales, off-premise consumption": "S",
+        "Brewpub, distillery, or winery": "S",
+        "Catering establishment": "P",
+        "Hookah bar": "S",
+        "Microbrewery": "S",
+        "Mobile food truck park": "S",
+        "Restaurant": "P",
+        "Hotel, Full Service": "S",
+        "Hotel, Limited Service": "S",
+        "Bank or financial institution": "P",
+        "Laundromat, self-service": "P",
+        "Office": "P",
+        "Personal services": "P",
+        "Retail sales, less than 15,000 sq. ft. GFA": "P",
+        "Retail sales, 15,000 to 50,000 sq. ft. GFA": "P",
+        "Retail sales, more than 50,000 sq. ft. GFA": "S",
+        "Parking facility, private": "S",
+        "Parking facility, public": "P",
+        "Transit terminal or station": "S",
+        "Vehicle fuel station": "S",
+        "Food production or processing": "P",
+        "Manufacturing, artisan": "P",
+        "Resource or mineral extraction": "S",
+        "Public utility, major": "P",
+        "Public utility, minor": "P",
+        "Satellite earth station": "A",
+        "Solar energy system": "A",
+        "Wind energy system, more than 100 kW": "S",
+        "Wind energy system, less than 100 kW": "A",
+        "Wireless communication facility, building- or roof-mounted": "P",
+        "Alcohol sales, on-premise consumption": "A",
+        "Caretaker’s quarters": "A",
+        "Drive-through": "A",
+        "Donation box": "A",
+        "Valet parking service": "A",
+        "Construction support activities": "T",
+        "Mobile food truck": "T",
+        "Outdoor retail and display": "T",
+        "Portable storage structure": "T",
+        "Real estate sales or model home": "T",
+        "Seasonal sales": "T",
+        "Special event": "T"
+      },
+      "dimensions": {
+        "lotAreaMin": {
+          "value": "none",
+          "page": 113
+        },
+        "lotWidthMin": {
+          "value": "none",
+          "page": 113
+        },
+        "frontSetbackMin": {
+          "value": 25,
+          "page": 113
+        },
+        "sideSetbackMin": {
+          "value": "none",
+          "page": 113
+        },
+        "rearSetbackMin": {
+          "value": "none",
+          "page": 113
+        },
+        "heightMax": {
+          "value": 35,
+          "page": 113
+        },
+        "lotCoverageMax": {
+          "value": 80,
+          "page": 113
+        }
+      },
+      "review": {
+        "sideSetbackMin": "Side/rear at least 10 ft next to R-1, R-2, R-3, A, or PDs referencing them",
+        "heightMax": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)"
+      }
+    },
+    "CG": {
+      "name": "Commercial General",
+      "section": "3.6.2",
+      "page": 114,
+      "purpose": "Medium to large-scale commercial, retail, office, and services.",
+      "uses": {
+        "Assisted living facility": "S",
+        "Continuing care facility": "S",
+        "Club or lodge": "S",
+        "Day care center, adult or child": "P",
+        "Funeral facility": "P",
+        "Library": "P",
+        "Museum": "P",
+        "Park or open space, active": "P",
+        "Park or open space, passive": "P",
+        "Place of worship": "P",
+        "Police, fire, or rescue facility (private)": "P",
+        "Police, fire, or rescue facility (public)": "P",
+        "School, public or private": "S",
+        "Hospital": "S",
+        "Medical clinic": "P",
+        "Kennel, commercial": "S",
+        "Plant nursery or greenhouse": "P",
+        "Urban agriculture, noncommercial": "A",
+        "Veterinary hospital or clinic": "P",
+        "Recreation facility, indoor": "P",
+        "Recreation facility, outdoor": "P",
+        "Beer and Wine sales, off-premise consumption": "S",
+        "Brewpub, distillery, or winery": "P",
+        "Catering establishment": "P",
+        "Hookah bar": "S",
+        "Microbrewery": "S",
+        "Mobile food truck park": "S",
+        "Restaurant": "P",
+        "Hotel, Full Service": "S",
+        "Hotel, Limited Service": "S",
+        "Bank or financial institution": "P",
+        "Credit access business": "S",
+        "Laundromat, self-service": "P",
+        "Office": "P",
+        "Personal services": "P",
+        "Building supply store": "P",
+        "Retail sales, less than 15,000 sq. ft. GFA": "P",
+        "Retail sales, 15,000 to 50,000 sq. ft. GFA": "P",
+        "Retail sales, more than 50,000 sq. ft. GFA": "P",
+        "Equipment sales or rental": "S",
+        "Parking facility, private": "S",
+        "Parking facility, public": "P",
+        "Transit terminal or station": "S",
+        "Vehicle fuel station": "P",
+        "Vehicle repair, minor": "P",
+        "Vehicle wash": "P",
+        "Data center": "S",
+        "Food production or processing": "P",
+        "Manufacturing, artisan": "P",
+        "Manufacturing, low-impact": "S",
+        "Resource or mineral extraction": "S",
+        "Public utility, major": "P",
+        "Public utility, minor": "P",
+        "Satellite earth station": "A",
+        "Solar energy system": "A",
+        "Wind energy system, more than 100 kW": "S",
+        "Wind energy system, less than 100 kW": "A",
+        "Wireless communication facility, building- or roof-mounted": "P",
+        "Alcohol sales, on-premise consumption": "A",
+        "Caretaker’s quarters": "A",
+        "Drive-through": "A",
+        "Donation box": "A",
+        "Event space": "P",
+        "Valet parking service": "A",
+        "Construction support activities": "T",
+        "Mobile food truck": "T",
+        "Outdoor retail and display": "T",
+        "Portable storage structure": "T",
+        "Real estate sales or model home": "T",
+        "Seasonal sales": "T",
+        "Special event": "T"
+      },
+      "dimensions": {
+        "lotAreaMin": {
+          "value": "none",
+          "page": 114
+        },
+        "lotWidthMin": {
+          "value": "none",
+          "page": 114
+        },
+        "frontSetbackMin": {
+          "value": 25,
+          "page": 114
+        },
+        "sideSetbackMin": {
+          "value": "none",
+          "page": 114
+        },
+        "rearSetbackMin": {
+          "value": "none",
+          "page": 114
+        },
+        "heightMax": {
+          "value": "none",
+          "page": 114
+        },
+        "lotCoverageMax": {
+          "value": 80,
+          "page": 114
+        }
+      },
+      "review": {
+        "sideSetbackMin": "Side/rear at least 10 ft next to R-1, R-2, R-3, A, or PDs referencing them",
+        "heightMax": "No limit, but above 70 ft needs 1 ft more setback per 2 ft of height. Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)"
+      }
+    },
+    "LI": {
+      "name": "Light Industrial",
+      "section": "3.6.3",
+      "page": 115,
+      "purpose": "Light manufacturing, warehousing, R&D, offices, showrooms.",
+      "uses": {
+        "Day care center, adult or child": "A",
+        "Library": "P",
+        "Museum": "P",
+        "Park or open space, active": "P",
+        "Park or open space, passive": "P",
+        "Place of worship": "P",
+        "Police, fire, or rescue facility (private)": "P",
+        "Police, fire, or rescue facility (public)": "P",
+        "School, college or university": "P",
+        "School, public or private": "S",
+        "School, vocational or trade": "P",
+        "Hospital": "S",
+        "Medical clinic": "P",
+        "Kennel, commercial": "S",
+        "Plant nursery or greenhouse": "P",
+        "Urban agriculture, noncommercial": "A",
+        "Veterinary hospital or clinic": "P",
+        "Recreation facility, indoor": "P",
+        "Recreation facility, outdoor": "P",
+        "Sexually oriented business": "S",
+        "Beer and Wine sales, off-premise consumption": "S",
+        "Brewpub, distillery, or winery": "P",
+        "Catering establishment": "P",
+        "Hookah bar": "S",
+        "Microbrewery": "S",
+        "Mobile food truck park": "S",
+        "Restaurant": "P",
+        "Hotel, Full Service": "S",
+        "Hotel, Limited Service": "S",
+        "Bank or financial institution": "P",
+        "Laundromat, self-service": "P",
+        "Office": "P",
+        "Personal services": "P",
+        "Building supply store": "P",
+        "Pawn shop": "P",
+        "Retail sales, less than 15,000 sq. ft. GFA": "P",
+        "Retail sales, 15,000 to 50,000 sq. ft. GFA": "P",
+        "Retail sales, more than 50,000 sq. ft. GFA": "P",
+        "Equipment sales or rental": "P",
+        "Fleet services": "P",
+        "Parking facility, private": "S",
+        "Parking facility, public": "P",
+        "Transit terminal or station": "S",
+        "Vehicle fuel station": "P",
+        "Vehicle repair, major": "P",
+        "Vehicle repair, minor": "P",
+        "Vehicle sales or leasing, indoors": "P",
+        "Vehicle wash": "P",
+        "Commercial laundry facility": "P",
+        "Data center": "S",
+        "Food production or processing": "P",
+        "Manufacturing, artisan": "P",
+        "Manufacturing, low-impact": "P",
+        "Resource or mineral extraction": "S",
+        "Contractor’s office": "P",
+        "Storage, self-service": "S",
+        "Storage, outdoor": "A",
+        "Warehouse or wholesale facility": "P",
+        "Public utility, major": "P",
+        "Public utility, minor": "P",
+        "Satellite earth station": "A",
+        "Solar energy system": "P",
+        "Wind energy system, more than 100 kW": "S",
+        "Wind energy system, less than 100 kW": "A",
+        "Wireless communication facility, building- or roof-mounted": "P",
+        "Alcohol sales, on-premise consumption": "A",
+        "Caretaker’s quarters": "A",
+        "Drive-through": "A",
+        "Donation box": "A",
+        "Valet parking service": "A",
+        "Construction support activities": "T",
+        "Mobile food truck": "T",
+        "Outdoor retail and display": "T",
+        "Portable storage structure": "T",
+        "Real estate sales or model home": "T",
+        "Seasonal sales": "T",
+        "Special event": "T"
+      },
+      "dimensions": {
+        "lotAreaMin": {
+          "value": "none",
+          "page": 115
+        },
+        "lotWidthMin": {
+          "value": "none",
+          "page": 115
+        },
+        "frontSetbackMin": {
+          "value": 25,
+          "page": 115
+        },
+        "sideSetbackMin": {
+          "value": "none",
+          "page": 115
+        },
+        "rearSetbackMin": {
+          "value": "none",
+          "page": 115
+        },
+        "heightMax": {
+          "value": 70,
+          "page": 115
+        },
+        "lotCoverageMax": {
+          "value": 90,
+          "page": 115
+        }
+      },
+      "review": {
+        "sideSetbackMin": "Side/rear at least 10 ft next to R-1, R-2, R-3, A, or PDs referencing them",
+        "heightMax": "Next to R-1/R-2/R-3: neighborhood transition limits apply (§5.7.6)"
+      }
+    },
+    "AA": {
+      "name": "Addison Airport",
+      "section": "3.6.4",
+      "page": 115,
+      "purpose": "Addison Airport operations and airport-supporting uses.",
+      "uses": {
+        "Club or lodge": "S",
+        "Day care center, adult or child": "A",
+        "Library": "S",
+        "Museum": "S",
+        "Place of worship": "S",
+        "Police, fire, or rescue facility (private)": "S",
+        "Police, fire, or rescue facility (public)": "S",
+        "School, vocational or trade": "P",
+        "Medical clinic": "P",
+        "Recreation facility, indoor": "A",
+        "Recreation facility, outdoor": "A",
+        "Brewpub, distillery, or winery": "P",
+        "Catering establishment": "P",
+        "Hookah bar": "S",
+        "Mobile food truck park": "S",
+        "Restaurant": "P",
+        "Hotel, Full Service": "S",
+        "Hotel, Limited Service": "S",
+        "Bank or financial institution": "P",
+        "Laundromat, self-service": "A",
+        "Office": "P",
+        "Personal services": "P",
+        "Retail sales, less than 15,000 sq. ft. GFA": "P",
+        "Retail sales, 15,000 to 50,000 sq. ft. GFA": "P",
+        "Equipment sales or rental": "P",
+        "Fleet services": "P",
+        "Parking facility, private": "P",
+        "Parking facility, public": "P",
+        "Transit terminal or station": "S",
+        "Vehicle fuel station": "P",
+        "Vehicle repair, major": "P",
+        "Vehicle repair, minor": "P",
+        "Vehicle wash": "P",
+        "Airport, public-owned": "P",
+        "Manufacturing, artisan": "P",
+        "Resource or mineral extraction": "S",
+        "Contractor’s office": "P",
+        "Storage, self-service": "P",
+        "Storage, outdoor": "A",
+        "Warehouse or wholesale facility": "P",
+        "Public utility, major": "P",
+        "Public utility, minor": "P",
+        "Satellite earth station": "A",
+        "Solar energy system": "P",
+        "Wind energy system, more than 100 kW": "S",
+        "Wind energy system, less than 100 kW": "A",
+        "Wireless communication facility, building- or roof-mounted": "P",
+        "Wireless communication facility, ground-mounted": "S",
+        "Alcohol sales, on-premise consumption": "A",
+        "Caretaker’s quarters": "A",
+        "Drive-through": "A",
+        "Donation box": "A",
+        "Valet parking service": "A",
+        "Construction support activities": "T",
+        "Mobile food truck": "T",
+        "Outdoor retail and display": "T",
+        "Portable storage structure": "T",
+        "Real estate sales or model home": "T",
+        "Seasonal sales": "T",
+        "Special event": "T"
+      },
+      "dimensions": {
+        "lotAreaMin": {
+          "value": "none",
+          "page": 116
+        },
+        "lotWidthMin": {
+          "value": "none",
+          "page": 116
+        },
+        "frontSetbackMin": {
+          "value": 25,
+          "page": 116
+        },
+        "sideSetbackMin": {
+          "value": 25,
+          "page": 116
+        },
+        "rearSetbackMin": {
+          "value": "none",
+          "page": 116
+        },
+        "heightMax": {
+          "value": 70,
+          "page": 116
+        },
+        "lotCoverageMax": {
+          "value": 90,
+          "page": 116
+        }
+      },
+      "review": {
+        "sideSetbackMin": "Table says 25 ft, but its note [1] says minimum 10 ft next to residential - check intent",
+        "heightMax": "FAA height standards also apply"
+      }
+    },
+    "A": {
+      "name": "Apartment (legacy)",
+      "section": "8.1",
+      "page": 311,
+      "purpose": "Legacy district: existing apartments continue; no new rezoning to A.",
+      "uses": {
+        "Dwelling, duplex": "P",
+        "Dwelling, multifamily": "P"
+      },
+      "legacyUses": [
+        "Two-family dwelling",
+        "Multiple-family dwelling (apartments)",
+        "Community, social or hobby buildings for tenants",
+        "Accessory laundry, utility, storage buildings, carports"
+      ],
+      "dimensions": {
+        "lotAreaMin": {
+          "value": 43560,
+          "page": 312
+        },
+        "lotAreaPerUnitMin": {
+          "value": {
+            "Efficiency": 1400,
+            "1 bedroom": 1600,
+            "2 bedroom": 2000
+          },
+          "page": 312
+        },
+        "lotWidthMin": {
+          "value": 200,
+          "page": 312
+        },
+        "lotDepthMin": {
+          "value": 200,
+          "page": 312
+        },
+        "lotCoverageMax": {
+          "value": 35,
+          "page": 312
+        },
+        "frontSetbackMin": {
+          "value": 30,
+          "page": 312
+        },
+        "sideSetbackMin": {
+          "value": 20,
+          "page": 312
+        },
+        "rearSetbackMin": {
+          "value": 25,
+          "page": 313
+        },
+        "heightMaxStories": {
+          "value": 2,
+          "page": 311
+        },
+        "unitSizeMin": {
+          "value": {
+            "Efficiency": 300,
+            "1 bedroom": 450,
+            "2 bedroom": 700,
+            "3 bedroom": 850
+          },
+          "page": 311
+        }
+      },
+      "review": {
+        "heightMaxStories": "1 story within 150 ft of single-family use or district",
+        "sideSetbackMin": "Long building sides: 10% of building length, min 20 ft",
+        "legacyUses": "Legacy uses mapped to UDC names (two-family = duplex, multiple-family = multifamily)"
+      }
+    },
+    "PD-TH": {
+      "name": "Townhouse/Condo PD (legacy)",
+      "section": "8.2",
+      "page": 315,
+      "purpose": "Legacy townhouse and condominium district; no new rezoning to it.",
+      "uses": {
+        "Dwelling, multifamily": "P",
+        "Dwelling, single-family (attached)": "P"
+      },
+      "legacyUses": [
+        "Condominium",
+        "Townhouses",
+        "Community center",
+        "Recreation buildings",
+        "Laundry rooms"
+      ],
+      "dimensions": {
+        "frontSetbackMin": {
+          "value": 25,
+          "page": 316
+        },
+        "sideSetbackMin": {
+          "value": {
+            "Townhouse": "none",
+            "1-story condo": 10,
+            "2-story condo": 15
+          },
+          "page": 316
+        },
+        "rearSetbackMin": {
+          "value": {
+            "Townhouse": 10
+          },
+          "page": 316
+        },
+        "densityMax": {
+          "value": 18,
+          "page": 316
+        },
+        "lotCoverageMax": {
+          "value": 50,
+          "page": 316
+        },
+        "lotAreaPerUnitMin": {
+          "value": 2400,
+          "page": 316
+        },
+        "unitSizeMin": {
+          "value": 750,
+          "page": 316
+        }
+      },
+      "review": {
+        "legacyUses": "Legacy uses mapped to UDC names (townhouse = single-family attached, condominium = multifamily)",
+        "frontSetbackMin": "25 ft exterior yard from all public streets"
+      }
+    },
+    "PD-CC": {
+      "name": "Condo Conversion PD (legacy)",
+      "section": "8.3",
+      "page": 318,
+      "purpose": "Legacy district for converting apartments to condominiums.",
+      "uses": {
+        "Dwelling, multifamily": "P"
+      },
+      "legacyUses": [
+        "Condominium",
+        "Community center",
+        "Recreation buildings",
+        "Laundry buildings"
+      ],
+      "dimensions": {},
+      "review": {
+        "legacyUses": "Condominium mapped to multifamily",
+        "dimensions": "No dimensional standards in Art. 8.3; set by each conversion site plan"
+      }
+    }
+  },
+  "placeTypes": {
+    "Residential Living": {
+      "definition": "Protect existing neighborhoods; mostly low-density housing with better walk and bike links.",
+      "page": 3
+    },
+    "Urban Village": {
+      "definition": "Redevelop aging areas into walkable, mixed-use neighborhoods.",
+      "page": 5
+    },
+    "High Intensity Urban Center": {
+      "definition": "Most intense place type: dense mixed use along the Dallas North Tollway.",
+      "page": 7
+    },
+    "Aviation and Industry": {
+      "definition": "Light and heavy industry, offices, and aviation uses around Addison Airport.",
+      "page": 9
+    },
+    "Inwood Innovation Area": {
+      "definition": "Flexible, parcel-by-parcel redevelopment along Inwood: culture, creative retail, innovation.",
+      "page": 11
+    }
+  }
+}

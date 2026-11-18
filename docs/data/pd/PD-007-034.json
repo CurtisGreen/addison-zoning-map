@@ -1,0 +1,340 @@
+{
+  "id": "PD 007-034",
+  "name": "Brookhaven Village",
+  "base": null,
+  "usesOnly": true,
+  "purpose": "Mixed use village of retail, restaurant, residential, and office uses under one plan, in a pedestrian-oriented setting.",
+  "uses": [
+    {
+      "name": "Dwelling, single-family (attached)",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 11,
+      "quote": "Residential uses within the Property are limited to the following: Townhouse"
+    },
+    {
+      "name": "Dwelling, multifamily",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 11,
+      "quote": "Townhouse Condominium Multifamily"
+    },
+    {
+      "name": "Retail sales, less than 15,000 sq. ft. GFA",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 13,
+      "quote": "Retail Store"
+    },
+    {
+      "name": "Retail sales, 15,000 to 50,000 sq. ft. GFA",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 13,
+      "quote": "Retail Store"
+    },
+    {
+      "name": "Retail sales, more than 50,000 sq. ft. GFA",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 12,
+      "quote": "Department store"
+    },
+    {
+      "name": "Bank or financial institution",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 11,
+      "quote": "Bakery, retail sales only Bank"
+    },
+    {
+      "name": "Personal services",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 11,
+      "quote": "Barber and beauty shop"
+    },
+    {
+      "name": "Laundromat, self-service",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 12,
+      "quote": "Laundromat, equipped with automatic washing machines"
+    },
+    {
+      "name": "Medical clinic",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 12,
+      "quote": "Medical and dental clinics"
+    },
+    {
+      "name": "Recreation facility, indoor",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 12,
+      "quote": "Health club, private and public"
+    },
+    {
+      "name": "Parking facility, public",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 13,
+      "quote": "Public garage, parking, no repairs"
+    },
+    {
+      "name": "Office",
+      "permission": "P",
+      "ordinance": "007-034",
+      "page": 13,
+      "quote": "Office. (Defined under article XXX of the Zoning Ordinance)"
+    },
+    {
+      "name": "Hotel, Full Service",
+      "permission": "S",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Hotel. Cleaning, dyeing and laundry pick-up station"
+    },
+    {
+      "name": "Hotel, Limited Service",
+      "permission": "S",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Hotel. Cleaning, dyeing and laundry pick-up station"
+    },
+    {
+      "name": "Library",
+      "permission": "S",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Library, for loan of books and other materials typically performed by a public library"
+    },
+    {
+      "name": "Police, fire, or rescue facility (public)",
+      "permission": "S",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Public safety facilities."
+    },
+    {
+      "name": "Restaurant",
+      "permission": "S",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Public safety facilities. Restaurant."
+    },
+    {
+      "name": "Alcohol sales, on-premise consumption",
+      "permission": "S",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Sale of alcohol for on-premises consumption."
+    },
+    {
+      "name": "Transit terminal or station",
+      "permission": "S",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Transit facilities."
+    },
+    {
+      "name": "Parking facility, private",
+      "permission": "A",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Parking and parking structures."
+    }
+  ],
+  "otherUses": [
+    {
+      "text": "ATM facilities",
+      "ordinance": "007-034",
+      "page": 11,
+      "quote": "ATM facilities"
+    },
+    {
+      "text": "Business support services",
+      "ordinance": "007-034",
+      "page": 11,
+      "quote": "Business support services"
+    },
+    {
+      "text": "Caterer and wedding service (office only)",
+      "ordinance": "007-034",
+      "page": 12,
+      "quote": "Caterer and wedding service (office only)"
+    },
+    {
+      "text": "Coffee shop, donut and pastry shop, pizza delivery shop (no seating on premises)",
+      "ordinance": "007-034",
+      "page": 12,
+      "quote": "Coffee shop (no seating on premises)"
+    },
+    {
+      "text": "Photographer or artist studio",
+      "ordinance": "007-034",
+      "page": 12,
+      "quote": "Photographer or artist studio"
+    },
+    {
+      "text": "Plumbing shop, without warehouse facilities",
+      "ordinance": "007-034",
+      "page": 12,
+      "quote": "Plumbing shop, without warehouse facilities"
+    },
+    {
+      "text": "Studios: dance, music, drama, martial arts",
+      "ordinance": "007-034",
+      "page": 13,
+      "quote": "Studios, dance, music, drama, martial arts"
+    },
+    {
+      "text": "Home office (up to 3 employees on ground floor; residents only on upper floors)",
+      "ordinance": "007-034",
+      "page": 13,
+      "quote": "office uses that are performed in a residential dwelling unit"
+    },
+    {
+      "text": "Civic (as defined in the Zoning Ordinance)",
+      "ordinance": "007-034",
+      "page": 13,
+      "quote": "Civic. (Defined under article XXX of the Zoning Ordinance)"
+    },
+    {
+      "text": "Mixed use (with residential)",
+      "ordinance": "007-034",
+      "page": 13,
+      "quote": "Mixed use (with residential). (Defined under article XXX of the Zoning Ordinance)"
+    },
+    {
+      "text": "Mixed use (with nonresidential)",
+      "ordinance": "007-034",
+      "page": 13,
+      "quote": "Mixed use (with nonresidential)"
+    },
+    {
+      "text": "Dry cleaning or laundry with work done on premises (special use permit)",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Cleaning, dyeing and laundry pick-up station, with cleaning, dyeing and/or laundry work done on the premises"
+    },
+    {
+      "text": "Retirement home (special use permit)",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Retirement home."
+    },
+    {
+      "text": "Community, social, hobby, or laundry facilities for residents (accessory)",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Community, social, hobby, or laundry facilities, for use by occupants of a residential development"
+    },
+    {
+      "text": "Recreation space and facilities (accessory)",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Recreation space and facilities."
+    },
+    {
+      "text": "Other uses incidental to permitted and special uses (accessory)",
+      "ordinance": "007-034",
+      "page": 14,
+      "quote": "Other uses customarily incidental and subordinate to permitted uses and any special uses."
+    }
+  ],
+  "dimensions": {
+    "buildTo": {
+      "value": {
+        "A streets": 9,
+        "B streets": "6-9",
+        "C streets": "6-9",
+        "D streets": 4,
+        "E streets": "6-9"
+      },
+      "ordinance": "007-034",
+      "page": 15,
+      "quote": "Street build-to lines within the Property are as follows"
+    },
+    "facadeAtBuildToMin": {
+      "value": {
+        "Subarea 1": 50,
+        "Elsewhere": 70
+      },
+      "ordinance": "007-034",
+      "page": 15,
+      "quote": "not more than 30 percent of any street frontage may vary from the build-to line"
+    },
+    "sideSetbackMin": {
+      "value": "none",
+      "ordinance": "007-034",
+      "page": 16,
+      "quote": "Side Yard Setback None, except as required by the City's Fire Code"
+    },
+    "rearSetbackMin": {
+      "value": "none",
+      "ordinance": "007-034",
+      "page": 16,
+      "quote": "Rear Yard Setback None, except as required by the City's Fire Code"
+    },
+    "heightMax": {
+      "value": {
+        "Within 100 ft of residential": 60,
+        "Elsewhere": "none"
+      },
+      "ordinance": "007-034",
+      "page": 16,
+      "quote": "No maximum height; except the portion of any building or other structure which is located within 100 feet of the property line"
+    },
+    "lotAreaMin": {
+      "value": "none",
+      "ordinance": "007-034",
+      "page": 16,
+      "quote": "No minimum lot area"
+    },
+    "lotWidthMin": {
+      "value": "none",
+      "ordinance": "007-034",
+      "page": 16,
+      "quote": "No minimum lot width"
+    },
+    "lotDepthMin": {
+      "value": "none",
+      "ordinance": "007-034",
+      "page": 16,
+      "quote": "No minimum lot depth"
+    },
+    "unitSizeMin": {
+      "value": {
+        "Efficiency": 450,
+        "1 bedroom": 600,
+        "2 bedroom": 850,
+        "3 bedroom": 1000,
+        "Townhouse": 1600
+      },
+      "ordinance": "007-034",
+      "page": 16,
+      "quote": "Minimum area per Residential dwelling unit Efficiency 450 sq. ft."
+    },
+    "lotCoverageMax": {
+      "value": 95,
+      "ordinance": "007-034",
+      "page": 16,
+      "quote": "Maximum lot coverage 95%"
+    }
+  },
+  "review": {
+    "base": "Ordinance names no base district. It rezoned 'A' Apartment (8 tracts) and PD-CC (Ord. 828, 9.4274 ac) to this PD, which has its own full use list and standards (Table A). Set to null so the old A standards do not show.",
+    "ordinances": "074-171 (1974) and 076-267 (1976) are pre-PD apartment variances under the old A district (3-story apartments; The Pier unit sizes and 260 units). Their standards are ignored.",
+    "acres": "Exhibit A totals 99.176 ac (54.017 + 45.159); pds.json says 97.7. Caption says A-zoned part is 87.7486 ac, Sec. 2 says 89.7486 ac.",
+    "uses": "Mapped by judgment: Townhouse to single-family attached; Condominium to multifamily; retail list (p.11-13, incl. department and grocery stores, no size limit) to all three retail size classes; barber, tailor, shoe repair, cleaning pick-up, fix-it, film developing to Personal services; professional offices, title companies, travel services to Office; health club to indoor recreation; Hotel to both full and limited service; public safety facilities to public police/fire. Retail is allowed only as part of a mixed use with residential, except portable kiosks (25-500 sq ft) anywhere; free-standing retail is prohibited (p.14-15).",
+    "dimensions": "Sec. 14 (p.22) lets P&Z and Council waive any standard in Secs. 5-13 with a development plan, but not to add a use. Source text reads 'does increase the allowable intensity' (likely missing 'not'). The OCR text drops these last lines; see the PDF.",
+    "buildTo": "Street types A-E are shown on the Concept Plan (Exhibit C). Measured from the closest right-of-way line.",
+    "facadeAtBuildToMin": "Derived: text says not more than 30% (50% in Subarea 1) of any street frontage may vary from the build-to line.",
+    "heightMax": "60 ft applies to the part of a building within 100 ft of land zoned single family or apartment or used for residential. All heights subject to FAA approval. Turrets, spires, towers may be up to 15 ft above the max (p.17).",
+    "unitSizeMin": "Table row is 'Minimum area per Residential dwelling unit'; read as unit floor area, not lot area per unit. The same cell block also lists 'Office uses 500,000 sq. ft.', which looks like part of the max nonresidential floor area row.",
+    "lotCoverageMax": "Porches and arcades fronting a street are excluded; above-grade parking structures are included (p.16)."
+  },
+  "notes": "Max nonresidential floor area: office 500,000 sq ft; retail, restaurant, and personal service 500,000 sq ft. Must follow the Concept Plan (Exhibit C), street standards (Exhibit D), street lighting and furnishings (Exhibit E), and sustainability program (Exhibit F). A development plan is required before permits. Block length 200-750 ft. At least 80% masonry on walls facing streets. Public open space: 2 ac per 1,000 residents up to 2,250 residents, then 1.5 ac per 1,000."
+}

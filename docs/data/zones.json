@@ -1,0 +1,2509 @@
+{
+  "asOf": "2026-11-17",
+  "zones": {
+    "AA": {
+      "kind": "district",
+      "acres": 409.4,
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": ["SU-1", "I-3"]
+    },
+    "LI": {
+      "kind": "district",
+      "acres": 232.4,
+      "placeTypes": [
+        "Aviation and Industry",
+        "Urban Village",
+        "Inwood Innovation Area"
+      ],
+      "specialUsePermits": ["SU-1", "SU-2", "SU-3"]
+    },
+    "CG": {
+      "kind": "district",
+      "acres": 178.5,
+      "placeTypes": [
+        "Urban Village",
+        "High Intensity Urban Center",
+        "Aviation and Industry",
+        "Inwood Innovation Area"
+      ],
+      "specialUsePermits": ["SU-1"]
+    },
+    "R-1": {
+      "kind": "district",
+      "acres": 171.2,
+      "placeTypes": ["Urban Village", "Residential Living"],
+      "specialUsePermits": ["SU-1", "SU-004-010"]
+    },
+    "R-2": {
+      "kind": "district",
+      "acres": 132.1,
+      "placeTypes": ["Residential Living", "Urban Village"],
+      "specialUsePermits": ["SU-2", "SU-1"]
+    },
+    "CL": {
+      "kind": "district",
+      "acres": 102.9,
+      "placeTypes": [
+        "Urban Village",
+        "Inwood Innovation Area",
+        "Aviation and Industry",
+        "High Intensity Urban Center",
+        "Residential Living"
+      ],
+      "specialUsePermits": [
+        "SU-2",
+        "SU-1",
+        "SU-3",
+        "SU-4",
+        "SU-6",
+        "SU-8",
+        "SU-5",
+        "311"
+      ]
+    },
+    "M-4": {
+      "kind": "district",
+      "acres": 69.2,
+      "placeTypes": ["Urban Village", "High Intensity Urban Center"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "A": {
+      "kind": "district",
+      "acres": 64.4,
+      "placeTypes": [
+        "Urban Village",
+        "Aviation and Industry",
+        "High Intensity Urban Center"
+      ],
+      "specialUsePermits": []
+    },
+    "PD-TH": {
+      "kind": "district",
+      "acres": 24.8,
+      "placeTypes": ["Urban Village", "Residential Living"],
+      "specialUsePermits": []
+    },
+    "M-1": {
+      "kind": "district",
+      "acres": 23.7,
+      "placeTypes": [],
+      "specialUsePermits": []
+    },
+    "M-2": {
+      "kind": "district",
+      "acres": 15.7,
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-3", "SU-2", "SU-1"]
+    },
+    "R-3": {
+      "kind": "district",
+      "acres": 10.7,
+      "placeTypes": ["Residential Living"],
+      "specialUsePermits": []
+    },
+    "PD-CC": {
+      "kind": "district",
+      "acres": 10.2,
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 007-034": {
+      "kind": "pd",
+      "name": "Brookhaven Village",
+      "base": null,
+      "done": true,
+      "acres": 97.7,
+      "mainOrdinance": "007-034",
+      "ordinances": [
+        {
+          "id": "074-171",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1974/171%20-%201974.pdf",
+          "date": "1974-01-21",
+          "description": "Change zoning to Apartment (A) to allow for 3 story apartment construction"
+        },
+        {
+          "id": "076-267",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1976/267%20-%201976.pdf",
+          "date": "1976-06-08",
+          "description": "Variance to Aparatment (A) zoning to allow smaller, 3 story units (The Pier Apartments)"
+        },
+        {
+          "id": "007-034",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2007/007-034%20Change%20of%20Zoning%20for%20Brookhaven%20Club.pdf",
+          "date": "2007-10-09",
+          "description": "Change in zoning of the property to pd planned development and proposes to build a mixed use development in phases on the property under a unified plan consisting of retail, restaurant, residential and office uses."
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 461": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 46.4,
+      "mainOrdinance": "078-461",
+      "ordinances": [
+        {
+          "id": "078-461",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1978/461%20-%201978.pdf",
+          "date": "1978-12-12",
+          "description": "Change zoning from Residential to Planned Development"
+        }
+      ],
+      "placeTypes": ["Residential Living"],
+      "specialUsePermits": []
+    },
+    "PD 91-038": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 40.5,
+      "mainOrdinance": "091-038",
+      "ordinances": [
+        {
+          "id": "091-038",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1991/091-038%20-%201991.pdf",
+          "date": "1991-07-23",
+          "description": "Change zoning from Residential (R-16) to Planned Development (PD) with residential uses"
+        }
+      ],
+      "placeTypes": ["Residential Living"],
+      "specialUsePermits": []
+    },
+    "PD O16-040": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 38.4,
+      "mainOrdinance": "016-040",
+      "ordinances": [
+        {
+          "id": "016-040",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/O16-040%20TCA%20PD.pdf",
+          "date": "2016-10-11",
+          "description": "Case 1738-Z: Rezone R-1 (66) to PD (O16-040) for private school with modified development standards"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 93-018": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 37.8,
+      "mainOrdinance": "093-018",
+      "ordinances": [
+        {
+          "id": "093-018",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1993/093-018%20-%201993.pdf",
+          "date": "1993-03-09",
+          "description": "Amend PD 092-048, 091-068 & 626 in order to add residential uses"
+        }
+      ],
+      "placeTypes": ["Urban Village", "Residential Living"],
+      "specialUsePermits": ["SU-6"]
+    },
+    "PD 94-011": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 35.1,
+      "mainOrdinance": "094-011",
+      "ordinances": [
+        {
+          "id": "094-011",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1994/094-011%20-%201994.pdf",
+          "date": "1994-02-08",
+          "description": "Change of zoning from Commercial-1 (C-1) to PD"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 23-03": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 31.7,
+      "mainOrdinance": "023-03",
+      "ordinances": [
+        {
+          "id": "096-003",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-003%20-%201996.pdf",
+          "date": "1996-01-09",
+          "description": "Change zoning from local retail (LR) to Planned Development (PD)"
+        },
+        {
+          "id": "096-028",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-028%20-%201996.pdf",
+          "date": "1996-07-23",
+          "description": "Amend ORD 096-003 to delete certain conditions for development"
+        },
+        {
+          "id": "002-001",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2002/002-001%20-%202002.pdf",
+          "date": "2002-01-08",
+          "description": "Amend ORD 096-003 relating to Planned Development (PD) to provide for residential uses"
+        },
+        {
+          "id": "005-024",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2005/005-024%20-%202005.pdf",
+          "date": "2005-06-28",
+          "description": "Amendment to development plan adopted by ORD 002-001"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-13"]
+    },
+    "PD 93-057": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 28.9,
+      "mainOrdinance": "093-057",
+      "ordinances": [
+        {
+          "id": "085-037",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-037%20-%201985.pdf",
+          "date": "1985-06-25",
+          "description": "Change zoning from Commercial (C) to Planned Development (PD)"
+        },
+        {
+          "id": "093-057",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1993/093-057%20-%201993.pdf",
+          "date": "1993-09-28",
+          "description": "Amend ORD 085-037 to add printing as an allowed uses, development standards, approval of development plans, and special conditions."
+        },
+        {
+          "id": "099-020",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1999/099-020%20-%201999.pdf",
+          "date": "1999-05-11",
+          "description": "Amend ORD 085-037 & 093-057 to approve revised development plans"
+        }
+      ],
+      "placeTypes": ["Urban Village", "Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 386": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 25.7,
+      "mainOrdinance": "077-386",
+      "ordinances": [
+        {
+          "id": "077-386",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1977/386%20-%201977.pdf",
+          "date": "1978-05-09",
+          "description": "Change zoning from Residential (R-1) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Residential Living", "Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 92-037": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 24.1,
+      "mainOrdinance": "092-037",
+      "ordinances": [
+        {
+          "id": "092-037",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1992/092-037%20-%201992.pdf",
+          "date": "1992-06-09",
+          "description": "Change zoning from Industrial-1 (I-1) to Planned Development (PD)"
+        },
+        {
+          "id": "095-023",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-023%20-%201995.pdf",
+          "date": "1995-05-09",
+          "description": "Amendment to Planned Development (092-037) to allow for concrete tilt-wall facades"
+        },
+        {
+          "id": "098-049",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1998/098-049%20-%201998.pdf",
+          "date": "1998-11-10",
+          "description": "Amendment to PD (092-037) to provide approval for revised development plans"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-2", "SU-7"]
+    },
+    "PD 83-072": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 22.5,
+      "mainOrdinance": "083-072",
+      "ordinances": [
+        {
+          "id": "083-072",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-072%20-%201983.pdf",
+          "date": "1983-11-22",
+          "description": "SUP for a restaurant and the sale of alcoholic beverages for on-premises consumption"
+        },
+        {
+          "id": "094-041",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1994/094-041%20-%201994.pdf",
+          "date": "1994-06-28",
+          "description": "Amend ORD 093-072 to provide for approval of site development plans and special conditions"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 86-001": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 22.3,
+      "mainOrdinance": "086-001",
+      "ordinances": [
+        {
+          "id": "086-001",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1986/086-001%20-%201986.pdf",
+          "date": "1986-01-14",
+          "description": "Change zoning from Commercial to Planned Development"
+        },
+        {
+          "id": "095-058",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-058%20-%201995.pdf",
+          "date": "1995-11-28",
+          "description": "Approval of development plans in an existing PD (086-001) and providing for special conditions"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 625": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 21.2,
+      "mainOrdinance": "080-625",
+      "ordinances": [
+        {
+          "id": "080-625",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1980/625%20-%201980.pdf",
+          "date": "1980-10-14",
+          "description": "Change zoning from Residential to Planned Development"
+        },
+        {
+          "id": "085-085",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-085%20-%201985.pdf",
+          "date": "1985-11-05",
+          "description": "Amending PD Ordinance No. 625, by amending Section 3.1 to improve the said property."
+        }
+      ],
+      "placeTypes": ["Urban Village", "Residential Living"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 84-007": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 20.5,
+      "mainOrdinance": "084-007",
+      "ordinances": [
+        {
+          "id": "084-007",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-007%20-%201984.pdf",
+          "date": "1984-02-28",
+          "description": "Amend ORD 623 for an existing Planned Development, to set forth special conditions on property."
+        },
+        {
+          "id": "091-021",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1991/091-021%20-%201991.pdf",
+          "date": "1991-04-23",
+          "description": "Amend planned development ordinance no. 623"
+        }
+      ],
+      "placeTypes": ["Residential Living", "Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 96-006": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 19.8,
+      "mainOrdinance": "096-006",
+      "ordinances": [
+        {
+          "id": "095-054",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-054%20-%201995.pdf",
+          "date": "1995-11-14",
+          "description": "Amend to change the zoning from Planned Development, Ordinance 085-073, to a revised Planned Development District and approval of site development plans"
+        },
+        {
+          "id": "096-006",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-006%20-%201996.pdf",
+          "date": "1996-02-13",
+          "description": "Amend PD 095-054 to revise development plans"
+        },
+        {
+          "id": "099-025",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1999/099-025%20-%201999.pdf",
+          "date": "1999-08-10",
+          "description": "Change zoning from Planned Development (PD) (085-073) to a revised Planned Development (PD) district"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD O16-018": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 18.8,
+      "mainOrdinance": "016-018",
+      "ordinances": [
+        {
+          "id": "016-018",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/O16-018%2005242016%20Brookhaven%20Village.pdf",
+          "date": "2016-05-24",
+          "description": "Development Plan Approval for a Retail Center with Waiver to Development Standards"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-5"]
+    },
+    "PD 85-093": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 18.7,
+      "mainOrdinance": "085-093",
+      "ordinances": [
+        {
+          "id": "085-093",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-093%20-%201985.pdf",
+          "date": "1985-12-10",
+          "description": "Change the zoning from Commercial and Planned Development to Planned Development"
+        },
+        {
+          "id": "000-016",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2000/000-016%20-%202000.pdf",
+          "date": "2000-05-09",
+          "description": "Change zoning from Planned Development (085-093) to a revised Planned Development district"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD O16-028": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 18.2,
+      "mainOrdinance": "016-028",
+      "ordinances": [
+        {
+          "id": "016-028",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/O16-028%201737-Z%2014345%20Dallas%20Parkway.pdf",
+          "date": "2016-08-09",
+          "description": "Case 1737-Z: Rezone from I-1 (66) to PD (O16-028) for high density office development"
+        },
+        {
+          "id": "017-005",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2017/O17-005%2002142017%2014555%20Dallas%20Parkway.pdf",
+          "date": "2017-02-14",
+          "description": "Case 1752-Z: Amend PD O16-028 by amending Exhibit B to revise min building height requirement and Approval of a development plan for an office development."
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 604": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 15.0,
+      "mainOrdinance": "080-604",
+      "ordinances": [
+        {
+          "id": "080-604",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1980/604%20-%201980.pdf",
+          "date": "1980-08-12",
+          "description": "Change zoning from Residential (R-1) to Planned Development (PD)"
+        },
+        {
+          "id": "085-089",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-089%20-%201985.pdf",
+          "date": "1985-11-05",
+          "description": "SUP for a restaurant and the sale of alcoholic beverages for on premises consumption"
+        }
+      ],
+      "placeTypes": ["Residential Living", "Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 84-092": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 14.5,
+      "mainOrdinance": "084-092",
+      "ordinances": [
+        {
+          "id": "084-092",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-092%20-%201984.pdf",
+          "date": "1984-11-27",
+          "description": "Change zoning from R-1 to PD and approve development plans"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD O16-003": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 13.5,
+      "mainOrdinance": "016-003",
+      "ordinances": [
+        {
+          "id": "091-066",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1991/091-066%20-%201991.pdf",
+          "date": "1991-11-12",
+          "description": "Amend existing (Ord 446 and 459) PD to provide for additional uses and a new development plan."
+        },
+        {
+          "id": "094-079",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1994/094-079%20-%201994.pdf",
+          "date": "1994-11-29",
+          "description": "Amend SUP 091-066 (and ORD: 446, 459) to provide for additional use: BREWPUB"
+        },
+        {
+          "id": "000-024",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2000/000-024%20-%202000.pdf",
+          "date": "2000-06-13",
+          "description": "Amend ORD 091-066 - revised entry vestibule and changes to building floor plan"
+        },
+        {
+          "id": "016-003",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/O16-003%2001262016%20Addison%20Groves%20PD.pdf",
+          "date": "2016-01-26",
+          "description": "Case 1725-Z: Rezone from PD 091-066 to new PD for retail, restaurant, residential and office uses"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1/3"]
+    },
+    "PD 739": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 13.1,
+      "mainOrdinance": "081-739",
+      "ordinances": [
+        {
+          "id": "081-739",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1981/739%20-%201981.pdf",
+          "date": "1981-10-27",
+          "description": "Change zoning from Commercial (C) to Planned Development (PD)"
+        },
+        {
+          "id": "096-042",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-042%20-%201996.pdf",
+          "date": "1996-09-10",
+          "description": "Amend ORD 739 to provide for revised plan for Phase III of an office complex"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 83-039": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 12.3,
+      "mainOrdinance": "083-039",
+      "ordinances": [
+        {
+          "id": "083-039",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-039%20-%201983.pdf",
+          "date": "1983-06-14",
+          "description": "Final approval in an existing PD to add and existing motel and provide additional restaurant space"
+        }
+      ],
+      "placeTypes": ["Urban Village", "Residential Living"],
+      "specialUsePermits": ["SU-11"]
+    },
+    "PD O20-47": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 11.6,
+      "mainOrdinance": "020-047",
+      "ordinances": [
+        {
+          "id": "083-017",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-017%20-%201983.pdf",
+          "date": "1983-03-22",
+          "description": "Change zoning from Commercial to Planned Development and approve site development plans"
+        },
+        {
+          "id": "085-056",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-056%20-%201985.pdf",
+          "date": "1985-08-27",
+          "description": "Amending Ordinance No. 083-017 so as to amend their site plan."
+        },
+        {
+          "id": "097-013",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1997/097-013%20-%201997.pdf",
+          "date": "1997-04-08",
+          "description": "Change zoning from PD (ORD 083-017 & 085-056) and C-1 to Planned Development"
+        },
+        {
+          "id": "020-047",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2020/O20-47%20-%202020.pdf",
+          "date": "2020-10-13",
+          "description": "Rezoning Planned Dev District 008-054 to Planned Dev District 020-047 for a senior living facility"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 387": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 11.3,
+      "mainOrdinance": "078-387",
+      "ordinances": [
+        {
+          "id": "078-387",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1978/387%20-%201978.pdf",
+          "date": "1978-05-09",
+          "description": "Change zoning from Commercial (C) to Planned Development with Local Retail (LR) uses"
+        }
+      ],
+      "placeTypes": ["Urban Village", "Residential Living"],
+      "specialUsePermits": []
+    },
+    "PD 89-015": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 10.9,
+      "mainOrdinance": "089-015",
+      "ordinances": [
+        {
+          "id": "089-015",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1989/089-015%20-%201989.pdf",
+          "date": "1989-06-13",
+          "description": "Amend existing PD ORD 087-070 by deleting all uses, restrictions, and site plans and adding new uses and restrictions."
+        },
+        {
+          "id": "089-016",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1989/089-016%20-%201989.pdf",
+          "date": "1989-06-13",
+          "description": "Amendment to  ORD 087-070, 089-015 (Approving final development plans.)"
+        },
+        {
+          "id": "096-052",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-052%20-%201996.pdf",
+          "date": "1996-10-08",
+          "description": "Amend ORD 089-015 to approve development plans for a hotel in a PD district"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-2"]
+    },
+    "PD 95-054?": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 10.9,
+      "mainOrdinance": null,
+      "ordinances": [
+        {
+          "id": "095-054",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-054%20-%201995.pdf",
+          "date": "1995-11-14",
+          "description": "Amend to change the zoning from Planned Development, Ordinance 085-073, to a revised Planned Development District and approval of site development plans"
+        },
+        {
+          "id": "096-006",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-006%20-%201996.pdf",
+          "date": "1996-02-13",
+          "description": "Amend PD 095-054 to revise development plans"
+        },
+        {
+          "id": "099-025",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1999/099-025%20-%201999.pdf",
+          "date": "1999-08-10",
+          "description": "Change zoning from Planned Development (PD) (085-073) to a revised Planned Development (PD) district"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 22-03": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 10.4,
+      "mainOrdinance": "022-03",
+      "ordinances": [
+        {
+          "id": "077-385",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1977/385%20-%201977.pdf",
+          "date": "1978-05-09",
+          "description": "Change zoning from Commercial (C) and Apartment (A) to Local Retail (LR)"
+        },
+        {
+          "id": "019-022",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2019/O19-022%20-%202019.pdf",
+          "date": "2019-06-11",
+          "description": "Creating planned development district 019-22 based on local retail (LR) district regulations with modified development standards"
+        },
+        {
+          "id": "022-03",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2022/O22-03%20-%202022.pdf",
+          "date": "2022-01-11",
+          "description": "Amend PD (O19-022) , Providing for medical office as a permitted use."
+        }
+      ],
+      "placeTypes": ["Urban Village", "Residential Living"],
+      "specialUsePermits": ["SU-9"]
+    },
+    "PD 23-08": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 10.1,
+      "mainOrdinance": "023-08",
+      "ordinances": [
+        {
+          "id": "023-08",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-08%20-%202023.pdf",
+          "date": "2023-02-13",
+          "description": "Changing from C-1, PD, and UC to a new PD to allow trainsit oriented mixed use development"
+        },
+        {
+          "id": "023-11",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-11%20-%202023.pdf",
+          "date": "2023-02-13",
+          "description": "Development plan for multifamily residential building, retail/restaurants, road realignment"
+        },
+        {
+          "id": "023-09",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-09%20-%202023.pdf",
+          "date": "2023-02-13",
+          "description": "Approval of a development plan for lots 1 and 5X, block A, Addison Circle Station-Phase 1, to allow for the development of an office building with ground floor retail/restaurant uses, a parking structure, and site access drives."
+        },
+        {
+          "id": "023-12",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-12%20-%202023.pdf",
+          "date": "2023-02-13",
+          "description": "Construction of emergency access drives, pedestrian ways, Festival Way streetscape improvements"
+        },
+        {
+          "id": "023-10",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-10%20-%202023.pdf",
+          "date": "2023-02-13",
+          "description": "Approval of development plan for multifamily residential building with retail/restaurant uses and streetscape improvements."
+        }
+      ],
+      "placeTypes": ["Urban Village", "High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 601": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 10.0,
+      "mainOrdinance": "080-601",
+      "ordinances": [
+        {
+          "id": "080-601",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1980/601%20-%201980.pdf",
+          "date": "1980-07-15",
+          "description": "Change zoning from Commercial (C) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-2"]
+    },
+    "PD 85-020": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 9.7,
+      "mainOrdinance": "085-020",
+      "ordinances": [
+        {
+          "id": "085-020",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-020%20-%201985.pdf",
+          "date": "1985-04-09",
+          "description": "Change zoning from Industrial (I-1) to Planned Development (PD) and approve site development plan"
+        },
+        {
+          "id": "001-010",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2001/001-010%20-%202001.pdf",
+          "date": "2001-04-10",
+          "description": "Approving development plans within Planned Development district 085-020"
+        },
+        {
+          "id": "001-041",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2001/001-041%20-%202001.pdf",
+          "date": "2001-12-21",
+          "description": "Approving revised development plans for an office building in a planned development district (085-020)"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD O16-039": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 8.8,
+      "mainOrdinance": "016-039",
+      "ordinances": [
+        {
+          "id": "085-001",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-001%20-%201985.pdf",
+          "date": "1985-01-08",
+          "description": "Case 884-Z: Rezoning from I-1 to PD with development plans"
+        },
+        {
+          "id": "014-056",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2014/O14-056%20Planned%20Development%20Case%201702-Z%20Tollway%20Center.pdf",
+          "date": "2014-12-09",
+          "description": "Repealing O85-001 to create a new PD for office uses with approved site plan"
+        },
+        {
+          "id": "016-039",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/O16-039%2010112016%20Tollway%20Center%20Cafe.pdf",
+          "date": "2016-10-11",
+          "description": "Case 1748-Z: Amend PD O14-056 to provide additional use and grant SUP for sale of alcohol beverages for on-premises consumption only"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 84-097": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 8.5,
+      "mainOrdinance": "084-097",
+      "ordinances": [
+        {
+          "id": "084-097",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-097%20-%201984.pdf",
+          "date": "1984-12-04",
+          "description": "Changing the zoning from 'I-1' Industrial to 'PD' Planned Development"
+        },
+        {
+          "id": "098-032",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1998/098-032%20-%201998.pdf",
+          "date": "1998-08-11",
+          "description": "Amend ordinance 087-097, in order to revise section 1 to revise the legal description; section 3 to revise the allowed square footages for development; and section 4 to revise special conditions."
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 85-003": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 8.1,
+      "mainOrdinance": "085-003",
+      "ordinances": [
+        {
+          "id": "078-460",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1978/460%20-%201978.pdf",
+          "date": "1978-12-12",
+          "description": "Change zoning from Residential to Planned Development"
+        },
+        {
+          "id": "085-003",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-003%20-%201985.pdf",
+          "date": "1985-01-08",
+          "description": "Amend ORD No.460 to the site plan to increase the amount of restaurant space"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 96-032": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 8.0,
+      "mainOrdinance": "096-032",
+      "ordinances": [
+        {
+          "id": "096-032",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-032%20-%201996.pdf",
+          "date": "1996-07-23",
+          "description": "Change of zoning from I-1 to PD for the uses allowed in the I-1 district (Lot 1)"
+        },
+        {
+          "id": "096-033",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-033%20-%201996.pdf",
+          "date": "1996-07-23",
+          "description": "Change of zoning from I-1 to PD for the uses allowed in the I-1 district (Lot 2)"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 517": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 7.9,
+      "mainOrdinance": "079-517",
+      "ordinances": [
+        {
+          "id": "079-517",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1979/517%20-%201979.pdf",
+          "date": "1979-07-27",
+          "description": "Change zoning from Industrial (I-1) to Planned Development (PD)"
+        },
+        {
+          "id": "086-058",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1986/086-058%20-%201986.pdf",
+          "date": "1986-07-22",
+          "description": "Amending PD Ordinance No. 517 by amending the site plan to add a drive-thru banking facility."
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-2"]
+    },
+    "PD 004-001": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 7.4,
+      "mainOrdinance": "004-001",
+      "ordinances": [
+        {
+          "id": "004-001",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2004/004-001%20-%202004.pdf",
+          "date": "2004-01-13",
+          "description": "Change zoning from Local Retail (LR) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Urban Village", "High Intensity Urban Center"],
+      "specialUsePermits": ["SU-6"]
+    },
+    "PD 006-047": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 7.4,
+      "mainOrdinance": "006-047",
+      "ordinances": [
+        {
+          "id": "006-047",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2006/006-047.pdf",
+          "date": "2006-10-10",
+          "description": "Change Zoning from Commercial-2 (C-2) to Planned Development (PD)"
+        },
+        {
+          "id": "011-044",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2011/011-044%20-%201640-Z%20Keller%20Springs%20Lofts%20Embrey%20Partners.pdf",
+          "date": "2011-08-09",
+          "description": "To provide for revised development plans for a project of 353 multi-family units"
+        },
+        {
+          "id": "011-056",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2011/011-056%20-%20Abandonment%20of%20sewer%20easement%20%28Addison%20Road%20%26%20Keller%20Springs%29.pdf",
+          "date": "2011-09-13",
+          "description": "The abandonment of the Town's interest in a portion of non-exclusive utility easement"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 83-007": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 7.3,
+      "mainOrdinance": "083-007",
+      "ordinances": [
+        {
+          "id": "083-007",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-007%20-%201983.pdf",
+          "date": "1983-02-22",
+          "description": "Change zoning from Commercial (C) to Planned Development (PD)"
+        },
+        {
+          "id": "086-079",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1986/086-079%20-%201986.pdf",
+          "date": "1986-10-14",
+          "description": "Amending Planned Development Ordinance No. 083-007 by Amending the site plan"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center", "Urban Village"],
+      "specialUsePermits": ["SU-4"]
+    },
+    "PD 84-100": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 7.2,
+      "mainOrdinance": "084-100",
+      "ordinances": [
+        {
+          "id": "084-100",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-100%20-%201984.pdf",
+          "date": "1984-12-11",
+          "description": "Changing the zoning from 'I-1' Industrial to 'PD' Planned Development"
+        },
+        {
+          "id": "095-012",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-012%20-%201995.pdf",
+          "date": "1995-03-14",
+          "description": "Special use permit for a hotel"
+        },
+        {
+          "id": "097-026",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1997/097-026%20-%201997.pdf",
+          "date": "1997-06-10",
+          "description": "Amend ORD 084-100 to provide for revised legal description, development plans & Special Conditions"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 011-002": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 6.9,
+      "mainOrdinance": "011-002",
+      "ordinances": [
+        {
+          "id": "009-004",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2009/009-004%20Methodist%20Spinal%20Hospital.pdf",
+          "date": "2009-04-14",
+          "description": "Change zoning from Local Retail (LR) to Planned Development (PD) district and SUP for Hospital use medical office, office parking, and related uses."
+        },
+        {
+          "id": "011-002",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2011/011-002%20MHSS%20Addison%20LP%20revised%20lot%20line.pdf",
+          "date": "2011-01-11",
+          "description": "Amend ORD 009-004 to revise lot line on Tract 1 from 10 ft to 0 ft and to eliminate a requirement for a ten (10) foot landscape buffer."
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 85-006": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 6.7,
+      "mainOrdinance": "085-006",
+      "ordinances": [
+        {
+          "id": "085-006",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-006%20-%201985.pdf",
+          "date": "1985-02-12",
+          "description": "Change zoning from Commercial (C) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 96-002": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 6.4,
+      "mainOrdinance": "096-002",
+      "ordinances": [
+        {
+          "id": "096-002",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-002%20-%201996.pdf",
+          "date": "1996-01-09",
+          "description": "Amendment to change the zoning from planned development to a planned development district with single family/townhome as an allowed use."
+        },
+        {
+          "id": "097-018",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1997/097-018%20-%201997.pdf",
+          "date": "1997-05-13",
+          "description": "Approval of revised development plans in a planned development district (ORD 092-037)"
+        }
+      ],
+      "placeTypes": ["Residential Living", "Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 566": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 6.2,
+      "mainOrdinance": null,
+      "ordinances": [
+        {
+          "id": "086-014",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1986/086-014%20-%201986.pdf%0D%0A",
+          "date": "1986-02-11",
+          "description": "SUP to add 8385 square feet to the total area allowed for restaurant uses and the sale of alcoholic beverages"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-3"]
+    },
+    "PD 623": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 6.0,
+      "mainOrdinance": "080-623",
+      "ordinances": [
+        {
+          "id": "080-623",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1980/623%20-%201980.pdf",
+          "date": "1980-10-14",
+          "description": "Change zoning from Residential to Planned Development"
+        }
+      ],
+      "placeTypes": ["Residential Living"],
+      "specialUsePermits": []
+    },
+    "PD 21-02": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 5.8,
+      "mainOrdinance": "021-002",
+      "ordinances": [
+        {
+          "id": "092-051",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1992/092-051%20-%201992.pdf",
+          "date": "1992-08-11",
+          "description": "Change zoning from Industrial-1 (I-1) to Local Retail (LR)"
+        },
+        {
+          "id": "021-002",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2021/O21-002%20-%202021.pdf",
+          "date": "2021-01-12",
+          "description": "Amending the Comprehensive Zoning Ordinance to rezone 5.95 acres of Property from local retail district to planned development district 021-02, based on local retail district standards with modified uses; providing a savings clause"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 84-076": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 5.7,
+      "mainOrdinance": "084-076",
+      "ordinances": [
+        {
+          "id": "084-076",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-076%20-%201984.pdf",
+          "date": "1984-10-09",
+          "description": "Change zoning from Local Retail (LR) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Urban Village", "Residential Living"],
+      "specialUsePermits": ["SU-2"]
+    },
+    "PD 688": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 5.7,
+      "mainOrdinance": "081-688",
+      "ordinances": [
+        {
+          "id": "081-688",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1981/688%20-%201981.pdf",
+          "date": "1981-07-28",
+          "description": "Change zoning from Industrial (I-1) to Commercial"
+        },
+        {
+          "id": "097-013",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1997/097-013%20-%201997.pdf",
+          "date": "1997-04-08",
+          "description": "Change zoning from PD (ORD 083-017 & 085-056) and C-1 to Planned Development"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 01-002": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 5.5,
+      "mainOrdinance": "001-002",
+      "ordinances": [
+        {
+          "id": "001-002",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2001/001-002%20-%202001.pdf",
+          "date": "2001-01-09",
+          "description": "Change zoning from local retail (LR) to a Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Urban Village", "High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 760": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 5.2,
+      "mainOrdinance": null,
+      "ordinances": [],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 94-006": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 5.2,
+      "mainOrdinance": "094-006",
+      "ordinances": [
+        {
+          "id": "094-006",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1994/094-006%20-%201994.pdf",
+          "date": "1994-01-11",
+          "description": "Amend ORD 084-093 to change use from Garden Office to Single Family Residential"
+        }
+      ],
+      "placeTypes": ["Residential Living"],
+      "specialUsePermits": []
+    },
+    "PD C-828": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 5.1,
+      "mainOrdinance": null,
+      "ordinances": [
+        {
+          "id": "082-828",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1982/828%20-%201982.pdf",
+          "date": "1982-09-21",
+          "description": "Change zoning from Apartment (A) to Planned Development-Condo"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD O17-06": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 5.0,
+      "mainOrdinance": "017-006",
+      "ordinances": [
+        {
+          "id": "017-006",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2017/O17-006%2002142017%20AMLI%205015%20Spectrum%20Drive.pdf",
+          "date": "2017-02-14",
+          "description": "Case 1753-Z: Rezoning from C-1 (305) to PD O17-006, approval of dev plan for multifamily and future retail space"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 496": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 4.9,
+      "mainOrdinance": "079-496",
+      "ordinances": [
+        {
+          "id": "079-496",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1979/496%20-%201979.pdf",
+          "date": "1979-04-24",
+          "description": "Change zoning from Residential (R-1) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Urban Village", "Residential Living"],
+      "specialUsePermits": []
+    },
+    "PD 85-026": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 4.6,
+      "mainOrdinance": "085-026",
+      "ordinances": [
+        {
+          "id": "085-026",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-026%20-%201985.pdf",
+          "date": "1985-05-14",
+          "description": "Change zoning from PD-TH to PD-Office"
+        },
+        {
+          "id": "096-057",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-057%20-%201996.pdf",
+          "date": "1996-11-11",
+          "description": "Amendment to an existing PD (086-026) provide for revised allowed uses, approval of development plans, revised special conditions"
+        },
+        {
+          "id": "097-037",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1997/097-037%20-%201997.pdf",
+          "date": "1997-09-09",
+          "description": "Amend ORD 096-057 to provide for revised allowed uses and revised special conditions"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 84-021": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 4.3,
+      "mainOrdinance": "084-021",
+      "ordinances": [
+        {
+          "id": "084-021",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-021%20-%201984.pdf",
+          "date": "1984-04-10",
+          "description": "Change zoning from Industrial (I-3) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 549": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 4.3,
+      "mainOrdinance": "079-549",
+      "ordinances": [
+        {
+          "id": "079-549",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1979/549%20-%201979.pdf",
+          "date": "1979-12-11",
+          "description": "Change zoning from Industrial (I-1) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 95-011": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 4.2,
+      "mainOrdinance": "095-011",
+      "ordinances": [
+        {
+          "id": "085-032",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-032%20-%201984.pdf",
+          "date": "1985-06-11",
+          "description": "Change the Zoning From District \"C\" (Commercial) to District \"PD\" (Planned Development)"
+        },
+        {
+          "id": "095-011",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-011%20-%201995.pdf",
+          "date": "1995-03-14",
+          "description": "Amend ORD 085-032 for revised development plans & special conditions"
+        }
+      ],
+      "placeTypes": ["Inwood Innovation Area"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 626": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 4.1,
+      "mainOrdinance": "080-626",
+      "ordinances": [
+        {
+          "id": "080-626",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1980/626%20-%201980.pdf",
+          "date": "1980-10-14",
+          "description": "Change zoning from Local Retail, Apartment & Residential to Planned Development, allowing LR"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-3"]
+    },
+    "PD 91-066": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 4.1,
+      "mainOrdinance": "091-066",
+      "ordinances": [
+        {
+          "id": "091-066",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1991/091-066%20-%201991.pdf",
+          "date": "1991-11-12",
+          "description": "Amend existing (Ord 446 and 459) PD to provide for additional uses and a new development plan."
+        },
+        {
+          "id": "094-079",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1994/094-079%20-%201994.pdf",
+          "date": "1994-11-29",
+          "description": "Amend SUP 091-066 (and ORD: 446, 459) to provide for additional use: BREWPUB"
+        },
+        {
+          "id": "000-024",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2000/000-024%20-%202000.pdf",
+          "date": "2000-06-13",
+          "description": "Amend ORD 091-066 - revised entry vestibule and changes to building floor plan"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1/3"]
+    },
+    "PD 658": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 4.0,
+      "mainOrdinance": "080-658",
+      "ordinances": [
+        {
+          "id": "080-658",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1980/658%20-%201980.pdf",
+          "date": "1981-02-10",
+          "description": "Change zoning from Industrial (I-1) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-2"]
+    },
+    "PD 94-076": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 4.0,
+      "mainOrdinance": "094-076",
+      "ordinances": [
+        {
+          "id": "094-076",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1994/094-076%20-%201994.pdf",
+          "date": "1994-11-08",
+          "description": "Change zoning from Commercial-2 (C-2) to Planned Development (PD) to allow for hotel use"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 84-010": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 3.8,
+      "mainOrdinance": "084-010",
+      "ordinances": [
+        {
+          "id": "084-010",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-010%20-%201984.pdf",
+          "date": "1984-03-13",
+          "description": "Change zoning from Commercial (C) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center", "Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 85-083": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 3.7,
+      "mainOrdinance": "085-083",
+      "ordinances": [
+        {
+          "id": "085-083",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-083%20-%201985.pdf",
+          "date": "1985-11-05",
+          "description": "Change zoning from Industrial (I) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 92-058": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 3.7,
+      "mainOrdinance": null,
+      "ordinances": [
+        {
+          "id": "095-031",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-031%20-%201995.pdf",
+          "date": "1995-06-27",
+          "description": "Approval of development plans for a parking lot in a PD district No.460 (ORD: 092-058)"
+        },
+        {
+          "id": "097-030",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1997/097-030%20-%201997.pdf",
+          "date": "1997-08-12",
+          "description": "Special use permit for hotel, restaurant & sale of alcohol for on-premises consumption"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-2"]
+    },
+    "PD 92-020": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 3.4,
+      "mainOrdinance": "092-020",
+      "ordinances": [
+        {
+          "id": "092-020",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1992/092-020%20-%201992.pdf",
+          "date": "1992-04-14",
+          "description": "Change zoning from Commercial-1 to Planned Development"
+        },
+        {
+          "id": "094-052",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1994/094-052%20-%201994.pdf",
+          "date": "1994-08-09",
+          "description": "Amend so as to Change the zoning from Planned Development and Commercial-2 to Planned Development (PD) to allow for hotel use"
+        },
+        {
+          "id": "000-039",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2000/000-039%20-%202000.pdf",
+          "date": "2000-10-10",
+          "description": "Approve development plan in an existing Planned Development (PD), which has a hotel/motel as an allowed use."
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 595": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 3.2,
+      "mainOrdinance": "080-595",
+      "ordinances": [
+        {
+          "id": "080-595",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1980/595%20-%201980.pdf",
+          "date": "1980-06-10",
+          "description": "Change zoning from Residential (R-1) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 83-010": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 3.2,
+      "mainOrdinance": "083-010",
+      "ordinances": [
+        {
+          "id": "083-010",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-010%20-%201983.pdf",
+          "date": "1983-03-15",
+          "description": "Amend existing PD (784) to allow hotel & restaurant and provide for revised site plans"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 22-11": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 3.1,
+      "mainOrdinance": "022-11",
+      "ordinances": [
+        {
+          "id": "092-025",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1992/092-025%20-%201992.pdf",
+          "date": "1992-04-14",
+          "description": "Change zoning (085-002) from Planned Development (PD) to Commercial-2 (C-2)"
+        },
+        {
+          "id": "022-11",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2022/O22-11%20-%202022.pdf",
+          "date": "2022-04-12",
+          "description": "Rezoning a 3.2 acre property from (C-2) DISTRICT to a (PD) district with modified Urban Center (UC) District standards."
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD O17-007": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 3.0,
+      "mainOrdinance": "017-007",
+      "ordinances": [
+        {
+          "id": "017-007",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2017/O17-007.pdf",
+          "date": "2017-02-28",
+          "description": "Case 1751-Z: Rezone LR (571) to PD O17-007 based on LR regulations with modified uses and standards"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 84?": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 3.0,
+      "mainOrdinance": null,
+      "ordinances": [],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 93-008": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.9,
+      "mainOrdinance": "093-008",
+      "ordinances": [
+        {
+          "id": "093-008",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1993/093-008%20-%201993.pdf",
+          "date": "1993-02-09",
+          "description": "Change zoning from Commerical-1 (C-1) to Planned Development with local retail"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-2"]
+    },
+    "PD 84-098": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.8,
+      "mainOrdinance": "084-098",
+      "ordinances": [
+        {
+          "id": "084-098",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-098%20-%201984.pdf",
+          "date": "1984-12-04",
+          "description": "Changing the zoning from 'I-3' Industrial to 'PD' Planned Development"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 808": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.7,
+      "mainOrdinance": "082-808",
+      "ordinances": [
+        {
+          "id": "082-808",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1982/808%20-%201982.pdf",
+          "date": "1982-06-22",
+          "description": "Change zoning from Industrial (I) to Planned Development (PD)."
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 85-100": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.6,
+      "mainOrdinance": "085-100",
+      "ordinances": [
+        {
+          "id": "085-100",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-100%20-%201985.pdf",
+          "date": "1985-12-10",
+          "description": "Change the zoning from Industrial to Planned Development"
+        },
+        {
+          "id": "095-035",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-035%20-%201995.pdf",
+          "date": "1995-08-08",
+          "description": "Amend ORD 085-100 to provide for a parking ratio of one space per 350 sq ft of usable space and delete a requirement for landscaping"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 96-034": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.6,
+      "mainOrdinance": "096-034",
+      "ordinances": [
+        {
+          "id": "096-034",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-034%20-%201996.pdf",
+          "date": "1996-07-23",
+          "description": "Change zoning from I-1 to PD  for the uses allowed in the I-1 district"
+        },
+        {
+          "id": "096-035",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-035%20-%201996.pdf",
+          "date": "1996-07-23",
+          "description": "Change zoning from I-1 to PD  for the uses allowed in the I-1 district"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 85-009": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.5,
+      "mainOrdinance": "085-009",
+      "ordinances": [
+        {
+          "id": "085-009",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-009%20-%201985.pdf",
+          "date": "1985-02-12",
+          "description": "Amend ORD 083-021 to amend site development plans"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 829": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.4,
+      "mainOrdinance": "082-829",
+      "ordinances": [
+        {
+          "id": "082-829",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1982/829%20-%201982.pdf",
+          "date": "1982-09-21",
+          "description": "Change zoning from Local Retail (LR) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 84-095": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.4,
+      "mainOrdinance": "084-095",
+      "ordinances": [
+        {
+          "id": "084-095",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-095%20-%201984.pdf",
+          "date": "1984-11-27",
+          "description": "Changing the zoning from 'C' Commercial to 'PD' Planned Development"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 02-020": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.3,
+      "mainOrdinance": "002-020",
+      "ordinances": [
+        {
+          "id": "002-020",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2002/002-020%20-%202002.pdf",
+          "date": "2002-06-11",
+          "description": "Change from C-1 to PD, with sale of alcoholic beverages for on-premises consumption &  brewpub as allowed uses."
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 004-048": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.2,
+      "mainOrdinance": "004-048",
+      "ordinances": [
+        {
+          "id": "004-048",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2004/004-048%20-%202004.pdf",
+          "date": "2004-11-09",
+          "description": "Change the zone from C-1 to PD, SUP for restaurant & sale of alcoholic beverages on premises consumption only"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 005-014": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.1,
+      "mainOrdinance": "005-014",
+      "ordinances": [
+        {
+          "id": "005-014",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2005/005-014%20-%202005.pdf",
+          "date": "2005-04-12",
+          "description": "Change zoning from C-1 to PD with restaurant; also SUP for the sale of alcoholic beverages for on-premises consumption"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 83-033": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.1,
+      "mainOrdinance": "083-033",
+      "ordinances": [
+        {
+          "id": "083-033",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-033%20-%201983.pdf",
+          "date": "1983-05-24",
+          "description": "Presently zoned \"C\" (Commercial) to be used under Planned Development District No. 34."
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 84-035": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.0,
+      "mainOrdinance": "084-035",
+      "ordinances": [
+        {
+          "id": "084-035",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-035%20-%201984.pdf",
+          "date": "1984-05-22",
+          "description": "Change zoning from Local Retail (LR) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-2"]
+    },
+    "PD 89-011": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 2.0,
+      "mainOrdinance": "089-011",
+      "ordinances": [
+        {
+          "id": "089-011",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1989/089-011%20-%201989.pdf",
+          "date": "1989-05-09",
+          "description": "Change zoning from Commercial (C) to Planned Development (PD) and approval of a site development plan"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 094-043": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.9,
+      "mainOrdinance": "094-043",
+      "ordinances": [
+        {
+          "id": "094-043",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1994/094-043%20-%201994.pdf",
+          "date": "1994-06-28",
+          "description": "SUP for Restaurant & sale of alcoholic beverages for on-premises consumption"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 12-039": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.8,
+      "mainOrdinance": "012-039",
+      "ordinances": [
+        {
+          "id": "012-039",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2012/012-039%2C%20amending%20zoning%20ordinance%20Methodist%20Hospital.pdf",
+          "date": "2012-06-12",
+          "description": "Changing the Zoning Classification on an approximately 1.73 ac tract of land"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 84-094": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.7,
+      "mainOrdinance": "084-094",
+      "ordinances": [
+        {
+          "id": "084-094",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-094%20-%201984.pdf",
+          "date": "1984-11-27",
+          "description": "Change zoning from LR to PD and approve development plans for office building"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 86-036": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.7,
+      "mainOrdinance": "086-036",
+      "ordinances": [
+        {
+          "id": "086-036",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1986/086-036%20-%201986.pdf",
+          "date": "1986-04-22",
+          "description": "Change zoning from Industrial to Planned Development"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 95-007": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.7,
+      "mainOrdinance": "095-007",
+      "ordinances": [
+        {
+          "id": "095-007",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-007%20-%201995.pdf",
+          "date": "1995-03-06",
+          "description": "Change zoning from Local Retail (LR) to Planned Development (PD) to allow for hotel/motel use"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 06-025": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.7,
+      "mainOrdinance": "006-025",
+      "ordinances": [
+        {
+          "id": "085-047",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-047%20-%201985.pdf",
+          "date": "1985-07-23",
+          "description": "Change zoning Residential (R-1) to Planned Development (PD)"
+        },
+        {
+          "id": "006-025",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2006/006-025.pdf",
+          "date": "2006-06-27",
+          "description": "Amendment ORD 085-047-Planned Development (PD) - change from Garden Office to Townhomes and to approve development plans and conditions for development of the property."
+        }
+      ],
+      "placeTypes": ["Residential Living"],
+      "specialUsePermits": []
+    },
+    "PD O18-033": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.6,
+      "mainOrdinance": "018-033",
+      "ordinances": [
+        {
+          "id": "018-033",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2018/O18-033%20Addison%20Office%20Condos%20Ordinance.pdf",
+          "date": "2018-09-11",
+          "description": "Case 1783-Z: Rezone from C-1 to PD O18-033 based on C-1 with modified development standards."
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 85-049": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.6,
+      "mainOrdinance": "085-049",
+      "ordinances": [
+        {
+          "id": "085-049",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-049%20-%201985.pdf",
+          "date": "1985-08-13",
+          "description": "Change zoning from Industrial (I-3) to Planned Development (PD) and approve site development plans"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 86-023": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.5,
+      "mainOrdinance": "086-023",
+      "ordinances": [
+        {
+          "id": "086-023",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1986/086-023%20-%201986.pdf",
+          "date": "1986-03-11",
+          "description": "Change zoning from Industrial to Planned Development"
+        },
+        {
+          "id": "087-032",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1987/087-032%20-%201987.pdf",
+          "date": "1987-06-09",
+          "description": "Amendment to a Planned Development (PD) - amend ORD 086-023"
+        },
+        {
+          "id": "088-003",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1988/088-003%20-%201988.pdf",
+          "date": "1988-01-12",
+          "description": "Amendment to a Planned Development (PD) - amend ORD 086-023, is hereby amended by providing for new development plans"
+        },
+        {
+          "id": "090-007",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1990/090-007%20-%201990.pdf",
+          "date": "1990-02-13",
+          "description": "Amendment to a Planned Development (PD) - amend ORD 088-003 & 086-023"
+        },
+        {
+          "id": "091-014",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1991/091-014%20-%201991.pdf",
+          "date": "1990-04-09",
+          "description": "Amendment to a Planned Development (PD) - amend ORD 088-003 & 086-023 add an additional use: hair and manicure salon."
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": ["SU-2"]
+    },
+    "PD O21-037": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.5,
+      "mainOrdinance": "021-037",
+      "ordinances": [
+        {
+          "id": "093-018",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1993/093-018%20-%201993.pdf",
+          "date": "1993-03-09",
+          "description": "Amend PD 092-048, 091-068 & 626 in order to add residential uses"
+        },
+        {
+          "id": "015-030",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2015/O15-030%20111015%20Addison%20Town%20Center%20PD%20Amendment.pdf",
+          "date": "2015-11-10",
+          "description": "Case 1720-Z: Amend O93-018 to revise permitted uses, facade requirements, and parking regulations"
+        },
+        {
+          "id": "020-054",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2020/O20-054%20-%202020.pdf",
+          "date": "2020-11-10",
+          "description": "Rezoning from Planned Development O93-018, amended by O15-030, to Planned Development O20-54 based on belt line (BL) district regulations with modified development standard"
+        },
+        {
+          "id": "021-037",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2021/O21-037%20-%202021.pdf",
+          "date": "2021-10-12",
+          "description": "Restating PD O20-054; providing minimum lot size and cross-access easement requirements"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 85-050": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.4,
+      "mainOrdinance": "085-050",
+      "ordinances": [
+        {
+          "id": "085-050",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-050%20-%201985.pdf",
+          "date": "1985-08-13",
+          "description": "Change the zoning from District LR to PD"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD 92-066": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.4,
+      "mainOrdinance": "092-066",
+      "ordinances": [
+        {
+          "id": "092-066",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1992/092-066%20-%201992.pdf",
+          "date": "1992-11-10",
+          "description": "Amend ORD 092-020 to provide for deletion of home improvement center, lumber yard as an allowed use; add local retail uses, and the addition of development standards"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 92-075": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.3,
+      "mainOrdinance": "092-075",
+      "ordinances": [
+        {
+          "id": "092-075",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1992/092-075%20-%201992.pdf",
+          "date": "1992-12-08",
+          "description": "Meritorious Exception to the city's sign ordinance allowing a monument sign with 10' setback"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 84-027": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.3,
+      "mainOrdinance": "084-027",
+      "ordinances": [
+        {
+          "id": "084-027",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-027%20-%201984.pdf",
+          "date": "1984-05-08",
+          "description": "Change the zoning from 'I-3' Industrial to 'PD' Planned Development"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD O21-034": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.2,
+      "mainOrdinance": "021-034",
+      "ordinances": [
+        {
+          "id": "021-024",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2021/O21-024%20-%202021.pdf",
+          "date": "2021-08-10",
+          "description": "Repealing ordinance No.095-021 and rezoning a 1.17 acre property from LR to COMMERCIAL -1 ( C1) DISTRICT."
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 84-099": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.2,
+      "mainOrdinance": "084-099",
+      "ordinances": [
+        {
+          "id": "084-099",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-099%20-%201984.pdf",
+          "date": "1984-12-04",
+          "description": "Changing the zoning from 'I-3' Industrial to 'PD' Planned Development"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 83-043": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.1,
+      "mainOrdinance": "083-043",
+      "ordinances": [
+        {
+          "id": "083-043",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-043%20-%201983.pdf",
+          "date": "1983-06-28",
+          "description": "Change zoning from Commercial to Planned Development and approve site development plans"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": []
+    },
+    "PD 847": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.1,
+      "mainOrdinance": "082-847",
+      "ordinances": [
+        {
+          "id": "082-847",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1982/847%20-%201982.pdf",
+          "date": "1982-12-14",
+          "description": "Change zoning from Local Retail (LR) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["High Intensity Urban Center"],
+      "specialUsePermits": []
+    },
+    "PD O18-032": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 1.0,
+      "mainOrdinance": "018-032",
+      "ordinances": [
+        {
+          "id": "018-032",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2018/O18-032%20Ordinance%20-%20Western%20International.pdf",
+          "date": "2018-09-11",
+          "description": "Case 1782-Z: Repeal O18-013 and create new PD district with UC regulations for an office building"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD 459": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 0.9,
+      "mainOrdinance": "078-459",
+      "ordinances": [
+        {
+          "id": "078-459",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1978/459%20-%201978.pdf",
+          "date": "1978-11-28",
+          "description": "Change zoning from Apartment (A) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 91-025": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 0.7,
+      "mainOrdinance": "091-025",
+      "ordinances": [
+        {
+          "id": "091-025",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1991/091-025%20-%201991.pdf",
+          "date": "1991-06-11",
+          "description": "Change zoning from Industrial (I-1) to Planned Development"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 84-067": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 0.7,
+      "mainOrdinance": "084-067",
+      "ordinances": [
+        {
+          "id": "091-043",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1991/091-043%20-%201991.pdf",
+          "date": "1991-08-13",
+          "description": "Amend ORD 084-067"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 83-047": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 0.7,
+      "mainOrdinance": "083-047",
+      "ordinances": [
+        {
+          "id": "083-047",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-047%20-%201983.pdf",
+          "date": "1983-07-26",
+          "description": "Change zoning from Industrial (I-3) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Aviation and Industry"],
+      "specialUsePermits": ["SU-1"]
+    },
+    "PD 23-39": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 0.6,
+      "mainOrdinance": "023-39",
+      "ordinances": [
+        {
+          "id": "004-048",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2004/004-048%20-%202004.pdf",
+          "date": "2004-11-09",
+          "description": "Change the zone from C-1 to PD, SUP for restaurant & sale of alcoholic beverages on premises consumption only"
+        },
+        {
+          "id": "023-39",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-39%20-%202023.pdf",
+          "date": "2023-09-12",
+          "description": "Restating NO. O20-53 to allow multifamilly residential use witin a 5-story commercial building"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": []
+    },
+    "PD O15-035": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 0.5,
+      "mainOrdinance": "015-035",
+      "ordinances": [
+        {
+          "id": "015-035",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2015/O15-035%20120815%20Axcess%20Catering%20PD.pdf",
+          "date": "2015-12-08",
+          "description": "Case 1726-Z: Rezone LR 154 to PD O15-035 to allow commercial catering kitchen with modified parking"
+        }
+      ],
+      "placeTypes": ["Urban Village"],
+      "specialUsePermits": ["SU-2"]
+    }
+  }
+}

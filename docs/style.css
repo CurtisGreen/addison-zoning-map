@@ -1,0 +1,191 @@
+:root {
+  --ink: #1f2328;
+  --muted: #59636e;
+  --line: #d1d9e0;
+  --bg: #fff;
+  --link: #0b5cad;
+  --ok: #1a7f37;
+  --sup: #9a6700;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font:
+    15px/1.45 system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+a {
+  color: var(--link);
+}
+header,
+main,
+footer {
+  padding: 0 16px;
+}
+header {
+  padding-block: 12px;
+  border-bottom: 1px solid var(--line);
+}
+footer {
+  color: var(--muted);
+  font-size: 13px;
+  padding-block: 16px;
+  border-top: 1px solid var(--line);
+}
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+#map {
+  height: 100vh;
+  height: 100dvh;
+}
+.leaflet-tile-pane {
+  filter: grayscale(1) brightness(1.06);
+}
+.legend {
+  background: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: grid;
+  gap: 2px;
+  box-shadow: 0 1px 3px #0003;
+}
+.legend i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  vertical-align: -2px;
+  opacity: 0.8;
+}
+.legend .pd {
+  outline: 1px dashed #333;
+}
+
+.leaflet-popup-content {
+  font-size: 14px;
+  margin: 10px 12px;
+}
+.leaflet-popup-content > div {
+  margin-top: 4px;
+}
+.headline-uses {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 2px 10px;
+}
+.allowed {
+  color: var(--ok);
+  font-weight: 600;
+}
+.permit {
+  color: var(--sup);
+  font-weight: 600;
+}
+.not-allowed {
+  color: var(--muted);
+}
+.links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#zone-list {
+  columns: 2 220px;
+}
+#zone-list h3 {
+  column-span: all;
+  margin: 16px 0 4px;
+  font-size: 15px;
+}
+#zone-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#zone-list li {
+  break-inside: avoid;
+  padding: 1px 0;
+}
+details summary {
+  cursor: pointer;
+  padding: 12px 0;
+  font-weight: 600;
+}
+
+main {
+  max-width: 760px;
+}
+main h1 {
+  font-size: 22px;
+  margin: 18px 0 6px;
+}
+main h2 {
+  font-size: 17px;
+  margin: 24px 0 6px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 4px;
+}
+main h3 {
+  font-size: 14px;
+  margin: 12px 0 2px;
+  color: var(--muted);
+}
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 16px;
+}
+dt {
+  color: var(--muted);
+}
+dd {
+  margin: 0;
+}
+ul.uses {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.uses span:first-child {
+  display: inline-block;
+  width: 1.4em;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 5px 8px 5px 0;
+  border-bottom: 1px solid var(--line);
+  font-weight: normal;
+}
+th {
+  color: var(--muted);
+  width: 38%;
+}
+td:last-child {
+  white-space: nowrap;
+  font-size: 13px;
+}
+.note {
+  margin: 2px 0 0;
+}
+
+.error {
+  padding: 16px;
+  color: #b42318;
+}

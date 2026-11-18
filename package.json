@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "prepare": "git config core.hooksPath .githooks"
+  },
+  "devDependencies": {
+    "prettier": "3.10.1"
+  }
+}

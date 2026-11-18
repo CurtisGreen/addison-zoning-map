@@ -1,0 +1,6 @@
+#!/bin/sh
+# Format staged files with Prettier before each commit.
+files=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(js|json|html|css|md)$')
+[ -z "$files" ] && exit 0
+echo "$files" | xargs npx --no-install prettier --write --ignore-unknown
+echo "$files" | xargs git add
