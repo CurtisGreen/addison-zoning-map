@@ -2,7 +2,7 @@
   "id": "PD 461",
   "name": "Midway Meadows",
   "base": "R-1",
-  "usesOnly": true,
+  "pdUsesOnly": true,
   "purpose": "",
   "uses": [
     {

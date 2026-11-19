@@ -12,7 +12,6 @@ import {
   loadSiteData,
   placeTypeInfo,
   showError,
-  sourceHtml,
   zonePageUrl,
   zoneTitle,
 } from "./data.js";
@@ -99,9 +98,7 @@ function renderFacts(zone, base) {
   }
   rows.push([
     "Source",
-    (zone.kind === "pd"
-      ? sourceHtml(zone)
-      : zone.sources.map(externalLink).join(", ")) +
+    zone.sources.map(externalLink).join(", ") +
       notes.mark(zone.review.ordinances),
   ]);
   // The ordinance's acreage, when its boundary includes the roads.
@@ -189,12 +186,12 @@ function changeText(baseValue, newValue, unit, baseUnit = unit) {
 
 /** Uses a PD adds or changes, or other uses it lists. */
 function useRows(pd, zone, base) {
-  // A PD that lists all its own uses (usesOnly) shows them once, under Allowed uses.
+  // A PD that lists all its own uses (pdUsesOnly) shows them once, under Allowed uses.
   const listed =
-    pd.base && !pd.usesOnly
+    pd.base && !pd.pdUsesOnly
       ? pd.uses.map((use) => ({ text: use.name, ...use }))
       : [];
-  const other = pd.usesOnly ? [] : pd.otherUses;
+  const other = pd.pdUsesOnly ? [] : pd.otherUses;
   return [...listed, ...other].map((use) => {
     const permission = use.permission ? PERMISSIONS[use.permission].label : "";
     return `<tr><td>${escapeHtml(use.text)}</td><td>${permission}</td><td class="source">${evidenceLink(use, zone, base)}</td></tr>`;
@@ -399,16 +396,21 @@ function renderUses(zone, base, standards) {
     .filter((permission) => permission.className !== "not-allowed")
     .map((permission) => `${permission.mark} ${permission.label.toLowerCase()}`)
     .join(", ");
-  // A PD that lists all its uses shows the ones with no UDC name as a last group.
-  const ordinanceOnlyUses = zone.pdData?.usesOnly ? zone.pdData.otherUses : [];
+  // A PD that lists all its own uses shows the ones with no UDC name as a last group.
+  const ordinanceOnlyUses = zone.pdData?.pdUsesOnly
+    ? zone.pdData.otherUses
+    : [];
   if (ordinanceOnlyUses.length)
-    byCategory.set(
-      "Other uses",
-      ordinanceOnlyUses.map((use) => {
-        const { mark, className } = PERMISSIONS[use.permission ?? "P"];
-        return `<li><span class="${className}">${mark}</span> ${escapeHtml(use.text)} ${evidenceLink(use, zone, base)}</li>`;
-      }),
-    );
+    for (const use of ordinanceOnlyUses) {
+      const { mark, className } = PERMISSIONS[use.permission ?? "P"];
+      const category = use.group ?? "Other uses";
+      if (!byCategory.has(category)) byCategory.set(category, []);
+      byCategory
+        .get(category)
+        .push(
+          `<li><span class="${className}">${mark}</span> ${escapeHtml(use.text)} ${evidenceLink(use, zone, base)}</li>`,
+        );
+    }
   const groups = [...byCategory].map(
     ([category, lines]) =>
       `<h3>${escapeHtml(category)}</h3><ul class="uses">${lines.join("")}</ul>`,

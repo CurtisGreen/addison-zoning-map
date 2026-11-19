@@ -135,7 +135,8 @@ export async function getZone(zoneId) {
 
   const pdData = await loadJson(pdFilePath(zoneId));
   const baseDistrict = base.districts[pdData.base];
-  const uses = pdData.usesOnly || !baseDistrict ? {} : { ...baseDistrict.uses };
+  const uses =
+    pdData.pdUsesOnly || !baseDistrict ? {} : { ...baseDistrict.uses };
   for (const use of pdData.uses) {
     if (use.permission === "none") delete uses[use.name];
     else uses[use.name] = use.permission;

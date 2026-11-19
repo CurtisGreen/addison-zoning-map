@@ -2076,8 +2076,7 @@
       },
       "review": {
         "heightMaxStories": "1 story within 150 ft of single-family use or district",
-        "sideSetbackMin": "Long building sides: 10% of building length, min 20 ft",
-        "legacyUses": "Legacy uses mapped to UDC names (two-family = duplex, multiple-family = multifamily)"
+        "sideSetbackMin": "Long building sides: 10% of building length, min 20 ft"
       }
     },
     "PD-TH": {
@@ -2133,7 +2132,6 @@
         }
       },
       "review": {
-        "legacyUses": "Legacy uses mapped to UDC names (townhouse = single-family attached, condominium = multifamily)",
         "frontSetbackMin": "25 ft exterior yard from all public streets"
       }
     },

@@ -3,251 +3,585 @@
   "name": "Vitruvian Park",
   "family": "mixed",
   "base": null,
-  "usesOnly": true,
+  "pdUsesOnly": true,
   "purpose": "The purpose of this Planned Development District No. 007-034 … is to create a mixed use environment under a unified plan consisting of retail, restaurant, residential and office uses within a pedestrian-oriented village setting",
-  "uses": [
+  "uses": [],
+  "otherUses": [
     {
-      "name": "Dwelling, single-family (attached)",
-      "permission": "P",
+      "text": "Townhouse",
+      "group": "Residential",
       "ordinance": "016-017",
       "page": 5,
-      "quote": "Townhouse Condominium Multifamily"
+      "quote": "Residential uses within the Property are limited to the following Townhouse Condominium Multifamily"
     },
     {
-      "name": "Dwelling, multifamily",
-      "permission": "P",
+      "text": "Condominium",
+      "group": "Residential",
       "ordinance": "016-017",
       "page": 5,
-      "quote": "Townhouse Condominium Multifamily"
+      "quote": "Residential uses within the Property are limited to the following Townhouse Condominium Multifamily"
     },
     {
-      "name": "Retail sales, less than 15,000 sq. ft. GFA",
-      "permission": "P",
+      "text": "Multifamily",
+      "group": "Residential",
       "ordinance": "016-017",
-      "page": 7,
-      "quote": "Retail Store",
-      "requires": "mixed use",
-      "exceptBlocks": ["211"]
+      "page": 5,
+      "quote": "Residential uses within the Property are limited to the following Townhouse Condominium Multifamily"
     },
     {
-      "name": "Retail sales, 15,000 to 50,000 sq. ft. GFA",
-      "permission": "P",
+      "text": "Antique shop",
+      "group": "Retail",
       "ordinance": "016-017",
-      "page": 7,
-      "quote": "Retail Store",
-      "requires": "mixed use",
-      "exceptBlocks": ["211"]
+      "page": 5,
+      "quote": "Antique shop Aquarium"
     },
     {
-      "name": "Retail sales, more than 50,000 sq. ft. GFA",
-      "permission": "P",
+      "text": "Aquarium",
+      "group": "Retail",
       "ordinance": "016-017",
-      "page": 6,
-      "quote": "Department store",
-      "requires": "mixed use",
-      "exceptBlocks": ["211"]
+      "page": 5,
+      "quote": "Aquarium Art gallery"
     },
     {
-      "name": "Bank or financial institution",
-      "permission": "P",
+      "text": "Art gallery",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 5,
+      "quote": "Art gallery ATM facilities"
+    },
+    {
+      "text": "ATM facilities",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 5,
+      "quote": "ATM facilities Bakery, retail sales only"
+    },
+    {
+      "text": "Bakery, retail sales only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 5,
+      "quote": "Bakery, retail sales only"
+    },
+    {
+      "text": "Bank",
+      "group": "Retail",
       "ordinance": "016-017",
       "page": 5,
       "quote": "Bank Barber and beauty shop"
     },
     {
-      "name": "Personal services",
-      "permission": "P",
+      "text": "Barber and beauty shop",
+      "group": "Retail",
       "ordinance": "016-017",
       "page": 5,
       "quote": "Barber and beauty shop"
     },
     {
-      "name": "Laundromat, self-service",
-      "permission": "P",
-      "ordinance": "016-017",
-      "page": 6,
-      "quote": "Laundromat, equipped with automatic washing machines"
-    },
-    {
-      "name": "Medical clinic",
-      "permission": "P",
-      "ordinance": "016-017",
-      "page": 6,
-      "quote": "Medical and dental clinics"
-    },
-    {
-      "name": "Recreation facility, indoor",
-      "permission": "P",
-      "ordinance": "016-017",
-      "page": 6,
-      "quote": "Health club, private and public"
-    },
-    {
-      "name": "Parking facility, public",
-      "permission": "P",
-      "ordinance": "016-017",
-      "page": 7,
-      "quote": "Public garage, parking, no repairs"
-    },
-    {
-      "name": "Office",
-      "permission": "P",
-      "ordinance": "016-017",
-      "page": 7,
-      "quote": "Office. (Defined under article XXX of the Zoning Ordinance)"
-    },
-    {
-      "name": "Hotel, Full Service",
-      "permission": "S",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Hotel. 2. Cleaning, dyeing and laundry pick-up station, with cleaning"
-    },
-    {
-      "name": "Hotel, Limited Service",
-      "permission": "S",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Hotel. 2. Cleaning, dyeing and laundry pick-up station, with cleaning"
-    },
-    {
-      "name": "Library",
-      "permission": "S",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Library, for loan of books and other materials typically performed by a public library."
-    },
-    {
-      "name": "Police, fire, or rescue facility (public)",
-      "permission": "S",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Public safety facilities."
-    },
-    {
-      "name": "Restaurant",
-      "permission": "S",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Public safety facilities. 7. Restaurant."
-    },
-    {
-      "name": "Alcohol sales, on-premise consumption",
-      "permission": "S",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Sale of alcohol for on-premises consumption."
-    },
-    {
-      "name": "Transit terminal or station",
-      "permission": "S",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Transit facilities."
-    },
-    {
-      "name": "Vehicle fuel station",
-      "permission": "S",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Gasoline service station only in Block 211 as shown on the Concept Plan.",
-      "onlyBlocks": ["211"]
-    },
-    {
-      "name": "Drive-through",
-      "permission": "S",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Restaurant with drive through facilities only in Block 211",
-      "onlyBlocks": ["211"]
-    },
-    {
-      "name": "Beer and Wine sales, off-premise consumption",
-      "permission": "S",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Sale of beer and wine for off-premises consumption only in Blocks 209, 210, and 211",
-      "onlyBlocks": ["209", "210", "211"]
-    },
-    {
-      "name": "Parking facility, private",
-      "permission": "A",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Parking and parking structures."
-    }
-  ],
-  "otherUses": [
-    {
-      "text": "ATM facilities",
+      "text": "Bicycle sales and service",
+      "group": "Retail",
       "ordinance": "016-017",
       "page": 5,
-      "quote": "ATM facilities"
+      "quote": "Bicycle sales and service"
+    },
+    {
+      "text": "Book or stationery store",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 5,
+      "quote": "Book or stationery store"
     },
     {
       "text": "Business support services",
+      "group": "Retail",
       "ordinance": "016-017",
       "page": 5,
       "quote": "Business support services"
     },
     {
+      "text": "Camera shop",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 5,
+      "quote": "Business support services Camera shop"
+    },
+    {
+      "text": "Candy, cigars and tobaccos, retail sales only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Candy, cigars and tobaccos, retail sales only"
+    },
+    {
       "text": "Caterer and wedding service (office only)",
+      "group": "Retail",
       "ordinance": "016-017",
       "page": 6,
       "quote": "Caterer and wedding service (office only)"
     },
     {
-      "text": "Coffee shop, donut and pastry shop, pizza delivery shop (no seating on premises)",
+      "text": "Cleaning, dyeing and laundry pick-up station for receiving and delivery of articles to be cleaned, dyed and laundered, but no actual cleaning, dying, or laundering work is to be done on the premises",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Cleaning, dyeing and laundry pick-up station for receiving and delivery of articles to be cleaned, dyed and laundered, but no actual cleaning, dying, or laundering work is to be done on the premises"
+    },
+    {
+      "text": "Coffee shop (no seating on premises)",
+      "group": "Retail",
       "ordinance": "016-017",
       "page": 6,
       "quote": "Coffee shop (no seating on premises)"
     },
     {
+      "text": "Convenience store",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Convenience store"
+    },
+    {
+      "text": "Cosmetic and beauty supplies",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Cosmetic and beauty supplies"
+    },
+    {
+      "text": "Dance studios",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Dance studios Department store"
+    },
+    {
+      "text": "Department store",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Department store"
+    },
+    {
+      "text": "Donut and pastry shop, no seating on premises",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Donut and pastry shop, no seating on premises"
+    },
+    {
+      "text": "Drug store, retail sales only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Drug store, retail sales only"
+    },
+    {
+      "text": "Electrical goods and fixtures for consumer use",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Electrical goods and fixtures for consumer use"
+    },
+    {
+      "text": "Electronics store",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Electronics store"
+    },
+    {
+      "text": "Film developing and printing",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Film developing and printing"
+    },
+    {
+      "text": "Financial services",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Financial services"
+    },
+    {
+      "text": "Fix-it shops, bicycle repair, saw filing and lawn mower sharpening, retail sales only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Fix-it shops, bicycle repair, saw filing and lawn mower sharpening, retail sales only"
+    },
+    {
+      "text": "Florist, retail sales only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Florist, retail sales only"
+    },
+    {
+      "text": "Furniture sales, repairs and upholstery",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Furniture sales, repairs and upholstery"
+    },
+    {
+      "text": "Gallery, for the display and sale of artworks",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Gallery, for the display and sale of artworks"
+    },
+    {
+      "text": "Grocery store, retail sales only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Grocery store, retail sales only"
+    },
+    {
+      "text": "Hardware, sporting goods, toys, paints, wallpaper, clothing, retail sales only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Hardware, sporting goods, toys, paints, wallpaper, clothing, retail sales only"
+    },
+    {
+      "text": "Health club, private and public",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Health club, private and public"
+    },
+    {
+      "text": "Household and office furniture, furnishings and appliances, retail sales or rental only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Household and office furniture, furnishings and appliances, retail sales or rental only"
+    },
+    {
+      "text": "Jewelry, optical goods, photographic supplies, retail sales only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Jewelry, optical goods, photographic supplies, retail sales only"
+    },
+    {
+      "text": "Laundromat, equipped with automatic washing machines of the type customarily found in a home and where the customers may personally supervise the washing and handling of their laundry",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Laundromat, equipped with automatic washing machines of the type customarily found in a home and where the customers may personally supervise the washing and handling of their laundry"
+    },
+    {
+      "text": "Magazine store",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Magazine store Meat market, retail sales only"
+    },
+    {
+      "text": "Meat market, retail sales only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Meat market, retail sales only"
+    },
+    {
+      "text": "Medical and dental clinics",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Medical and dental clinics"
+    },
+    {
+      "text": "Movie DVD and VHS rental and sales",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Movie DVD and VHS rental and sales"
+    },
+    {
+      "text": "Optician and optical store",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Optician and optical store"
+    },
+    {
+      "text": "Pet and pet supplies",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Pet and pet supplies"
+    },
+    {
+      "text": "Pet grooming and pet boarding, including overnight pet boarding",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Pet grooming and pet boarding, including overnight pet boarding"
+    },
+    {
       "text": "Photographer or artist studio",
+      "group": "Retail",
       "ordinance": "016-017",
       "page": 6,
       "quote": "Photographer or artist studio"
     },
     {
-      "text": "Plumbing shop, without warehouse facilities",
+      "text": "Pizza delivery shop, no seating on premises",
+      "group": "Retail",
       "ordinance": "016-017",
       "page": 6,
-      "quote": "Plumbing shop, without warehouse facilities"
+      "quote": "Pizza delivery shop, no seating on premises"
     },
     {
-      "text": "Studios: dance, music, drama, martial arts",
+      "text": "Piano and musical instruments",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Piano and musical instruments"
+    },
+    {
+      "text": "Plumbing shop, without warehouse facilities (to include storage for ordinary repairs, but not storage for materials for contracting work)",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 6,
+      "quote": "Plumbing shop, without warehouse facilities (to include storage for ordinary repairs, but not storage for materials for contracting work)"
+    },
+    {
+      "text": "Printing and copy shop, retail sales only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Printing and copy shop, retail sales only"
+    },
+    {
+      "text": "Professional offices for architect, attorney, engineer and real estate",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Professional offices for architect, attorney, engineer and real estate"
+    },
+    {
+      "text": "Public garage, parking, no repairs",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Public garage, parking, no repairs"
+    },
+    {
+      "text": "Retail Store",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Retail Store Seamstress, dressmaker, or tailor"
+    },
+    {
+      "text": "Seamstress, dressmaker, or tailor",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Seamstress, dressmaker, or tailor"
+    },
+    {
+      "text": "Shoe repair shop, retail sales only",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Shoe repair shop, retail sales only"
+    },
+    {
+      "text": "Sporting goods, toy & hobby store",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Sporting goods, toy & hobby store"
+    },
+    {
+      "text": "Studio for the display and sale of glass, china, art objects, cloth and draperies",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Studio for the display and sale of glass, china, art objects, cloth and draperies"
+    },
+    {
+      "text": "Studios, dance, music, drama, martial arts",
+      "group": "Retail",
       "ordinance": "016-017",
       "page": 7,
       "quote": "Studios, dance, music, drama, martial arts"
     },
     {
-      "text": "Home office (up to 3 employees on ground floor; residents only on upper floors)",
+      "text": "Tailors",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Tailors Telephone stores"
+    },
+    {
+      "text": "Telephone stores",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Telephone stores"
+    },
+    {
+      "text": "Title companies",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Title companies"
+    },
+    {
+      "text": "Travel services",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Travel services"
+    },
+    {
+      "text": "Wearing apparel, including clothing, shoes, hats, millinery and accessories",
+      "group": "Retail",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Wearing apparel, including clothing, shoes, hats, millinery and accessories"
+    },
+    {
+      "text": "Office (as defined in Article XXX of the Zoning Ordinance)",
+      "group": "Office",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Office. (Defined under article XXX of the Zoning Ordinance)"
+    },
+    {
+      "text": "Home office: office uses in a residential dwelling unit, with no structural change. Up to three employees on the ground floor; on other floors, residents only",
+      "group": "Office",
       "ordinance": "016-017",
       "page": 7,
       "quote": "office uses that are performed in a residential dwelling unit"
     },
     {
-      "text": "Civic (as defined in the Zoning Ordinance)",
+      "text": "Civic (as defined in Article XXX of the Zoning Ordinance)",
+      "group": "Civic",
       "ordinance": "016-017",
       "page": 7,
       "quote": "Civic. (Defined under article XXX of the Zoning Ordinance)"
     },
     {
-      "text": "Dry cleaning or laundry with work done on premises",
+      "text": "Mixed use, with residential (as defined in Article XXX of the Zoning Ordinance)",
+      "group": "Mixed use",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Mixed use (with residential). (Defined under article XXX of the Zoning Ordinance)"
+    },
+    {
+      "text": "Mixed use, with nonresidential (as defined in Article XXX of the Zoning Ordinance)",
+      "group": "Mixed use",
+      "ordinance": "016-017",
+      "page": 7,
+      "quote": "Mixed use (with nonresidential). (Defined under article XXX of the Zoning Ordinance)"
+    },
+    {
+      "text": "Hotel",
+      "group": "Special uses (special use permit)",
       "ordinance": "016-017",
       "page": 8,
-      "quote": "Cleaning, dyeing and laundry pick-up station, with cleaning, dyeing and/or laundry work done on the premises",
+      "quote": "1. Hotel. 2 Cleaning, dyeing and laundry pick-up station",
+      "permission": "S"
+    },
+    {
+      "text": "Cleaning, dyeing and laundry pick-up station, with cleaning, dyeing and/or laundry work done on the premises",
+      "group": "Special uses (special use permit)",
+      "ordinance": "016-017",
+      "page": 8,
+      "quote": "Cleaning, dyeing and laundry pick-up station, with cleaning, dyeing and/or laundry work done on the premises.",
+      "permission": "S"
+    },
+    {
+      "text": "Gasoline service station, only in Block 211",
+      "group": "Special uses (special use permit)",
+      "ordinance": "016-017",
+      "page": 8,
+      "quote": "Gasoline service station only in Block 211 as shown on the Concept Plan.",
+      "permission": "S"
+    },
+    {
+      "text": "Library, for loan of books and other materials typically performed by a public library",
+      "group": "Special uses (special use permit)",
+      "ordinance": "016-017",
+      "page": 8,
+      "quote": "Library, for loan of books and other materials typically performed by a public library.",
+      "permission": "S"
+    },
+    {
+      "text": "Movie picture theater",
+      "group": "Special uses (special use permit)",
+      "ordinance": "016-017",
+      "page": 8,
+      "quote": "Movie picture theater.",
+      "permission": "S"
+    },
+    {
+      "text": "Public safety facilities",
+      "group": "Special uses (special use permit)",
+      "ordinance": "016-017",
+      "page": 8,
+      "quote": "Public safety facilities.",
+      "permission": "S"
+    },
+    {
+      "text": "Restaurant",
+      "group": "Special uses (special use permit)",
+      "ordinance": "016-017",
+      "page": 8,
+      "quote": "7. Restaurant.",
+      "permission": "S"
+    },
+    {
+      "text": "Restaurant with drive-through facilities, only in Block 211",
+      "group": "Special uses (special use permit)",
+      "ordinance": "016-017",
+      "page": 8,
+      "quote": "Restaurant with drive through facilities only in Block 211 as shown on the Concept Plan.",
       "permission": "S"
     },
     {
       "text": "Retirement home",
+      "group": "Special uses (special use permit)",
       "ordinance": "016-017",
       "page": 8,
       "quote": "Retirement home.",
       "permission": "S"
     },
     {
-      "text": "Community, social, hobby, or laundry facilities for residents",
+      "text": "Sale of alcohol for on-premises consumption",
+      "group": "Special uses (special use permit)",
+      "ordinance": "016-017",
+      "page": 8,
+      "quote": "Sale of alcohol for on-premises consumption.",
+      "permission": "S"
+    },
+    {
+      "text": "Sale of beer and wine for off-premises consumption, only in Blocks 209, 210, and 211",
+      "group": "Special uses (special use permit)",
+      "ordinance": "016-017",
+      "page": 8,
+      "quote": "Sale of beer and wine for off-premises consumption only in Blocks 209, 210, and 211 as shown on the Concept Plan.",
+      "permission": "S"
+    },
+    {
+      "text": "Transit facilities",
+      "group": "Special uses (special use permit)",
+      "ordinance": "016-017",
+      "page": 8,
+      "quote": "Transit facilities.",
+      "permission": "S"
+    },
+    {
+      "text": "Community, social, hobby, or laundry facilities for use by occupants of a residential development within the Property",
+      "group": "Accessory uses",
       "ordinance": "016-017",
       "page": 8,
       "quote": "Community, social, hobby, or laundry facilities, for use by occupants of a residential development",
@@ -255,24 +589,27 @@
     },
     {
       "text": "Recreation space and facilities",
+      "group": "Accessory uses",
       "ordinance": "016-017",
       "page": 8,
       "quote": "Recreation space and facilities.",
       "permission": "A"
     },
     {
-      "text": "Other uses incidental to permitted and special uses",
+      "text": "Parking and parking structures",
+      "group": "Accessory uses",
+      "ordinance": "016-017",
+      "page": 8,
+      "quote": "Parking and parking structures.",
+      "permission": "A"
+    },
+    {
+      "text": "Other uses customarily incidental and subordinate to permitted uses and any special uses",
+      "group": "Accessory uses",
       "ordinance": "016-017",
       "page": 8,
       "quote": "Other uses customarily incidental and subordinate to permitted uses and any special uses.",
       "permission": "A"
-    },
-    {
-      "text": "Movie picture theater",
-      "permission": "S",
-      "ordinance": "016-017",
-      "page": 8,
-      "quote": "Movie picture theater."
     }
   ],
   "dimensions": {

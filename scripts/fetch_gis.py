@@ -2,7 +2,7 @@
 
 Writes nothing under docs/data. Edits to the data files are made by hand or by Claude on request.
   python3 scripts/fetch_gis.py              print the differences
-  python3 scripts/fetch_gis.py --out DIR    also write fresh zones.geojson and zones.json into DIR (never into docs/data), to diff or copy from
+  python3 scripts/fetch_gis.py --out tmp/fetch_gis   also write fresh zones.geojson and zones.json there (never into docs/data), to diff or copy from
 Polygons that are all park (Town parks layer), railroad, or excluded parcels are left out; MERGED_ZONES and EXTRA_ORDINANCES list
 the other known differences from the town map.
 
@@ -14,18 +14,13 @@ import sys
 import json
 import re
 import urllib.parse
-import urllib.request
 from pathlib import Path
 
 from shapely.geometry import mapping, shape
 from shapely.ops import unary_union
 
-GIS = "https://gis.addisontx.gov/arcgis/rest/services/"
-ZONING_LAYER = "Planning_Development/Landbase/MapServer/15"
-ORDINANCE_LAYER = "Planning_Development/Landbase/MapServer/1"
-PLACE_TYPE_LAYER = "Planning_Development/Comprehensive_Planning/MapServer/0"
-PARK_LAYER = "Parks/Parks/MapServer/10"
-PARCEL_LAYER = "Planning_Development/Landbase/MapServer/8"
+import gis_api
+
 DATA = Path(__file__).resolve().parent.parent / "docs" / "data"
 
 TOWN_WIDE_ORDINANCES = {"025-015"}  # O25-015 rezoned the whole town to UDC districts; not PD-specific
@@ -69,18 +64,18 @@ MIN_PIECE = 2e-7  # square degrees (~2,000 sq m); a polygon with no non-park pie
 SQ_FT_PER_ACRE = 43560
 
 
-def query(layer, geometry=True, where="1=1"):
-    """Features of a layer as GeoJSON, paging past the 1,000-record limit."""
-    features, offset = [], 0
-    while True:
-        params = urllib.parse.urlencode({"where": where, "outFields": "*", "outSR": 4326, "f": "geojson",
-                                         "returnGeometry": str(geometry).lower(), "resultOffset": offset})
-        with urllib.request.urlopen(f"{GIS}{layer}/query?{params}", timeout=60) as response:
-            page = json.load(response)["features"]
-        features += page
-        if len(page) < 1000:
-            return features
-        offset += len(page)
+ID_CHAIN = re.compile(r"(PD )?O?\d{1,3}-\d{1,3}(/(PD )?O?\d{1,3}-\d{1,3})*")
+
+
+def zone_chain(record):
+    """Slash-separated ordinance chain for a zoning polygon.
+
+    ZCODE_TOT is the standard field but is cut off at 36 characters. ZONE_HIST is the full chain when the
+    town filled it in, but for most polygons it is blank, '*' or free text, so it is used only when it is a
+    clean list of ordinance ids.
+    """
+    history = (record["ZONE_HIST"] or "").strip()
+    return history if ID_CHAIN.fullmatch(history) else record["ZCODE_TOT"]
 
 
 def ordinance_id_options(code):
@@ -120,8 +115,7 @@ def place_type_areas(geom, place_types):
 def load_ordinances():
     """Ordinance id -> {id, url, date, description}, keeping the first record that has a link."""
     ordinances = {}
-    for feature in query(ORDINANCE_LAYER, geometry=False):
-        record = feature["properties"]
+    for record in gis_api.ordinances():
         ordinance_id = (record["ORD_ID"] or "").strip()
         if not ordinance_id or (ordinance_id in ordinances and ordinances[ordinance_id]["url"]):
             continue
@@ -148,12 +142,12 @@ def main():
         matches = ids_by_number.get(code.strip().lstrip("0"), []) if code.strip().isdigit() else []
         return ordinances[matches[0]] if len(matches) == 1 else None
 
-    place_types = [(f["properties"]["PlaceType"], shape(f["geometry"])) for f in query(PLACE_TYPE_LAYER)]
-    parks = [shape(f["geometry"]).buffer(0) for f in query(PARK_LAYER)
+    place_types = [(f["properties"]["PlaceType"], shape(f["geometry"])) for f in gis_api.place_types(geometry=True, geojson=True)]
+    parks = [shape(f["geometry"]).buffer(0) for f in gis_api.parks(geometry=True, geojson=True)
              if not any(word in (f["properties"]["Name"] or "") for word in NOT_PARKS)]
     parcel_ids = ", ".join(repr(i) for i in EXCLUDED_PARCELS)
     parcel_classes = ", ".join(repr(c) for c in EXCLUDED_PARCEL_CLASSES)
-    parcels = query(PARCEL_LAYER, where=f"PARCELID IN ({parcel_ids}) OR CLASSDSCRP IN ({parcel_classes})")
+    parcels = gis_api.parcels(f"PARCELID IN ({parcel_ids}) OR CLASSDSCRP IN ({parcel_classes})", geometry=True, geojson=True)
     missing = set(EXCLUDED_PARCELS) - {f["properties"]["PARCELID"] for f in parcels}
     if missing:
         print("Excluded parcels not found in the parcel layer:", ", ".join(sorted(missing)))
@@ -164,10 +158,10 @@ def main():
     features, zones, place_type_totals, unmatched = [], {}, {}, set()
     global unmatched_codes
     unmatched_codes = unmatched
-    for feature in query(ZONING_LAYER):
+    for feature in gis_api.udc_zoning(geometry=True, geojson=True):
         record = feature["properties"]
         district = record["ZONE_UDC"].strip()
-        chain = [c.strip() for c in record["ZCODE_TOT"].split("/")
+        chain = [c.strip() for c in zone_chain(record).split("/")
                  if c.strip() and ordinance_id_options(c)[0] not in TOWN_WIDE_ORDINANCES]
         pd_code = record["ZONE_CODE"].strip().removeprefix("PD ")
         # '?' = GIS has no ZONE_CODE for this PD polygon; the id is guessed from its ordinance chain

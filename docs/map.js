@@ -61,24 +61,24 @@ function polygonStyle(zoneId, zoneIndex) {
   };
 }
 
-/** "1–4 units": the building sizes a zone allows with one permission, or "" when there are none. */
+/** "1 unit", "1–4 units", "1, 3+ units" (1 and anything from 3 up), or "" when no size has this permission. */
 function dwellingSizes(zone, code) {
-  const indexes = DWELLING_SIZES.flatMap((size, index) =>
-    zone.uses[size.use] === code ? [index] : [],
-  );
+  const last = DWELLING_SIZES.length - 1;
   const runs = [];
-  for (const index of indexes) {
-    const last = runs.at(-1);
-    if (last && last.to === index - 1) last.to = index;
+  DWELLING_SIZES.forEach((size, index) => {
+    if (zone.uses[size.use] !== code) return;
+    const run = runs.at(-1);
+    if (run && run.to === index - 1) run.to = index;
     else runs.push({ from: index, to: index });
-  }
-  const sizes = runs.map(({ from, to }) =>
-    from === to
-      ? DWELLING_SIZES[from].units
-      : `${DWELLING_SIZES[from].units}–${DWELLING_SIZES[to].units}`,
-  );
-  if (!sizes.length) return "";
-  return `${sizes.join(", ")} ${sizes.join() === "1" ? "unit" : "units"}`;
+  });
+  if (!runs.length) return "";
+  const text = runs.map(({ from, to }) => {
+    const start = DWELLING_SIZES[from].units;
+    if (from === to) return start;
+    if (to === last) return `${start}+`;
+    return `${start}–${DWELLING_SIZES[to].units}`;
+  });
+  return `${text.join(", ")} ${text.join() === "1" ? "unit" : "units"}`;
 }
 
 /** A table: Residential, Retail, Office down the left; sizes that need a special use permit, Restaurant, Industry down the right. */
@@ -92,16 +92,16 @@ function renderHeadlineUses(zone) {
   const allowed = dwellingSizes(zone, "P");
   const permit = dwellingSizes(zone, "S");
   const labelCode = allowed ? "P" : permit ? "S" : "none";
-  // Zones with no special-permit sizes show whether an accessory dwelling ("Casita") is allowed.
+  // Zones with no special-permit sizes show whether an accessory dwelling ("ADU") is allowed.
   const adu = zone.uses[ADU_USE];
   const cottage =
     allowed && !permit
-      ? pair("Casita", adu === "P" || adu === "A" ? "P" : adu)
+      ? pair("ADU", adu === "P" || adu === "A" ? "P" : adu)
       : "<td></td><td></td>";
-  const sizeCell = (text, code, span = 1) =>
-    `<td class="${PERMISSIONS[code].className}" colspan="${span}">${PERMISSIONS[code].mark} ${text}</td>`;
+  const sizeCell = (text, code) =>
+    `<td class="${PERMISSIONS[code].className}">${PERMISSIONS[code].mark} ${text}</td>`;
   const rows = [
-    `<td class="${PERMISSIONS[labelCode].className}">Residential</td>${allowed ? sizeCell(allowed, "P") : `<td class="${PERMISSIONS.none.className}">${PERMISSIONS.none.mark}</td>`}${permit ? sizeCell(permit, "S", 2) : cottage}`,
+    `<td class="${PERMISSIONS[labelCode].className}">Residential</td>${allowed ? sizeCell(allowed, "P") : `<td class="${PERMISSIONS.none.className}">${PERMISSIONS.none.mark}</td>`}${permit ? pair(permit, "S") : cottage}`,
     useCell(retail) + useCell(restaurant),
     useCell(office) + useCell(industry),
   ];

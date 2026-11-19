@@ -3,3 +3,4 @@ pdfs/
 __pycache__/
 node_modules/
 saved/
+tmp/

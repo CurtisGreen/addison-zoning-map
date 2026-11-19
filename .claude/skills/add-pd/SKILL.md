@@ -13,6 +13,21 @@ Goal: one draft file, `docs/data/pd/<id>.json`, that the user can check against 
 - If the user gives only a number, find the matching key. If several match or none do, list them and ask.
 - "Next PD" means the largest PD (by `acres`) with `done: false`.
 
+## Town GIS lookups (use `scripts/gis_api.py`, do not write ad-hoc queries)
+
+Every town ArcGIS endpoint has a function in `scripts/gis_api.py` (JSON, paging handled). Call it from the shell or import it; never hand-write curl or urllib code for the town GIS.
+
+```bash
+python3 scripts/gis_api.py udc_zoning "ZONE_CODE = '23-03'" --fields ZONE_CODE,ZCODE_TOT,ZONE_HIST   # ordinance chain
+python3 scripts/gis_api.py ordinances "ORD_ID LIKE '%23-03%'"                              # id, date, description, PDF url
+python3 scripts/gis_api.py                                                                 # list endpoints
+```
+
+- `ZCODE_TOT` is the polygon's ordinance chain but is cut off at 36 characters. `ZONE_HIST` is the full chain only where the town filled it in (PD 23-03 does; most PDs have blank, `*` or free text). Fetch both. If either names an ordinance that `zones.json` lacks for the PD, tell the user and look it up with `ordinances`. Ids are zero-padded or prefixed with `O` ('096-003', 'O26-022'): search with `LIKE '%23-03%'`.
+- An ordinance in `ZONE_HIST` with no `ordinances` row has no PDF on the town map (for example `O20-08`). Say so in the report; do not guess a URL.
+- A row with no `HYPERLINK` or `DESCRIPTIO` is new and unpublished. Do not add it to the chain.
+- Individual restaurant or alcohol SUP ordinances at an address are per-tenant permits, not PD changes. Mention them in `review` only when the PD lists that use as a special use.
+
 ## 2. Fetch
 
 ```bash
@@ -33,12 +48,13 @@ It downloads each ordinance in the PD's chain to `pdfs/<id>/`, writes page text 
 
 Slug = id with spaces as `-` and `?` removed (`PD 461` -> `PD-461.json`).
 
+Scripts never write to `docs/data`. If you generate the JSON with a script, write it to `tmp/<slug>/` (ignored by git), then write `docs/data/pd/<slug>.json` yourself using that as the reference. Temporary files go in `tmp/` or `pdfs/` inside the repo, never the system scratchpad.
+
 ```json
 {
   "id": "PD 461",
   "name": "Brookhaven Club",
   "base": "CL",
-  "usesOnly": false,
   "purpose": "",
   "uses": [
     {
@@ -81,16 +97,17 @@ Rules:
   - Several ordinance items that fit one UDC use: one entry with the clearest quote; put the rest in `otherUses` only if they add meaning.
 - **`family`** (optional): `residential`, `mixed`, `commercial`, `industrial`, `airport`, or `planned`. Sets the PD's map color when the PD has no base district. Copy it to the PD's entry in `zones.json`.
 - **`insideAirportContour: true`** only when the PD is confirmed to lie inside the Addison Airport noise contour. Leave it out otherwise; the FAA review note then stays hidden for the PD.
-- **`usesOnly: true`** when the PD gives a complete list of allowed uses instead of adding to a base district. Then list every allowed use (usually with `base: null`).
+- **`pdUsesOnly: true`** when the ordinance lists every use the PD allows and excludes all others, even if it also builds on a base district for dimensions and other standards. The page then shows only the PD's own uses and not the base district's. List every allowed use. Leave it out when the PD allows the base district's uses plus changes.
 - **`parking`**: the PD's own parking ratios, one row per use: `{use, requirement, rates, ordinance, page, quote}`. `requirement` is the display text. `rates` is the exact ratio as numbers, `[{spaces: 1, per: 250, unit: "sq ft GFA"}]`; add `maxPerUnit` or `basis` (for example `"parking demand study"`) when the ordinance says so. Shown as a Parking table.
 - **Use conditions** on a `uses` entry: `onlyBlocks: ["211"]` when allowed only in named blocks, `requires: "mixed use"` with `exceptBlocks` when it needs another use. Data only; say it in a note too.
-- **`notes`** items may be a string or `{heading, items: [strings]}` to group related items (for example everything specific to one block).
-- **`otherUses`** for ordinance uses with no clear UDC match: `{text, permission?, ordinance, page, quote}`. `permission` is optional (`P` default, or `S`, `A`, `T`). Do not force a match. Give each one its `permission` (`S` or `A` when the ordinance says so) and keep it out of `text`. For a `usesOnly` PD they show as the last group under Allowed uses.
+- **`notes`** items may be a string or `{heading, items: [strings]}` to group related items (for example everything specific to one block). Write only requirements this PD sets. Do not state the absence of something (no height limit, no setbacks), the obvious (listed uses are the only ones allowed), or town-wide rules that apply to every PD (landscaping fees, standard plan approval), even when the ordinance repeats them.
+- **`otherUses`** for ordinance uses with no clear UDC match: `{text, permission?, group?, ordinance, page, quote}`. `permission` is optional (`P` default, or `S`, `A`, `T`). Do not force a match. Give each one its `permission` (`S` or `A` when the ordinance says so) and keep it out of `text`. For a `pdUsesOnly` PD they show under Allowed uses, in groups named by `group` (default "Other uses"). When a `pdUsesOnly` PD has no base district, do not map its uses to UDC names: put every use in `otherUses`, in the ordinance's own wording, with `group` set to the ordinance's own heading (for example "Retail", "Office", "Special uses"), and leave `uses` empty.
 - **`dimensions`**: keys must be one of `base.json` → `dimensionFields` (for example `heightMax`, `frontSetbackMin`, `buildTo`, `lotCoverageMax`, `unitSizeMin`, `floorAreaMax`); each field there has its label and unit. `value` is a number, `"none"`, a range `{"min": 5, "max": 15}`, a choice `{"options": [10, 20]}`, or an object of those for values that vary by area, use, or building type (`{"Tract A": 70, "Tract B": 45}`). Values are always stored as numbers so they can drive calculations later; the page builds the display text from them. Add `"except": ["Block 211"]` when named areas are exempt. Include only values the PD itself sets. A value you calculate (e.g. 70% from "no more than 30% may vary") needs a `review` note showing the math. Standards with no field (sidewalks, shared parking, bicycle parking) go in `notes`: a list, one short sentence per item, shown under an "Other requirements" heading.
 - **`review`** = notes for readers of the site, shown next to the value they are about. Write what a reader needs to know about the zoning (a condition, an exception, a conflict in the ordinance). Do not describe how you got the data (OCR, text quality, reading page images, mapping choices, the ordinance's history, or how the base district was chosen). Put anything the user should verify in your report instead. Other guidance on what to flag: conflicts, amendments that cover only part of the PD, unreadable pages, values only shown on a site plan, guessed mappings. Any key works. Keys that match a `dimensions` field show next to that value; all others show under the PD's rules.
 - **`acresWithRoads`** = the acreage the ordinance states, only when its boundary encloses the roads inside the PD (the map's acreage leaves roads out). The site shows it as "46.4 acres (59.6 including roads)". Leave it out otherwise.
+- **`acres` in `zones.json`** = the acreage stated in the latest ordinance that gives one, rounded to 0.1 (31.608 -> 31.6). No `review` note for differing acreages in older ordinances or the map.
 - **`curtisNotes`** = the user's own commentary, shown above Allowed uses. Never write or change it.
-- **`history`** (optional) = a short description per ordinance, keyed by ordinance id, for the "History" list at the bottom of the page. Without it the page shows the town map's own description of the ordinance. Write what the ordinance did, in under 15 words.
+- **`history`** (optional) = a short description per ordinance, keyed by ordinance id, for the "History" list at the bottom of the page. Without it the page shows the town map's own description of the ordinance. Write what the ordinance did, in under 15 words, leading with its most substantive change (height or parking only when that was the change). No trailing period on a single sentence.
 - **`name`** = the development name the ordinance uses, if any. Otherwise `""`.
 - **`purpose`** = the ordinance's own purpose or intent sentence, word for word (the site shows it in quotation marks). Shorten only by cutting words and marking the cut with `…`. Use `""` if the ordinance states none. The checker looks for it in the ordinance text.
 - Plain short text in neutral terms (house, townhouse, apartment, condominium), except inside quotes. No marketing words.
@@ -119,7 +136,7 @@ Fix every `ERROR` and run again. The script never edits `docs/data`. On a clean 
 Tell the user, in a few lines:
 
 - base district (and the old district it came from), or why it is `null`
-- number of use changes (or allowed uses, if `usesOnly`) and dimension values
+- number of use changes (or allowed uses, if `pdUsesOnly`) and dimension values
 - every `review` item
 - the local preview command: `python3 -m http.server 8765 -d docs` then open `zone.html?id=<id>`
 

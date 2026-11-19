@@ -38,8 +38,17 @@ Every value stores its source page. `review` entries flag values to double-check
 python3 scripts/fetch_gis.py
 ```
 
-Prints how the Town GIS differs from the data files (new or removed zones, acreage, place types, PD ordinances). It never changes anything under `docs/data`. `--out DIR` writes fresh copies into another folder to diff or copy from.
+Prints how the Town GIS differs from the data files (zones, acreage, place types, PD ordinances).
+
+## Query the town GIS
+
+```bash
+python3 scripts/gis_api.py ordinances "ORD_ID LIKE '%23-03%'"
+python3 scripts/gis_api.py udc_zoning "ZONE_CODE = '23-03'"
+```
+
+Run `python3 scripts/gis_api.py` to list the endpoints.
 
 ## Add a PD
 
-In Claude Code: `/add-pd PD 461` (or "add the next PD"). Uses `scripts/pd.py fetch` and `scripts/pd.py check`. Review the draft against the PDFs, then commit.
+In Claude Code: `/add-pd PD 461`. Check the draft against the PDFs, then commit.
