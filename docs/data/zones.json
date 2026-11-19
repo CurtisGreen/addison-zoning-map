@@ -90,7 +90,7 @@
       "name": "Vitruvian Park",
       "base": null,
       "done": true,
-      "acres": 97.7,
+      "acres": 116.4,
       "mainOrdinance": "007-034",
       "ordinances": [
         {
@@ -160,6 +160,12 @@
           "description": "Case 1734-Z: Development Plan Approval for Vitruvian West I, multifamily development and amenities center. Approval of a waiver to development standards."
         },
         {
+          "id": "016-018",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/O16-018%2005242016%20Brookhaven%20Village.pdf",
+          "date": "2016-05-24",
+          "description": "Development Plan Approval for a Retail Center with Waiver to Development Standards"
+        },
+        {
           "id": "018-041",
           "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2018/O18-041%20Vitruvian%20West%202%20%26%203%20Ordinance.pdf",
           "date": "2018-11-13",
@@ -172,7 +178,8 @@
           "description": "Amending planned development (PD) district ordinance 007-034 (as amended) to approve a revised concept plan and provide for approval of a development plan and waivers to the development standards, including but not limited to, street build-to lines, exte"
         }
       ],
-      "placeTypes": ["Urban Village"]
+      "placeTypes": ["Urban Village"],
+      "family": "mixed"
     },
     "PD 461": {
       "kind": "pd",
@@ -489,23 +496,6 @@
         }
       ],
       "placeTypes": ["Aviation and Industry"]
-    },
-    "PD O16-018": {
-      "kind": "pd",
-      "name": "",
-      "base": null,
-      "done": false,
-      "acres": 18.8,
-      "mainOrdinance": "016-018",
-      "ordinances": [
-        {
-          "id": "016-018",
-          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/O16-018%2005242016%20Brookhaven%20Village.pdf",
-          "date": "2016-05-24",
-          "description": "Development Plan Approval for a Retail Center with Waiver to Development Standards"
-        }
-      ],
-      "placeTypes": ["Urban Village"]
     },
     "PD 85-093": {
       "kind": "pd",
@@ -1397,6 +1387,23 @@
       ],
       "placeTypes": ["Urban Village"]
     },
+    "PD 549": {
+      "kind": "pd",
+      "name": "",
+      "base": null,
+      "done": false,
+      "acres": 4.4,
+      "mainOrdinance": "079-549",
+      "ordinances": [
+        {
+          "id": "079-549",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1979/549%20-%201979.pdf",
+          "date": "1979-12-11",
+          "description": "Change zoning from Industrial (I-1) to Planned Development (PD)"
+        }
+      ],
+      "placeTypes": ["Urban Village"]
+    },
     "PD 84-021": {
       "kind": "pd",
       "name": "",
@@ -1413,23 +1420,6 @@
         }
       ],
       "placeTypes": ["Aviation and Industry"]
-    },
-    "PD 549": {
-      "kind": "pd",
-      "name": "",
-      "base": null,
-      "done": false,
-      "acres": 4.3,
-      "mainOrdinance": "079-549",
-      "ordinances": [
-        {
-          "id": "079-549",
-          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1979/549%20-%201979.pdf",
-          "date": "1979-12-11",
-          "description": "Change zoning from Industrial (I-1) to Planned Development (PD)"
-        }
-      ],
-      "placeTypes": ["Urban Village"]
     },
     "PD 95-011": {
       "kind": "pd",

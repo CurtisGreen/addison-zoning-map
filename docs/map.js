@@ -3,12 +3,11 @@ import {
   FAMILIES,
   PERMISSIONS,
   escapeHtml,
-  externalLink,
   familyOf,
   getZone,
   loadJson,
   loadSiteData,
-  mainSource,
+  sourceHtml,
   showError,
   summarizeValue,
   zoneLabel,
@@ -19,10 +18,18 @@ import {
 // Leaflet, loaded by index.html as window.L.
 const Leaflet = window.L;
 
-/** The same six uses in every popup, so zones compare at a glance. */
+/** Building sizes for the Residential line: units per building, and the UDC use that allows them. */
+const ADU_USE = "Dwelling, accessory (ADU)";
+const DWELLING_SIZES = [
+  { units: "1", use: "Dwelling, single-family (detached)" },
+  { units: "2", use: "Dwelling, duplex" },
+  { units: "3", use: "Dwelling, triplex" },
+  { units: "4", use: "Dwelling, fourplex" },
+  { units: "5+", use: "Dwelling, multifamily" },
+];
+
+/** The same uses in every popup, so zones compare at a glance. */
 const HEADLINE_USES = [
-  { label: "House", use: "Dwelling, single-family (detached)" },
-  { label: "Apartments", use: "Dwelling, multifamily" },
   { label: "Retail", use: "Retail sales, less than 15,000 sq. ft. GFA" },
   { label: "Restaurant", use: "Restaurant" },
   { label: "Office", use: "Office" },
@@ -54,12 +61,51 @@ function polygonStyle(zoneId, zoneIndex) {
   };
 }
 
+/** "1–4 units": the building sizes a zone allows with one permission, or "" when there are none. */
+function dwellingSizes(zone, code) {
+  const indexes = DWELLING_SIZES.flatMap((size, index) =>
+    zone.uses[size.use] === code ? [index] : [],
+  );
+  const runs = [];
+  for (const index of indexes) {
+    const last = runs.at(-1);
+    if (last && last.to === index - 1) last.to = index;
+    else runs.push({ from: index, to: index });
+  }
+  const sizes = runs.map(({ from, to }) =>
+    from === to
+      ? DWELLING_SIZES[from].units
+      : `${DWELLING_SIZES[from].units}–${DWELLING_SIZES[to].units}`,
+  );
+  if (!sizes.length) return "";
+  return `${sizes.join(", ")} ${sizes.join() === "1" ? "unit" : "units"}`;
+}
+
+/** A table: Residential, Retail, Office down the left; sizes that need a special use permit, Restaurant, Industry down the right. */
 function renderHeadlineUses(zone) {
-  const cells = HEADLINE_USES.map(({ label, use }) => {
-    const permission = PERMISSIONS[zone.uses[use] || "none"];
-    return `<span class="${permission.className}">${label} ${permission.mark}</span>`;
-  });
-  return `<div class="headline-uses">${cells.join("")}</div>`;
+  const pair = (label, code) => {
+    const { mark, className } = PERMISSIONS[code || "none"];
+    return `<td class="${className}">${label}</td><td class="${className}">${mark}</td>`;
+  };
+  const useCell = ({ label, use }) => pair(label, zone.uses[use]);
+  const [retail, restaurant, office, industry] = HEADLINE_USES;
+  const allowed = dwellingSizes(zone, "P");
+  const permit = dwellingSizes(zone, "S");
+  const labelCode = allowed ? "P" : permit ? "S" : "none";
+  // Zones with no special-permit sizes show whether an accessory dwelling ("Casita") is allowed.
+  const adu = zone.uses[ADU_USE];
+  const cottage =
+    allowed && !permit
+      ? pair("Casita", adu === "P" || adu === "A" ? "P" : adu)
+      : "<td></td><td></td>";
+  const sizeCell = (text, code, span = 1) =>
+    `<td class="${PERMISSIONS[code].className}" colspan="${span}">${PERMISSIONS[code].mark} ${text}</td>`;
+  const rows = [
+    `<td class="${PERMISSIONS[labelCode].className}">Residential</td>${allowed ? sizeCell(allowed, "P") : `<td class="${PERMISSIONS.none.className}">${PERMISSIONS.none.mark}</td>`}${permit ? sizeCell(permit, "S", 2) : cottage}`,
+    useCell(retail) + useCell(restaurant),
+    useCell(office) + useCell(industry),
+  ];
+  return `<table class="headline-uses">${rows.map((row) => `<tr>${row}</tr>`).join("")}</table>`;
 }
 
 function renderKeyLimits(zone, dimensionFields) {
@@ -84,9 +130,8 @@ async function renderPopup(zoneId, placeTypeName) {
   } else {
     parts.push("<div>Rules set by ordinance</div>");
   }
-  const source = mainSource(zone);
   parts.push(
-    `<div class="links"><a href="${zonePageUrl(zone.id)}">Details →</a> ${source ? externalLink(source) : ""}</div>`,
+    `<div class="links"><a href="${zonePageUrl(zone.id)}">Details →</a> ${sourceHtml(zone)}</div>`,
   );
   return parts.join("");
 }

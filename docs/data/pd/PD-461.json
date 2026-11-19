@@ -62,7 +62,9 @@
     },
     "frontSetbackMin": {
       "value": {
-        "Zero-Lot-Line": "10 or 20",
+        "Zero-Lot-Line": {
+          "options": [10, 20]
+        },
         "Single Family Detached": 25,
         "Duplex": 20
       },
@@ -72,7 +74,9 @@
     },
     "sideSetbackMin": {
       "value": {
-        "Zero-Lot-Line": "3 or 7",
+        "Zero-Lot-Line": {
+          "options": [3, 7]
+        },
         "Single Family Detached": 5,
         "Duplex": 5
       },

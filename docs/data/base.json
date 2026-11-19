@@ -85,6 +85,34 @@
     "floorAreaMax": {
       "label": "Floor area, max",
       "unit": "sq ft"
+    },
+    "openSpacePer1000Residents": {
+      "label": "Public open space, per 1,000 residents",
+      "unit": "acres"
+    },
+    "residentsPerUnit": {
+      "label": "Residents per unit, assumed",
+      "unit": "people"
+    },
+    "blockLengthMin": {
+      "label": "Block length, min",
+      "unit": "ft"
+    },
+    "blockLengthMax": {
+      "label": "Block length, max",
+      "unit": "ft"
+    },
+    "masonryMin": {
+      "label": "Masonry on street-facing walls, min",
+      "unit": "%"
+    },
+    "claddingMaterialsMax": {
+      "label": "Exterior cladding materials, max",
+      "unit": ""
+    },
+    "garageExposedLengthMax": {
+      "label": "Exposed garage length along a street, max",
+      "unit": "ft"
     }
   },
   "uses": [
@@ -783,7 +811,9 @@
         "buildTo": {
           "value": {
             "Arterial or collector": 20,
-            "Other streets": "15 or 20"
+            "Other streets": {
+              "options": [15, 20]
+            }
           },
           "page": 102
         },
@@ -894,7 +924,10 @@
           "page": 103
         },
         "buildTo": {
-          "value": "5-15",
+          "value": {
+            "min": 5,
+            "max": 15
+          },
           "page": 103
         },
         "sideSetbackMin": {
@@ -1024,11 +1057,26 @@
         },
         "buildTo": {
           "value": {
-            "Arterial": "10-15",
-            "Collector": "10-15",
-            "Local": "5-10",
-            "Alley/mews": "0-5",
-            "Park/open space": "5-10"
+            "Arterial": {
+              "min": 10,
+              "max": 15
+            },
+            "Collector": {
+              "min": 10,
+              "max": 15
+            },
+            "Local": {
+              "min": 5,
+              "max": 10
+            },
+            "Alley/mews": {
+              "min": 0,
+              "max": 5
+            },
+            "Park/open space": {
+              "min": 5,
+              "max": 10
+            }
           },
           "page": 105
         },
@@ -1159,11 +1207,26 @@
         },
         "buildTo": {
           "value": {
-            "Arterial": "10-90",
-            "Collector": "10-90",
-            "Local": "10-90",
-            "Alley/mews": "0-5",
-            "Park/open space": "0-5"
+            "Arterial": {
+              "min": 10,
+              "max": 90
+            },
+            "Collector": {
+              "min": 10,
+              "max": 90
+            },
+            "Local": {
+              "min": 10,
+              "max": 90
+            },
+            "Alley/mews": {
+              "min": 0,
+              "max": 5
+            },
+            "Park/open space": {
+              "min": 0,
+              "max": 5
+            }
           },
           "page": 107
         },
@@ -1285,11 +1348,26 @@
         },
         "buildTo": {
           "value": {
-            "Arterial": "0-15",
-            "Collector": "0-10",
-            "Local": "0-10",
-            "Alley/mews": "0-5",
-            "Park/open space": "0-5"
+            "Arterial": {
+              "min": 0,
+              "max": 15
+            },
+            "Collector": {
+              "min": 0,
+              "max": 10
+            },
+            "Local": {
+              "min": 0,
+              "max": 10
+            },
+            "Alley/mews": {
+              "min": 0,
+              "max": 5
+            },
+            "Park/open space": {
+              "min": 0,
+              "max": 5
+            }
           },
           "page": 109
         },
@@ -1410,11 +1488,26 @@
         },
         "buildTo": {
           "value": {
-            "Arterial": "0-10",
-            "Collector": "0-10",
-            "Local": "0-10",
-            "Alley/mews": "0-5",
-            "Park/open space": "0-5"
+            "Arterial": {
+              "min": 0,
+              "max": 10
+            },
+            "Collector": {
+              "min": 0,
+              "max": 10
+            },
+            "Local": {
+              "min": 0,
+              "max": 10
+            },
+            "Alley/mews": {
+              "min": 0,
+              "max": 5
+            },
+            "Park/open space": {
+              "min": 0,
+              "max": 5
+            }
           },
           "page": 111
         },

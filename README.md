@@ -24,21 +24,21 @@ Open http://127.0.0.1:8765
 
 | File                       | What                                                     | Source                            |
 | -------------------------- | -------------------------------------------------------- | --------------------------------- |
-| `docs/data/zones.geojson`  | Zone polygons and place type                             | Town GIS (`scripts/fetch_gis.py`) |
-| `docs/data/zones.json`     | Every zone: acres, place types, SUPs; PD ordinance links | Town GIS (`scripts/fetch_gis.py`) |
+| `docs/data/zones.geojson`  | Zone polygons and place type                             | Town GIS, edited by hand          |
+| `docs/data/zones.json`     | Every zone: acres, place types, SUPs; PD ordinance links | Town GIS, edited by hand          |
 | `docs/data/standards.json` | Use-specific standards, UDC Article 4 (word for word)    | UDC O25-004                       |
 | `docs/data/base.json`      | Uses (UDC Table 4.2-1), district dimensions, place types | UDC O25-004, Advance Addison 2050 |
 | `docs/data/pd/<id>.json`   | One PD's changes from its base district                  | PD ordinances (`add-pd` skill)    |
 
 Every value stores its source page. `review` entries flag values to double-check.
 
-## Refresh the map
+## Check the map against the town
 
 ```bash
 python3 scripts/fetch_gis.py
 ```
 
-Keeps PD names, bases, and done flags.
+Prints how the Town GIS differs from the data files (new or removed zones, acreage, place types, PD ordinances). It never changes anything under `docs/data`. `--out DIR` writes fresh copies into another folder to diff or copy from.
 
 ## Add a PD
 

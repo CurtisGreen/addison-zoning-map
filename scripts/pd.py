@@ -1,7 +1,7 @@
 """Helper for adding one Planned Development (PD). Used by the add-pd skill.
 
-  python3 scripts/pd.py fetch "PD 461"   download ordinances, extract page text (OCR if scanned), make skeleton JSON
-  python3 scripts/pd.py check "PD 461"   validate docs/data/pd/<id>.json; on pass mark it done in zones.json
+  python3 scripts/pd.py fetch "PD 461"   download ordinances and extract page text (OCR if scanned) into pdfs/
+  python3 scripts/pd.py check "PD 461"   validate docs/data/pd/<id>.json and say what zones.json should hold
 
 Needs: pdfinfo, pdftotext, pdftoppm (poppler) and tesseract for scanned pages. Stdlib only otherwise.
 """
@@ -19,18 +19,14 @@ PDFS = ROOT / "pdfs"
 PERMISSIONS = {"P", "S", "A", "T"}  # by right, special use permit, accessory, temporary
 GARBLED_CHARACTERS = "~=^"
 GARBLED_THRESHOLD = 8
+# An acreage whose decimal point was lost, such as "4 5 611 acres" or "21 8 acres".
+SPLIT_ACREAGE = re.compile(r"\d[ \t]*\n?[ \t]*\d[\d \t\n]*[ \t\n]acres?\b", re.IGNORECASE)
 MIN_QUOTE_LENGTH = 12
 QUOTE_MATCH_RATIO = 0.85
-SKELETON = {"id": "", "name": "", "base": None, "usesOnly": False, "purpose": "", "uses": [], "otherUses": [],
-            "dimensions": {}, "review": {}, "notes": []}
 
 
 def read_json(path):
     return json.loads(path.read_text())
-
-
-def write_json(path, data):
-    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
 
 def run(*command):
@@ -42,9 +38,14 @@ def file_slug(pd_id):
     return pd_id.replace("?", "").replace(" ", "-")
 
 
+def has_split_acreage(text):
+    return bool(SPLIT_ACREAGE.search(text)) and not re.search(r"\d\.\d+\s+acres?\b", text, re.IGNORECASE)
+
+
 def page_texts(pdf):
     """Text of each page, cached in pdfs/<pd>/<ordinance>/pNNN.txt. Pages with no text layer, or a garbled one,
     are OCR'd.
+    A text layer with an acreage that lost its decimal point counts as poor too.
     Returns (texts, list of OCR'd page numbers, text folder)."""
     folder = pdf.with_suffix("")
     folder.mkdir(exist_ok=True)
@@ -52,10 +53,12 @@ def page_texts(pdf):
     texts, ocr_pages = [], []
     for number in range(1, page_count + 1):
         text_file = folder / f"p{number:03d}.txt"
+        if text_file.exists() and not text_file.read_text().startswith("[OCR]") and has_split_acreage(text_file.read_text()):
+            text_file.unlink()
         if not text_file.exists():
             text = run("pdftotext", "-layout", "-f", str(number), "-l", str(number), str(pdf), "-")
             garbled = sum(text.count(character) for character in GARBLED_CHARACTERS) >= GARBLED_THRESHOLD
-            if len(text.strip()) < 40 or garbled:  # scanned page, or a poor text layer
+            if len(text.strip()) < 40 or garbled or has_split_acreage(text):  # scanned page, or a poor text layer
                 image = folder / f"p{number:03d}"
                 run("pdftoppm", "-r", "300", "-gray", "-png", "-singlefile", "-f", str(number), "-l", str(number),
                     str(pdf), str(image))
@@ -87,11 +90,8 @@ def fetch(pd_id, pd):
               f"     {ordinance['description'][:140]}\n"
               f"     text: {text_folder.relative_to(ROOT)}/pNNN.txt   pdf: {pdf.relative_to(ROOT)}")
     pd_file = DATA / "pd" / f"{file_slug(pd_id)}.json"
-    if pd_file.exists():
-        print(f"\nExisting file kept: {pd_file.relative_to(ROOT)}")
-    else:
-        write_json(pd_file, {**SKELETON, "id": pd_id})
-        print(f"\nSkeleton written: {pd_file.relative_to(ROOT)}")
+    state = "exists" if pd_file.exists() else "does not exist yet; create it from the schema in the add-pd skill"
+    print(f"\nData file {pd_file.relative_to(ROOT)} {state}. Nothing under docs/data was changed.")
 
 
 def normalize(text):
@@ -115,6 +115,21 @@ def quote_on_page(quote, page_text):
     quote_numbers = re.findall(r"\d+", quote)
     nearby_numbers = re.findall(r"\d+", page_text[max(0, offset - 5): max(0, offset) + len(quote) + 5])
     return any(nearby_numbers[i: i + len(quote_numbers)] == quote_numbers for i in range(len(nearby_numbers) + 1))
+
+
+def valid_value(value, split_allowed=True):
+    """A dimension value: a number, "none", {min, max}, {options: [numbers]}, or (split) a dict of those by area or type."""
+    if isinstance(value, bool):
+        return False
+    if isinstance(value, (int, float)) or value == "none":
+        return True
+    if isinstance(value, dict) and set(value) == {"min", "max"}:
+        return all(isinstance(value[k], (int, float)) for k in value)
+    if isinstance(value, dict) and set(value) == {"options"}:
+        return isinstance(value["options"], list) and all(isinstance(o, (int, float)) for o in value["options"])
+    if isinstance(value, dict) and split_allowed and value:
+        return all(valid_value(part, False) for part in value.values())
+    return False
 
 
 def check(pd_id, pd, index):
@@ -173,6 +188,9 @@ def check(pd_id, pd, index):
     for i, row in enumerate(pd_data.get("parking", [])):
         if not row.get("use") or not row.get("requirement"):
             errors.append(f"parking[{i}]: needs use and requirement")
+        for rate in row.get("rates", []):
+            if not all(isinstance(rate.get(k), (int, float)) for k in ("spaces", "per")) or not rate.get("unit"):
+                errors.append(f"parking[{i}]: each rate needs numbers spaces and per, and a unit")
         check_evidence(f"parking[{i}]", row)
     for field, dimension in pd_data.get("dimensions", {}).items():
         if field not in base["dimensionFields"]:
@@ -180,6 +198,8 @@ def check(pd_id, pd, index):
         if not isinstance(dimension, dict) or "value" not in dimension:
             errors.append(f"dimensions.{field}: must be {{value, ordinance, page, quote}}")
             continue
+        if not valid_value(dimension["value"]):
+            errors.append(f"dimensions.{field}: value must be a number, \"none\", {{min, max}}, {{options: [...]}}, or those split by type")
         check_evidence(f"dimensions.{field}", dimension)
 
     for warning in warnings:
@@ -190,9 +210,17 @@ def check(pd_id, pd, index):
         print("REVIEW", key, "-", text)
     if errors:
         sys.exit(1)
-    pd.update(done=True, name=pd_data.get("name", ""), base=pd_data.get("base"))
-    write_json(DATA / "zones.json", index)
-    print(f"OK - {pd_id} marked done in zones.json. Review the values against the PDFs before committing.")
+    families = {"residential", "mixed", "commercial", "industrial", "airport", "planned"}
+    if pd_data.get("family") not in families | {None}:
+        print(f"ERROR family must be one of {sorted(families)}")
+        sys.exit(1)
+    wanted = {"done": True, "name": pd_data.get("name", ""), "base": pd_data.get("base")}
+    if pd_data.get("family"):
+        wanted["family"] = pd_data["family"]
+    for key, value in wanted.items():
+        if pd.get(key) != value:
+            print(f"UPDATE zones.json entry for {pd_id}: set {key} to {value!r} (now {pd.get(key)!r})")
+    print(f"OK - {pd_id} has no errors. Nothing under docs/data was changed.")
 
 
 def main():

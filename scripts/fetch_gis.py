@@ -1,15 +1,16 @@
-"""Pull Addison zoning, place types, and PD ordinance links from the Town GIS.
+"""Compare the Town GIS (zoning, place types, PD ordinance links) with docs/data and print what differs.
 
-Writes:
-  docs/data/zones.geojson  map polygons (zone, placeType)
-  docs/data/zones.json     one entry per zone: acres, place types, SUPs; PDs also get ordinances
-Zoning polygons that are all park (Town parks layer), railroad, or excluded parcels are left off the map.
-Keeps PD names, bases, and done flags already in zones.json. Re-run when the zoning map changes.
+Writes nothing under docs/data. Edits to the data files are made by hand or by Claude on request.
+  python3 scripts/fetch_gis.py              print the differences
+  python3 scripts/fetch_gis.py --out DIR    also write fresh zones.geojson and zones.json into DIR (never into docs/data), to diff or copy from
+Polygons that are all park (Town parks layer), railroad, or excluded parcels are left out; MERGED_ZONES and EXTRA_ORDINANCES list
+the other known differences from the town map.
 
 Needs: shapely (pip install shapely)
 Run:   python3 scripts/fetch_gis.py
 """
 import datetime
+import sys
 import json
 import re
 import urllib.parse
@@ -44,6 +45,10 @@ EXTRA_ORDINANCES = {
         "018-041",
         "021-045",
     ],
+}
+# Zones the town map draws separately that belong to another PD
+MERGED_ZONES = {
+    "PD O16-018": "PD 007-034",
 }
 KEEP_ZONES = {
     "PD 23-08": "Development site between Addison Circle Park and the DART Addison Transit Center; the parks layer's Addison Circle Park shape overlaps it",
@@ -157,6 +162,8 @@ def main():
     previous = json.loads(index_file.read_text())["zones"] if index_file.exists() else {}
 
     features, zones, place_type_totals, unmatched = [], {}, {}, set()
+    global unmatched_codes
+    unmatched_codes = unmatched
     for feature in query(ZONING_LAYER):
         record = feature["properties"]
         district = record["ZONE_UDC"].strip()
@@ -165,6 +172,8 @@ def main():
         pd_code = record["ZONE_CODE"].strip().removeprefix("PD ")
         # '?' = GIS has no ZONE_CODE for this PD polygon; the id is guessed from its ordinance chain
         zone_id = district if district != "PD" else f"PD {pd_code or chain[0] + '?'}"
+        merged = zone_id in MERGED_ZONES
+        zone_id = MERGED_ZONES.get(zone_id, zone_id)
 
         if district == "PD":
             kept = previous.get(zone_id, {})
@@ -172,7 +181,7 @@ def main():
                                               "done": kept.get("done", False), "acres": 0, "mainOrdinance": None,
                                               "ordinances": {}, "placeTypes": []})
             main_ordinance = find_ordinance(pd_code) if pd_code else None
-            if main_ordinance:
+            if main_ordinance and not merged:
                 zone["mainOrdinance"] = main_ordinance["id"]
             for code in chain:
                 ordinance = find_ordinance(code)
@@ -209,20 +218,50 @@ def main():
     districts = sorted((z for z in zones.items() if z[1]["kind"] == "district"), key=lambda z: -z[1]["acres"])
     pds = sorted((z for z in zones.items() if z[1]["kind"] == "pd"), key=lambda z: -z[1]["acres"])
 
-    (DATA / "zones.geojson").write_text(json.dumps({"type": "FeatureCollection", "features": features}, separators=(",", ":")))
-    index_file.write_text(json.dumps({"asOf": datetime.date.today().isoformat(), "zones": dict(districts + pds)}, indent=2))
+    new_index = {"asOf": datetime.date.today().isoformat(), "zones": dict(districts + pds)}
+    new_geojson = {"type": "FeatureCollection", "features": features}
+    if "--out" in sys.argv:
+        out = Path(sys.argv[sys.argv.index("--out") + 1]).resolve()
+        if out == DATA.resolve():
+            sys.exit("--out must not be docs/data")
+        out.mkdir(parents=True, exist_ok=True)
+        (out / "zones.geojson").write_text(json.dumps(new_geojson, separators=(",", ":")))
+        (out / "zones.json").write_text(json.dumps(new_index, indent=2))
+        print(f"Fresh files written to {out}")
+    report_differences(previous, new_index["zones"], features)
+    return
 
-    print(f"{len(features)} polygons -> zones.geojson")
-    print("\nDistricts (acres):")
-    for zone_id, zone in districts:
-        print(f"  {zone_id:6} {zone['acres']:7.1f}")
-    print(f"\nPDs: {len(pds)} ({sum(z['acres'] for _, z in pds):.0f} acres)")
-    for zone_id, zone in pds:
-        print(f"  {zone_id:12} {zone['acres']:6.1f} ac  ordinances: {', '.join(o['id'] for o in zone['ordinances']) or 'NONE'}")
-    if unmatched:
-        print("\nUnmatched ordinance codes (fix by hand in zones.json):")
-        for item in sorted(unmatched):
+
+def report_differences(previous, current, features):
+    """Print how the town's data differs from docs/data. Changes nothing."""
+    geojson_file = DATA / "zones.geojson"
+    old_count = len(json.loads(geojson_file.read_text())["features"]) if geojson_file.exists() else 0
+    print(f"Polygons: {len(features)} from the town, {old_count} in zones.geojson")
+    added = sorted(set(current) - set(previous))
+    removed = sorted(set(previous) - set(current))
+    print("Zones only in the town data:", ", ".join(added) or "none")
+    print("Zones only in zones.json:   ", ", ".join(removed) or "none")
+    for zone_id in sorted(set(current) & set(previous)):
+        town, ours = current[zone_id], previous[zone_id]
+        lines = []
+        if abs(town["acres"] - ours["acres"]) >= 0.5:
+            lines.append(f"acres {ours['acres']} -> {town['acres']}")
+        if town["placeTypes"] != ours["placeTypes"]:
+            lines.append(f"place types {ours['placeTypes']} -> {town['placeTypes']}")
+        if town["kind"] == "pd":
+            town_ids = {o["id"] for o in town["ordinances"]}
+            our_ids = {o["id"] for o in ours["ordinances"]}
+            if town_ids - our_ids:
+                lines.append("ordinances only in the town data: " + ", ".join(sorted(town_ids - our_ids)))
+            if our_ids - town_ids:
+                lines.append("ordinances only in zones.json: " + ", ".join(sorted(our_ids - town_ids)))
+        if lines:
+            print(f"  {zone_id}: " + "; ".join(lines))
+    if unmatched_codes:
+        print("Ordinance codes in the town data that match no ordinance:")
+        for item in sorted(unmatched_codes):
             print("  " + item)
+    print("\nNothing under docs/data was changed.")
 
 
 if __name__ == "__main__":

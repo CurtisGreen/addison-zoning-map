@@ -35,9 +35,10 @@ const DISTRICT_FAMILY = {
   AA: "airport",
 };
 
-/** A district's family, or a PD's base district family once known, else "planned". */
+/** A district's family. A PD uses its own family if it has one, else its base district's, else "planned". */
 export function familyOf(zoneId, zoneIndex) {
   const entry = zoneIndex.zones[zoneId];
+  if (entry?.family) return entry.family;
   const district = entry?.kind === "pd" ? entry.base : zoneId;
   return DISTRICT_FAMILY[district] || "planned";
 }
@@ -166,14 +167,13 @@ export async function getZone(zoneId) {
 
 export const zoneTitle = (zone) => idWithName(zone.id, zone.name);
 
-/** The one source to show in a popup: the UDC section, or the PD's own ordinance (latest if unknown). */
-export function mainSource(zone) {
-  if (zone.kind === "district") return zone.sources[0];
+/** The source to show in a popup: the UDC section, the PD's one ordinance, or the count when a PD has several. */
+export function sourceHtml(zone) {
+  if (zone.kind === "district") return externalLink(zone.sources[0]);
   const ordinances = zone.index.ordinances;
-  const main =
-    ordinances.find((ordinance) => ordinance.id === zone.index.mainOrdinance) ||
-    ordinances.at(-1);
-  return main && { label: `Ord. ${main.id}`, url: main.url };
+  if (ordinances.length > 1) return `${ordinances.length} ordinances`;
+  const [only] = ordinances;
+  return only ? externalLink({ label: `Ord. ${only.id}`, url: only.url }) : "";
 }
 
 export function placeTypeInfo(name, base) {
@@ -223,30 +223,46 @@ function withUnit(text, unit) {
   return unit === "%" ? `${text}%` : `${text} ${unit}`;
 }
 
-/** 70 -> "70 ft", "none" -> "None", "5-15" -> "5–15 ft", {Interior: 5, Street: 20} -> "Interior 5 ft, Street 20 ft". */
+/** A value that differs by street, lot type, or similar: an object whose keys are the parts. A range or an either-or is not split. */
+export function isSplit(value) {
+  return (
+    Boolean(value) &&
+    typeof value === "object" &&
+    !("min" in value) &&
+    !("options" in value)
+  );
+}
+
+/** 70 -> "70 ft", "none" -> "None", {min: 5, max: 15} -> "5–15 ft", {options: [10, 20]} -> "10 or 20 ft", {Interior: 5, Street: 20} -> "Interior 5 ft, Street 20 ft". */
 export function formatValue(value, unit) {
-  if (value && typeof value === "object") {
+  if (isSplit(value)) {
     return Object.entries(value)
       .map(([part, partValue]) => `${part} ${formatValue(partValue, unit)}`)
       .join(", ");
   }
   if (value === "none") return "None";
   if (typeof value === "number") return withUnit(value.toLocaleString(), unit);
-  return withUnit(String(value).replace("-", "–"), unit);
+  if ("min" in value)
+    return withUnit(
+      `${value.min.toLocaleString()}–${value.max.toLocaleString()}`,
+      unit,
+    );
+  return withUnit(
+    value.options.map((option) => option.toLocaleString()).join(" or "),
+    unit,
+  );
 }
 
-/** Numbers inside a value: 30 -> [30], "5-15" -> [5, 15], "15 or 20" -> [15, 20]. */
+/** Numbers inside a value: 30 -> [30], {min: 5, max: 15} -> [5, 15], {options: [15, 20]} -> [15, 20]. */
 function numbersIn(value) {
   if (typeof value === "number") return [value];
-  return String(value)
-    .split(/[^\d.]+/)
-    .filter(Boolean)
-    .map(Number);
+  if ("min" in value) return [value.min, value.max];
+  return value.options;
 }
 
 /** One short value for the popup. Values that differ by street or building type become a range. */
 export function summarizeValue(value, unit) {
-  if (!value || typeof value !== "object") return formatValue(value, unit);
+  if (!isSplit(value)) return formatValue(value, unit);
   const parts = Object.values(value);
   if (parts.every((part) => part === "none")) return "None";
   if (parts.includes("none")) return "varies";
@@ -254,7 +270,7 @@ export function summarizeValue(value, unit) {
   const lowest = Math.min(...numbers);
   const highest = Math.max(...numbers);
   return formatValue(
-    lowest === highest ? lowest : `${lowest}-${highest}`,
+    lowest === highest ? lowest : { min: lowest, max: highest },
     unit,
   );
 }

@@ -8,9 +8,11 @@ import {
   getZone,
   loadJson,
   idWithName,
+  isSplit,
   loadSiteData,
   placeTypeInfo,
   showError,
+  sourceHtml,
   zonePageUrl,
   zoneTitle,
 } from "./data.js";
@@ -97,7 +99,9 @@ function renderFacts(zone, base) {
   }
   rows.push([
     "Source",
-    zone.sources.map(externalLink).join(", ") +
+    (zone.kind === "pd"
+      ? sourceHtml(zone)
+      : zone.sources.map(externalLink).join(", ")) +
       notes.mark(zone.review.ordinances),
   ]);
   // The ordinance's acreage, when its boundary includes the roads.
@@ -119,8 +123,7 @@ function renderFacts(zone, base) {
 }
 
 /** A value split by area, lot type, or street type is an object; anything else is one value. */
-const partsOf = (value) =>
-  value && typeof value === "object" ? Object.keys(value) : [];
+const partsOf = (value) => (isSplit(value) ? Object.keys(value) : []);
 
 function groupBySplit(entries) {
   const groups = new Map();
@@ -368,6 +371,8 @@ function renderUses(zone, base, standards) {
   }
   if (!zone.uses) return "";
   const district = zone.kind === "pd" ? zone.base : zone.id;
+  // A PD with no base district has its own rules, so the UDC's use standards are not shown.
+  const showStandards = Boolean(district);
   const heading = `Allowed uses${notes.mark(zone.review.uses)}`;
   const byCategory = new Map();
   const applicableStandards = new Map();
@@ -376,7 +381,10 @@ function renderUses(zone, base, standards) {
     if (!permission) continue;
     const { mark, className } = PERMISSIONS[permission];
     const standard = standards[use.standard];
-    const items = standard ? applicableItems(standard.items, district) : [];
+    const items =
+      standard && showStandards
+        ? applicableItems(standard.items, district)
+        : [];
     let standardLink = "";
     if (items.length) {
       applicableStandards.set(use.standard, { standard, items });

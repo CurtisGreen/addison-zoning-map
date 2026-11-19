@@ -1,6 +1,7 @@
 {
   "id": "PD 007-034",
   "name": "Vitruvian Park",
+  "family": "mixed",
   "base": null,
   "usesOnly": true,
   "purpose": "The purpose of this Planned Development District No. 007-034 … is to create a mixed use environment under a unified plan consisting of retail, restaurant, residential and office uses within a pedestrian-oriented village setting",
@@ -24,21 +25,27 @@
       "permission": "P",
       "ordinance": "016-017",
       "page": 7,
-      "quote": "Retail Store"
+      "quote": "Retail Store",
+      "requires": "mixed use",
+      "exceptBlocks": ["211"]
     },
     {
       "name": "Retail sales, 15,000 to 50,000 sq. ft. GFA",
       "permission": "P",
       "ordinance": "016-017",
       "page": 7,
-      "quote": "Retail Store"
+      "quote": "Retail Store",
+      "requires": "mixed use",
+      "exceptBlocks": ["211"]
     },
     {
       "name": "Retail sales, more than 50,000 sq. ft. GFA",
       "permission": "P",
       "ordinance": "016-017",
       "page": 6,
-      "quote": "Department store"
+      "quote": "Department store",
+      "requires": "mixed use",
+      "exceptBlocks": ["211"]
     },
     {
       "name": "Bank or financial institution",
@@ -143,21 +150,24 @@
       "permission": "S",
       "ordinance": "016-017",
       "page": 8,
-      "quote": "Gasoline service station only in Block 211 as shown on the Concept Plan."
+      "quote": "Gasoline service station only in Block 211 as shown on the Concept Plan.",
+      "onlyBlocks": ["211"]
     },
     {
       "name": "Drive-through",
       "permission": "S",
       "ordinance": "016-017",
       "page": 8,
-      "quote": "Restaurant with drive through facilities only in Block 211"
+      "quote": "Restaurant with drive through facilities only in Block 211",
+      "onlyBlocks": ["211"]
     },
     {
       "name": "Beer and Wine sales, off-premise consumption",
       "permission": "S",
       "ordinance": "016-017",
       "page": 8,
-      "quote": "Sale of beer and wine for off-premises consumption only in Blocks 209, 210, and 211"
+      "quote": "Sale of beer and wine for off-premises consumption only in Blocks 209, 210, and 211",
+      "onlyBlocks": ["209", "210", "211"]
     },
     {
       "name": "Parking facility, private",
@@ -269,14 +279,24 @@
     "buildTo": {
       "value": {
         "A streets": 9,
-        "B streets": "6-9",
-        "C streets": "6-9",
+        "B streets": {
+          "min": 6,
+          "max": 9
+        },
+        "C streets": {
+          "min": 6,
+          "max": 9
+        },
         "D streets": 4,
-        "E streets": "6-9"
+        "E streets": {
+          "min": 6,
+          "max": 9
+        }
       },
       "ordinance": "016-017",
       "page": 9,
-      "quote": "Street build-to lines within the Property are as follows"
+      "quote": "Street build-to lines within the Property are as follows",
+      "except": ["Block 211"]
     },
     "facadeAtBuildToMin": {
       "value": {
@@ -285,7 +305,8 @@
       },
       "ordinance": "016-017",
       "page": 9,
-      "quote": "not more than 30 percent of any street frontage may vary from the build-to line"
+      "quote": "not more than 30 percent of any street frontage may vary from the build-to line",
+      "except": ["Block 211"]
     },
     "sideSetbackMin": {
       "value": "none",
@@ -343,13 +364,74 @@
       "ordinance": "016-017",
       "page": 10,
       "quote": "Maximum lot coverage 95%"
+    },
+    "floorAreaMax": {
+      "value": {
+        "Office": 500000,
+        "Retail, restaurant, and personal service": 500000
+      },
+      "ordinance": "016-017",
+      "page": 10,
+      "quote": "Maximum nonresidential square footage"
+    },
+    "openSpacePer1000Residents": {
+      "value": {
+        "First 2,250 residents": 2,
+        "After": 1.5
+      },
+      "ordinance": "016-017",
+      "page": 11,
+      "quote": "Two acres for every 1,000 residents shall be dedicated for public open space use"
+    },
+    "residentsPerUnit": {
+      "value": 1.5,
+      "ordinance": "016-017",
+      "page": 11,
+      "quote": "multiplied by a factor of 1.5 persons per dwelling unit"
+    },
+    "blockLengthMin": {
+      "value": 200,
+      "except": ["Block 211"],
+      "ordinance": "016-017",
+      "page": 13,
+      "quote": "the length of a block shall not be less than 200 feet, nor more than 750 feet"
+    },
+    "blockLengthMax": {
+      "value": 750,
+      "except": ["Block 211"],
+      "ordinance": "016-017",
+      "page": 13,
+      "quote": "the length of a block shall not be less than 200 feet, nor more than 750 feet"
+    },
+    "masonryMin": {
+      "value": 80,
+      "except": ["Block 211"],
+      "ordinance": "016-017",
+      "page": 13,
+      "quote": "at least 80 percent of the exterior cladding of all exterior walls fronting or visible from public streets"
+    },
+    "claddingMaterialsMax": {
+      "value": 3,
+      "ordinance": "016-017",
+      "page": 13,
+      "quote": "shall be composed of not more than three"
+    },
+    "garageExposedLengthMax": {
+      "value": 200,
+      "ordinance": "016-017",
+      "page": 13,
+      "quote": "length of an exposed parking structure along a street is 200 feet unless"
     }
   },
   "review": {
     "buildTo": "A to E streets are shown on the Concept Plan. Measured from the closest right-of-way line. Not required in Block 211.",
     "facadeAtBuildToMin": "The text says not more than 30% of any street frontage (50% in Block 102) may vary from the build-to line. Not required in Block 211.",
     "heightMax": "The 60 ft limit applies to the part of a building within 100 ft of land zoned single family or apartment or used for residential. All heights are subject to FAA approval. Turrets, spires, and towers may be up to 15 ft above the maximum.",
-    "lotCoverageMax": "Porches and arcades fronting a public street are excluded. Above-grade parking structures are included."
+    "lotCoverageMax": "Porches and arcades fronting a public street are excluded. Above-grade parking structures are included.",
+    "garageExposedLengthMax": "Longer is allowed when the structure has enhanced facade elements such as living walls or artistic design.",
+    "masonryMin": "Masonry includes brick, stone, cultured stone, glazing and plate glass, and split face concrete masonry units.",
+    "floorAreaMax": "Office and retail, restaurant, and personal service uses each have their own 500,000 sq ft limit.",
+    "openSpacePer1000Residents": "Residents are estimated from the number of dwelling units."
   },
   "notes": [
     {
@@ -364,11 +446,8 @@
     "Off-premises beer and wine sales are allowed with a special use permit in Blocks 209, 210, and 211 only.",
     "The whole PD counts as one lot for parking and open space, and each phase must still meet the parking standards.",
     "Shared parking is allowed when uses peak at different times, based on a parking study approved by the director of development services. Below-grade parking may extend to the lot lines.",
-    "Parking garages: no ramps expressed on street-facing facades, no steel garages or steel guard cables, and no more than 200 ft of exposed structure along a street unless it has enhanced facade elements such as living walls or artistic design.",
+    "Parking garages: no ramps expressed on street-facing facades, and no steel garages or steel guard cables.",
     "Bicycle parking is required for all multifamily and commercial uses.",
-    "At least 80% masonry on walls facing or visible from streets, and no more than three exterior cladding materials.",
-    "Max nonresidential floor area: 500,000 sq ft each for office, retail, restaurant, and personal service uses.",
-    "Public open space: 2 acres per 1,000 residents up to 2,250 residents, then 1.5 acres per 1,000 (estimated at 1.5 people per unit).",
     "A development plan approved by Planning and Zoning and Council is required before permits.",
     "Council may waive any development standard with a development plan, but not to add a use or raise intensity or density."
   ],
@@ -381,17 +460,25 @@
     "009-002": "Updated street designs for the main boulevard",
     "009-036": "Development plan for a multifamily building on 3.6 acres",
     "010-005": "Renamed Brookhaven Club Drive to Vitruvian Way",
-    "011-032": "Development plan for apartments on 4.6 acres, with waivers for setbacks over 9 ft on Vitruvian Way and Bella Lane",
+    "011-032": "Development plan for apartments on 5.5 acres, with waivers for setbacks over 9 ft on Vitruvian Way and Bella Lane",
     "013-026": "Added 21.8 acres rezoned from Local Retail, revised uses and standards, new concept plan (120.9 acres)",
     "016-017": "Added gas station, drive-through restaurant, and movie theater uses; limited the Block 209 and 210 exemptions to Block 211; revised concept plan",
     "016-019": "Development plan for apartments and an amenity center on 5.2 acres, with waivers for smaller 1-bedroom units, less masonry, and four materials",
     "018-041": "Development plan for apartments on 6.9 acres, with a waiver for four building materials",
-    "021-045": "Revised concept plan and development plan for 85 apartments on 5.1 acres, with waivers for build-to line, materials, and colors"
+    "021-045": "Revised concept plan and development plan for 85 apartments on 5.1 acres, with waivers for build-to line, materials, and colors",
+    "016-018": "Development plan for a retail center on 11.5 acres, with a waiver for 6 building materials on Building B"
   },
   "parking": [
     {
       "use": "General retail",
       "requirement": "4 per 1,000 sq ft GFA",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 250,
+          "unit": "sq ft GFA"
+        }
+      ],
       "ordinance": "016-017",
       "page": 12,
       "quote": "General retail. (1/250 s.f.) One space per each 250 square feet of gross floor area."
@@ -399,6 +486,13 @@
     {
       "use": "Furniture store",
       "requirement": "1 per 1,000 sq ft GFA",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1000,
+          "unit": "sq ft GFA"
+        }
+      ],
       "ordinance": "016-017",
       "page": 12,
       "quote": "Furniture store. (1/1,000 s.f.) One space per each 1,000 square feet of gross floor area."
@@ -406,6 +500,13 @@
     {
       "use": "Medical or dental clinic",
       "requirement": "5 per 1,000 sq ft GFA",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 200,
+          "unit": "sq ft GFA"
+        }
+      ],
       "ordinance": "016-017",
       "page": 12,
       "quote": "Medical or dental clinics. (1/200 s.f.) One space per each 200 square feet of gross floor area."
@@ -413,6 +514,13 @@
     {
       "use": "Bank or savings and loan",
       "requirement": "3.33 per 1,000 sq ft GFA",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft GFA"
+        }
+      ],
       "ordinance": "016-017",
       "page": 12,
       "quote": "Bank or savings and loans. (1/300 s.f.) One space per each 300 square feet of gross floor area."
@@ -420,6 +528,14 @@
     {
       "use": "Office",
       "requirement": "3.33 per 1,000 sq ft GFA (gross leaseable area for buildings of 50,000 sq ft or more)",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft GFA"
+        }
+      ],
+      "leaseableAreaFrom": 50000,
       "ordinance": "016-017",
       "page": 12,
       "quote": "An office building or group of buildings, which shall total 50,000 square feet or more: (1/300 s.f.). One space per 300 square feet of gross leaseable area."
@@ -427,6 +543,13 @@
     {
       "use": "Health club or studio (dance, music, drama, health, reducing)",
       "requirement": "10 per 1,000 sq ft GFA",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 100,
+          "unit": "sq ft GFA"
+        }
+      ],
       "ordinance": "016-017",
       "page": 12,
       "quote": "Health club or studio for dance, music, drama, health and reducing. (1/100 s.f.) One space per each 100 square feet of gross floor area."
@@ -434,6 +557,14 @@
     {
       "use": "Residential",
       "requirement": "1 per bedroom, max 2 per unit",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1,
+          "unit": "bedroom"
+        }
+      ],
+      "maxPerUnit": 2,
       "ordinance": "016-017",
       "page": 12,
       "quote": "Residential. One space/bedroom to a maximum of two spaces/unit."
@@ -441,6 +572,18 @@
     {
       "use": "Hotel",
       "requirement": "1 per room, plus 3.33 per 1,000 sq ft of conference or banquet space",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1,
+          "unit": "room"
+        },
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft conference or banquet GFA"
+        }
+      ],
       "ordinance": "016-017",
       "page": 12,
       "quote": "One space/hotel room plus one parking space per every 300 square feet of gross floor area of conference/banquet facilities."
@@ -448,20 +591,21 @@
     {
       "use": "Civic",
       "requirement": "Set by a parking demand study approved by the director of development services",
+      "basis": "parking demand study",
       "ordinance": "016-017",
       "page": 12,
       "quote": "To be determined by parking demand analysis study for proposed use and approved by the town's director of development services."
     },
     {
-      "use": "Mixed use",
-      "requirement": "Total of the ratios for each use",
-      "ordinance": "016-017",
-      "page": 12,
-      "quote": "Number of spaces resulting from application of ratios provided above for respective uses in the development."
-    },
-    {
       "use": "Restaurant",
       "requirement": "10 per 1,000 sq ft GFA",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 100,
+          "unit": "sq ft GFA"
+        }
+      ],
       "ordinance": "016-017",
       "page": 12,
       "quote": "Restaurant. (1/100 s.f.) One space per each 100 square feet of gross floor area."
@@ -469,6 +613,13 @@
     {
       "use": "Movie picture theater",
       "requirement": "1 per 4 seats",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 4,
+          "unit": "seat"
+        }
+      ],
       "ordinance": "016-017",
       "page": 12,
       "quote": "Movie picture theater. One space for every four seats."

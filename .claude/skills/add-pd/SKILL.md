@@ -19,7 +19,7 @@ Goal: one draft file, `docs/data/pd/<id>.json`, that the user can check against 
 python3 scripts/pd.py fetch "PD 461"
 ```
 
-It downloads each ordinance in the PD's chain to `pdfs/<id>/`, writes page text to `pdfs/<id>/<ordinance>/pNNN.txt` (OCR for scanned pages, marked `[OCR]`), and creates the skeleton JSON if it is missing. If an ordinance has no URL, tell the user; do not search the web for it unless they ask.
+It downloads each ordinance in the PD's chain to `pdfs/<id>/`, writes page text to `pdfs/<id>/<ordinance>/pNNN.txt` (OCR for scanned pages, marked `[OCR]`), into the ignored `pdfs/` folder. It never writes under `docs/data`; create `docs/data/pd/<id>.json` yourself. If an ordinance has no URL, tell the user; do not search the web for it unless they ask.
 
 ## 3. Read
 
@@ -79,12 +79,14 @@ Rules:
 - **`uses`** = changes from the base: added or changed (`permission` = `P` by right, `S` special use permit, `A` accessory, `T` temporary) or removed (`permission` = `"none"`). `name` must be an exact use name from `docs/data/base.json` → `uses[].name`.
   - One ordinance use that spans UDC size or type classes (retail by floor area, hotel types): add each class the wording covers, and note the mapping in `review.uses`.
   - Several ordinance items that fit one UDC use: one entry with the clearest quote; put the rest in `otherUses` only if they add meaning.
+- **`family`** (optional): `residential`, `mixed`, `commercial`, `industrial`, `airport`, or `planned`. Sets the PD's map color when the PD has no base district. Copy it to the PD's entry in `zones.json`.
 - **`insideAirportContour: true`** only when the PD is confirmed to lie inside the Addison Airport noise contour. Leave it out otherwise; the FAA review note then stays hidden for the PD.
 - **`usesOnly: true`** when the PD gives a complete list of allowed uses instead of adding to a base district. Then list every allowed use (usually with `base: null`).
-- **`parking`**: the PD's own parking ratios, one row per use: `{use, requirement, ordinance, page, quote}`. Shown as a Parking table.
+- **`parking`**: the PD's own parking ratios, one row per use: `{use, requirement, rates, ordinance, page, quote}`. `requirement` is the display text. `rates` is the exact ratio as numbers, `[{spaces: 1, per: 250, unit: "sq ft GFA"}]`; add `maxPerUnit` or `basis` (for example `"parking demand study"`) when the ordinance says so. Shown as a Parking table.
+- **Use conditions** on a `uses` entry: `onlyBlocks: ["211"]` when allowed only in named blocks, `requires: "mixed use"` with `exceptBlocks` when it needs another use. Data only; say it in a note too.
 - **`notes`** items may be a string or `{heading, items: [strings]}` to group related items (for example everything specific to one block).
 - **`otherUses`** for ordinance uses with no clear UDC match: `{text, permission?, ordinance, page, quote}`. `permission` is optional (`P` default, or `S`, `A`, `T`). Do not force a match. Give each one its `permission` (`S` or `A` when the ordinance says so) and keep it out of `text`. For a `usesOnly` PD they show as the last group under Allowed uses.
-- **`dimensions`**: keys must be one of `base.json` → `dimensionFields` (for example `heightMax`, `frontSetbackMin`, `buildTo`, `lotCoverageMax`, `unitSizeMin`, `floorAreaMax`); each field there has its label and unit. `value` is a number, `"none"`, a short string (`"5-15"`), or an object for values that vary by area, use, or building type (`{"Tract A": 70, "Tract B": 45}`). Include only values the PD itself sets. A value you calculate (e.g. 70% from "no more than 30% may vary") needs a `review` note showing the math. Standards with no field (block length, parking, masonry, sidewalks) go in `notes`: a list, one short sentence per item, shown under an "Other requirements" heading.
+- **`dimensions`**: keys must be one of `base.json` → `dimensionFields` (for example `heightMax`, `frontSetbackMin`, `buildTo`, `lotCoverageMax`, `unitSizeMin`, `floorAreaMax`); each field there has its label and unit. `value` is a number, `"none"`, a range `{"min": 5, "max": 15}`, a choice `{"options": [10, 20]}`, or an object of those for values that vary by area, use, or building type (`{"Tract A": 70, "Tract B": 45}`). Values are always stored as numbers so they can drive calculations later; the page builds the display text from them. Add `"except": ["Block 211"]` when named areas are exempt. Include only values the PD itself sets. A value you calculate (e.g. 70% from "no more than 30% may vary") needs a `review` note showing the math. Standards with no field (sidewalks, shared parking, bicycle parking) go in `notes`: a list, one short sentence per item, shown under an "Other requirements" heading.
 - **`review`** = notes for readers of the site, shown next to the value they are about. Write what a reader needs to know about the zoning (a condition, an exception, a conflict in the ordinance). Do not describe how you got the data (OCR, text quality, reading page images, mapping choices, the ordinance's history, or how the base district was chosen). Put anything the user should verify in your report instead. Other guidance on what to flag: conflicts, amendments that cover only part of the PD, unreadable pages, values only shown on a site plan, guessed mappings. Any key works. Keys that match a `dimensions` field show next to that value; all others show under the PD's rules.
 - **`acresWithRoads`** = the acreage the ordinance states, only when its boundary encloses the roads inside the PD (the map's acreage leaves roads out). The site shows it as "46.4 acres (59.6 including roads)". Leave it out otherwise.
 - **`curtisNotes`** = the user's own commentary, shown above Allowed uses. Never write or change it.
@@ -110,7 +112,7 @@ Rules:
 python3 scripts/pd.py check "PD 461"
 ```
 
-Fix every `ERROR` and run again. On a clean run the script marks the PD `done` in `zones.json` (so the map colors it by base and the site loads its details).
+Fix every `ERROR` and run again. The script never edits `docs/data`. On a clean run it prints any `UPDATE zones.json` lines (`done`, `name`, `base`); make those edits yourself so the map colors the PD by base and the site loads its details.
 
 ## 6. Report
 
