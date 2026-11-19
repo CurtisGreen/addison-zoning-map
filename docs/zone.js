@@ -72,7 +72,12 @@ function typologyLines(placeType) {
 function renderFacts(zone, base) {
   const placeTypes = zone.index.placeTypes
     .map((name) => placeTypeInfo(name, base))
-    .filter(Boolean);
+    .filter(Boolean)
+    .map((placeType) =>
+      zone.kind === "pd" && !zone.pdData?.insideAirportContour
+        ? { ...placeType, faaReview: [] }
+        : placeType,
+    );
   const showFaaNote = placeTypes.some(
     (placeType) => placeType.faaReview.length,
   );
@@ -186,7 +191,8 @@ function useRows(pd, zone, base) {
     pd.base && !pd.usesOnly
       ? pd.uses.map((use) => ({ text: use.name, ...use }))
       : [];
-  return [...listed, ...pd.otherUses].map((use) => {
+  const other = pd.usesOnly ? [] : pd.otherUses;
+  return [...listed, ...other].map((use) => {
     const permission = use.permission ? PERMISSIONS[use.permission].label : "";
     return `<tr><td>${escapeHtml(use.text)}</td><td>${permission}</td><td class="source">${evidenceLink(use, zone, base)}</td></tr>`;
   });
@@ -252,11 +258,26 @@ function renderCurtisNotes(zone) {
   return text ? `<h2>Curtis's notes</h2><p>${escapeHtml(text)}</p>` : "";
 }
 
+/** A PD's own parking ratios, one row per use. */
+function renderParking(zone, base) {
+  const rows = zone.pdData?.parking || [];
+  if (!rows.length) return "";
+  const body = rows.map(
+    (row) =>
+      `<tr><td>${escapeHtml(row.use)}</td><td>${escapeHtml(row.requirement)}</td><td class="source">${evidenceLink(row, zone, base)}</td></tr>`,
+  );
+  return `<h2>Parking</h2>${tableOf([`<tr class="head"><th>Use</th><th>Spaces required</th><th></th></tr>`, ...body])}`;
+}
+
 /** A PD's general conditions from the ordinance, one per line. */
 function renderNotes(zone) {
   const items = zone.pdData?.notes || [];
   if (!items.length) return "";
-  return `<h2>Other requirements</h2><ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+  const line = (item) =>
+    typeof item === "string"
+      ? `<li>${escapeHtml(item)}</li>`
+      : `<li>${escapeHtml(item.heading)}<ul>${item.items.map(line).join("")}</ul></li>`;
+  return `<h2>Other requirements</h2><ul>${items.map(line).join("")}</ul>`;
 }
 
 const ZONE_TYPES = {
@@ -370,6 +391,16 @@ function renderUses(zone, base, standards) {
     .filter((permission) => permission.className !== "not-allowed")
     .map((permission) => `${permission.mark} ${permission.label.toLowerCase()}`)
     .join(", ");
+  // A PD that lists all its uses shows the ones with no UDC name as a last group.
+  const ordinanceOnlyUses = zone.pdData?.usesOnly ? zone.pdData.otherUses : [];
+  if (ordinanceOnlyUses.length)
+    byCategory.set(
+      "Other uses",
+      ordinanceOnlyUses.map((use) => {
+        const { mark, className } = PERMISSIONS[use.permission ?? "P"];
+        return `<li><span class="${className}">${mark}</span> ${escapeHtml(use.text)} ${evidenceLink(use, zone, base)}</li>`;
+      }),
+    );
   const groups = [...byCategory].map(
     ([category, lines]) =>
       `<h3>${escapeHtml(category)}</h3><ul class="uses">${lines.join("")}</ul>`,
@@ -435,6 +466,7 @@ async function initZonePage() {
     renderUses(zone, base, standards),
     renderDimensions(zone, base),
     renderPdRules(zone, base),
+    renderParking(zone, base),
     renderNotes(zone),
     renderHistory(zone),
   ].join("");

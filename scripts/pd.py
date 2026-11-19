@@ -170,6 +170,10 @@ def check(pd_id, pd, index):
         if use.get("permission", "P") not in PERMISSIONS:
             errors.append(f"otherUses[{i}]: permission must be P, S, A, or T (or left out)")
         check_evidence(f"otherUses[{i}]", use)
+    for i, row in enumerate(pd_data.get("parking", [])):
+        if not row.get("use") or not row.get("requirement"):
+            errors.append(f"parking[{i}]: needs use and requirement")
+        check_evidence(f"parking[{i}]", row)
     for field, dimension in pd_data.get("dimensions", {}).items():
         if field not in base["dimensionFields"]:
             errors.append(f"dimensions.{field}: unknown field (allowed: {', '.join(base['dimensionFields'])})")

@@ -32,7 +32,18 @@ NOT_PARKS = ("Elmntry",)  # school grounds in the parks layer stay zoned
 # Zones that stay on the map even where the parks layer covers them
 # Ordinances that amend a PD but are missing from the town map's ordinance list for it
 EXTRA_ORDINANCES = {
-    "PD 007-034": ["009-002"],  # amends Exhibit D, Street A
+    "PD 007-034": [
+        "009-002",
+        "008-022",
+        "009-036",
+        "010-005",
+        "011-032",
+        "013-026",
+        "016-017",
+        "016-019",
+        "018-041",
+        "021-045",
+    ],
 }
 KEEP_ZONES = {
     "PD 23-08": "Development site between Addison Circle Park and the DART Addison Transit Center; the parks layer's Addison Circle Park shape overlaps it",
