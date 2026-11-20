@@ -156,7 +156,7 @@ function dimensionTable(group, { zone, base, markFor, baseDimensions }) {
       : undefined;
     const baseUnit = base.dimensionFields[baseField]?.unit ?? unit;
     const cell = (value) =>
-      `<td>${escapeHtml(changeText(baseValue, value, unit, baseUnit))}</td>`;
+      `<td>${changeText(baseValue, value, unit, baseUnit)}</td>`;
     return parts.length
       ? `<tr><th>${escapeHtml(label)}${mark}</th>${parts.map((part) => cell(dimension.value[part])).join("")}${source}</tr>`
       : `<tr><th>${escapeHtml(label)}</th>${cell(dimension.value).replace("</td>", `${mark}</td>`)}${source}</tr>`;
@@ -175,13 +175,15 @@ const SAME_QUANTITY = {
  * A base that is itself split or not a plain number keeps its own unit. With no base value, just the new value.
  */
 function changeText(baseValue, newValue, unit, baseUnit = unit) {
-  const to = formatValue(newValue, unit);
+  const to = escapeHtml(formatValue(newValue, unit));
   if (baseValue === undefined) return to;
-  const from = formatValue(
-    baseValue,
-    typeof baseValue === "number" && baseUnit === unit ? "" : baseUnit,
+  const from = escapeHtml(
+    formatValue(
+      baseValue,
+      typeof baseValue === "number" && baseUnit === unit ? "" : baseUnit,
+    ),
   );
-  return `${from} → ${to}`;
+  return `<span class="before">${from} →</span> ${to}`;
 }
 
 /** Uses a PD adds or changes, or other uses it lists. */
@@ -192,10 +194,20 @@ function useRows(pd, zone, base) {
       ? pd.uses.map((use) => ({ text: use.name, ...use }))
       : [];
   const other = pd.pdUsesOnly ? [] : pd.otherUses;
-  return [...listed, ...other].map((use) => {
-    const permission = use.permission ? PERMISSIONS[use.permission].label : "";
-    return `<tr><td>${escapeHtml(use.text)}</td><td>${permission}</td><td class="source">${evidenceLink(use, zone, base)}</td></tr>`;
-  });
+  // Several UDC uses can come from one ordinance phrase (`text`), which is shown once.
+  const seen = new Set();
+  return [...listed, ...other]
+    .filter((use) => {
+      const key = `${use.text}|${use.permission ?? "P"}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .map((use) => {
+      const { mark, label, className } = PERMISSIONS[use.permission ?? "P"];
+      const permission = `<span class="${className}" title="${label}">${mark}</span>`;
+      return `<tr><td>${escapeHtml(use.text)}</td><td>${permission}</td><td class="source">${evidenceLink(use, zone, base)}</td></tr>`;
+    });
 }
 
 /** Review keys whose notes appear next to what they are about. */
@@ -370,7 +382,12 @@ function renderUses(zone, base, standards) {
   const district = zone.kind === "pd" ? zone.base : zone.id;
   // A PD with no base district has its own rules, so the UDC's use standards are not shown.
   const showStandards = Boolean(district);
-  const heading = `Allowed uses${notes.mark(zone.review.uses)}`;
+  // A PD that builds on a base district shows that district's uses plus its own changes.
+  const fromBase =
+    zone.kind === "pd" && zone.base && !zone.pdData?.pdUsesOnly
+      ? ` (From base ${escapeHtml(zone.base)})`
+      : "";
+  const heading = `Allowed uses${fromBase}${notes.mark(zone.review.uses)}`;
   const byCategory = new Map();
   const applicableStandards = new Map();
   for (const use of base.uses) {
@@ -473,9 +490,9 @@ async function initZonePage() {
     renderHeading(zone),
     renderFacts(zone, base),
     renderCurtisNotes(zone),
+    renderPdRules(zone, base),
     renderUses(zone, base, standards),
     renderDimensions(zone, base),
-    renderPdRules(zone, base),
     renderParking(zone, base),
     renderNotes(zone),
     renderHistory(zone),

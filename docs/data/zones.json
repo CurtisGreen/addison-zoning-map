@@ -1942,10 +1942,10 @@
     },
     "PD 89-011": {
       "kind": "pd",
-      "name": "",
-      "base": null,
-      "done": false,
-      "acres": 2.0,
+      "name": "Cross Roads Aviation",
+      "base": "CG",
+      "done": true,
+      "acres": 2.2,
       "mainOrdinance": "089-011",
       "ordinances": [
         {

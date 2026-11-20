@@ -89,10 +89,10 @@ Scripts never write to `docs/data`. If you generate the JSON with a script, writ
 Rules:
 
 - **Evidence on every entry.** `ordinance` = ordinance id from the PD's `ordinances` in `docs/data/zones.json`; `page` = page number within that ordinance PDF (1-based, as in `pNNN.txt`); `quote` = exact text copied from that page, 12 to 200 characters, specific enough to prove the value (include the number or the use wording, not just "Bank"). The checker rejects quotes it cannot find or that are too short.
-- **`base`** = the UDC district the PD explicitly builds on ("uses permitted in the LR district", "C-1 standards apply"). Old ordinances name pre-UDC districts: map them with the table below and say which old district was named in `review.base`.
+- **`base`** = the UDC district the PD explicitly builds on ("uses permitted in the LR district", "C-1 standards apply"). Old ordinances name pre-UDC districts: map them with the table below and say which old district was named in `review.base`. When the ordinance names no district, write no `review.base` note.
   - The zoning _before_ the PD (earlier ordinances in the chain) is not a base.
   - The base's uses, dimensions, and review notes all show on the PD's page, so a wrong base shows wrong limits. When unsure, use `null` and explain in `review.base`.
-- **`uses`** = changes from the base: added or changed (`permission` = `P` by right, `S` special use permit, `A` accessory, `T` temporary) or removed (`permission` = `"none"`). `name` must be an exact use name from `docs/data/base.json` → `uses[].name`.
+- **`uses`** = changes from the base: added or changed (`permission` = `P` by right, `S` special use permit, `A` accessory, `T` temporary) or removed (`permission` = `"none"`). `name` must be an exact use name from `docs/data/base.json` → `uses[].name`. Add `text` (the ordinance's own wording) to show that wording in the "Changes from base" table instead of the UDC name; entries with the same `text` show as one row.
   - One ordinance use that spans UDC size or type classes (retail by floor area, hotel types): add each class the wording covers, and note the mapping in `review.uses`.
   - Several ordinance items that fit one UDC use: one entry with the clearest quote; put the rest in `otherUses` only if they add meaning.
 - **`family`** (optional): `residential`, `mixed`, `commercial`, `industrial`, `airport`, or `planned`. Sets the PD's map color when the PD has no base district. Copy it to the PD's entry in `zones.json`.

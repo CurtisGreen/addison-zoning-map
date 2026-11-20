@@ -1,6 +1,7 @@
 :root {
   --ink: #1f2328;
   --muted: #59636e;
+  --faint: #8b949e;
   --line: #d1d9e0;
   --bg: #fff;
   --link: #0b5cad;
@@ -186,6 +187,9 @@ td {
 }
 th {
   color: var(--muted);
+}
+.before {
+  color: var(--faint);
 }
 tr.head th,
 tr.head td {

@@ -1,0 +1,33 @@
+{
+  "id": "PD 89-011",
+  "name": "Cross Roads Aviation",
+  "base": "CG",
+  "purpose": "",
+  "uses": [
+    {
+      "name": "Vehicle sales or leasing, indoors",
+      "text": "Automobile sales, rental, and repairs",
+      "permission": "P",
+      "ordinance": "089-011",
+      "page": 8,
+      "quote": "COMMERCIAL USES PLUS AUTOMOBILE SALES, RENTAL, AND REPAIRS"
+    },
+    {
+      "name": "Vehicle repair, major",
+      "text": "Automobile sales, rental, and repairs",
+      "permission": "P",
+      "ordinance": "089-011",
+      "page": 8,
+      "quote": "COMMERCIAL USES PLUS AUTOMOBILE SALES, RENTAL, AND REPAIRS"
+    }
+  ],
+  "otherUses": [],
+  "dimensions": {},
+  "review": {},
+  "notes": [
+    "An 18 ft wide landscaped buffer is required across the entire Addison Road frontage."
+  ],
+  "history": {
+    "089-011": "Rezoned Commercial (C) to PD, adding automobile sales, rental and repairs"
+  }
+}

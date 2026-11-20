@@ -421,14 +421,14 @@
       "group": "Retail"
     },
     {
-      "text": "Office use, as defined in Article XXX of the Zoning Ordinance",
+      "text": "Office use",
       "group": "Office",
       "ordinance": "012-002",
       "page": 7,
       "quote": "Office use, as the term office is defined in Article XXX"
     },
     {
-      "text": "Civic uses, as defined in Article XXX of the Zoning Ordinance",
+      "text": "Civic uses",
       "group": "Civic",
       "ordinance": "012-002",
       "page": 7,
@@ -515,9 +515,7 @@
     }
   ],
   "review": {
-    "base": "No base district is named. The ordinance lists its own allowed uses and prohibits all others.",
-    "specialUses": "The town lists special use permits 012-003 (beer and wine off-premises) and 012-004 (movie theater), both January 2012, plus individual restaurant and alcohol permits for tenants at 5100 Belt Line Rd. These were not reviewed.",
-    "history": "The 2023 ordinance restates PD 020-08 (2020), which is not on the town's ordinance list and was not reviewed. Special conditions in 020-08 may still apply."
+    "base": "No base district is named. The ordinance lists its own allowed uses and prohibits all others."
   },
   "notes": [
     "Development must follow the site plan (Exhibit A) and the site, landscape, floor, facade and valet plans (Exhibit B) of the 2023 ordinance.",
