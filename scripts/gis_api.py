@@ -1,10 +1,10 @@
 """Town of Addison public ArcGIS REST endpoints, one function per endpoint. Stdlib only, no key needed.
 
 Import:  from gis_api import ordinances, udc_zoning, place_types   (scripts/ on sys.path)
-CLI:     python3 scripts/gis_api.py ordinances "ORD_ID LIKE '%23-03%'"
-         python3 scripts/gis_api.py udc_zoning "ZONE_CODE = '23-03'" --fields ZONE_CODE,ZONE_HIST
-         python3 scripts/gis_api.py place_types
-         python3 scripts/gis_api.py services | layers Landbase | fields Landbase 1
+CLI:     python scripts/gis_api.py ordinances "ORD_ID LIKE '%23-03%'"
+         python scripts/gis_api.py udc_zoning "ZONE_CODE = '23-03'" --fields ZONE_CODE,ZONE_HIST
+         python scripts/gis_api.py place_types
+         python scripts/gis_api.py services | layers Landbase | fields Landbase 1
 
 Every query function takes `where` (SQL, default all rows), `fields` ("*" or a comma list),
 `geometry` (False = attributes only; True adds shapes in lat/lon) and returns a list of
@@ -156,6 +156,8 @@ def special_area_study_boundaries(where="1=1", fields="*", geometry=False, geojs
 
 
 def _main(argv):
+    if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to a legacy code page
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     if not argv:
         print(__doc__)
         return
@@ -165,7 +167,7 @@ def _main(argv):
         return
     function = globals().get(name)
     if not callable(function) or name.startswith("_") or name in ("get", "query"):
-        sys.exit(f"unknown endpoint {name!r}; see: python3 scripts/gis_api.py")
+        sys.exit(f"unknown endpoint {name!r}; see: python scripts/gis_api.py")
     where, selected, geometry = "1=1", "*", False
     positional = []
     i = 0

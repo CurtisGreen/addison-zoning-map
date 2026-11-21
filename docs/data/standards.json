@@ -1,7 +1,7 @@
 {
   "4.3.2.A": {
     "title": "Cottage Development",
-    "page": 134,
+    "page": 136,
     "items": [
       {
         "label": "1",
@@ -67,7 +67,7 @@
   },
   "4.3.2.B": {
     "title": "Dwelling, Fourplex",
-    "page": 134,
+    "page": 136,
     "items": [
       {
         "label": null,
@@ -77,7 +77,7 @@
   },
   "4.3.2.C": {
     "title": "Dwelling, Live/Work",
-    "page": 134,
+    "page": 136,
     "items": [
       {
         "label": "1",
@@ -99,7 +99,7 @@
   },
   "4.3.2.D": {
     "title": "Dwelling, Multifamily",
-    "page": 135,
+    "page": 137,
     "items": [
       {
         "label": "1",
@@ -134,7 +134,7 @@
   },
   "4.3.2.E": {
     "title": "Dwelling, Single-Family (Attached)",
-    "page": 135,
+    "page": 137,
     "items": [
       {
         "label": "1",
@@ -153,7 +153,7 @@
   },
   "4.3.2.F": {
     "title": "Dwelling, Single-Family (Detached)",
-    "page": 135,
+    "page": 137,
     "items": [
       {
         "label": "1",
@@ -173,7 +173,7 @@
   },
   "4.3.2.G": {
     "title": "Dwelling, Triplex",
-    "page": 135,
+    "page": 137,
     "items": [
       {
         "label": null,
@@ -183,7 +183,7 @@
   },
   "4.3.2.H": {
     "title": "Manufactured Home Development (HUD-Code)",
-    "page": 135,
+    "page": 137,
     "items": [
       {
         "label": null,
@@ -193,7 +193,7 @@
   },
   "4.3.2.I": {
     "title": "Group Care Home, FHAA (Small and Large)",
-    "page": 135,
+    "page": 137,
     "items": [
       {
         "label": "1",
@@ -208,7 +208,7 @@
   },
   "4.3.3.A": {
     "title": "Daycare Center, Adult or Child",
-    "page": 136,
+    "page": 138,
     "items": [
       {
         "label": "1",
@@ -237,7 +237,7 @@
   },
   "4.3.3.B": {
     "title": "Daycare Home, Adult or Child",
-    "page": 136,
+    "page": 138,
     "items": [
       {
         "label": "1",
@@ -259,7 +259,7 @@
   },
   "4.3.3.C": {
     "title": "Park or Open Space, Active and Passive",
-    "page": 136,
+    "page": 138,
     "items": [
       {
         "label": "1",
@@ -273,7 +273,7 @@
   },
   "4.3.3.D": {
     "title": "Police, Fire, or Rescue Facility (Public)",
-    "page": 136,
+    "page": 138,
     "items": [
       {
         "label": null,
@@ -287,8 +287,23 @@
   },
   "4.3.3.E": {
     "title": "Medical Clinic",
-    "page": 136,
+    "page": 138,
     "items": [
+      {
+        "label": null,
+        "text": "All activities shall occur entirely within an enclosed structure."
+      },
+      {
+        "label": null,
+        "text": "In the M1, M2, and M3 district the following shall apply:",
+        "districts": ["M-1", "M-2", "M-3"],
+        "items": [
+          {
+            "label": "1",
+            "text": "Medical clinic facilities shall not exceed 5,000 square feet GFA."
+          }
+        ]
+      },
       {
         "label": null,
         "text": "In the M-4 zoning district the following shall apply:",
@@ -303,12 +318,43 @@
             "text": "Medical clinic facilities shall not exceed 3,000 square feet GFA."
           }
         ]
+      },
+      {
+        "label": null,
+        "text": "In the LI zoning district the following shall apply:",
+        "districts": ["LI"],
+        "items": [
+          {
+            "label": "1",
+            "text": "Retail pharmacies shall not be permitted."
+          }
+        ]
       }
     ]
   },
   "4.3.4.A": {
+    "title": "Pet Care, Commercial",
+    "page": 138,
+    "items": [
+      {
+        "label": "1",
+        "text": "No veterinary care, overnight kenneling, or onsite kenneling is permitted."
+      },
+      {
+        "label": "2",
+        "text": "In the M-2 zoning district, the ground floor adjacent to the street shall be constructed to Commercial Building Code standards for a depth of at least 50 feet. A smaller depth may be allowed by the Director if the Commercial Pet Care facility is serving as a liner use to mask a parking garage.",
+        "districts": ["M-2"]
+      },
+      {
+        "label": "3",
+        "text": "In the M-3 and M-4 zoning districts, a stand-alone building containing Commercial Pet Care is prohibited along Spectrum Drive.",
+        "districts": ["M-3", "M-4"]
+      }
+    ]
+  },
+  "4.3.4.B": {
     "title": "Kennel, Commercial",
-    "page": 136,
+    "page": 139,
     "items": [
       {
         "label": "1",
@@ -320,9 +366,9 @@
       }
     ]
   },
-  "4.3.4.B": {
+  "4.3.4.C": {
     "title": "Urban Agriculture, Noncommercial",
-    "page": 137,
+    "page": 139,
     "items": [
       {
         "label": "1",
@@ -382,7 +428,7 @@
             "items": [
               {
                 "label": "i",
-                "text": "It shall be unlawful for any owner to keep or harbor a three or more fowl within the corporate limits of the Town in any pen, stable, shed, coop or enclosure, if any part of such enclosure or structure is within 150 feet of any residence, business or commercial establishment or office (other than the owner's residence, business or commercial establishment or office), grocery store, restaurant, school, hospital, assisted living facility, or continuing care facility."
+                "text": "It shall be unlawful for any owner to keep or harbor more than three fowl within the corporate limits of the Town in any pen, stable, shed, coop or enclosure, if any part of such enclosure or structure is within 150 feet of any residence, business or commercial establishment or office (other than the owner's residence, business or commercial establishment or office), grocery store, restaurant, school, hospital, assisted living facility, or continuing care facility."
               },
               {
                 "label": "ii",
@@ -464,9 +510,9 @@
       }
     ]
   },
-  "4.3.4.C": {
+  "4.3.4.D": {
     "title": "Veterinary Hospital or Clinic",
-    "page": 138,
+    "page": 140,
     "items": [
       {
         "label": null,
@@ -489,9 +535,9 @@
       }
     ]
   },
-  "4.3.4.D": {
+  "4.3.4.E": {
     "title": "Recreation Facility, Indoor",
-    "page": 138,
+    "page": 140,
     "items": [
       {
         "label": null,
@@ -500,9 +546,9 @@
       }
     ]
   },
-  "4.3.4.E": {
+  "4.3.4.F": {
     "title": "Recreation Facility, Outdoor",
-    "page": 138,
+    "page": 141,
     "items": [
       {
         "label": null,
@@ -511,9 +557,9 @@
       }
     ]
   },
-  "4.3.4.F": {
+  "4.3.4.G": {
     "title": "Sexually Oriented Businesses",
-    "page": 138,
+    "page": 141,
     "items": [
       {
         "label": "1",
@@ -521,11 +567,11 @@
         "items": [
           {
             "label": "a",
-            "text": "It is the purpose of this §4.3.4.F, to regulate sexually oriented businesses to promote the health, safety, morals, and general welfare of the citizens of the Town, and to establish reasonable and uniform regulations to prevent the continued concentration of sexually oriented businesses within the Town. The provisions of this §4.3.4.F, have neither the purpose nor the effect of imposing a limitation or restriction on the content of any communicative materials, including sexually oriented materials. Similarly, it is not the intent or the effect of this article to restrict or deny access by adults to sexually oriented materials protected by the First Amendment, or to deny access by the distributors and exhibitors of sexually oriented entertainment to their intended market."
+            "text": "It is the purpose of this §4.3.4.G, to regulate sexually oriented businesses to promote the health, safety, morals, and general welfare of the citizens of the Town, and to establish reasonable and uniform regulations to prevent the continued concentration of sexually oriented businesses within the Town. The provisions of this §4.3.4.G, have neither the purpose nor the effect of imposing a limitation or restriction on the content of any communicative materials, including sexually oriented materials. Similarly, it is not the intent or the effect of this article to restrict or deny access by adults to sexually oriented materials protected by the First Amendment, or to deny access by the distributors and exhibitors of sexually oriented entertainment to their intended market."
           },
           {
             "label": "b",
-            "text": "It is the intent of the City Council that the locational regulations of §4.3.4.F.3.b are promulgated pursuant to TLGC Chapter 243. It is the intent of the City Council that all other provisions of this §4.3.4.F, are promulgated pursuant to the Town Charter and TLGC §§51.072, 54.004, and 215.075."
+            "text": "It is the intent of the City Council that the locational regulations of §4.3.4.G.3.b are promulgated pursuant to TLGC Chapter 243. It is the intent of the City Council that all other provisions of this §4.3.4.G, are promulgated pursuant to the Town Charter and TLGC §§51.072, 54.004, and 215.075."
           },
           {
             "label": "c",
@@ -533,7 +579,7 @@
             "items": [
               {
                 "label": "i",
-                "text": "It is a defense to prosecution under §§4.3.4.F.2.a, 4.3.4.F.3.b, and 4.3.4.F.3.c that a person appearing in a state of nudity did so in a modeling class operated:",
+                "text": "It is a defense to prosecution under §§4.3.4.G.2.a, 4.3.4.G.3.b, and 4.3.4.G.3.c that a person appearing in a state of nudity did so in a modeling class operated:",
                 "items": [
                   {
                     "label": "a",
@@ -565,7 +611,7 @@
               },
               {
                 "label": "ii",
-                "text": "It is a defense to prosecution under §§4.3.4.F.2.a and 4.3.4.F.3.b that each item of descriptive printed film, or video material offered for sale or rental, taken as a whole, contains serious literary, artistic, political or scientific value."
+                "text": "It is a defense to prosecution under §§4.3.4.G.2.a and 4.3.4.G.3.b that each item of descriptive printed film, or video material offered for sale or rental, taken as a whole, contains serious literary, artistic, political or scientific value."
               }
             ]
           },
@@ -635,11 +681,11 @@
                   },
                   {
                     "label": "b",
-                    "text": "A statement as to whether or not the applicant meets each of the requirements set forth in §4.3.4.F.2.c;"
+                    "text": "A statement as to whether or not the applicant meets each of the requirements set forth in §4.3.4.G.2.c;"
                   },
                   {
                     "label": "c",
-                    "text": "The name and address of each person required to sign the application pursuant to §4.3.4.F.2.b.iv below, and the name, address and type of entity of each entity required to sign the application pursuant to §4.3.4.F.2.b.iv below, and, as to each entity which is required to sign the application, the name and address of each person or entity which owns an interest in each such entity;"
+                    "text": "The name and address of each person required to sign the application pursuant to §4.3.4.G.2.b.iv below, and the name, address and type of entity of each entity required to sign the application pursuant to §4.3.4.G.2.b.iv below, and, as to each entity which is required to sign the application, the name and address of each person or entity which owns an interest in each such entity;"
                   },
                   {
                     "label": "d",
@@ -647,7 +693,7 @@
                   },
                   {
                     "label": "e",
-                    "text": "Such other matters, consistent with this §4.3.4.F, as may be specified in the application form, including, without limitation, driver's license numbers, dates of birth and identifying photographs of each person required to be identified in the application."
+                    "text": "Such other matters, consistent with this §4.3.4.G, as may be specified in the application form, including, without limitation, driver's license numbers, dates of birth and identifying photographs of each person required to be identified in the application."
                   }
                 ]
               },
@@ -657,11 +703,11 @@
               },
               {
                 "label": "iii",
-                "text": "The applicant shall be qualified according to the provisions of this §4.3.4.F."
+                "text": "The applicant shall be qualified according to the provisions of this §4.3.4.G."
               },
               {
                 "label": "iv",
-                "text": "If a person who wishes to operate a sexually oriented business is an individual, he/she shall sign the application for a permit as applicant. If a person who wishes to operate a sexually oriented business is other than an individual, each individual who directly or indirectly through one or more intermediaries owns or controls a 20 percent or greater interest in the business shall sign the application for a permit as applicant. Each applicant shall be qualified under §4.3.4.F.2.c and each applicant shall be considered a permittee if a permit is granted."
+                "text": "If a person who wishes to operate a sexually oriented business is an individual, he/she shall sign the application for a permit as applicant. If a person who wishes to operate a sexually oriented business is other than an individual, each individual who directly or indirectly through one or more intermediaries owns or controls a 20 percent or greater interest in the business shall sign the application for a permit as applicant. Each applicant shall be qualified under §4.3.4.G.2.c and each applicant shall be considered a permittee if a permit is granted."
               }
             ]
           },
@@ -687,7 +733,7 @@
                   },
                   {
                     "label": "d",
-                    "text": "An applicant or an applicant's spouse has been convicted of a violation of a provision of this §4.3.4.F, within two years immediately preceding the application. The fact that a conviction is being appealed shall have no effect;"
+                    "text": "An applicant or an applicant's spouse has been convicted of a violation of a provision of this §4.3.4.G, within two years immediately preceding the application. The fact that a conviction is being appealed shall have no effect;"
                   },
                   {
                     "label": "e",
@@ -695,11 +741,11 @@
                   },
                   {
                     "label": "f",
-                    "text": "The permit fee required by this §4.3.4.F, has not been paid;"
+                    "text": "The permit fee required by this §4.3.4.G, has not been paid;"
                   },
                   {
                     "label": "g",
-                    "text": "An applicant has been employed in a sexually oriented business in a managerial capacity within the preceding 12 months and has demonstrated an inability to operate or manage a sexually oriented business premises in a peaceful and law- abiding manner, thus necessitating action by law enforcement officers;"
+                    "text": "An applicant has been employed in a sexually oriented business in a managerial capacity within the preceding 12 months and has demonstrated an inability to operate or manage a sexually oriented business premises in a peaceful and law-abiding manner, thus necessitating action by law enforcement officers;"
                   },
                   {
                     "label": "h",
@@ -707,35 +753,35 @@
                     "items": [
                       {
                         "label": "i",
-                        "text": "4.3.4.F.2.e;"
+                        "text": "4.3.4.G.2.e;"
                       },
                       {
                         "label": "ii",
-                        "text": "4.3.4.F.3.a;"
+                        "text": "4.3.4.G.3.a;"
                       },
                       {
                         "label": "iii",
-                        "text": "4.3.4.F.3.b;"
+                        "text": "4.3.4.G.3.b;"
                       },
                       {
                         "label": "iv",
-                        "text": "4.3.4.F.3.d;"
+                        "text": "4.3.4.G.3.d;"
                       },
                       {
                         "label": "v",
-                        "text": "4.3.4.F.3.e;"
+                        "text": "4.3.4.G.3.e;"
                       },
                       {
                         "label": "vi",
-                        "text": "4.3.4.F.3.f;"
+                        "text": "4.3.4.G.3.f;"
                       },
                       {
                         "label": "vii",
-                        "text": "4.3.4.F.3.g; or"
+                        "text": "4.3.4.G.3.g; or"
                       },
                       {
                         "label": "viii",
-                        "text": "4.3.4.F.3.h."
+                        "text": "4.3.4.G.3.h."
                       }
                     ]
                   },
@@ -831,7 +877,7 @@
               },
               {
                 "label": "iii",
-                "text": "An applicant who has been convicted or whose spouse has been convicted of an offense listed herein may qualify for a sexually oriented business permit only when the time period required by §§4.3.4.F.2.c.i.o, 4.3.4.F.2.c.i.p, and 4.3.4.F.2.c.i.q above have elapsed."
+                "text": "An applicant who has been convicted or whose spouse has been convicted of an offense listed herein may qualify for a sexually oriented business permit only when the time period required by §§4.3.4.G.2.c.i.o, 4.3.4.G.2.c.i.p, and 4.3.4.G.2.c.i.q above have elapsed."
               },
               {
                 "label": "iv",
@@ -845,7 +891,7 @@
             "items": [
               {
                 "label": "i",
-                "text": "Each sexually oriented business permit shall expire one year from the date of issuance and may be renewed only by making application as provided in §4.3.4.F.2.b. Application for renewal should be made at least 30 days before the expiration date."
+                "text": "Each sexually oriented business permit shall expire one year from the date of issuance and may be renewed only by making application as provided in §4.3.4.G.2.b. Application for renewal should be made at least 30 days before the expiration date."
               },
               {
                 "label": "ii",
@@ -855,7 +901,7 @@
           },
           {
             "label": "e",
-            "text": "Transfer A permittee under this §4.3.4.F, shall not transfer their permit to another, nor shall a permittee operate a sexually oriented business under the authority of a permit at any place other than the address designated in the application."
+            "text": "Transfer A permittee under this §4.3.4.G, shall not transfer their permit to another, nor shall a permittee operate a sexually oriented business under the authority of a permit at any place other than the address designated in the application."
           },
           {
             "label": "f",
@@ -867,35 +913,35 @@
                 "items": [
                   {
                     "label": "a",
-                    "text": "4.3.4.F.2.e;"
+                    "text": "4.3.4.G.2.e;"
                   },
                   {
                     "label": "b",
-                    "text": "4.3.4.F.3.a;"
+                    "text": "4.3.4.G.3.a;"
                   },
                   {
                     "label": "c",
-                    "text": "4.3.4.F.3.b;"
+                    "text": "4.3.4.G.3.b;"
                   },
                   {
                     "label": "d",
-                    "text": "4.3.4.F.3.d;"
+                    "text": "4.3.4.G.3.d;"
                   },
                   {
                     "label": "e",
-                    "text": "4.3.4.F.3.e;"
+                    "text": "4.3.4.G.3.e;"
                   },
                   {
                     "label": "f",
-                    "text": "4.3.4.F.3.f;"
+                    "text": "4.3.4.G.3.f;"
                   },
                   {
                     "label": "g",
-                    "text": "4.3.4.F.3.g; or"
+                    "text": "4.3.4.G.3.g; or"
                   },
                   {
                     "label": "h",
-                    "text": "4.3.4.F.3.h."
+                    "text": "4.3.4.G.3.h."
                   }
                 ]
               },
@@ -905,7 +951,7 @@
               },
               {
                 "label": "iii",
-                "text": "Has refused to allow an inspection of the sexually oriented business premises as authorized by this §4.3.4.F."
+                "text": "Has refused to allow an inspection of the sexually oriented business premises as authorized by this §4.3.4.G."
               },
               {
                 "label": "iv",
@@ -919,7 +965,7 @@
             "items": [
               {
                 "label": "i",
-                "text": "The Chief of Police shall revoke a sexually oriented business permit if a cause of suspension in §4.3.4.F.2.f occurs after the permit has previously been suspended and within 12 months following the date of such previous suspension."
+                "text": "The Chief of Police shall revoke a sexually oriented business permit if a cause of suspension in §4.3.4.G.2.f occurs after the permit has previously been suspended and within 12 months following the date of such previous suspension."
               },
               {
                 "label": "ii",
@@ -943,11 +989,11 @@
                   },
                   {
                     "label": "e",
-                    "text": "A permittee has been convicted of an offense listed in §4.3.4.F.2.f.i, for which the time period required in §4.3.4.F.2.c.i.o through §4.3.4.F.2.c.i.q has not elapsed;"
+                    "text": "A permittee has been convicted of an offense listed in §4.3.4.G.2.f.i, for which the time period required in §4.3.4.G.2.c.i.o through §4.3.4.G.2.c.i.q has not elapsed;"
                   },
                   {
                     "label": "f",
-                    "text": "On two or more occasions within a 12-month period, a person committed an offense occurring in or on the permitted premises of a crime listed in §4.3.4.F.2.c.i for which a conviction has been obtained, and the person was an employee of the sexually oriented business at the time the offense was committed;"
+                    "text": "On two or more occasions within a 12-month period, a person committed an offense occurring in or on the permitted premises of a crime listed in §4.3.4.G.2.c.i for which a conviction has been obtained, and the person was an employee of the sexually oriented business at the time the offense was committed;"
                   },
                   {
                     "label": "g",
@@ -965,11 +1011,11 @@
               },
               {
                 "label": "iv",
-                "text": "§4.3.4.F.2.g.ii.g does not apply to adult motels as a ground for revoking the permit unless the permittee or employee knowingly allowed the act of sexual intercourse, sodomy, oral copulation, masturbation, or sexual contact to occur in a public place or within public view."
+                "text": "§4.3.4.G.2.g.ii.g does not apply to adult motels as a ground for revoking the permit unless the permittee or employee knowingly allowed the act of sexual intercourse, sodomy, oral copulation, masturbation, or sexual contact to occur in a public place or within public view."
               },
               {
                 "label": "v",
-                "text": "When the Chief of Police revokes a permit, the revocation shall continue for one year and the permittee shall not be issued a sexually oriented business permit for one year from the date revocation became effective. If, subsequent to revocation, the Chief of Police finds that the basis for the revocation has been corrected or abated, an applicant may be granted a permit if at least 90 days have elapsed since the date the revocation became effective. If the permit was revoked under §4.3.4.F.2.g.ii.e, an applicant may not be granted another permit until the appropriate number of years required under has elapsed."
+                "text": "When the Chief of Police revokes a permit, the revocation shall continue for one year and the permittee shall not be issued a sexually oriented business permit for one year from the date revocation became effective. If, subsequent to revocation, the Chief of Police finds that the basis for the revocation has been corrected or abated, an applicant may be granted a permit if at least 90 days have elapsed since the date the revocation became effective. If the permit was revoked under §4.3.4.G.2.g.ii.e, an applicant may not be granted another permit until the appropriate number of years required under has elapsed."
               }
             ]
           },
@@ -1017,7 +1063,7 @@
             "items": [
               {
                 "label": "i",
-                "text": "An applicant or permittee under this §4.3.4.F shall permit representatives of the Police Department, Health Department, Fire Department, and Building Inspection Division to inspect the premises of a sexually oriented business for the purpose of ensuring compliance with the law, at any time it is occupied or open for business."
+                "text": "An applicant or permittee under this §4.3.4.G shall permit representatives of the Police Department, Health Department, Fire Department, and Building Inspection Division to inspect the premises of a sexually oriented business for the purpose of ensuring compliance with the law, at any time it is occupied or open for business."
               },
               {
                 "label": "ii",
@@ -1069,19 +1115,19 @@
               },
               {
                 "label": "iv",
-                "text": "For the purposes of §4.3.4.F.3.b.i, measurement shall be made in a straight line, without regard to intervening structures or objects, from the nearest portion of the building or structure used as a part of the premises where a sexually oriented business is conducted, to the nearest property line of the premises of a uses listed in §4.3.4.F.3.b.i."
+                "text": "For the purposes of §4.3.4.G.3.b.i, measurement shall be made in a straight line, without regard to intervening structures or objects, from the nearest portion of the building or structure used as a part of the premises where a sexually oriented business is conducted, to the nearest property line of the premises of a uses listed in §4.3.4.G.3.b.i."
               },
               {
                 "label": "v",
-                "text": "For purposes of §4.3.4.F.3.b.ii, the distance between any two sexually oriented businesses shall be measured in a straight line, without regard to intervening structures or objects, from the closest exterior wall of the structure in which each business is located."
+                "text": "For purposes of §4.3.4.G.3.b.ii, the distance between any two sexually oriented businesses shall be measured in a straight line, without regard to intervening structures or objects, from the closest exterior wall of the structure in which each business is located."
               },
               {
                 "label": "vi",
-                "text": "A sexually oriented business lawfully operating as a conforming use is not rendered a nonconforming use by the new location of those uses listed in §4.3.4.F.3.b.i.a through §4.3.4.F.3.b.i.e within 1,000 feet of the sexually oriented business subsequent to the grant or renewal of the sexually oriented business permit. This provision applies only to the renewal of a valid permit and does not apply when an application for a permit is submitted after a permit has expired or has been revoked."
+                "text": "A sexually oriented business lawfully operating as a conforming use is not rendered a nonconforming use by the new location of those uses listed in §4.3.4.G.3.b.i.a through §4.3.4.G.3.b.i.e within 1,000 feet of the sexually oriented business subsequent to the grant or renewal of the sexually oriented business permit. This provision applies only to the renewal of a valid permit and does not apply when an application for a permit is submitted after a permit has expired or has been revoked."
               },
               {
                 "label": "vii",
-                "text": "§§4.3.4.F.3.b.ii and 4.3.4.F.3.b.iv shall apply to any sexually oriented business located within the Town, whether or not the measurement of the 1,000 feet is made wholly within the boundaries of the Town, or includes within such 1,000 feet area within the boundaries of any municipality adjoining the boundaries of the Town."
+                "text": "§§4.3.4.G.3.b.ii and 4.3.4.G.3.b.iv shall apply to any sexually oriented business located within the Town, whether or not the measurement of the 1,000 feet is made wholly within the boundaries of the Town, or includes within such 1,000 feet area within the boundaries of any municipality adjoining the boundaries of the Town."
               },
               {
                 "label": "viii",
@@ -1095,7 +1141,7 @@
             "items": [
               {
                 "label": "i",
-                "text": "If the Chief of Police denies the issuance of a permit under this §4.3.4.F, to an applicant because the location of the sexually oriented business is in violation of §4.3.4.F.3.b, then the applicant may, not later than 10 calendar days after the mailing of the notice of the denial, file with the Town a written request for any exemption from the locational restrictions of §4.3.4.F.3.b."
+                "text": "If the Chief of Police denies the issuance of a permit under this §4.3.4.G, to an applicant because the location of the sexually oriented business is in violation of §4.3.4.G.3.b, then the applicant may, not later than 10 calendar days after the mailing of the notice of the denial, file with the Town a written request for any exemption from the locational restrictions of §4.3.4.G.3.b."
               },
               {
                 "label": "ii",
@@ -1107,7 +1153,7 @@
               },
               {
                 "label": "iv",
-                "text": "The City Council may, in its discretion, grant an exemption from the locational restrictions of §4.3.4.F.3.b if it makes the following findings:",
+                "text": "The City Council may, in its discretion, grant an exemption from the locational restrictions of §4.3.4.G.3.b if it makes the following findings:",
                 "items": [
                   {
                     "label": "a",
@@ -1115,7 +1161,7 @@
                   },
                   {
                     "label": "b",
-                    "text": "The granting of the exemption will not violate the spirit and intent of this §4.3.4.F;"
+                    "text": "The granting of the exemption will not violate the spirit and intent of this §4.3.4.G;"
                   },
                   {
                     "label": "c",
@@ -1127,7 +1173,7 @@
                   },
                   {
                     "label": "e",
-                    "text": "All other applicable provisions of this §4.3.4.F will be observed."
+                    "text": "All other applicable provisions of this §4.3.4.G will be observed."
                   }
                 ]
               },
@@ -1137,7 +1183,7 @@
               },
               {
                 "label": "vi",
-                "text": "If the City Council grants the exemption, the exemption is valid for one year from the date of the Council's action. Upon the expiration of an exemption, the sexually oriented business is in violation of the locational restrictions of §4.3.4.F.3.b until the applicant applies for and receives another exemption."
+                "text": "If the City Council grants the exemption, the exemption is valid for one year from the date of the Council's action. Upon the expiration of an exemption, the sexually oriented business is in violation of the locational restrictions of §4.3.4.G.3.b until the applicant applies for and receives another exemption."
               },
               {
                 "label": "vii",
@@ -1145,7 +1191,7 @@
               },
               {
                 "label": "viii",
-                "text": "The grant of an exemption does not exempt the applicant from any other provisions of this §4.3.4.F, other than the locational restrictions of §4.3.4.F.3.b."
+                "text": "The grant of an exemption does not exempt the applicant from any other provisions of this §4.3.4.G, other than the locational restrictions of §4.3.4.G.3.b."
               }
             ]
           },
@@ -1199,7 +1245,7 @@
               },
               {
                 "label": "iii",
-                "text": "It is a defense to prosecution under §§4.3.4.F.3.a and 4.3.4.F.3.b if the person under 21 years was in a restroom not open to public view or persons of the opposite sex."
+                "text": "It is a defense to prosecution under §§4.3.4.G.3.a and 4.3.4.G.3.b if the person under 21 years was in a restroom not open to public view or persons of the opposite sex."
               }
             ]
           },
@@ -1247,7 +1293,7 @@
                   },
                   {
                     "label": "f",
-                    "text": "It shall be the duty of the owners and the operator, and it shall also be the duty of any agents and employees present in the premises to ensure that the view area specified in §4.3.4.F.3.h.i.e remains unobstructed by any doors, walls, merchandise, display racks, or other materials at all times that any patron is present in the premises and to ensure that no patron is permitted access to any area of the premises which has been designated as an area in which patrons will not be permitted in application filed pursuant to §4.3.4.F.3.h.i.a."
+                    "text": "It shall be the duty of the owners and the operator, and it shall also be the duty of any agents and employees present in the premises to ensure that the view area specified in §4.3.4.G.3.h.i.e remains unobstructed by any doors, walls, merchandise, display racks, or other materials at all times that any patron is present in the premises and to ensure that no patron is permitted access to any area of the premises which has been designated as an area in which patrons will not be permitted in application filed pursuant to §4.3.4.G.3.h.i.a."
                   },
                   {
                     "label": "g",
@@ -1255,13 +1301,13 @@
                   },
                   {
                     "label": "h",
-                    "text": "It shall be the duty of the owners and operator, and it shall also be the duty of any agents and employees present on the premises, to ensure that the illumination described in §4.3.4.F.3.h.i.g is maintained at all times that any patron is present in the premises."
+                    "text": "It shall be the duty of the owners and operator, and it shall also be the duty of any agents and employees present on the premises, to ensure that the illumination described in §4.3.4.G.3.h.i.g is maintained at all times that any patron is present in the premises."
                   }
                 ]
               },
               {
                 "label": "ii",
-                "text": "A person having a duty under §4.3.4.F.3.h.i.a through §4.3.4.F.3.h.i.h commits an offense if they knowingly fail to fulfill that duty."
+                "text": "A person having a duty under §4.3.4.G.3.h.i.a through §4.3.4.G.3.h.i.h commits an offense if they knowingly fail to fulfill that duty."
               }
             ]
           }
@@ -1269,23 +1315,49 @@
       }
     ]
   },
-  "4.3.4.G": {
-    "title": "Hookah Bar",
-    "page": 147,
+  "4.3.4.H": {
+    "title": "Cigar Lounge",
+    "page": 150,
     "items": [
       {
         "label": "1",
-        "text": "Hookah bars that intend to operate after 11:00 p.m. shall specifically request so within their Special Use Permit application."
+        "text": "Cigar lounges that operate as an accessory to other permitted uses shall not exceed 25 percent of the GFA of the primary use."
       },
       {
         "label": "2",
-        "text": "Hookah bars shall turn off amplified sound by 11:00 p.m."
+        "text": "Cigar lounges may not be located within 1,000 feet of another cigar lounge."
+      },
+      {
+        "label": "3",
+        "text": "Cigar lounges shall turn off amplified sound and cease cigar operations by 11:00 p.m. Cigar lounges must provide proof of an approved Environmental Health division inspection every six months to continue use, and are subject to the regulations found in Chapter 46, Article III of the Code of Ordinances."
       }
     ]
   },
-  "4.3.4.H": {
+  "4.3.4.I": {
+    "title": "Hookah Bar",
+    "page": 150,
+    "items": [
+      {
+        "label": "1",
+        "text": "Hookah bars must be located in a stand-alone building."
+      },
+      {
+        "label": "2",
+        "text": "Hookah bars may not be located within 1,000 feet of another hookah bar."
+      },
+      {
+        "label": "3",
+        "text": "Hookah bars shall turn off amplified sound and cease hookah operations by 11:00 p.m."
+      },
+      {
+        "label": "4",
+        "text": "Hookah bars must provide proof of an approved Environmental Health division inspection every six months to continue use, and are subject to the regulations found in Chapter 46, Article III of the Code of Ordinances."
+      }
+    ]
+  },
+  "4.3.4.J": {
     "title": "Microbrewery",
-    "page": 147,
+    "page": 150,
     "items": [
       {
         "label": null,
@@ -1294,9 +1366,9 @@
       }
     ]
   },
-  "4.3.4.I": {
+  "4.3.4.K": {
     "title": "Mobile Food Truck Park",
-    "page": 148,
+    "page": 150,
     "items": [
       {
         "label": "1",
@@ -1366,9 +1438,9 @@
       }
     ]
   },
-  "4.3.4.J": {
+  "4.3.4.L": {
     "title": "Restaurant",
-    "page": 148,
+    "page": 151,
     "items": [
       {
         "label": "1",
@@ -1385,9 +1457,9 @@
       }
     ]
   },
-  "4.3.4.K": {
+  "4.3.4.M": {
     "title": "Bed and Breakfast",
-    "page": 149,
+    "page": 151,
     "items": [
       {
         "label": "1",
@@ -1415,9 +1487,9 @@
       }
     ]
   },
-  "4.3.4.L": {
+  "4.3.4.N": {
     "title": "Hotel, Full Service",
-    "page": 149,
+    "page": 151,
     "items": [
       {
         "label": "1",
@@ -1437,9 +1509,9 @@
       }
     ]
   },
-  "4.3.4.M": {
+  "4.3.4.O": {
     "title": "Credit Access Business",
-    "page": 149,
+    "page": 151,
     "items": [
       {
         "label": null,
@@ -1447,9 +1519,9 @@
       }
     ]
   },
-  "4.3.4.N": {
+  "4.3.4.P": {
     "title": "Retail Sales",
-    "page": 149,
+    "page": 151,
     "items": [
       {
         "label": "1",
@@ -1463,9 +1535,9 @@
       }
     ]
   },
-  "4.3.4.O": {
+  "4.3.4.Q": {
     "title": "Equipment Sales or Rental and Fleet Services",
-    "page": 149,
+    "page": 151,
     "items": [
       {
         "label": "1",
@@ -1481,9 +1553,9 @@
       }
     ]
   },
-  "4.3.4.P": {
+  "4.3.4.R": {
     "title": "Vehicle Fuel Station",
-    "page": 149,
+    "page": 152,
     "items": [
       {
         "label": "1",
@@ -1500,9 +1572,9 @@
       }
     ]
   },
-  "4.3.4.Q": {
+  "4.3.4.S": {
     "title": "Vehicle Repair, Minor",
-    "page": 150,
+    "page": 152,
     "items": [
       {
         "label": "1",
@@ -1518,9 +1590,9 @@
       }
     ]
   },
-  "4.3.4.R": {
+  "4.3.4.T": {
     "title": "Vehicle Wash",
-    "page": 150,
+    "page": 152,
     "items": [
       {
         "label": "1",
@@ -1535,7 +1607,7 @@
   },
   "4.3.5.A": {
     "title": "Data Center",
-    "page": 150,
+    "page": 152,
     "items": [
       {
         "label": null,
@@ -1545,7 +1617,7 @@
   },
   "4.3.5.B": {
     "title": "Food Production or Processing",
-    "page": 150,
+    "page": 152,
     "items": [
       {
         "label": "1",
@@ -1570,7 +1642,7 @@
   },
   "4.3.5.C": {
     "title": "Manufacturing, Artisan",
-    "page": 150,
+    "page": 152,
     "items": [
       {
         "label": null,
@@ -1580,7 +1652,7 @@
   },
   "4.3.5.D": {
     "title": "Manufacturing, Low-Impact",
-    "page": 150,
+    "page": 152,
     "items": [
       {
         "label": "1",
@@ -1605,7 +1677,7 @@
   },
   "4.3.5.E": {
     "title": "Storage, Self-Service",
-    "page": 151,
+    "page": 153,
     "items": [
       {
         "label": "1",
@@ -1633,7 +1705,7 @@
   },
   "4.3.5.F": {
     "title": "Storage, Outdoor",
-    "page": 151,
+    "page": 153,
     "items": [
       {
         "label": "1",
@@ -1673,17 +1745,28 @@
   },
   "4.3.5.G": {
     "title": "Warehouse or Wholesale Facility",
-    "page": 151,
+    "page": 153,
     "items": [
       {
         "label": null,
         "text": "Warehouse or wholesale facilities larger than 50,000 square feet GFA require Special Use Permit approval pursuant to §2.5.1."
+      },
+      {
+        "label": "1",
+        "text": "CG District",
+        "districts": ["CG"],
+        "items": [
+          {
+            "label": "a",
+            "text": "Warehouse uses shall be no more than 75% of the warehouse or wholesale facility GFA."
+          }
+        ]
       }
     ]
   },
   "4.3.6.A": {
     "title": "Public Utility, Major and Minor",
-    "page": 151,
+    "page": 153,
     "items": [
       {
         "label": "1",
@@ -1697,7 +1780,7 @@
   },
   "4.3.6.B": {
     "title": "Satellite Earth Station",
-    "page": 151,
+    "page": 154,
     "items": [
       {
         "label": "1",
@@ -1785,7 +1868,7 @@
   },
   "4.3.6.C": {
     "title": "Solar Energy System",
-    "page": 152,
+    "page": 155,
     "items": [
       {
         "label": "1",
@@ -1861,7 +1944,7 @@
   },
   "4.3.6.D": {
     "title": "Wind Energy Systems (all)",
-    "page": 153,
+    "page": 155,
     "items": [
       {
         "label": "1",
@@ -1886,7 +1969,7 @@
   },
   "4.3.6.E": {
     "title": "Wireless Communication Facilities (WCF)",
-    "page": 153,
+    "page": 156,
     "items": [
       {
         "label": "1",
@@ -2076,7 +2159,7 @@
                       },
                       {
                         "label": "iii",
-                        "text": "For any eligible support structure, it involves installation of more than the standard number of new equipment cabinets for the technology involved, but not to exceed four cabinets; or roof- and building-mounted WCFs, it involves installation of any new equipment cabinets on the ground if there are no pre- existing ground cabinets associated with the structure, or else involves installation of ground cabinets that are more than 10 percent larger in height or overall volume than any other ground cabinets associated with the structure;"
+                        "text": "For any eligible support structure, it involves installation of more than the standard number of new equipment cabinets for the technology involved, but not to exceed four cabinets; or roof- and building-mounted WCFs, it involves installation of any new equipment cabinets on the ground if there are no pre-existing ground cabinets associated with the structure, or else involves installation of ground cabinets that are more than 10 percent larger in height or overall volume than any other ground cabinets associated with the structure;"
                       },
                       {
                         "label": "iv",
@@ -2288,7 +2371,7 @@
   },
   "4.4.4.A": {
     "title": "Drive-Through",
-    "page": 160,
+    "page": 163,
     "items": [
       {
         "label": "1",
@@ -2306,7 +2389,7 @@
   },
   "4.4.4.B": {
     "title": "Donation Box",
-    "page": 161,
+    "page": 163,
     "items": [
       {
         "label": null,
@@ -2316,7 +2399,7 @@
   },
   "4.4.4.C": {
     "title": "Dwelling, Accessory (ADU)",
-    "page": 161,
+    "page": 163,
     "items": [
       {
         "label": "1",
@@ -2428,7 +2511,7 @@
   },
   "4.4.4.D": {
     "title": "Home Occupation",
-    "page": 162,
+    "page": 164,
     "items": [
       {
         "label": "1",
@@ -2507,8 +2590,28 @@
     ]
   },
   "4.4.4.E": {
+    "title": "Kitchen",
+    "page": 165,
+    "items": [
+      {
+        "label": null,
+        "text": "Kitchen facilities may be permitted only as accessory uses within a Residence Hotel."
+      }
+    ]
+  },
+  "4.4.4.F": {
+    "title": "Kitchenette",
+    "page": 165,
+    "items": [
+      {
+        "label": null,
+        "text": "Kitchenette facilities may be permitted only as accessory uses within a Hotel, Full Service or Hotel, Limited Service."
+      }
+    ]
+  },
+  "4.4.4.G": {
     "title": "Valet Parking Services",
-    "page": 162,
+    "page": 165,
     "items": [
       {
         "label": null,
@@ -2528,7 +2631,7 @@
   },
   "4.5.5.A": {
     "title": "Construction Support Activities",
-    "page": 163,
+    "page": 166,
     "items": [
       {
         "label": null,
@@ -2560,7 +2663,7 @@
   },
   "4.5.5.B": {
     "title": "Mobile Food Truck",
-    "page": 164,
+    "page": 166,
     "items": [
       {
         "label": "1",
@@ -2628,7 +2731,7 @@
   },
   "4.5.5.C": {
     "title": "Outdoor Retail and Display",
-    "page": 164,
+    "page": 167,
     "items": [
       {
         "label": "1",
@@ -2692,7 +2795,7 @@
   },
   "4.5.5.D": {
     "title": "Portable Storage Structure",
-    "page": 165,
+    "page": 167,
     "items": [
       {
         "label": "1",
@@ -2726,7 +2829,7 @@
   },
   "4.5.5.E": {
     "title": "Real Estate Sales or Model Home",
-    "page": 165,
+    "page": 168,
     "items": [
       {
         "label": "1",
@@ -2740,7 +2843,7 @@
   },
   "4.5.5.F": {
     "title": "Seasonal Sales",
-    "page": 166,
+    "page": 168,
     "items": [
       {
         "label": "1",
@@ -2777,7 +2880,7 @@
   },
   "4.5.5.G": {
     "title": "Special Event",
-    "page": 166,
+    "page": 168,
     "items": [
       {
         "label": "1",

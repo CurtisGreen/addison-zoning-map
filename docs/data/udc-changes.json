@@ -1,0 +1,138 @@
+{
+  "amendments": [
+    {
+      "id": "2026-12",
+      "title": "December 2026 amendment",
+      "date": "2026-12",
+      "url": "https://developmentservices.addisontx.gov/files/sharedassets/devservices/v/5/documents/adopted-codes/adoption-draft-udc-amendment-clean-cc-conditions.pdf",
+      "changes": [
+        {
+          "kind": "added",
+          "section": "4.3.4.A",
+          "title": "Pet Care, Commercial",
+          "summary": "New use and standard.\nM-1 to M-4, CL, CG, LI: X -> P",
+          "page": 138,
+          "quote": "No veterinary care, overnight kenneling, or onsite kenneling is permitted."
+        },
+        {
+          "kind": "added",
+          "section": "4.3.4.H",
+          "title": "Cigar Lounge",
+          "summary": "New use and standard.\nM-1 to M-4, CL, CG, LI, AA: X -> S",
+          "page": 150,
+          "quote": "Cigar lounges may not be located within 1,000 feet of another cigar lounge."
+        },
+        {
+          "kind": "added",
+          "section": "4.4.4.E",
+          "title": "Kitchen",
+          "summary": "New accessory use and standard.\nM-2, M-3: X -> A",
+          "page": 165,
+          "quote": "Kitchen facilities may be permitted only as accessory uses within a Residence Hotel."
+        },
+        {
+          "kind": "added",
+          "section": "4.4.4.F",
+          "title": "Kitchenette",
+          "summary": "New accessory use and standard.\nM-1 to M-4, CL, CG, LI, AA: X -> A",
+          "page": 165,
+          "quote": "Kitchenette facilities may be permitted only as accessory uses within a Hotel, Full Service or Hotel, Limited Service."
+        },
+        {
+          "kind": "changed",
+          "section": "4.3.3.E",
+          "title": "Medical Clinic",
+          "summary": "New limit in M-1, M-2, and M-3. Also adds an enclosed-structure rule and no retail pharmacies in LI.",
+          "page": 138,
+          "quote": "Medical clinic facilities shall not exceed 5,000 square feet GFA."
+        },
+        {
+          "kind": "changed",
+          "section": "4.3.4.I",
+          "title": "Hookah Bar",
+          "summary": "Rewritten with new spacing, closing-time, and inspection rules. The late-hours request in the special use permit application is gone.",
+          "page": 150,
+          "quote": "Hookah bars must be located in a stand-alone building."
+        },
+        {
+          "kind": "changed",
+          "section": "4.3.4.C",
+          "title": "Urban Agriculture, Noncommercial",
+          "summary": "Fowl limit now applies to more than three fowl (was three or more).",
+          "page": 139,
+          "quote": "to keep or harbor more than three fowl"
+        },
+        {
+          "kind": "added",
+          "section": "4.3.5.G",
+          "title": "Warehouse or Wholesale Facility",
+          "summary": "New CG rule.",
+          "page": 153,
+          "quote": "Warehouse uses shall be no more than 75% of the warehouse or wholesale facility GFA."
+        },
+        {
+          "kind": "added",
+          "section": "Table 4.2-1",
+          "title": "Retail sales, smoking facility",
+          "summary": "New use.\nLI: X -> P",
+          "page": 133
+        },
+        {
+          "kind": "changed",
+          "section": "Table 4.2-1",
+          "title": "Hospital",
+          "summary": "AA: X -> S",
+          "page": 132
+        },
+        {
+          "kind": "changed",
+          "section": "Table 4.2-1",
+          "title": "Kennel, commercial",
+          "summary": "M-1, M-3, M-4: X -> S",
+          "page": 132
+        },
+        {
+          "kind": "changed",
+          "section": "Table 4.2-1",
+          "title": "Hookah bar",
+          "summary": "M-1 to M-4, CL, AA: S -> X",
+          "page": 132
+        },
+        {
+          "kind": "changed",
+          "section": "Table 4.2-1",
+          "title": "Manufacturing, low-impact",
+          "summary": "AA: X -> P",
+          "page": 133
+        },
+        {
+          "kind": "changed",
+          "section": "Table 4.2-1",
+          "title": "Retail sales, more than 50,000 sq. ft. GFA",
+          "summary": "M-3: X -> S",
+          "page": 133
+        },
+        {
+          "kind": "changed",
+          "section": "Table 4.2-1",
+          "title": "Warehouse or wholesale facility",
+          "summary": "CL, CG: X -> P",
+          "page": 134
+        },
+        {
+          "kind": "changed",
+          "section": "Table 4.2-1",
+          "title": "Event space",
+          "summary": "CG: P -> A",
+          "page": 134
+        }
+      ]
+    },
+    {
+      "id": "O25-004",
+      "title": "Unified Development Code adopted",
+      "date": "2025-03-25",
+      "changes": []
+    }
+  ]
+}

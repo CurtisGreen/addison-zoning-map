@@ -1,8 +1,8 @@
 {
   "sources": {
     "udc": {
-      "name": "UDC Ord. O25-004",
-      "url": "https://developmentservices.addisontx.gov/files/sharedassets/devservices/v/3/documents/adopted-codes/udc-adoption-draft-clean-clickable-adopted-3.25.2025.pdf"
+      "name": "UDC Amendment (December 2026)",
+      "url": "https://developmentservices.addisontx.gov/files/sharedassets/devservices/v/5/documents/adopted-codes/adoption-draft-udc-amendment-clean-cc-conditions.pdf"
     },
     "plan": {
       "name": "Advance Addison 2050",
@@ -119,584 +119,613 @@
     {
       "name": "Cottage development",
       "category": "Household Living",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.2.A"
     },
     {
       "name": "Dwelling, duplex",
       "category": "Household Living",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Dwelling, fourplex",
       "category": "Household Living",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.2.B"
     },
     {
       "name": "Dwelling, live/work",
       "category": "Household Living",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.2.C"
     },
     {
       "name": "Dwelling, multifamily",
       "category": "Household Living",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.2.D"
     },
     {
       "name": "Dwelling, single-family (attached)",
       "category": "Household Living",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.2.E"
     },
     {
       "name": "Dwelling, single-family (detached)",
       "category": "Household Living",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.2.F"
     },
     {
       "name": "Dwelling, triplex",
       "category": "Household Living",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.2.G"
     },
     {
       "name": "Manufactured home development (HUD-Code)",
       "category": "Household Living",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.2.H"
     },
     {
       "name": "Assisted living facility",
       "category": "Group Living",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Continuing care facility",
       "category": "Group Living",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Group care home, FHAA small",
       "category": "Group Living",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.2.I"
     },
     {
       "name": "Group care home, FHAA large",
       "category": "Group Living",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.2.I"
     },
     {
       "name": "Supportive housing, small",
       "category": "Group Living",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Supportive housing, large",
       "category": "Group Living",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Club or lodge",
       "category": "Community and Cultural Facilities",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Day care center, adult or child",
       "category": "Community and Cultural Facilities",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.3.A"
     },
     {
       "name": "Day care home, adult or child",
       "category": "Community and Cultural Facilities",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.3.B"
     },
     {
       "name": "Funeral facility",
       "category": "Community and Cultural Facilities",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Library",
       "category": "Community and Cultural Facilities",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Museum",
       "category": "Community and Cultural Facilities",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Park or open space, active",
       "category": "Community and Cultural Facilities",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Park or open space, passive",
       "category": "Community and Cultural Facilities",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.3.C"
     },
     {
       "name": "Place of worship",
       "category": "Community and Cultural Facilities",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Police, fire, or rescue facility (private)",
       "category": "Community and Cultural Facilities",
-      "page": 130
+      "page": 131
     },
     {
       "name": "Police, fire, or rescue facility (public)",
       "category": "Community and Cultural Facilities",
-      "page": 130,
+      "page": 131,
       "standard": "4.3.3.D"
     },
     {
       "name": "School, college or university",
       "category": "Educational Facilities",
-      "page": 131
+      "page": 132
     },
     {
       "name": "School, public or private",
       "category": "Educational Facilities",
-      "page": 131
+      "page": 132
     },
     {
       "name": "School, vocational or trade",
       "category": "Educational Facilities",
-      "page": 131
+      "page": 132
     },
     {
       "name": "Hospital",
       "category": "Healthcare Facilities",
-      "page": 131
+      "page": 132
     },
     {
       "name": "Medical clinic",
       "category": "Healthcare Facilities",
-      "page": 131,
+      "page": 132,
       "standard": "4.3.3.E"
+    },
+    {
+      "name": "Pet Care, commercial",
+      "category": "Agricultural and Animal",
+      "page": 132,
+      "standard": "4.3.4.A"
     },
     {
       "name": "Kennel, commercial",
       "category": "Agricultural and Animal",
-      "page": 131,
-      "standard": "4.3.4.A"
+      "page": 132,
+      "standard": "4.3.4.B"
     },
     {
       "name": "Plant nursery or greenhouse",
       "category": "Agricultural and Animal",
-      "page": 131
+      "page": 132
     },
     {
       "name": "Urban agriculture, noncommercial",
       "category": "Agricultural and Animal",
-      "page": 131,
-      "standard": "4.3.4.B"
+      "page": 132,
+      "standard": "4.3.4.C"
     },
     {
       "name": "Veterinary hospital or clinic",
       "category": "Agricultural and Animal",
-      "page": 131,
-      "standard": "4.3.4.C"
+      "page": 132,
+      "standard": "4.3.4.D"
     },
     {
       "name": "Recreation facility, indoor",
       "category": "Recreation and Entertainment",
-      "page": 131,
-      "standard": "4.3.4.D"
+      "page": 132,
+      "standard": "4.3.4.E"
     },
     {
       "name": "Recreation facility, outdoor",
       "category": "Recreation and Entertainment",
-      "page": 131,
-      "standard": "4.3.4.E"
+      "page": 132,
+      "standard": "4.3.4.F"
     },
     {
       "name": "Sexually oriented business",
       "category": "Recreation and Entertainment",
-      "page": 131,
-      "standard": "4.3.4.F"
+      "page": 132,
+      "standard": "4.3.4.G"
     },
     {
       "name": "Beer and Wine sales, off-premise consumption",
       "category": "Food and Beverage",
-      "page": 131
+      "page": 132
     },
     {
       "name": "Brewpub, distillery, or winery",
       "category": "Food and Beverage",
-      "page": 131
+      "page": 132
     },
     {
       "name": "Catering establishment",
       "category": "Food and Beverage",
-      "page": 131
+      "page": 132
+    },
+    {
+      "name": "Cigar Lounge",
+      "category": "Food and Beverage",
+      "page": 132,
+      "standard": "4.3.4.H"
     },
     {
       "name": "Hookah bar",
       "category": "Food and Beverage",
-      "page": 131,
-      "standard": "4.3.4.G"
+      "page": 132,
+      "standard": "4.3.4.I"
     },
     {
       "name": "Liquor sales, off-premise consumption",
       "category": "Food and Beverage",
-      "page": 131,
+      "page": 132,
       "note": "See Code of Ordinances Ch. 6 (Alcoholic Beverages)"
     },
     {
       "name": "Microbrewery",
       "category": "Food and Beverage",
-      "page": 131,
-      "standard": "4.3.4.H"
+      "page": 132,
+      "standard": "4.3.4.J"
     },
     {
       "name": "Mobile food truck park",
       "category": "Food and Beverage",
-      "page": 131,
-      "standard": "4.3.4.I"
+      "page": 132,
+      "standard": "4.3.4.K"
     },
     {
       "name": "Restaurant",
       "category": "Food and Beverage",
-      "page": 131,
-      "standard": "4.3.4.J"
+      "page": 132,
+      "standard": "4.3.4.L"
     },
     {
       "name": "Bed and breakfast",
       "category": "Lodging",
-      "page": 131,
-      "standard": "4.3.4.K"
+      "page": 132,
+      "standard": "4.3.4.M"
     },
     {
       "name": "Hotel, Full Service",
       "category": "Lodging",
-      "page": 131,
-      "standard": "4.3.4.L"
+      "page": 132,
+      "standard": "4.3.4.N"
     },
     {
       "name": "Hotel, Limited Service",
       "category": "Lodging",
-      "page": 131
+      "page": 132
     },
     {
       "name": "Residence Hotel",
       "category": "Lodging",
-      "page": 131
+      "page": 132
     },
     {
       "name": "Bank or financial institution",
       "category": "Office, Business, Professional, and Personal Services",
-      "page": 131
+      "page": 133
     },
     {
       "name": "Credit access business",
       "category": "Office, Business, Professional, and Personal Services",
-      "page": 131,
-      "standard": "4.3.4.M"
+      "page": 133,
+      "standard": "4.3.4.O"
     },
     {
       "name": "Laundromat, self-service",
       "category": "Office, Business, Professional, and Personal Services",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Office",
       "category": "Office, Business, Professional, and Personal Services",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Personal services",
       "category": "Office, Business, Professional, and Personal Services",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Building supply store",
       "category": "Retail Sales",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Pawn shop",
       "category": "Retail Sales",
-      "page": 132
+      "page": 133
+    },
+    {
+      "name": "Retail sales, smoking facility",
+      "category": "Retail Sales",
+      "page": 133
     },
     {
       "name": "Retail sales, less than 15,000 sq. ft. GFA",
       "category": "Retail Sales",
-      "page": 132,
-      "standard": "4.3.4.N"
+      "page": 133,
+      "standard": "4.3.4.P"
     },
     {
       "name": "Retail sales, 15,000 to 50,000 sq. ft. GFA",
       "category": "Retail Sales",
-      "page": 132,
-      "standard": "4.3.4.N"
+      "page": 133,
+      "standard": "4.3.4.P"
     },
     {
       "name": "Retail sales, more than 50,000 sq. ft. GFA",
       "category": "Retail Sales",
-      "page": 132,
-      "standard": "4.3.4.N"
+      "page": 133,
+      "standard": "4.3.4.P"
     },
     {
       "name": "Equipment sales or rental",
       "category": "Transportation, Vehicles, and Equipment",
-      "page": 132,
-      "standard": "4.3.4.O"
+      "page": 133,
+      "standard": "4.3.4.Q"
     },
     {
       "name": "Fleet services",
       "category": "Transportation, Vehicles, and Equipment",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Parking facility, private",
       "category": "Transportation, Vehicles, and Equipment",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Parking facility, public",
       "category": "Transportation, Vehicles, and Equipment",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Transit terminal or station",
       "category": "Transportation, Vehicles, and Equipment",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Vehicle fuel station",
       "category": "Transportation, Vehicles, and Equipment",
-      "page": 132,
-      "standard": "4.3.4.P"
+      "page": 133,
+      "standard": "4.3.4.R"
     },
     {
       "name": "Vehicle repair, major",
       "category": "Transportation, Vehicles, and Equipment",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Vehicle repair, minor",
       "category": "Transportation, Vehicles, and Equipment",
-      "page": 132,
-      "standard": "4.3.4.Q"
+      "page": 133,
+      "standard": "4.3.4.S"
     },
     {
       "name": "Vehicle sales or leasing, indoors",
       "category": "Transportation, Vehicles, and Equipment",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Vehicle wash",
       "category": "Transportation, Vehicles, and Equipment",
-      "page": 132,
-      "standard": "4.3.4.R"
+      "page": 133,
+      "standard": "4.3.4.T"
     },
     {
       "name": "Airport, public-owned",
       "category": "Aviation",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Commercial laundry facility",
       "category": "Manufacturing and Processing",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Data center",
       "category": "Manufacturing and Processing",
-      "page": 132,
+      "page": 133,
       "standard": "4.3.5.A"
     },
     {
       "name": "Food production or processing",
       "category": "Manufacturing and Processing",
-      "page": 132,
+      "page": 133,
       "standard": "4.3.5.B"
     },
     {
       "name": "Manufacturing, artisan",
       "category": "Manufacturing and Processing",
-      "page": 132,
+      "page": 133,
       "standard": "4.3.5.C"
     },
     {
       "name": "Manufacturing, low-impact",
       "category": "Manufacturing and Processing",
-      "page": 132,
+      "page": 133,
       "standard": "4.3.5.D"
     },
     {
       "name": "Resource or mineral extraction",
       "category": "Manufacturing and Processing",
-      "page": 132
+      "page": 133
     },
     {
       "name": "Contractor’s office",
       "category": "Storage and Warehousing",
-      "page": 132
+      "page": 134
     },
     {
       "name": "Storage, self-service",
       "category": "Storage and Warehousing",
-      "page": 132,
+      "page": 134,
       "standard": "4.3.5.E"
     },
     {
       "name": "Storage, outdoor",
       "category": "Storage and Warehousing",
-      "page": 132,
+      "page": 134,
       "standard": "4.3.5.F"
     },
     {
       "name": "Warehouse or wholesale facility",
       "category": "Storage and Warehousing",
-      "page": 133,
+      "page": 134,
       "standard": "4.3.5.G"
     },
     {
       "name": "Public utility, major",
       "category": "Utilities and Communication Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.3.6.A"
     },
     {
       "name": "Public utility, minor",
       "category": "Utilities and Communication Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.3.6.A"
     },
     {
       "name": "Satellite earth station",
       "category": "Utilities and Communication Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.3.6.B"
     },
     {
       "name": "Solar energy system",
       "category": "Utilities and Communication Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.3.6.C"
     },
     {
       "name": "Wind energy system, more than 100 kW",
       "category": "Utilities and Communication Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.3.6.D"
     },
     {
       "name": "Wind energy system, less than 100 kW",
       "category": "Utilities and Communication Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.3.6.D"
     },
     {
       "name": "Wireless communication facility, building- or roof-mounted",
       "category": "Utilities and Communication Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.3.6.E"
     },
     {
       "name": "Wireless communication facility, ground-mounted",
       "category": "Utilities and Communication Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.3.6.E"
     },
     {
       "name": "Alcohol sales, on-premise consumption",
       "category": "Accessory Uses",
-      "page": 133
+      "page": 134
     },
     {
       "name": "Caretaker’s quarters",
       "category": "Accessory Uses",
-      "page": 133
+      "page": 134
     },
     {
       "name": "Drive-through",
       "category": "Accessory Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.4.4.A"
     },
     {
       "name": "Donation box",
       "category": "Accessory Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.4.4.B"
     },
     {
       "name": "Dwelling, accessory (ADU)",
       "category": "Accessory Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.4.4.C"
     },
     {
       "name": "Event space",
       "category": "Accessory Uses",
-      "page": 133
+      "page": 134
     },
     {
       "name": "Home occupation",
       "category": "Accessory Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.4.4.D"
+    },
+    {
+      "name": "Kitchen",
+      "category": "Accessory Uses",
+      "page": 134,
+      "standard": "4.4.4.E"
+    },
+    {
+      "name": "Kitchenette",
+      "category": "Accessory Uses",
+      "page": 134,
+      "standard": "4.4.4.F"
     },
     {
       "name": "Valet parking service",
       "category": "Accessory Uses",
-      "page": 133,
-      "standard": "4.4.4.E"
+      "page": 134,
+      "standard": "4.4.4.G"
     },
     {
       "name": "Construction support activities",
       "category": "Temporary Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.5.5.A"
     },
     {
       "name": "Mobile food truck",
       "category": "Temporary Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.5.5.B"
     },
     {
       "name": "Outdoor retail and display",
       "category": "Temporary Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.5.5.C"
     },
     {
       "name": "Portable storage structure",
       "category": "Temporary Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.5.5.D"
     },
     {
       "name": "Real estate sales or model home",
       "category": "Temporary Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.5.5.E"
     },
     {
       "name": "Seasonal sales",
       "category": "Temporary Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.5.5.F"
     },
     {
       "name": "Special event",
       "category": "Temporary Uses",
-      "page": 133,
+      "page": 134,
       "standard": "4.5.5.G"
     }
   ],
@@ -704,7 +733,7 @@
     "R-1": {
       "name": "Residential 1",
       "section": "3.4.1",
-      "page": 101,
+      "page": 102,
       "purpose": "The R-1 district is intended to accommodate single-family detached residential development on large suburban lots.",
       "uses": {
         "Dwelling, single-family (detached)": "P",
@@ -767,7 +796,7 @@
     "R-2": {
       "name": "Residential 2",
       "section": "3.4.2",
-      "page": 102,
+      "page": 103,
       "purpose": "The R-2 district is intended to accommodate moderately compact single-family detached residential development in a low-density urban neighborhood context.",
       "uses": {
         "Dwelling, live/work": "S",
@@ -850,7 +879,7 @@
     "R-3": {
       "name": "Residential 3",
       "section": "3.4.3",
-      "page": 103,
+      "page": 104,
       "purpose": "The R-3 district is intended to accommodate a variety of compatible residential housing types including single-family detached, single-family attached, duplex, triplex, fourplex, small-scale multifamily, and live/work dwellings.",
       "uses": {
         "Cottage development": "S",
@@ -982,7 +1011,7 @@
     "M-1": {
       "name": "Mixed-Use Neighborhood",
       "section": "3.5.1",
-      "page": 105,
+      "page": 106,
       "purpose": "The M-1 district is intended to accommodate small- to medium-scale mixed-use development that supports a comfortable and safe bicycle and pedestrian friendly development pattern and that accommodates infill and redevelopment.",
       "uses": {
         "Cottage development": "S",
@@ -1012,7 +1041,6 @@
         "Recreation facility, indoor": "A",
         "Recreation facility, outdoor": "A",
         "Beer and Wine sales, off-premise consumption": "S",
-        "Hookah bar": "S",
         "Microbrewery": "S",
         "Mobile food truck park": "S",
         "Restaurant": "P",
@@ -1044,7 +1072,11 @@
         "Portable storage structure": "T",
         "Real estate sales or model home": "T",
         "Seasonal sales": "T",
-        "Special event": "T"
+        "Special event": "T",
+        "Pet Care, commercial": "P",
+        "Cigar Lounge": "S",
+        "Kitchenette": "A",
+        "Kennel, commercial": "S"
       },
       "dimensions": {
         "lotWidthMin": {
@@ -1120,7 +1152,7 @@
     "M-2": {
       "name": "Mixed-Use Suburban Corridor",
       "section": "3.5.2",
-      "page": 107,
+      "page": 108,
       "purpose": "The M-2 district is intended to accommodate a mix of small- to medium-scale mixed-use development that promotes sustainable infill and redevelopment of older commercial sites, while ensuring that the site design, uses, and scale are consistent with adjacent residential neighborhoods.",
       "uses": {
         "Dwelling, live/work": "P",
@@ -1153,7 +1185,6 @@
         "Recreation facility, indoor": "P",
         "Recreation facility, outdoor": "P",
         "Beer and Wine sales, off-premise consumption": "S",
-        "Hookah bar": "S",
         "Microbrewery": "S",
         "Mobile food truck park": "S",
         "Restaurant": "P",
@@ -1194,7 +1225,11 @@
         "Portable storage structure": "T",
         "Real estate sales or model home": "T",
         "Seasonal sales": "T",
-        "Special event": "T"
+        "Special event": "T",
+        "Pet Care, commercial": "P",
+        "Cigar Lounge": "S",
+        "Kitchen": "A",
+        "Kitchenette": "A"
       },
       "dimensions": {
         "lotWidthMin": {
@@ -1269,7 +1304,7 @@
     "M-3": {
       "name": "Mixed-Use Urban Corridor",
       "section": "3.5.3",
-      "page": 109,
+      "page": 110,
       "purpose": "The M-3 district is intended to accommodate a mix of medium- to large-scale mixed-use development that supports pedestrian- and transit-oriented uses.",
       "uses": {
         "Dwelling, live/work": "P",
@@ -1299,7 +1334,6 @@
         "Recreation facility, indoor": "P",
         "Recreation facility, outdoor": "P",
         "Beer and Wine sales, off-premise consumption": "S",
-        "Hookah bar": "S",
         "Microbrewery": "S",
         "Mobile food truck park": "S",
         "Restaurant": "P",
@@ -1335,7 +1369,13 @@
         "Portable storage structure": "T",
         "Real estate sales or model home": "T",
         "Seasonal sales": "T",
-        "Special event": "T"
+        "Special event": "T",
+        "Pet Care, commercial": "P",
+        "Cigar Lounge": "S",
+        "Kitchen": "A",
+        "Kitchenette": "A",
+        "Kennel, commercial": "S",
+        "Retail sales, more than 50,000 sq. ft. GFA": "S"
       },
       "dimensions": {
         "lotWidthMin": {
@@ -1411,7 +1451,7 @@
     "M-4": {
       "name": "Mixed-Use Center",
       "section": "3.5.4",
-      "page": 111,
+      "page": 112,
       "purpose": "The M-4 district is intended to support the most intensive, transit supportive development to create a unique, mixed-use, and integrated regional destination.",
       "uses": {
         "Dwelling, live/work": "P",
@@ -1440,7 +1480,6 @@
         "Recreation facility, indoor": "P",
         "Recreation facility, outdoor": "S",
         "Beer and Wine sales, off-premise consumption": "S",
-        "Hookah bar": "S",
         "Microbrewery": "S",
         "Mobile food truck park": "S",
         "Restaurant": "P",
@@ -1475,7 +1514,11 @@
         "Portable storage structure": "T",
         "Real estate sales or model home": "T",
         "Seasonal sales": "T",
-        "Special event": "T"
+        "Special event": "T",
+        "Pet Care, commercial": "P",
+        "Cigar Lounge": "S",
+        "Kitchenette": "A",
+        "Kennel, commercial": "S"
       },
       "dimensions": {
         "lotWidthMin": {
@@ -1550,7 +1593,7 @@
     "CL": {
       "name": "Commercial Limited",
       "section": "3.6.1",
-      "page": 113,
+      "page": 114,
       "purpose": "The CL district is intended to accommodate small-scale commercial, retail, office, service-oriented, and accessory uses.",
       "uses": {
         "Assisted living facility": "S",
@@ -1577,7 +1620,6 @@
         "Beer and Wine sales, off-premise consumption": "S",
         "Brewpub, distillery, or winery": "S",
         "Catering establishment": "P",
-        "Hookah bar": "S",
         "Microbrewery": "S",
         "Mobile food truck park": "S",
         "Restaurant": "P",
@@ -1615,7 +1657,11 @@
         "Portable storage structure": "T",
         "Real estate sales or model home": "T",
         "Seasonal sales": "T",
-        "Special event": "T"
+        "Special event": "T",
+        "Pet Care, commercial": "P",
+        "Cigar Lounge": "S",
+        "Kitchenette": "A",
+        "Warehouse or wholesale facility": "P"
       },
       "dimensions": {
         "lotAreaMin": {
@@ -1660,7 +1706,7 @@
     "CG": {
       "name": "Commercial General",
       "section": "3.6.2",
-      "page": 114,
+      "page": 115,
       "purpose": "The CG district is intended to accommodate medium- to large-scale commercial, retail, office, service-oriented, and accessory uses.",
       "uses": {
         "Assisted living facility": "S",
@@ -1725,7 +1771,7 @@
         "Caretaker’s quarters": "A",
         "Drive-through": "A",
         "Donation box": "A",
-        "Event space": "P",
+        "Event space": "A",
         "Valet parking service": "A",
         "Construction support activities": "T",
         "Mobile food truck": "T",
@@ -1733,7 +1779,11 @@
         "Portable storage structure": "T",
         "Real estate sales or model home": "T",
         "Seasonal sales": "T",
-        "Special event": "T"
+        "Special event": "T",
+        "Pet Care, commercial": "P",
+        "Cigar Lounge": "S",
+        "Kitchenette": "A",
+        "Warehouse or wholesale facility": "P"
       },
       "dimensions": {
         "lotAreaMin": {
@@ -1779,7 +1829,7 @@
     "LI": {
       "name": "Light Industrial",
       "section": "3.6.3",
-      "page": 115,
+      "page": 116,
       "purpose": "The LI district is intended to accommodate a mix of light manufacturing, warehousing and distribution, auto-oriented uses, research and development operations, offices, showrooms, and a limited range of associated retail services, and accessory uses.",
       "uses": {
         "Day care center, adult or child": "A",
@@ -1858,7 +1908,11 @@
         "Portable storage structure": "T",
         "Real estate sales or model home": "T",
         "Seasonal sales": "T",
-        "Special event": "T"
+        "Special event": "T",
+        "Pet Care, commercial": "P",
+        "Cigar Lounge": "S",
+        "Kitchenette": "A",
+        "Retail sales, smoking facility": "P"
       },
       "dimensions": {
         "lotAreaMin": {
@@ -1903,7 +1957,7 @@
     "AA": {
       "name": "Addison Airport",
       "section": "3.6.4",
-      "page": 115,
+      "page": 116,
       "purpose": "The AA district is intended to support and optimize operational efficiency of the Addison Airport and to support the airport’s role as a key economic engine for the Town and region.",
       "uses": {
         "Club or lodge": "S",
@@ -1919,7 +1973,6 @@
         "Recreation facility, outdoor": "A",
         "Brewpub, distillery, or winery": "P",
         "Catering establishment": "P",
-        "Hookah bar": "S",
         "Mobile food truck park": "S",
         "Restaurant": "P",
         "Hotel, Full Service": "S",
@@ -1965,7 +2018,11 @@
         "Portable storage structure": "T",
         "Real estate sales or model home": "T",
         "Seasonal sales": "T",
-        "Special event": "T"
+        "Special event": "T",
+        "Cigar Lounge": "S",
+        "Kitchenette": "A",
+        "Hospital": "S",
+        "Manufacturing, low-impact": "P"
       },
       "dimensions": {
         "lotAreaMin": {
@@ -2011,7 +2068,7 @@
     "A": {
       "name": "Apartment (legacy)",
       "section": "8.1",
-      "page": 311,
+      "page": 315,
       "purpose": "The Apartment district is prohibited from future use.",
       "uses": {
         "Dwelling, duplex": "P",
@@ -2082,7 +2139,7 @@
     "PD-TH": {
       "name": "Townhouse/Condominium (legacy)",
       "section": "8.2",
-      "page": 315,
+      "page": 319,
       "purpose": "The Planned Development Townhouse/Condominium district is prohibited from future use.",
       "uses": {
         "Dwelling, multifamily": "P",
@@ -2138,7 +2195,7 @@
     "PD-CC": {
       "name": "Condominium Conversions (legacy)",
       "section": "8.3",
-      "page": 318,
+      "page": 322,
       "purpose": "The Planned Development Condominium Conversions district is prohibited from future use.",
       "uses": {
         "Dwelling, multifamily": "P"

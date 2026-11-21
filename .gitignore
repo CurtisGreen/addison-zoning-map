@@ -4,3 +4,5 @@ __pycache__/
 node_modules/
 saved/
 tmp/
+Thumbs.db
+desktop.ini

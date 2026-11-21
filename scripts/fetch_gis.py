@@ -1,13 +1,13 @@
 """Compare the Town GIS (zoning, place types, PD ordinance links) with docs/data and print what differs.
 
 Writes nothing under docs/data. Edits to the data files are made by hand or by Claude on request.
-  python3 scripts/fetch_gis.py              print the differences
-  python3 scripts/fetch_gis.py --out tmp/fetch_gis   also write fresh zones.geojson and zones.json there (never into docs/data), to diff or copy from
+  python scripts/fetch_gis.py              print the differences
+  python scripts/fetch_gis.py --out tmp/fetch_gis   also write fresh zones.geojson and zones.json there (never into docs/data), to diff or copy from
 Polygons that are all park (Town parks layer), railroad, or excluded parcels are left out; MERGED_ZONES and EXTRA_ORDINANCES list
 the other known differences from the town map.
 
-Needs: shapely (pip install shapely)
-Run:   python3 scripts/fetch_gis.py
+Needs: shapely (python -m pip install shapely)
+Run:   python scripts/fetch_gis.py
 """
 import datetime
 import sys
@@ -129,7 +129,15 @@ def load_ordinances():
     return ordinances
 
 
+def write_text(path, text):
+    """UTF-8 with LF line endings on every platform."""
+    with open(path, "w", encoding="utf-8", newline="\n") as file:
+        file.write(text)
+
+
 def main():
+    if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to a legacy code page
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ordinances = load_ordinances()
     ids_by_number = {}  # old ordinances are often cited by number only ("461")
     for ordinance_id in ordinances:
@@ -153,7 +161,7 @@ def main():
         print("Excluded parcels not found in the parcel layer:", ", ".join(sorted(missing)))
     excluded = unary_union(parks + [shape(f["geometry"]).buffer(0) for f in parcels])
     index_file = DATA / "zones.json"
-    previous = json.loads(index_file.read_text())["zones"] if index_file.exists() else {}
+    previous = json.loads(index_file.read_text(encoding="utf-8"))["zones"] if index_file.exists() else {}
 
     features, zones, place_type_totals, unmatched = [], {}, {}, set()
     global unmatched_codes
@@ -219,8 +227,8 @@ def main():
         if out == DATA.resolve():
             sys.exit("--out must not be docs/data")
         out.mkdir(parents=True, exist_ok=True)
-        (out / "zones.geojson").write_text(json.dumps(new_geojson, separators=(",", ":")))
-        (out / "zones.json").write_text(json.dumps(new_index, indent=2))
+        write_text(out / "zones.geojson", json.dumps(new_geojson, separators=(",", ":")))
+        write_text(out / "zones.json", json.dumps(new_index, indent=2))
         print(f"Fresh files written to {out}")
     report_differences(previous, new_index["zones"], features)
     return
@@ -229,7 +237,7 @@ def main():
 def report_differences(previous, current, features):
     """Print how the town's data differs from docs/data. Changes nothing."""
     geojson_file = DATA / "zones.geojson"
-    old_count = len(json.loads(geojson_file.read_text())["features"]) if geojson_file.exists() else 0
+    old_count = len(json.loads(geojson_file.read_text(encoding="utf-8"))["features"]) if geojson_file.exists() else 0
     print(f"Polygons: {len(features)} from the town, {old_count} in zones.geojson")
     added = sorted(set(current) - set(previous))
     removed = sorted(set(previous) - set(current))

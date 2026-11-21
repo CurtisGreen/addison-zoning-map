@@ -1,13 +1,14 @@
 """Helper for adding one Planned Development (PD). Used by the add-pd skill.
 
-  python3 scripts/pd.py fetch "PD 461"   download ordinances and extract page text (OCR if scanned) into pdfs/
-  python3 scripts/pd.py check "PD 461"   validate docs/data/pd/<id>.json and say what zones.json should hold
+  python scripts/pd.py fetch "PD 461"   download ordinances and extract page text (OCR if scanned) into pdfs/
+  python scripts/pd.py check "PD 461"   validate docs/data/pd/<id>.json and say what zones.json should hold
 
-Needs: pdfinfo, pdftotext, pdftoppm (poppler) and tesseract for scanned pages. Stdlib only otherwise.
+Needs pdftotext, pdftoppm (poppler) and tesseract, checked on startup. Stdlib only otherwise.
 """
 import difflib
 import json
 import re
+import shutil
 import subprocess
 import sys
 import urllib.request
@@ -25,12 +26,45 @@ MIN_QUOTE_LENGTH = 12
 QUOTE_MATCH_RATIO = 0.85
 
 
+def read_text(path):
+    """Always UTF-8; Windows would otherwise use its code page and garble section signs and quotes."""
+    return path.read_text(encoding="utf-8")
+
+
+def write_text(path, text):
+    """UTF-8 with LF line endings on every platform."""
+    with open(path, "w", encoding="utf-8", newline="\n") as file:
+        file.write(text)
+
+
 def read_json(path):
-    return json.loads(path.read_text())
+    return json.loads(read_text(path))
+
+
+INSTALL_HINT = ("install poppler (macOS: brew install poppler tesseract; "
+                "Windows: scoop install poppler tesseract, or choco install poppler tesseract) and reopen the terminal")
+
+
+REQUIRED_TOOLS = ("pdftotext", "pdftoppm", "tesseract")
+
+
+def require(tool):
+    """Fail with an install hint instead of a stack trace when a command-line tool is missing."""
+    if not shutil.which(tool):
+        sys.exit(f"Missing command-line tool: {tool}. {INSTALL_HINT}.")
 
 
 def run(*command):
-    return subprocess.run(command, capture_output=True, text=True).stdout
+    require(command[0])
+    result = subprocess.run(command, capture_output=True, encoding="utf-8", errors="replace")
+    return result.stdout
+
+
+def page_count(pdf):
+    """Number of pages. pdfinfo when present, else the form feeds in pdftotext's output (Xpdf has no pdfinfo)."""
+    if shutil.which("pdfinfo"):
+        return int(re.search(r"Pages:\s+(\d+)", run("pdfinfo", str(pdf)))[1])
+    return run("pdftotext", "-enc", "UTF-8", "-layout", str(pdf), "-").count("\f")
 
 
 def file_slug(pd_id):
@@ -49,14 +83,14 @@ def page_texts(pdf):
     Returns (texts, list of OCR'd page numbers, text folder)."""
     folder = pdf.with_suffix("")
     folder.mkdir(exist_ok=True)
-    page_count = int(re.search(r"Pages:\s+(\d+)", run("pdfinfo", str(pdf)))[1])
+    page_total = page_count(pdf)
     texts, ocr_pages = [], []
-    for number in range(1, page_count + 1):
+    for number in range(1, page_total + 1):
         text_file = folder / f"p{number:03d}.txt"
-        if text_file.exists() and not text_file.read_text().startswith("[OCR]") and has_split_acreage(text_file.read_text()):
+        if text_file.exists() and not read_text(text_file).startswith("[OCR]") and has_split_acreage(read_text(text_file)):
             text_file.unlink()
         if not text_file.exists():
-            text = run("pdftotext", "-layout", "-f", str(number), "-l", str(number), str(pdf), "-")
+            text = run("pdftotext", "-enc", "UTF-8", "-layout", "-f", str(number), "-l", str(number), str(pdf), "-")
             garbled = sum(text.count(character) for character in GARBLED_CHARACTERS) >= GARBLED_THRESHOLD
             if len(text.strip()) < 40 or garbled or has_split_acreage(text):  # scanned page, or a poor text layer
                 image = folder / f"p{number:03d}"
@@ -64,8 +98,8 @@ def page_texts(pdf):
                     str(pdf), str(image))
                 text = "[OCR]\n" + run("tesseract", f"{image}.png", "-")
                 Path(f"{image}.png").unlink(missing_ok=True)
-            text_file.write_text(text)
-        text = text_file.read_text()
+            write_text(text_file, text)
+        text = read_text(text_file)
         texts.append(text)
         if text.startswith("[OCR]"):
             ocr_pages.append(number)
@@ -83,7 +117,8 @@ def fetch(pd_id, pd):
                 print(f"  {ordinance['id']}: NO URL - add one in zones.json or find it on agendas.addisontx.gov")
                 continue
             request = urllib.request.Request(ordinance["url"], headers={"User-Agent": "Mozilla/5.0"})
-            pdf.write_bytes(urllib.request.urlopen(request, timeout=60).read())
+            with urllib.request.urlopen(request, timeout=60) as response:
+                pdf.write_bytes(response.read())
         texts, ocr_pages, text_folder = page_texts(pdf)
         ocr_note = f"  OCR pages {ocr_pages}" if ocr_pages else ""
         print(f"  {ordinance['id']}  {ordinance['date']}  {len(texts)} pages{ocr_note}\n"
@@ -224,8 +259,12 @@ def check(pd_id, pd, index):
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to a legacy code page
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     if len(sys.argv) != 3 or sys.argv[1] not in ("fetch", "check"):
         sys.exit(__doc__)
+    for tool in REQUIRED_TOOLS:  # checked first: a missing tool would otherwise fail partway through
+        require(tool)
     command, pd_id = sys.argv[1], sys.argv[2]
     index = read_json(DATA / "zones.json")
     pd = index["zones"].get(pd_id)

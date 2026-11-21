@@ -5,6 +5,11 @@ description: Add one Addison Planned Development (PD) to the zoning site. Use wh
 
 # Add a Planned Development
 
+**Before anything else, check the tools.** Required: `pdftotext`, `pdftoppm` (poppler) and `tesseract`. The scripts, and the Read tool's PDF page rendering that step 3 depends on, all need them. Run `pdftoppm -v` and `tesseract --version`; if either fails, stop and give the user the install command. Do not work around a missing tool, and do not read values from extracted text alone.
+
+- macOS: `brew install poppler tesseract`
+- Windows: `scoop install poppler tesseract` (or `choco install poppler tesseract`), then reopen the terminal
+
 Goal: one draft file, `docs/data/pd/<id>.json`, that the user can check against the PDFs quickly. Accuracy beats completeness: leave a value out and add a `review` note rather than guess.
 
 ## 1. Pick the PD
@@ -18,9 +23,9 @@ Goal: one draft file, `docs/data/pd/<id>.json`, that the user can check against 
 Every town ArcGIS endpoint has a function in `scripts/gis_api.py` (JSON, paging handled). Call it from the shell or import it; never hand-write curl or urllib code for the town GIS.
 
 ```bash
-python3 scripts/gis_api.py udc_zoning "ZONE_CODE = '23-03'" --fields ZONE_CODE,ZCODE_TOT,ZONE_HIST   # ordinance chain
-python3 scripts/gis_api.py ordinances "ORD_ID LIKE '%23-03%'"                              # id, date, description, PDF url
-python3 scripts/gis_api.py                                                                 # list endpoints
+python scripts/gis_api.py udc_zoning "ZONE_CODE = '23-03'" --fields ZONE_CODE,ZCODE_TOT,ZONE_HIST   # ordinance chain
+python scripts/gis_api.py ordinances "ORD_ID LIKE '%23-03%'"                              # id, date, description, PDF url
+python scripts/gis_api.py                                                                 # list endpoints
 ```
 
 - `ZCODE_TOT` is the polygon's ordinance chain but is cut off at 36 characters. `ZONE_HIST` is the full chain only where the town filled it in (PD 23-03 does; most PDs have blank, `*` or free text). Fetch both. If either names an ordinance that `zones.json` lacks for the PD, tell the user and look it up with `ordinances`. Ids are zero-padded or prefixed with `O` ('096-003', 'O26-022'): search with `LIKE '%23-03%'`.
@@ -31,7 +36,7 @@ python3 scripts/gis_api.py                                                      
 ## 2. Fetch
 
 ```bash
-python3 scripts/pd.py fetch "PD 461"
+python scripts/pd.py fetch "PD 461"
 ```
 
 It downloads each ordinance in the PD's chain to `pdfs/<id>/`, writes page text to `pdfs/<id>/<ordinance>/pNNN.txt` (OCR for scanned pages, marked `[OCR]`), into the ignored `pdfs/` folder. It never writes under `docs/data`; create `docs/data/pd/<id>.json` yourself. If an ordinance has no URL, tell the user; do not search the web for it unless they ask.
@@ -126,7 +131,7 @@ Rules:
 ## 5. Check
 
 ```bash
-python3 scripts/pd.py check "PD 461"
+python scripts/pd.py check "PD 461"
 ```
 
 Fix every `ERROR` and run again. The script never edits `docs/data`. On a clean run it prints any `UPDATE zones.json` lines (`done`, `name`, `base`); make those edits yourself so the map colors the PD by base and the site loads its details.
@@ -138,6 +143,6 @@ Tell the user, in a few lines:
 - base district (and the old district it came from), or why it is `null`
 - number of use changes (or allowed uses, if `pdUsesOnly`) and dimension values
 - every `review` item
-- the local preview command: `python3 -m http.server 8765 -d docs` then open `zone.html?id=<id>`
+- the local preview command: `python -m http.server 8000 -d docs` then open `zone.html?id=<id>`
 
 Remind them the file is a draft to check against the PDFs. Do not commit or push.
