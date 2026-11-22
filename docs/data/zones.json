@@ -1802,7 +1802,8 @@
       "kind": "pd",
       "name": "",
       "base": null,
-      "done": false,
+      "done": true,
+      "family": "commercial",
       "acres": 3.8,
       "mainOrdinance": "084-010",
       "ordinances": [
@@ -1920,9 +1921,9 @@
     },
     "PD 22-11": {
       "kind": "pd",
-      "name": "",
-      "base": null,
-      "done": false,
+      "name": "Jefferson Aero",
+      "base": "M-4",
+      "done": true,
       "acres": 3.1,
       "mainOrdinance": "022-11",
       "ordinances": [
@@ -1939,7 +1940,19 @@
           "description": "Rezoning a 3.2 acre property from (C-2) DISTRICT to a (PD) district with modified Urban Center (UC) District standards."
         }
       ],
-      "placeTypes": ["Urban Village"]
+      "placeTypes": ["Urban Village"],
+      "popup": {
+        "residential": "5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "",
+        "hotel": "S",
+        "daycare": "P",
+        "limits": "No height limit"
+      }
     },
     "PD O17-007": {
       "kind": "pd",

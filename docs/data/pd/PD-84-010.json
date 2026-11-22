@@ -1,0 +1,36 @@
+{
+  "id": "PD 84-010",
+  "name": "",
+  "family": "commercial",
+  "base": null,
+  "purpose": "",
+  "uses": [],
+  "otherUses": [],
+  "dimensions": {},
+  "parking": [
+    {
+      "use": "Restaurant",
+      "requirement": "3.3 per 1,000 sq ft gross restaurant space",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft gross restaurant space"
+        }
+      ],
+      "ordinance": "084-010",
+      "page": 3,
+      "quote": "Parking requirement is one space for every (300) square feet of gross restaurant space."
+    }
+  ],
+  "review": {
+    "base": "The ordinance names no base district. The property was zoned Commercial (C) before the PD."
+  },
+  "notes": [
+    "Development must follow the development plans attached to ordinance 084-010."
+  ],
+  "history": {
+    "084-010": "Rezoned from Commercial to PD, with restaurant parking of 1 per 300 sq ft"
+  },
+  "curtisNotes": "The ordinance says it must follow the attached development plans, but I haven't been able to find those plans"
+}

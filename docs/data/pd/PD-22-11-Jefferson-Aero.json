@@ -1,0 +1,53 @@
+{
+  "id": "PD 22-11",
+  "name": "Jefferson Aero",
+  "base": "M-4",
+  "purpose": "",
+  "uses": [],
+  "otherUses": [],
+  "dimensions": {},
+  "review": {
+    "base": "The original base was the legacy Urban Center (UC) district. The UDC replaced UC with M-4, so rules may differ"
+  },
+  "notes": [
+    {
+      "heading": "Units and retail",
+      "items": [
+        "No more than 287 dwelling units in total, and no more than 280 of them multifamily.",
+        "At least 7 live/work units.",
+        "Home offices are allowed in live/work units on the fourth and fifth floors of the western facade.",
+        "At least 5,000 sq ft of \"retail ready\" space, placed as shown on the development plans."
+      ]
+    },
+    {
+      "heading": "Building and site conditions",
+      "items": [
+        "The project must be National Green Building Standard certified.",
+        "No linoleum or Formica surfaces in the units, and all units get energy efficient appliances.",
+        "Countertops must be granite, stone or a superior material.",
+        "The developer must install a public art feature, visible from the public right-of-way, before a certificate of occupancy. The Addison Arbor Foundation may help fund it but does not have to.",
+        "Before a building permit, the developer must give the Town written notice of an easement for emergency and pedestrian access to the fire lane at the southeast corner.",
+        "The property must be built as shown in the development plans: site plan, landscape plan, facade and floor plans."
+      ]
+    },
+    {
+      "heading": "Changes to the old UC standards",
+      "items": [
+        "Landscape area: 16.4 percent of gross area, down from 20 percent. Shared use trails count toward it.",
+        "Landscape buffer: variable width following the Town's Trail Master Plan, instead of a 20-foot minimum.",
+        "Street trees: ornamental trees on the Addison Road frontage instead of shade trees due to overhead wires.",
+        "Shade tree spacing on the Airport Parkway frontage: up to 50 feet, up from 30 feet.",
+        "Setbacks at the Addison Road and Airport Parkway frontages follow the development plans instead of the old 10-foot build-to line.",
+        "Building step-backs follow the development plans instead of one foot for every two feet over 50 feet.",
+        "Public open space dedication is met by the shared use trails, sidewalks and publicly accessible private open space on the plans.",
+        "Driveway setback at the southern property line: 2 feet, down from 5 feet.",
+        "Unit size: one-bedroom units with a private balcony must be at least 650 sq ft, down from 700 sq ft. The UDC's own minimum for a one-bedroom is 450 sq ft (§4.3.2.D, page 137).",
+        "Exterior walls: masonry and glazing of at least 75 percent on the north and west facades, 58 percent on the south facade and 59 percent on the east facade. The old UC rule was 90 percent brick on walls seen from a public street and 80 percent on the rest. The UDC has no masonry percentage. It requires 80 percent of the cladding to be from its allowed materials (§5.7, Table 5.7-2, page 218)."
+      ]
+    }
+  ],
+  "history": {
+    "092-025": "Rezoned from PD 085-002 to Commercial-2",
+    "022-11": "Rezoned to PD for up to 287 apartment and live/work units and 5,000 sq ft of retail-ready space"
+  }
+}
