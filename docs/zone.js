@@ -71,11 +71,12 @@ function typologyLines(placeType) {
 }
 
 function renderFacts(zone, base) {
-  const placeTypes = zone.index.placeTypes
+  // Place types are shown for PDs only; districts span several place types.
+  const placeTypes = (zone.kind === "pd" ? zone.index.placeTypes : [])
     .map((name) => placeTypeInfo(name, base))
     .filter(Boolean)
     .map((placeType) =>
-      zone.kind === "pd" && !zone.pdData?.insideAirportContour
+      !zone.pdData?.insideAirportContour
         ? { ...placeType, faaReview: [] }
         : placeType,
     );

@@ -9,7 +9,6 @@ import {
   loadSiteData,
   sourceHtml,
   showError,
-  summarizeValue,
   zoneLabel,
   zonePageUrl,
   zoneTitle,
@@ -17,31 +16,6 @@ import {
 
 // Leaflet, loaded by index.html as window.L.
 const Leaflet = window.L;
-
-/** Building sizes for the Residential line: units per building, and the UDC use that allows them. */
-const ADU_USE = "Dwelling, accessory (ADU)";
-const DWELLING_SIZES = [
-  { units: "1", use: "Dwelling, single-family (detached)" },
-  { units: "2", use: "Dwelling, duplex" },
-  { units: "3", use: "Dwelling, triplex" },
-  { units: "4", use: "Dwelling, fourplex" },
-  { units: "5+", use: "Dwelling, multifamily" },
-];
-
-/** The same uses in every popup, so zones compare at a glance. */
-const HEADLINE_USES = [
-  { label: "Retail", use: "Retail sales, less than 15,000 sq. ft. GFA" },
-  { label: "Restaurant", use: "Restaurant" },
-  { label: "Office", use: "Office" },
-  { label: "Industry", use: "Manufacturing, low-impact" },
-];
-
-/** Popup limits: label and the dimension fields to try, in order. */
-const POPUP_LIMITS = [
-  { label: "Height", fields: ["heightMax", "heightMaxStories"] },
-  { label: "Front", fields: ["frontSetbackMin"] },
-  { label: "Build-to", fields: ["buildTo"] },
-];
 
 const NORMAL_OPACITY = 0.5;
 const HOVER_OPACITY = 0.8;
@@ -61,72 +35,44 @@ function polygonStyle(zoneId, zoneIndex) {
   };
 }
 
-/** "1 unit", "1–4 units", "1, 3+ units" (1 and anything from 3 up), or "" when no size has this permission. */
-function dwellingSizes(zone, code) {
-  const last = DWELLING_SIZES.length - 1;
-  const runs = [];
-  DWELLING_SIZES.forEach((size, index) => {
-    if (zone.uses[size.use] !== code) return;
-    const run = runs.at(-1);
-    if (run && run.to === index - 1) run.to = index;
-    else runs.push({ from: index, to: index });
-  });
-  if (!runs.length) return "";
-  const text = runs.map(({ from, to }) => {
-    const start = DWELLING_SIZES[from].units;
-    if (from === to) return start;
-    if (to === last) return `${start}+`;
-    return `${start}–${DWELLING_SIZES[to].units}`;
-  });
-  return `${text.join(", ")} ${text.join() === "1" ? "unit" : "units"}`;
-}
-
-/** A table: Residential, Retail, Office down the left; sizes that need a special use permit, Restaurant, Industry down the right. */
-function renderHeadlineUses(zone) {
+/**
+ * A table: Residential, Retail, Office down the left; sizes that need a special use permit, Restaurant,
+ * Industry down the right. Values come from the zone's stored `popup` in zones.json, not from its uses.
+ */
+function renderHeadlineUses(popup) {
   const pair = (label, code) => {
     const { mark, className } = PERMISSIONS[code || "none"];
     return `<td class="${className}">${label}</td><td class="${className}">${mark}</td>`;
   };
-  const useCell = ({ label, use }) => pair(label, zone.uses[use]);
-  const [retail, restaurant, office, industry] = HEADLINE_USES;
-  const allowed = dwellingSizes(zone, "P");
-  const permit = dwellingSizes(zone, "S");
-  const labelCode = allowed ? "P" : permit ? "S" : "none";
+  const labelCode = popup.residential
+    ? "P"
+    : popup.residentialPermit
+      ? "S"
+      : "none";
   // Zones with no special-permit sizes show whether an accessory dwelling ("ADU") is allowed.
-  const adu = zone.uses[ADU_USE];
   const cottage =
-    allowed && !permit
-      ? pair("ADU", adu === "P" || adu === "A" ? "P" : adu)
+    popup.residential && !popup.residentialPermit
+      ? pair("ADU", popup.adu)
       : "<td></td><td></td>";
   const sizeCell = (text, code) =>
     `<td class="${PERMISSIONS[code].className}">${PERMISSIONS[code].mark} ${text}</td>`;
   const rows = [
-    `<td class="${PERMISSIONS[labelCode].className}">Residential</td>${allowed ? sizeCell(allowed, "P") : `<td class="${PERMISSIONS.none.className}">${PERMISSIONS.none.mark}</td>`}${permit ? pair(permit, "S") : cottage}`,
-    useCell(retail) + useCell(restaurant),
-    useCell(office) + useCell(industry),
+    `<td class="${PERMISSIONS[labelCode].className}">Residential</td>${popup.residential ? sizeCell(popup.residential, "P") : `<td class="${PERMISSIONS.none.className}">${PERMISSIONS.none.mark}</td>`}${popup.residentialPermit ? pair(popup.residentialPermit, "S") : cottage}`,
+    pair("Retail", popup.retail) + pair("Restaurant", popup.restaurant),
+    pair("Office", popup.office) + pair("Industry", popup.industry),
   ];
   return `<table class="headline-uses">${rows.map((row) => `<tr>${row}</tr>`).join("")}</table>`;
 }
 
-function renderKeyLimits(zone, dimensionFields) {
-  const limits = POPUP_LIMITS.map(({ label, fields }) => {
-    const field = fields.find((name) => zone.dimensions[name]);
-    if (!field) return null;
-    return `${label} ${summarizeValue(zone.dimensions[field].value, dimensionFields[field].unit)}`;
-  }).filter(Boolean);
-  return limits.length ? `<div>${limits.join(", ")}</div>` : "";
-}
-
 async function renderPopup(zoneId, placeTypeName) {
-  const [zone, { base }] = await Promise.all([getZone(zoneId), loadSiteData()]);
+  const zone = await getZone(zoneId);
+  const popup = zone.index.popup;
   const parts = [`<b>${escapeHtml(zoneTitle(zone))}</b>`];
-  if (placeTypeName)
+  if (placeTypeName && zone.kind === "pd")
     parts.push(`<div class="muted">${escapeHtml(placeTypeName)}</div>`);
-  if (zone.uses) {
-    parts.push(
-      renderHeadlineUses(zone),
-      renderKeyLimits(zone, base.dimensionFields),
-    );
+  if (popup) {
+    parts.push(renderHeadlineUses(popup));
+    if (popup.limits) parts.push(`<div>${escapeHtml(popup.limits)}</div>`);
   } else {
     parts.push("<div>Rules set by ordinance</div>");
   }

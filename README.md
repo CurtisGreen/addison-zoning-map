@@ -8,6 +8,7 @@ Static site in `docs/` (GitHub Pages). No build step: the pages read `docs/data/
 
 ```bash
 npm install
+python -m pip install shapely
 ```
 
 Installs Prettier and a git pre-commit hook that formats staged files.
@@ -22,13 +23,13 @@ Open http://127.0.0.1:8000
 
 ## Data
 
-| File                       | What                                                     | Source                                         |
-| -------------------------- | -------------------------------------------------------- | ---------------------------------------------- |
-| `docs/data/zones.geojson`  | Zone polygons and place type                             | Town GIS, edited by hand                       |
-| `docs/data/zones.json`     | Every zone: acres, place types, SUPs; PD ordinance links | Town GIS, edited by hand                       |
-| `docs/data/standards.json` | Use-specific standards, UDC Article 4 (word for word)    | UDC amendment (Dec 2026)                       |
-| `docs/data/base.json`      | Uses (UDC Table 4.2-1), district dimensions, place types | UDC amendment (Dec 2026), Advance Addison 2050 |
-| `docs/data/pd/<id>.json`   | One PD's changes from its base district                  | PD ordinances (`add-pd` skill)                 |
+| File                            | What                                                     | Source                                         |
+| ------------------------------- | -------------------------------------------------------- | ---------------------------------------------- |
+| `docs/data/zones.geojson`       | Zone polygons and place type                             | Town GIS, edited by hand                       |
+| `docs/data/zones.json`          | Every zone: acres, place types, SUPs; PD ordinance links | Town GIS, edited by hand                       |
+| `docs/data/standards.json`      | Use-specific standards, UDC Article 4 (word for word)    | UDC amendment (Dec 2026)                       |
+| `docs/data/base.json`           | Uses (UDC Table 4.2-1), district dimensions, place types | UDC amendment (Dec 2026), Advance Addison 2050 |
+| `docs/data/pd/<id>-<name>.json` | One PD's changes from its base district                  | PD ordinances (`add-pd` skill)                 |
 
 `docs/data/udc-changes.json` lists what each UDC amendment changed, shown on `udc-changes.html`. Each change has a page in the amendment PDF; changes not yet applied to the map data carry `"onSite": false`. Check it with `python scripts/check_udc_changes.py 2026-12 <amendment.pdf>`.
 
@@ -40,7 +41,7 @@ Every value stores its source page. `review` entries flag values to double-check
 python scripts/fetch_gis.py
 ```
 
-Needs `python -m pip install shapely`. Prints how the Town GIS differs from the data files (zones, acreage, place types, PD ordinances).
+Prints how the Town GIS differs from the data files (zones, acreage, place types, PD ordinances).
 
 ## Query the town GIS
 
@@ -51,6 +52,6 @@ python scripts/gis_api.py udc_zoning "ZONE_CODE = '23-03'"
 
 Run `python scripts/gis_api.py` to list the endpoints.
 
-## Add a PD
+## Add a PD through the skill
 
-In Claude Code: `/add-pd PD 461`. Check the draft against the PDFs, then commit.
+Skill: `/add-pd PD 461`. Then manually check the draft against the PDFs

@@ -82,8 +82,14 @@ export function zoneLabel(zoneId, { base, zoneIndex }) {
 export const zonePageUrl = (zoneId) =>
   `zone.html?id=${encodeURIComponent(zoneId)}`;
 
-const pdFilePath = (zoneId) =>
-  `data/pd/${zoneId.replace("?", "").replaceAll(" ", "-")}.json`;
+/** "PD 461" + "Midway Meadows" -> data/pd/PD-461-Midway-Meadows.json; a PD with no name uses just the id. */
+function pdFilePath(zoneId, name) {
+  const id = zoneId.replace("?", "").replaceAll(" ", "-");
+  const label = (name || "")
+    .replace(/[^A-Za-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+  return `data/pd/${label ? `${id}-${label}` : id}.json`;
+}
 
 /**
  * Everything known about one zone:
@@ -133,7 +139,7 @@ export async function getZone(zoneId) {
   };
   if (!index.done) return zone;
 
-  const pdData = await loadJson(pdFilePath(zoneId));
+  const pdData = await loadJson(pdFilePath(zoneId, index.name));
   const baseDistrict = base.districts[pdData.base];
   const uses =
     pdData.pdUsesOnly || !baseDistrict ? {} : { ...baseDistrict.uses };
@@ -250,28 +256,6 @@ export function formatValue(value, unit) {
     );
   return withUnit(
     value.options.map((option) => option.toLocaleString()).join(" or "),
-    unit,
-  );
-}
-
-/** Numbers inside a value: 30 -> [30], {min: 5, max: 15} -> [5, 15], {options: [15, 20]} -> [15, 20]. */
-function numbersIn(value) {
-  if (typeof value === "number") return [value];
-  if ("min" in value) return [value.min, value.max];
-  return value.options;
-}
-
-/** One short value for the popup. Values that differ by street or building type become a range. */
-export function summarizeValue(value, unit) {
-  if (!isSplit(value)) return formatValue(value, unit);
-  const parts = Object.values(value);
-  if (parts.every((part) => part === "none")) return "None";
-  if (parts.includes("none")) return "varies";
-  const numbers = parts.flatMap(numbersIn);
-  const lowest = Math.min(...numbers);
-  const highest = Math.max(...numbers);
-  return formatValue(
-    lowest === highest ? lowest : { min: lowest, max: highest },
     unit,
   );
 }

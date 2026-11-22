@@ -1,0 +1,27 @@
+{
+  "id": "PD C-828",
+  "name": "Vitruvian West",
+  "base": "PD-CC",
+  "purpose": "",
+  "uses": [],
+  "otherUses": [],
+  "dimensions": {},
+  "parking": [
+    {
+      "use": "Entire development",
+      "requirement": "260 spaces (28 fewer than the required amount at the time)",
+      "ordinance": "082-828",
+      "page": 2,
+      "quote": "to allow 28 parking spaces less than the required amount; therefore, allowing 260 parking spaces"
+    }
+  ],
+  "review": {
+    "base": "The ordinance rezones Apartment (A) to Planned Development, Condominium-Conversion, shown here under the UDC's legacy PD-CC district."
+  },
+  "notes": [
+    "Fire walls are allowed throughout the units except in the areas behind the bathtubs and sinks (variance to the fire wall regulations)."
+  ],
+  "history": {
+    "082-828": "Rezoned Apartment to condominium-conversion PD; 260 parking spaces, fire wall variance"
+  }
+}

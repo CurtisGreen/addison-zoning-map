@@ -10,7 +10,7 @@ description: Add one Addison Planned Development (PD) to the zoning site. Use wh
 - macOS: `brew install poppler tesseract`
 - Windows: `scoop install poppler tesseract` (or `choco install poppler tesseract`), then reopen the terminal
 
-Goal: one draft file, `docs/data/pd/<id>.json`, that the user can check against the PDFs quickly. Accuracy beats completeness: leave a value out and add a `review` note rather than guess.
+Goal: one draft file, `docs/data/pd/<slug>.json` (named as in step 4), that the user can check against the PDFs quickly. Accuracy beats completeness: leave a value out and add a `review` note rather than guess.
 
 ## 1. Pick the PD
 
@@ -51,7 +51,7 @@ It downloads each ordinance in the PD's chain to `pdfs/<id>/`, writes page text 
 
 ## 4. Write `docs/data/pd/<slug>.json`
 
-Slug = id with spaces as `-` and `?` removed (`PD 461` -> `PD-461.json`).
+Slug = id with spaces as `-` and `?` removed, then `-` and the PD's name with each run of other characters as `-` (`PD 461`, "Midway Meadows" -> `PD-461-Midway-Meadows.json`). A PD with no name uses just the id (`PD-461.json`). The site finds the file by the `name` in `zones.json`, so when the name is set or changed, rename the file to match with `git mv`; `scripts/pd.py check` prints a `RENAME` line when they differ.
 
 Scripts never write to `docs/data`. If you generate the JSON with a script, write it to `tmp/<slug>/` (ignored by git), then write `docs/data/pd/<slug>.json` yourself using that as the reference. Temporary files go in `tmp/` or `pdfs/` inside the repo, never the system scratchpad.
 
@@ -135,6 +135,8 @@ python scripts/pd.py check "PD 461"
 ```
 
 Fix every `ERROR` and run again. The script never edits `docs/data`. On a clean run it prints any `UPDATE zones.json` lines (`done`, `name`, `base`); make those edits yourself so the map colors the PD by base and the site loads its details.
+
+Then run `python scripts/build_popups.py` to add the PD's map-popup summary (`popup` in `zones.json`). It only fills zones that have none, so hand edits are kept. Check the values against the ordinance and edit them in `zones.json` where the uses don't map cleanly to UDC names (for example a PD that lists "Multifamily" in `otherUses`).
 
 ## 6. Report
 

@@ -766,30 +766,30 @@
       "dimensions": {
         "lotAreaMin": {
           "value": 16000,
-          "page": 101
+          "page": 102
         },
         "lotWidthMin": {
           "value": 80,
-          "page": 101
+          "page": 102
         },
         "frontSetbackMin": {
           "value": 30,
-          "page": 101
+          "page": 102
         },
         "sideSetbackMin": {
           "value": {
             "Interior": 5,
             "Street": 20
           },
-          "page": 101
+          "page": 102
         },
         "rearSetbackMin": {
           "value": 20,
-          "page": 101
+          "page": 102
         },
         "heightMax": {
           "value": 35,
-          "page": 101
+          "page": 102
         }
       }
     },
@@ -831,11 +831,11 @@
       "dimensions": {
         "lotAreaMin": {
           "value": 5500,
-          "page": 102
+          "page": 103
         },
         "lotWidthMin": {
           "value": 55,
-          "page": 102
+          "page": 103
         },
         "buildTo": {
           "value": {
@@ -844,26 +844,26 @@
               "options": [15, 20]
             }
           },
-          "page": 102
+          "page": 103
         },
         "sideSetbackMin": {
           "value": "none",
-          "page": 102
+          "page": 103
         },
         "rearSetbackMin": {
           "value": {
             "Front-entry": 10,
             "Rear-entry": 5
           },
-          "page": 102
+          "page": 103
         },
         "heightMax": {
           "value": 35,
-          "page": 102
+          "page": 103
         },
         "facadeAtBuildToMin": {
           "value": 60,
-          "page": 102
+          "page": 103
         }
       },
       "tableNotes": {
@@ -930,7 +930,7 @@
             "Triplex/Fourplex": 40,
             "Multifamily Live/Work": "none"
           },
-          "page": 103
+          "page": 104
         },
         "lotWidthMax": {
           "value": {
@@ -940,7 +940,7 @@
             "Triplex/Fourplex": 75,
             "Multifamily Live/Work": "none"
           },
-          "page": 103
+          "page": 104
         },
         "lotDepthMin": {
           "value": {
@@ -950,14 +950,14 @@
             "Triplex/Fourplex": 75,
             "Multifamily Live/Work": "none"
           },
-          "page": 103
+          "page": 104
         },
         "buildTo": {
           "value": {
             "min": 5,
             "max": 15
           },
-          "page": 103
+          "page": 104
         },
         "sideSetbackMin": {
           "value": {
@@ -967,11 +967,11 @@
             "Triplex/Fourplex": 5,
             "Multifamily Live/Work": 5
           },
-          "page": 103
+          "page": 104
         },
         "rearSetbackMin": {
           "value": 10,
-          "page": 103
+          "page": 104
         },
         "heightMax": {
           "value": {
@@ -981,7 +981,7 @@
             "Triplex/Fourplex": 40,
             "Multifamily Live/Work": 48
           },
-          "page": 103
+          "page": 104
         },
         "facadeAtBuildToMin": {
           "value": {
@@ -991,7 +991,7 @@
             "Triplex/Fourplex": 60,
             "Multifamily Live/Work": 75
           },
-          "page": 103
+          "page": 104
         }
       },
       "tableNotes": {
@@ -1081,11 +1081,11 @@
       "dimensions": {
         "lotWidthMin": {
           "value": "none",
-          "page": 105
+          "page": 106
         },
         "lotDepthMin": {
           "value": "none",
-          "page": 105
+          "page": 106
         },
         "buildTo": {
           "value": {
@@ -1110,31 +1110,31 @@
               "max": 10
             }
           },
-          "page": 105
+          "page": 106
         },
         "facadeAtBuildToMin": {
           "value": 75,
-          "page": 105
+          "page": 106
         },
         "sideSetbackMin": {
           "value": "none",
-          "page": 105
+          "page": 106
         },
         "rearSetbackMin": {
           "value": "none",
-          "page": 105
+          "page": 106
         },
         "heightMin": {
           "value": 25,
-          "page": 105
+          "page": 106
         },
         "heightMax": {
           "value": 48,
-          "page": 105
+          "page": 106
         },
         "lotCoverageMax": {
           "value": 95,
-          "page": 105
+          "page": 106
         }
       },
       "tableNotes": {
@@ -1234,11 +1234,11 @@
       "dimensions": {
         "lotWidthMin": {
           "value": "none",
-          "page": 107
+          "page": 108
         },
         "lotDepthMin": {
           "value": "none",
-          "page": 107
+          "page": 108
         },
         "buildTo": {
           "value": {
@@ -1263,31 +1263,31 @@
               "max": 5
             }
           },
-          "page": 107
+          "page": 108
         },
         "facadeAtBuildToMin": {
           "value": 80,
-          "page": 107
+          "page": 108
         },
         "sideSetbackMin": {
           "value": "none",
-          "page": 107
+          "page": 108
         },
         "rearSetbackMin": {
           "value": "none",
-          "page": 107
+          "page": 108
         },
         "heightMin": {
           "value": 25,
-          "page": 107
+          "page": 108
         },
         "heightMax": {
           "value": 70,
-          "page": 107
+          "page": 108
         },
         "lotCoverageMax": {
           "value": 80,
-          "page": 107
+          "page": 108
         }
       },
       "tableNotes": {
@@ -1380,11 +1380,11 @@
       "dimensions": {
         "lotWidthMin": {
           "value": "none",
-          "page": 109
+          "page": 110
         },
         "lotDepthMin": {
           "value": "none",
-          "page": 109
+          "page": 110
         },
         "buildTo": {
           "value": {
@@ -1409,31 +1409,31 @@
               "max": 5
             }
           },
-          "page": 109
+          "page": 110
         },
         "facadeAtBuildToMin": {
           "value": 80,
-          "page": 109
+          "page": 110
         },
         "sideSetbackMin": {
           "value": "none",
-          "page": 109
+          "page": 110
         },
         "rearSetbackMin": {
           "value": "none",
-          "page": 109
+          "page": 110
         },
         "heightMin": {
           "value": 25,
-          "page": 109
+          "page": 110
         },
         "heightMax": {
           "value": 70,
-          "page": 109
+          "page": 110
         },
         "lotCoverageMax": {
           "value": 85,
-          "page": 109
+          "page": 110
         }
       },
       "tableNotes": {
@@ -1523,11 +1523,11 @@
       "dimensions": {
         "lotWidthMin": {
           "value": "none",
-          "page": 111
+          "page": 112
         },
         "lotDepthMin": {
           "value": "none",
-          "page": 111
+          "page": 112
         },
         "buildTo": {
           "value": {
@@ -1552,27 +1552,27 @@
               "max": 5
             }
           },
-          "page": 111
+          "page": 112
         },
         "facadeAtBuildToMin": {
           "value": 80,
-          "page": 111
+          "page": 112
         },
         "sideSetbackMin": {
           "value": "none",
-          "page": 111
+          "page": 112
         },
         "rearSetbackMin": {
           "value": "none",
-          "page": 111
+          "page": 112
         },
         "heightMax": {
           "value": "none",
-          "page": 111
+          "page": 112
         },
         "lotCoverageMax": {
           "value": 100,
-          "page": 111
+          "page": 112
         }
       },
       "review": {
@@ -1666,31 +1666,31 @@
       "dimensions": {
         "lotAreaMin": {
           "value": "none",
-          "page": 113
+          "page": 114
         },
         "lotWidthMin": {
           "value": "none",
-          "page": 113
+          "page": 114
         },
         "frontSetbackMin": {
           "value": 25,
-          "page": 113
+          "page": 114
         },
         "sideSetbackMin": {
           "value": "none",
-          "page": 113
+          "page": 114
         },
         "rearSetbackMin": {
           "value": "none",
-          "page": 113
+          "page": 114
         },
         "heightMax": {
           "value": 35,
-          "page": 113
+          "page": 114
         },
         "lotCoverageMax": {
           "value": 80,
-          "page": 113
+          "page": 114
         }
       },
       "tableNotes": {
@@ -1788,31 +1788,31 @@
       "dimensions": {
         "lotAreaMin": {
           "value": "none",
-          "page": 114
+          "page": 115
         },
         "lotWidthMin": {
           "value": "none",
-          "page": 114
+          "page": 115
         },
         "frontSetbackMin": {
           "value": 25,
-          "page": 114
+          "page": 115
         },
         "sideSetbackMin": {
           "value": "none",
-          "page": 114
+          "page": 115
         },
         "rearSetbackMin": {
           "value": "none",
-          "page": 114
+          "page": 115
         },
         "heightMax": {
           "value": "none",
-          "page": 114
+          "page": 115
         },
         "lotCoverageMax": {
           "value": 80,
-          "page": 114
+          "page": 115
         }
       },
       "tableNotes": {
@@ -1917,31 +1917,31 @@
       "dimensions": {
         "lotAreaMin": {
           "value": "none",
-          "page": 115
+          "page": 116
         },
         "lotWidthMin": {
           "value": "none",
-          "page": 115
+          "page": 116
         },
         "frontSetbackMin": {
           "value": 25,
-          "page": 115
+          "page": 116
         },
         "sideSetbackMin": {
           "value": "none",
-          "page": 115
+          "page": 116
         },
         "rearSetbackMin": {
           "value": "none",
-          "page": 115
+          "page": 116
         },
         "heightMax": {
           "value": 70,
-          "page": 115
+          "page": 116
         },
         "lotCoverageMax": {
           "value": 90,
-          "page": 115
+          "page": 116
         }
       },
       "tableNotes": {
@@ -2083,7 +2083,7 @@
       "dimensions": {
         "lotAreaMin": {
           "value": 43560,
-          "page": 312
+          "page": 316
         },
         "lotAreaPerUnitMin": {
           "value": {
@@ -2091,35 +2091,35 @@
             "1 bedroom": 1600,
             "2 bedroom": 2000
           },
-          "page": 312
+          "page": 316
         },
         "lotWidthMin": {
           "value": 200,
-          "page": 312
+          "page": 316
         },
         "lotDepthMin": {
           "value": 200,
-          "page": 312
+          "page": 316
         },
         "lotCoverageMax": {
           "value": 35,
-          "page": 312
+          "page": 316
         },
         "frontSetbackMin": {
           "value": 30,
-          "page": 312
+          "page": 316
         },
         "sideSetbackMin": {
           "value": 20,
-          "page": 312
+          "page": 316
         },
         "rearSetbackMin": {
           "value": 25,
-          "page": 313
+          "page": 317
         },
         "heightMaxStories": {
           "value": 2,
-          "page": 311
+          "page": 315
         },
         "unitSizeMin": {
           "value": {
@@ -2128,7 +2128,7 @@
             "2 bedroom": 700,
             "3 bedroom": 850
           },
-          "page": 311
+          "page": 315
         }
       },
       "review": {
@@ -2155,7 +2155,7 @@
       "dimensions": {
         "frontSetbackMin": {
           "value": 25,
-          "page": 316
+          "page": 320
         },
         "sideSetbackMin": {
           "value": {
@@ -2163,29 +2163,29 @@
             "1-story condominium": 10,
             "2-story condominium": 15
           },
-          "page": 316
+          "page": 320
         },
         "rearSetbackMin": {
           "value": {
             "Townhouse": 10
           },
-          "page": 316
+          "page": 320
         },
         "densityMax": {
           "value": 18,
-          "page": 316
+          "page": 320
         },
         "lotCoverageMax": {
           "value": 50,
-          "page": 316
+          "page": 320
         },
         "lotAreaPerUnitMin": {
           "value": 2400,
-          "page": 316
+          "page": 320
         },
         "unitSizeMin": {
           "value": 750,
-          "page": 316
+          "page": 320
         }
       },
       "review": {

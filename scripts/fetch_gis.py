@@ -29,6 +29,8 @@ NOT_PARKS = ("Elmntry",)  # school grounds in the parks layer stay zoned
 # Ordinances that amend a PD but are missing from the town map's ordinance list for it
 EXTRA_ORDINANCES = {
     "PD 007-034": [
+        "068-084",
+        "083-074",
         "009-002",
         "008-022",
         "009-036",
@@ -44,6 +46,11 @@ EXTRA_ORDINANCES = {
 # Zones the town map draws separately that belong to another PD
 MERGED_ZONES = {
     "PD O16-018": "PD 007-034",
+}
+# Polygons the town labels PD but that are really a UDC district. PD 84?: the Brooktown Townhouse condos, built
+# 1971-72 on land zoned Apartment (A) by ordinance 068-084; no PD ordinance covers them.
+RECLASSIFIED_ZONES = {
+    "PD 84?": "A",
 }
 KEEP_ZONES = {
     "PD 23-08": "Development site between Addison Circle Park and the DART Addison Transit Center; the parks layer's Addison Circle Park shape overlaps it",
@@ -176,6 +183,8 @@ def main():
         zone_id = district if district != "PD" else f"PD {pd_code or chain[0] + '?'}"
         merged = zone_id in MERGED_ZONES
         zone_id = MERGED_ZONES.get(zone_id, zone_id)
+        if zone_id in RECLASSIFIED_ZONES:
+            zone_id = district = RECLASSIFIED_ZONES[zone_id]
 
         if district == "PD":
             kept = previous.get(zone_id, {})

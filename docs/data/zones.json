@@ -4,7 +4,17 @@
     "AA": {
       "kind": "district",
       "acres": 409.4,
-      "placeTypes": ["Aviation and Industry"]
+      "placeTypes": ["Aviation and Industry"],
+      "popup": {
+        "residential": "",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "P",
+        "limits": "Height 70 ft, Front 25 ft"
+      }
     },
     "LI": {
       "kind": "district",
@@ -13,7 +23,17 @@
         "Aviation and Industry",
         "Urban Village",
         "Inwood Innovation Area"
-      ]
+      ],
+      "popup": {
+        "residential": "",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "P",
+        "limits": "Height 70 ft, Front 25 ft"
+      }
     },
     "CG": {
       "kind": "district",
@@ -23,17 +43,47 @@
         "High Intensity Urban Center",
         "Aviation and Industry",
         "Inwood Innovation Area"
-      ]
+      ],
+      "popup": {
+        "residential": "",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "S",
+        "limits": "No height limit, Front 25 ft"
+      }
     },
     "R-1": {
       "kind": "district",
       "acres": 171.2,
-      "placeTypes": ["Urban Village", "Residential Living"]
+      "placeTypes": ["Urban Village", "Residential Living"],
+      "popup": {
+        "residential": "1 unit",
+        "residentialPermit": "",
+        "adu": "P",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "limits": "Height 35 ft, Front 30 ft"
+      }
     },
     "R-2": {
       "kind": "district",
       "acres": 132.1,
-      "placeTypes": ["Residential Living", "Urban Village"]
+      "placeTypes": ["Residential Living", "Urban Village"],
+      "popup": {
+        "residential": "1 unit",
+        "residentialPermit": "",
+        "adu": "P",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "limits": "Height 35 ft, Build-to 15–20 ft"
+      }
     },
     "CL": {
       "kind": "district",
@@ -44,46 +94,126 @@
         "Aviation and Industry",
         "High Intensity Urban Center",
         "Residential Living"
-      ]
+      ],
+      "popup": {
+        "residential": "",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "",
+        "limits": "Height 35 ft, Front 25 ft"
+      }
     },
     "M-4": {
       "kind": "district",
       "acres": 69.2,
-      "placeTypes": ["Urban Village", "High Intensity Urban Center"]
+      "placeTypes": ["Urban Village", "High Intensity Urban Center"],
+      "popup": {
+        "residential": "5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "",
+        "limits": "No height limit, Build-to 0–10 ft"
+      }
     },
     "A": {
       "kind": "district",
-      "acres": 64.4,
+      "acres": 67.4,
       "placeTypes": [
         "Urban Village",
         "Aviation and Industry",
         "High Intensity Urban Center"
-      ]
+      ],
+      "popup": {
+        "residential": "2, 5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "limits": "Height 2 stories, Front 30 ft"
+      }
     },
     "PD-TH": {
       "kind": "district",
       "acres": 24.8,
-      "placeTypes": ["Urban Village", "Residential Living"]
+      "placeTypes": ["Urban Village", "Residential Living"],
+      "popup": {
+        "residential": "5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "limits": "Front 25 ft"
+      }
     },
     "M-1": {
       "kind": "district",
       "acres": 23.7,
-      "placeTypes": []
+      "placeTypes": [],
+      "popup": {
+        "residential": "1, 3+ units",
+        "residentialPermit": "",
+        "adu": "P",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "",
+        "limits": "Height 48 ft, Build-to 0–15 ft"
+      }
     },
     "M-2": {
       "kind": "district",
       "acres": 15.7,
-      "placeTypes": ["Urban Village"]
+      "placeTypes": ["Urban Village"],
+      "popup": {
+        "residential": "5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "",
+        "limits": "Height 70 ft, Build-to 0–90 ft"
+      }
     },
     "R-3": {
       "kind": "district",
       "acres": 10.7,
-      "placeTypes": ["Residential Living"]
+      "placeTypes": ["Residential Living"],
+      "popup": {
+        "residential": "1–4 units",
+        "residentialPermit": "5+ units",
+        "adu": "P",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "limits": "Height 35–48 ft, Build-to 5–15 ft"
+      }
     },
     "PD-CC": {
       "kind": "district",
       "acres": 10.2,
-      "placeTypes": ["High Intensity Urban Center"]
+      "placeTypes": ["High Intensity Urban Center"],
+      "popup": {
+        "residential": "5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "limits": ""
+      }
     },
     "PD 007-034": {
       "kind": "pd",
@@ -93,6 +223,12 @@
       "acres": 116.4,
       "mainOrdinance": "007-034",
       "ordinances": [
+        {
+          "id": "068-084",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1968/84%20-%201968.pdf",
+          "date": "1968-01-01",
+          "description": "Assign zoning classification as Apartment (A)"
+        },
         {
           "id": "074-171",
           "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1974/171%20-%201974.pdf",
@@ -104,6 +240,12 @@
           "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1976/267%20-%201976.pdf",
           "date": "1976-06-08",
           "description": "Variance to Aparatment (A) zoning to allow smaller, 3 story units (The Pier Apartments)"
+        },
+        {
+          "id": "083-074",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-074%20-%201983.pdf",
+          "date": "1983-11-22",
+          "description": "Change the zoning from “LR” Local Retail to “PD” Planned Development"
         },
         {
           "id": "007-034",
@@ -179,7 +321,17 @@
         }
       ],
       "placeTypes": ["Urban Village"],
-      "family": "mixed"
+      "family": "mixed",
+      "popup": {
+        "residential": "5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "S",
+        "office": "P",
+        "industry": "",
+        "limits": "No height limit, Build-to 4–9 ft"
+      }
     },
     "PD 461": {
       "kind": "pd",
@@ -196,7 +348,17 @@
           "description": "Change zoning from Residential to Planned Development"
         }
       ],
-      "placeTypes": ["Residential Living"]
+      "placeTypes": ["Residential Living"],
+      "popup": {
+        "residential": "1–2 units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "limits": "Height 35 ft, Front 10–25 ft"
+      }
     },
     "PD 91-038": {
       "kind": "pd",
@@ -312,7 +474,17 @@
         }
       ],
       "placeTypes": ["Urban Village"],
-      "family": "commercial"
+      "family": "commercial",
+      "popup": {
+        "residential": "",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "limits": ""
+      }
     },
     "PD 93-057": {
       "kind": "pd",
@@ -1322,9 +1494,9 @@
     },
     "PD C-828": {
       "kind": "pd",
-      "name": "",
-      "base": null,
-      "done": false,
+      "name": "Vitruvian West",
+      "base": "PD-CC",
+      "done": true,
       "acres": 5.1,
       "mainOrdinance": null,
       "ordinances": [
@@ -1335,7 +1507,17 @@
           "description": "Change zoning from Apartment (A) to Planned Development-Condo"
         }
       ],
-      "placeTypes": ["Urban Village"]
+      "placeTypes": ["Urban Village"],
+      "popup": {
+        "residential": "5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "limits": ""
+      }
     },
     "PD O17-06": {
       "kind": "pd",
@@ -1697,16 +1879,6 @@
       ],
       "placeTypes": ["Urban Village"]
     },
-    "PD 84?": {
-      "kind": "pd",
-      "name": "",
-      "base": null,
-      "done": false,
-      "acres": 3.0,
-      "mainOrdinance": null,
-      "ordinances": [],
-      "placeTypes": ["Urban Village"]
-    },
     "PD 93-008": {
       "kind": "pd",
       "name": "",
@@ -1955,7 +2127,17 @@
           "description": "Change zoning from Commercial (C) to Planned Development (PD) and approval of a site development plan"
         }
       ],
-      "placeTypes": ["Urban Village"]
+      "placeTypes": ["Urban Village"],
+      "popup": {
+        "residential": "",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "S",
+        "limits": "No height limit, Front 25 ft"
+      }
     },
     "PD 094-043": {
       "kind": "pd",

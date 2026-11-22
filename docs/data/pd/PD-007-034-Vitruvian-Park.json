@@ -763,7 +763,7 @@
   "review": {
     "buildTo": "A to E streets are shown on the Concept Plan. Measured from the closest right-of-way line. Not required in Block 211.",
     "facadeAtBuildToMin": "The text says not more than 30% of any street frontage (50% in Block 102) may vary from the build-to line. Not required in Block 211.",
-    "heightMax": "The 60 ft limit applies to the part of a building within 100 ft of land zoned single family or apartment or used for residential. All heights are subject to FAA approval. Turrets, spires, and towers may be up to 15 ft above the maximum.",
+    "heightMax": "The 60 ft limit applies to the part of a building within 100 ft of land zoned single family or apartment or used for residential. All heights are subject to FAA approval. Within that 60 ft zone, turrets, spires, and towers may be up to 15 ft taller if their floorplate is 10% or less of the building's ground floor area.",
     "lotCoverageMax": "Porches and arcades fronting a public street are excluded. Above-grade parking structures are included.",
     "garageExposedLengthMax": "Longer is allowed when the structure has enhanced facade elements such as living walls or artistic design.",
     "masonryMin": "Masonry includes brick, stone, cultured stone, glazing and plate glass, and split face concrete masonry units.",
@@ -790,8 +790,10 @@
   ],
   "acresWithRoads": 120.91,
   "history": {
+    "068-084": "Assigned Apartment (A) zoning to a large tract east of Marsh Lane",
     "074-171": "Rezoned to Apartment (A) for 3-story apartments",
     "076-267": "Variance to Apartment (A) zoning for smaller 3-story units (The Pier Apartments)",
+    "083-074": "Rezoned 0.5 acre from local retail to PD for a Goodyear Tire and Service site",
     "007-034": "Rezoned to Planned Development for a phased mixed-use development (Brookhaven Village)",
     "008-022": "Development plan for a multifamily building on 10.3 acres, with an 8 ft screening wall and trees next to Brooktown Townhomes",
     "009-002": "Updated street designs for the main boulevard",
