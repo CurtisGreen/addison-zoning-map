@@ -1,0 +1,148 @@
+{
+  "id": "PD 86-001",
+  "name": "Hallmark Center",
+  "family": "commercial",
+  "base": null,
+  "pdUsesOnly": true,
+  "purpose": "",
+  "uses": [],
+  "otherUses": [
+    {
+      "text": "Office (2,670,000 sq ft)",
+      "group": "Building area",
+      "ordinance": "086-001",
+      "page": 7,
+      "quote": "OFFICE USE : 2,670,000 SQ.FT."
+    },
+    {
+      "text": "Hotel (260,000 sq ft)",
+      "group": "Building area",
+      "ordinance": "086-001",
+      "page": 7,
+      "quote": "HOTEL USE : 260,000 SQ.FT."
+    },
+    {
+      "text": "General retail (50,000 sq ft)",
+      "group": "Building area",
+      "ordinance": "086-001",
+      "page": 7,
+      "quote": "GENERAL RETAIL USE : 50,000 SQ.FT."
+    },
+    {
+      "text": "Restaurant (30,000 sq ft)",
+      "group": "Building area",
+      "ordinance": "086-001",
+      "page": 7,
+      "quote": "RESTAURANT USE : 30,000 SQ.FT."
+    }
+  ],
+  "dimensions": {
+    "heightMax": {
+      "value": 200,
+      "ordinance": "086-001",
+      "page": 7,
+      "quote": "MAXIMUM HEIGHT 200' HEIGHT ( SUBJECT TO FAA APPROVAL )"
+    },
+    "floorAreaRatioMax": {
+      "value": 3,
+      "ordinance": "086-001",
+      "page": 3,
+      "quote": "The average Floor Area Ratio"
+    },
+    "frontSetbackMin": {
+      "value": 25,
+      "ordinance": "086-001",
+      "page": 7,
+      "quote": "25' FRONT YARD SETBACK"
+    }
+  },
+  "parking": [
+    {
+      "use": "Office",
+      "requirement": "3.3 per 1,000 sq ft",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft"
+        }
+      ],
+      "ordinance": "086-001",
+      "page": 7,
+      "quote": "PARKING 1/300 SQ.FT."
+    },
+    {
+      "use": "Hotel",
+      "requirement": "1 per guest room",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1,
+          "unit": "guest room"
+        }
+      ],
+      "ordinance": "086-001",
+      "page": 7,
+      "quote": "PARKING 1/GUEST ROOM"
+    },
+    {
+      "use": "General retail",
+      "requirement": "5 per 1,000 sq ft",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 200,
+          "unit": "sq ft"
+        }
+      ],
+      "ordinance": "086-001",
+      "page": 7,
+      "quote": "PARKING 1/200 SQ.FT."
+    },
+    {
+      "use": "Restaurant",
+      "requirement": "10 per 1,000 sq ft",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 100,
+          "unit": "sq ft"
+        }
+      ],
+      "ordinance": "086-001",
+      "page": 7,
+      "quote": "PARKING 1/100 SQ.FT."
+    }
+  ],
+  "review": {
+    "uses": "The ordinance text lists no uses. These come from the General Notes on the 1986 conceptual site plan (Exhibit page 7), which the development must follow. The square footages are the plan's building areas.",
+    "heightMax": "Subject to FAA approval. All proposed building heights are also reviewed by the FAA.",
+    "floorAreaRatioMax": "An average for the whole property, set at 3 to 1 and subject to review case by case.",
+    "frontSetbackMin": "From the General Notes on the 1986 conceptual site plan. The 1995 site plan shows 25 ft building setback lines along Keller Springs Road, Airport Parkway and the Dallas North Tollway service road."
+  },
+  "notes": [
+    "Development must follow the development plans attached to ordinances 086-001 and 095-058.",
+    {
+      "heading": "Conditions from the 1986 ordinance",
+      "items": [
+        "The property must be platted under the Subdivision Regulations.",
+        "The developer must work with the Addison Fire Department on future fire safety provisions.",
+        "The developer must dedicate more right-of-way on Quorum Drive for a right-turn lane and share in the cost of any new traffic signals for the site.",
+        "The developer must follow the Addison Landscape Department's comments and recommendations."
+      ]
+    },
+    {
+      "heading": "Conditions from the 1995 development plan",
+      "items": [
+        "Before a building permit for the new building, dedicate right-of-way: 20 ft along Keller Springs Road and 11 ft along Quorum Drive.",
+        "Build 5-foot sidewalks along Airport Parkway, Keller Springs Road and Dallas Parkway. The Keller Springs Road sidewalk along the parking lot waits until four months after the road is widened, or four months after the City says it will not be widened.",
+        "Submit a detailed landscaping and irrigation plan for approval before a building permit.",
+        "Drive throats along Keller Springs Road must be at least 35 ft after the road is widened."
+      ]
+    }
+  ],
+  "history": {
+    "086-001": "Rezoned 25 acres from Commercial to PD, with a 3-to-1 average floor area ratio",
+    "095-058": "Approved development plans for a Hallmark Center expansion, with road and sidewalk conditions"
+  }
+}

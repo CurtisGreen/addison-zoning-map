@@ -852,7 +852,7 @@
     },
     {
       "use": "Bank or savings and loan",
-      "requirement": "3.33 per 1,000 sq ft GFA",
+      "requirement": "3.3 per 1,000 sq ft GFA",
       "rates": [
         {
           "spaces": 1,
@@ -866,7 +866,7 @@
     },
     {
       "use": "Office",
-      "requirement": "3.33 per 1,000 sq ft GFA (gross leaseable area for buildings of 50,000 sq ft or more)",
+      "requirement": "3.3 per 1,000 sq ft GFA (gross leaseable area for buildings of 50,000 sq ft or more)",
       "rates": [
         {
           "spaces": 1,
@@ -910,7 +910,7 @@
     },
     {
       "use": "Hotel",
-      "requirement": "1 per room, plus 3.33 per 1,000 sq ft of conference or banquet space",
+      "requirement": "1 per room, plus 3.3 per 1,000 sq ft of conference or banquet space",
       "rates": [
         {
           "spaces": 1,

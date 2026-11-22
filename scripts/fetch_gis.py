@@ -28,6 +28,7 @@ NOT_PARKS = ("Elmntry",)  # school grounds in the parks layer stay zoned
 # Zones that stay on the map even where the parks layer covers them
 # Ordinances that amend a PD but are missing from the town map's ordinance list for it
 EXTRA_ORDINANCES = {
+    "PD O20-47": ["008-054"],
     "PD 007-034": [
         "068-084",
         "083-074",

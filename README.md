@@ -1,6 +1,6 @@
-# Addison Zoning
+# Addison Zoning Map
 
-Zoning map of Addison, TX. Hover for the zone name, click for uses, limits, place type, and source links.
+Detailed zoning map of Addison, TX
 
 Static site in `docs/` (GitHub Pages). No build step: the pages read `docs/data/*.json` directly.
 
@@ -13,13 +13,13 @@ python -m pip install shapely
 
 Installs Prettier and a git pre-commit hook that formats staged files.
 
-## Preview
+## Run
 
 ```bash
-python -m http.server 8000 -d docs
+python scripts/serve.py
 ```
 
-Open http://127.0.0.1:8000
+Open localhost:8000
 
 ## Data
 
@@ -28,12 +28,10 @@ Open http://127.0.0.1:8000
 | `docs/data/zones.geojson`       | Zone polygons and place type                             | Town GIS, edited by hand                       |
 | `docs/data/zones.json`          | Every zone: acres, place types, SUPs; PD ordinance links | Town GIS, edited by hand                       |
 | `docs/data/standards.json`      | Use-specific standards, UDC Article 4 (word for word)    | UDC amendment (Dec 2026)                       |
-| `docs/data/base.json`           | Uses (UDC Table 4.2-1), district dimensions, place types | UDC amendment (Dec 2026), Advance Addison 2050 |
+| `docs/data/base.json`           | Uses, dimensions, place types                            | UDC amendment (Dec 2026), Advance Addison 2050 |
 | `docs/data/pd/<id>-<name>.json` | One PD's changes from its base district                  | PD ordinances (`add-pd` skill)                 |
 
 `docs/data/udc-changes.json` lists what each UDC amendment changed, shown on `udc-changes.html`. Each change has a page in the amendment PDF; changes not yet applied to the map data carry `"onSite": false`. Check it with `python scripts/check_udc_changes.py 2026-12 <amendment.pdf>`.
-
-Every value stores its source page. `review` entries flag values to double-check.
 
 ## Check the map against the town
 

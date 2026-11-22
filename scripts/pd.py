@@ -17,7 +17,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "docs" / "data"
 PDFS = ROOT / "pdfs"
-PERMISSIONS = {"P", "S", "A", "T"}  # by right, special use permit, accessory, temporary
+# by right, special use permit, development plan approval (PDs only), accessory, temporary
+PERMISSIONS = {"P", "S", "D", "A", "T"}
 GARBLED_CHARACTERS = "~=^"
 GARBLED_THRESHOLD = 8
 # An acreage whose decimal point was lost, such as "4 5 611 acres" or "21 8 acres".
@@ -225,11 +226,11 @@ def check(pd_id, pd, index):
         if use.get("name") not in use_names:
             errors.append(f"{label}: not a UDC use name (put non-matching uses in otherUses)")
         if use.get("permission") not in PERMISSIONS | {"none"}:
-            errors.append(f"{label}: permission must be P, S, A, T, or none")
+            errors.append(f"{label}: permission must be P, S, D, A, T, or none")
         check_evidence(label, use)
     for i, use in enumerate(pd_data.get("otherUses", [])):
         if use.get("permission", "P") not in PERMISSIONS:
-            errors.append(f"otherUses[{i}]: permission must be P, S, A, or T (or left out)")
+            errors.append(f"otherUses[{i}]: permission must be P, S, D, A, or T (or left out)")
         check_evidence(f"otherUses[{i}]", use)
     for i, row in enumerate(pd_data.get("parking", [])):
         if not row.get("use") or not row.get("requirement"):
@@ -237,6 +238,12 @@ def check(pd_id, pd, index):
         for rate in row.get("rates", []):
             if not all(isinstance(rate.get(k), (int, float)) for k in ("spaces", "per")) or not rate.get("unit"):
                 errors.append(f"parking[{i}]: each rate needs numbers spaces and per, and a unit")
+                continue
+            if rate["unit"].startswith("sq ft"):  # floor-area ratios read "X per 1,000 sq ft ..."
+                per_thousand = f"{1000 * rate['spaces'] / rate['per']:.1f}".rstrip("0").rstrip(".")
+                if f"{per_thousand} per 1,000 sq ft" not in row.get("requirement", ""):
+                    errors.append(f"parking[{i}]: requirement must say '{per_thousand} per 1,000 sq ft ...' "
+                                  f"for the rate 1 per {rate['per']}: {row.get('requirement')!r}")
         check_evidence(f"parking[{i}]", row)
     for field, dimension in pd_data.get("dimensions", {}).items():
         if field not in base["dimensionFields"]:

@@ -1,0 +1,638 @@
+{
+  "id": "PD 94-011",
+  "name": "Mary Kay",
+  "family": "commercial",
+  "base": null,
+  "pdUsesOnly": true,
+  "purpose": "",
+  "uses": [],
+  "otherUses": [
+    {
+      "text": "Antique shop",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Antique shop Aquarium"
+    },
+    {
+      "text": "Aquarium",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Aquarium Art gallery"
+    },
+    {
+      "text": "Art gallery",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Art gallery Auto seat covers, covering"
+    },
+    {
+      "text": "Auto seat covers, covering",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Auto seat covers, covering"
+    },
+    {
+      "text": "Baker, retail or wholesale",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Baker, retail or wholesale"
+    },
+    {
+      "text": "Bank, office, wholesale sales office or sample room",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Bank, office, wholesale sales office or sample room"
+    },
+    {
+      "text": "Barber and beauty shop",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Barber and beauty shop"
+    },
+    {
+      "text": "Bird and pet shops",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Bird and pet shops"
+    },
+    {
+      "text": "Book or stationery store",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Book or stationery store"
+    },
+    {
+      "text": "Camera shop",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Camera shop Candy, cigars and tobaccos"
+    },
+    {
+      "text": "Candy, cigars and tobaccos",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Candy, cigars and tobaccos"
+    },
+    {
+      "text": "Caterer and wedding service",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Caterer and wedding service"
+    },
+    {
+      "text": "Cleaning and pressing shops having an area of not more than 6,000 square feet",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Cleaning and pressing shops having an area of not more than 6,000 square feet"
+    },
+    {
+      "text": "Curtain cleaning shop having an area of not more than 6,000 square feet",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Curtain cleaning shop having an area of not more than 6,000 square feet"
+    },
+    {
+      "text": "Day nurseries and day care facilities",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Day nurseries and day care facilities",
+      "permission": "D"
+    },
+    {
+      "text": "Department store, novelty or variety shop, retail sales only and under 50,000 square feet in total floor area",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Department store, novelty or variety shop, retail sales only and under 50,000 square feet in total floor area"
+    },
+    {
+      "text": "Drug store",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Drug store Electrical lighting fixtures and supplies for consumer use"
+    },
+    {
+      "text": "Electrical lighting fixtures and supplies for consumer use",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Electrical lighting fixtures and supplies for consumer use"
+    },
+    {
+      "text": "Electrical repair, domestic equipment and autos",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Electrical repair, domestic equipment and autos"
+    },
+    {
+      "text": "Exterminating company",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Exterminating company"
+    },
+    {
+      "text": "Film developing and printing",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 6,
+      "quote": "Film developing and printing"
+    },
+    {
+      "text": "Fix-it shops, bicycle repairs, saw filing, lawn mower sharpening",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Fix-it shops, bicycle repairs, saw filing, lawn mower sharpening"
+    },
+    {
+      "text": "Florist",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Florist Furniture repairs and upholstering, where all storage and display is within the building"
+    },
+    {
+      "text": "Furniture repairs and upholstering, where all storage and display is within the building",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Furniture repairs and upholstering, where all storage and display is within the building"
+    },
+    {
+      "text": "Frozen food lockers",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Frozen food lockers"
+    },
+    {
+      "text": "Gallery, for the display and sale of artworks",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Gallery, for the display and sale of artworks"
+    },
+    {
+      "text": "Gasoline sales",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Gasoline sales",
+      "permission": "D"
+    },
+    {
+      "text": "General Services shops for maids, tax preparers, book-keeping",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "General Services shops for maids, tax preparers, book-keeping"
+    },
+    {
+      "text": "Grocery store or convenience store",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Grocery store or convenience store"
+    },
+    {
+      "text": "Hardware, sporting goods, toys, paints, wallpaper, clothing",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Hardware, sporting goods, toys, paints, wallpaper, clothing"
+    },
+    {
+      "text": "Hotel and Motel",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Hotel and Motel"
+    },
+    {
+      "text": "Health Club, public or private",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Health Club, public or private"
+    },
+    {
+      "text": "Household and office furniture, furnishings and appliances",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Household and office furniture, furnishings and appliances"
+    },
+    {
+      "text": "Jewelry, optical goods, photographic supplies",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Jewelry, optical goods, photographic supplies"
+    },
+    {
+      "text": "Job printing",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Job printing Ice delivery station"
+    },
+    {
+      "text": "Ice delivery station",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Ice delivery station"
+    },
+    {
+      "text": "Laundromat, equipped with automatic washing machines of the type customarily found in a home and where the customers may personally supervise the washing and handling of their laundry",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Laundromat, equipped with automatic washing machines of the type customarily found in a home and where the customers may personally supervise the washing and handling of their laundry"
+    },
+    {
+      "text": "Letter and mimeograph shop",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Letter and mimeograph shop"
+    },
+    {
+      "text": "Library, rental",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Library, rental"
+    },
+    {
+      "text": "Manufacturing facility",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Manufacturing facility",
+      "permission": "D"
+    },
+    {
+      "text": "Meat market",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Meat market Medical and Dental offices"
+    },
+    {
+      "text": "Medical and Dental offices",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Medical and Dental offices"
+    },
+    {
+      "text": "Mortuary",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Mortuary Office building"
+    },
+    {
+      "text": "Office building",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Office building"
+    },
+    {
+      "text": "Office/service/showroom, the office/showroom component is limited to a facility for the regular transaction of business and for the display of uncontainerized merchandise in a finished building setting, and the service component of this use is limited to not more than seventy-five percent (75%) of the floor area of the use",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Office/service/showroom, the office/showroom component is limited to a facility for the regular transaction of business and for the display of uncontainerized merchandise in a finished building settin"
+    },
+    {
+      "text": "Parking lot without public garage or automobile facilities for the parking of passenger cars and trucks or less than one (1) ton capacity only",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Parking lot without public garage or automobile facilities for the parking of passenger cars and trucks"
+    },
+    {
+      "text": "Photographers or artists studio",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Photographers or artists studio"
+    },
+    {
+      "text": "Private Clubs",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Private Clubs",
+      "permission": "D"
+    },
+    {
+      "text": "Professional offices for architect, attorney, engineer and real estate",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Professional offices for architect, attorney, engineer and real estate"
+    },
+    {
+      "text": "Public garage, parking no repairs",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Public garage, parking no repairs"
+    },
+    {
+      "text": "Piano and musical instruments",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 7,
+      "quote": "Piano and musical instruments"
+    },
+    {
+      "text": "Plumbing shop, without warehouse facilities (to include storage for ordinary repairs, but not storage for materials for contracting work)",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Plumbing shop, without warehouse facilities (to include storage for ordinary repairs, but not storage for materials for contracting work)"
+    },
+    {
+      "text": "Restaurant without drive-in service",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Restaurant without drive-in service",
+      "permission": "D"
+    },
+    {
+      "text": "Retail store or shop for custom work or the making of articles to be sold for retail on the premises",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Retail store or shop for custom work or the making of articles to be sold for retail on the premises"
+    },
+    {
+      "text": "Sale of alcohol for on-premises consumption only",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Sale of alcohol for on-premises consumption only",
+      "permission": "D"
+    },
+    {
+      "text": "Satellite Earth Station",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Satellite Earth Station",
+      "permission": "D"
+    },
+    {
+      "text": "Seamstress, dressmaker or tailor",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Seamstress, dressmaker or tailor"
+    },
+    {
+      "text": "Shoe repair shop",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Shoe repair shop"
+    },
+    {
+      "text": "Studios, dance, music, drama, health, and reducing",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Studios, dance, music, drama, health, and reducing"
+    },
+    {
+      "text": "Studio for the display and sale of glass, china, sculpture, art objects, cloth and draperies",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Studio for the display and sale of glass, china, sculpture, art objects, cloth and draperies"
+    },
+    {
+      "text": "Taxi stand",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Taxi stand Video equipment and cassettes, sales and rental"
+    },
+    {
+      "text": "Video equipment and cassettes, sales and rental",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Video equipment and cassettes, sales and rental"
+    },
+    {
+      "text": "Warehouse and distribution facility",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Warehouse and distribution facility",
+      "permission": "D"
+    },
+    {
+      "text": "Washateria, equipped with automatic washing machines of the type customarily found in a home and where the customers may personally supervise the washing and handling of their laundry",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Washateria, equipped with automatic washing machines of the type customarily found in a home and where the customers may personally supervise the washing and handling of their laundry"
+    },
+    {
+      "text": "Wearing apparel, including clothing, shoes, hats, millinery, and accessories",
+      "group": "Use regulations",
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "Wearing apparel, including clothing, shoes, hats, millinery, and accessories"
+    }
+  ],
+  "dimensions": {
+    "heightMaxStories": {
+      "value": 6,
+      "ordinance": "094-011",
+      "page": 8,
+      "quote": "No building or structure shall exceed six (6) standard stories in height"
+    },
+    "frontSetbackMin": {
+      "value": 25,
+      "ordinance": "094-011",
+      "page": 9,
+      "quote": "The minimum required front yard is twenty-five (25)"
+    },
+    "sideSetbackMin": {
+      "value": {
+        "Street": 25,
+        "Next to apartment district": 10,
+        "Elsewhere": "none"
+      },
+      "ordinance": "094-011",
+      "page": 9,
+      "quote": "On a corner lot, a minimum required side yard of twenty-five (25) feet must be provided on the side street"
+    },
+    "rearSetbackMin": {
+      "value": {
+        "Street": "none",
+        "Next to apartment district": 10,
+        "Elsewhere": "none"
+      },
+      "ordinance": "094-011",
+      "page": 9,
+      "quote": "If a rear lot line in this district abuts an apartment district"
+    }
+  },
+  "parking": [
+    {
+      "use": "Existing Corporate I building, all uses",
+      "requirement": "3.3 per 1,000 sq ft net usable",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft net usable"
+        }
+      ],
+      "ordinance": "094-011",
+      "page": 9,
+      "quote": "under the ratio of 1 space per 300 square feet of net usable"
+    },
+    {
+      "use": "General retail",
+      "requirement": "5 per 1,000 sq ft floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 200,
+          "unit": "sq ft floor area"
+        }
+      ],
+      "ordinance": "094-011",
+      "page": 10,
+      "quote": "General retail: (1/200 s.f.) One space per each two hundred square feet of floor area"
+    },
+    {
+      "use": "Furniture store",
+      "requirement": "1 per 1,000 sq ft floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1000,
+          "unit": "sq ft floor area"
+        }
+      ],
+      "ordinance": "094-011",
+      "page": 10,
+      "quote": "Furniture Store"
+    },
+    {
+      "use": "Medical or dental clinics",
+      "requirement": "5 per 1,000 sq ft floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 200,
+          "unit": "sq ft floor area"
+        }
+      ],
+      "ordinance": "094-011",
+      "page": 10,
+      "quote": "Medical or Dental Clinics"
+    },
+    {
+      "use": "Banks or savings and loans",
+      "requirement": "3.3 per 1,000 sq ft floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft floor area"
+        }
+      ],
+      "ordinance": "094-011",
+      "page": 10,
+      "quote": "Banks or Savings and Loans"
+    },
+    {
+      "use": "Office",
+      "requirement": "3.3 per 1,000 sq ft gross floor area (net usable area for an office building or group of buildings of 50,000 sq ft or more)",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft gross floor area"
+        }
+      ],
+      "ordinance": "094-011",
+      "page": 10,
+      "quote": "One space per each three hundred square feet of gross floor area"
+    },
+    {
+      "use": "Service",
+      "requirement": "1 per 1,000 sq ft floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1000,
+          "unit": "sq ft floor area"
+        }
+      ],
+      "ordinance": "094-011",
+      "page": 10,
+      "quote": "one space per each one thousand square feet of floor area"
+    },
+    {
+      "use": "Health club or studio for dance, music, drama, health, and reducing",
+      "requirement": "10 per 1,000 sq ft",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 100,
+          "unit": "sq ft"
+        }
+      ],
+      "ordinance": "094-011",
+      "page": 10,
+      "quote": "Health Club or Studio for dance, music, drama, health"
+    }
+  ],
+  "review": {
+    "heightMaxStories": "Taller buildings must set the extra height back one foot from the street line for every two feet above six stories. FAA limits also apply.",
+    "sideSetbackMin": "A corner lot that abuts an apartment district needs 25 ft on the side street. Other lots that abut an apartment district need 10 ft."
+  },
+  "notes": [
+    "The existing Corporate One building may use any use allowed under its Phase One development plans, as well as any listed use.",
+    "At least 80 percent of the exterior walls of all structures must be masonry, not counting door and window openings. All facades visible from a divided thoroughfare must be brick or stone construction. Glass tile, glass block and plate glass may count as masonry.",
+    "Before a development plan is approved, owners within 200 ft are notified and a public hearing is held.",
+    "Loading facilities must be screened. On lots that abut a 4-lane divided thoroughfare, no loading facility may face it or sit on the side next to it.",
+    "Outside sales and commercial promotions need a permit: up to 14 days a year and two permits per business per year, with goods on a sidewalk within 10 ft of the building.",
+    "Long-term outside storage of equipment, buildings, goods and products is prohibited, except on construction sites.",
+    "Mechanical equipment must be screened from public streets. Refuse containers must be screened from public rights-of-way and sit on a reinforced concrete pad."
+  ],
+  "history": {
+    "094-011": "Rezoned Commercial to PD on 34 acres, replacing the 1984 PD's uses and standards"
+  }
+}

@@ -1,9 +1,10 @@
 // Loads the data files and turns a zone id into one zone object, for districts and planned developments (PDs) alike.
 
-/** Permission codes from UDC Table 4.2-1, plus "none" for a use a PD removes. */
+/** Permission codes from UDC Table 4.2-1, plus "D" (a PD use that needs development plan approval) and "none" for a use a PD removes. */
 export const PERMISSIONS = {
   P: { mark: "✓", label: "By right", className: "allowed" },
   S: { mark: "S", label: "Special use permit", className: "permit" },
+  D: { mark: "D", label: "Development plan approval", className: "permit" },
   A: { mark: "A", label: "Accessory", className: "accessory" },
   T: { mark: "T", label: "Temporary", className: "accessory" },
   none: { mark: "—", label: "Not allowed", className: "not-allowed" },
@@ -181,17 +182,6 @@ export function sourceHtml(zone) {
   if (ordinances.length > 1) return `${ordinances.length} ordinances`;
   const [only] = ordinances;
   return only ? externalLink({ label: `Ord. ${only.id}`, url: only.url }) : "";
-}
-
-export function placeTypeInfo(name, base) {
-  const placeType = base.placeTypes[name];
-  return (
-    placeType && {
-      name,
-      ...placeType,
-      url: `${base.sources.plan.url}#page=${placeType.page}`,
-    }
-  );
 }
 
 const HTML_ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" };

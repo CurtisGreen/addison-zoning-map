@@ -1,6 +1,7 @@
 """Fill in the static map-popup summary (`popup`) of each zone in docs/data/zones.json.
 
-  python scripts/build_popups.py            add `popup` to every zone that has data and none yet
+  python scripts/build_popups.py            add `popup` to every zone that has data and none yet, and any
+                                            new field to popups written before it existed
   python scripts/build_popups.py --force    recompute every zone, replacing hand edits
   python scripts/build_popups.py --dry-run  print what would be added, change nothing
 
@@ -12,7 +13,7 @@ Zones whose data is not written yet (a PD with no docs/data/pd file) get no `pop
   residential        building sizes allowed by right, such as "1 unit" or "5+ units"; "" if none
   residentialPermit  sizes that need a special use permit; "" if none
   adu                P, S or "" for an accessory dwelling; shown only when residentialPermit is empty
-  retail, restaurant, office, industry   P, S, A, T or "" (not allowed)
+  retail, restaurant, office, industry, hotel, daycare   P, S, D, A, T or "" (not allowed)
   limits             text such as "Height 35 ft, Front 30 ft"
 """
 import json
@@ -35,6 +36,8 @@ HEADLINE = {
     "restaurant": "Restaurant",
     "office": "Office",
     "industry": "Manufacturing, low-impact",
+    "hotel": "Hotel, Full Service",
+    "daycare": "Day care center, adult or child",
 }
 ADU_USE = "Dwelling, accessory (ADU)"
 LIMITS = [
@@ -150,7 +153,12 @@ def build_popup(uses, dimensions, base):
         if field:
             unit = base["dimensionFields"][field]["unit"]
             text = summarize_value(dimensions[field]["value"], unit)
-            limits.append("No height limit" if label == "Height" and text == "None" else f"{label} {text}")
+            if label == "Height" and text == "None":  # no maximum: say so, or give the minimum when there is one
+                minimum = dimensions.get("heightMin")
+                text = f"Min height {summarize_value(minimum['value'], 'ft')}" if minimum else "No height limit"
+                limits.append(text)
+            else:
+                limits.append(f"{'Max height' if label == 'Height' else label} {text}")
     popup = {
         "residential": allowed,
         "residentialPermit": permit,
@@ -170,14 +178,22 @@ def main():
     index = read_json(DATA / "zones.json")
     added = []
     for zone_id, entry in index["zones"].items():
-        if "popup" in entry and not force:
-            continue
         found = zone_data(zone_id, base, entry)
         if not found:
             continue
-        entry["popup"] = build_popup(*found, base)
+        built = build_popup(*found, base)
+        if "popup" in entry and not force:
+            # keep every stored value, add only fields the popup gained since it was written
+            merged = {key: entry["popup"].get(key, value) for key, value in built.items()}
+            if merged == entry["popup"]:
+                continue
+            new_keys = [key for key in built if key not in entry["popup"]]
+            entry["popup"] = merged
+            print(f"{zone_id}: added {', '.join(new_keys)}")
+        else:
+            entry["popup"] = built
+            print(f"{zone_id}: {json.dumps(built, ensure_ascii=False)}")
         added.append(zone_id)
-        print(f"{zone_id}: {json.dumps(entry['popup'], ensure_ascii=False)}")
     if dry_run or not added:
         print(f"{len(added)} zones {'would be ' if dry_run else ''}updated." if added else "Nothing to add.")
         return

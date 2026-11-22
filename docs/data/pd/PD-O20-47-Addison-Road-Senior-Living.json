@@ -1,0 +1,361 @@
+{
+  "id": "PD O20-47",
+  "name": "Addison Road Senior Living",
+  "family": "mixed",
+  "base": null,
+  "pdUsesOnly": true,
+  "purpose": "",
+  "uses": [],
+  "otherUses": [
+    {
+      "text": "Continuing care retirement community, inclusive of independent living, assisted living, and memory care facility, for adults 55 and older (the only residential use allowed)",
+      "group": "Permitted uses by right",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Residential uses are limited to continuing care retirement community"
+    },
+    {
+      "text": "Mixed use (with residential), as defined under Article XXX of the Zoning Ordinance",
+      "group": "Permitted uses by right",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Mixed use (with residential) -- As defined under Article XXX"
+    },
+    {
+      "text": "Medical office, as defined under Article XXX of the Zoning Ordinance",
+      "group": "Permitted uses by right",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Medical office - As defined under Article XXX"
+    },
+    {
+      "text": "Barber and beauty shop",
+      "group": "Retail (only as part of a mixed use with residential)",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Barber and Beauty Shop"
+    },
+    {
+      "text": "Coffee shop, no seating on premises",
+      "group": "Retail (only as part of a mixed use with residential)",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Coffee Shop, no seating on premises"
+    },
+    {
+      "text": "Convenience store without the sale of alcohol for off-premise consumption, except through a Special Use Permit",
+      "group": "Retail (only as part of a mixed use with residential)",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Convenience Store without the sale of alcohol for off-premise consumption, except through a Special Use Permit"
+    },
+    {
+      "text": "Donut and pastry shop, no seating on premises",
+      "group": "Retail (only as part of a mixed use with residential)",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Donut and Pastry Shop, no seating on premises"
+    },
+    {
+      "text": "Drug store, retail sales only",
+      "group": "Retail (only as part of a mixed use with residential)",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Drug Store, retail sales only"
+    },
+    {
+      "text": "Florist, retail sales only",
+      "group": "Retail (only as part of a mixed use with residential)",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Florist, retail sales only"
+    },
+    {
+      "text": "Health club and spa, private and public",
+      "group": "Retail (only as part of a mixed use with residential)",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Health Club and Spa, private and public"
+    },
+    {
+      "text": "Optician and optical store",
+      "group": "Retail (only as part of a mixed use with residential)",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Optician and Optical Store"
+    },
+    {
+      "text": "Restaurant",
+      "group": "Special uses",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Special Uses: Restaurant",
+      "permission": "S"
+    },
+    {
+      "text": "Sale of alcohol for on-premises consumption in conjunction with a restaurant",
+      "group": "Special uses",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Sale of alcohol for on-premises consumption in conjunction with a restaurant",
+      "permission": "S"
+    },
+    {
+      "text": "Sale of beer and wine for off-premises consumption as part of a convenience store, but not including a store for which beer and wine sales constitute the primary source of revenue for the business",
+      "group": "Special uses",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Sale of beer and wine for off-premises consumption as part of a",
+      "permission": "S"
+    },
+    {
+      "text": "Community, social, hobby, physical and occupational therapy, beauty/barber salon, health and wellness facilities, health care clinic and associated exam rooms, personal services, business office space for local bank, travel agency or laundry facilities, for the exclusive use by occupants of a residential development for seniors within the property which are customary to such residential developments",
+      "group": "Accessory uses",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Community, social, hobby, physical and occupational therapy, beauty/barber salon, health and wellness facilities",
+      "permission": "A"
+    },
+    {
+      "text": "Recreation/open space and facilities",
+      "group": "Accessory uses",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Recreation/open space and facilities",
+      "permission": "A"
+    },
+    {
+      "text": "Parking and parking structures",
+      "group": "Accessory uses",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Parking and parking structures",
+      "permission": "A"
+    },
+    {
+      "text": "Other uses customarily incidental and subordinate to permitted uses and any special uses",
+      "group": "Accessory uses",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Other uses customarily incidental and subordinate to permitted uses",
+      "permission": "A"
+    }
+  ],
+  "dimensions": {
+    "heightMin": {
+      "value": 129,
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Minimum of eleven (11) stories, or one hundred twenty-nine"
+    },
+    "heightMax": {
+      "value": "none",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "No maximum height"
+    },
+    "frontSetbackMin": {
+      "value": {
+        "Addison Road, new street, Excel Parkway": 10,
+        "Dallas Parkway": 30
+      },
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "Minimum building setback for this sub-district is ten"
+    },
+    "sideSetbackMin": {
+      "value": "none",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "No minimum side yard or rear"
+    },
+    "rearSetbackMin": {
+      "value": "none",
+      "ordinance": "020-047",
+      "page": 2,
+      "quote": "No minimum side yard or rear"
+    },
+    "lotAreaMin": {
+      "value": "none",
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "No minimum lot area, width, or depth"
+    },
+    "lotWidthMin": {
+      "value": "none",
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "No minimum lot area, width, or depth"
+    },
+    "lotDepthMin": {
+      "value": "none",
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "No minimum lot area, width, or depth"
+    },
+    "lotCoverageMax": {
+      "value": 95,
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "Maximum lot coverage is 95%"
+    }
+  },
+  "parking": [
+    {
+      "use": "Independent living",
+      "requirement": "1 per dwelling unit",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1,
+          "unit": "dwelling unit"
+        }
+      ],
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "Independent Living --1 parking space per dwelling unit"
+    },
+    {
+      "use": "Assisted living",
+      "requirement": "0.5 per dwelling unit",
+      "rates": [
+        {
+          "spaces": 0.5,
+          "per": 1,
+          "unit": "dwelling unit"
+        }
+      ],
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "Assisted Living -- 0.5 spaces per dwelling unit"
+    },
+    {
+      "use": "Memory care",
+      "requirement": "0.3 per dwelling unit",
+      "rates": [
+        {
+          "spaces": 0.3,
+          "per": 1,
+          "unit": "dwelling unit"
+        }
+      ],
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "Memory Care -- 0.3 spaces space per dwelling unit"
+    },
+    {
+      "use": "General retail",
+      "requirement": "4 per 1,000 sq ft gross floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 250,
+          "unit": "sq ft gross floor area"
+        }
+      ],
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "General retail -- (1/250) One space per each 250 square feet of"
+    },
+    {
+      "use": "Restaurant",
+      "requirement": "10 per 1,000 sq ft gross floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 100,
+          "unit": "sq ft gross floor area"
+        }
+      ],
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "Restaurant -- (1/100) One space per each 100 square feet of"
+    },
+    {
+      "use": "Medical or dental clinics",
+      "requirement": "5 per 1,000 sq ft gross floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 200,
+          "unit": "sq ft gross floor area"
+        }
+      ],
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "Medical or dental clinics -- (1/200) One space per each 200"
+    },
+    {
+      "use": "Office",
+      "requirement": "3.3 per 1,000 sq ft gross floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft gross floor area"
+        }
+      ],
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "Office -- (1/300) One space per each 300 square feet of gross"
+    },
+    {
+      "use": "Health club or spa",
+      "requirement": "10 per 1,000 sq ft gross floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 100,
+          "unit": "sq ft gross floor area"
+        }
+      ],
+      "ordinance": "020-047",
+      "page": 3,
+      "quote": "Health Club or Spa -- (1/100) One space per each 100 square"
+    }
+  ],
+  "review": {
+    "dimensions": "These standards apply to Sub-District A, the senior living site. Sub-District B has its own minimums, listed under Other requirements.",
+    "heightMin": "The ordinance sets a minimum of 11 stories or 129 ft. All heights are subject to FAA approval.",
+    "frontSetbackMin": "The 10 ft setback applies along Addison Road, the new street between Dallas Parkway and Addison Road, and Excel Parkway, not counting the motor court and loading and delivery areas. The Dallas Parkway setback is measured from back of curb."
+  },
+  "notes": [
+    "Sub-District A must follow the site plan, landscape plans and building elevations in Exhibit B.",
+    {
+      "heading": "Minimum dwelling unit size",
+      "items": [
+        "Independent living: studio 800 sq ft, one bedroom 1,018 sq ft, two bedroom 1,150 sq ft.",
+        "Assisted living: studio 425 sq ft, one bedroom 570 sq ft, two bedroom 800 sq ft.",
+        "Memory care: studio 300 sq ft."
+      ]
+    },
+    "At least 65% of the required parking must be in a parking garage, and no more than 20% may be in a surface lot.",
+    "A parking study must show that parking can be shared between uses with alternating times of use.",
+    "Park land dedication is at least 20,907 sq ft (0.48 acre), or a fee in lieu if the Town accepts one, priced at the market value of the land.",
+    {
+      "heading": "Streetscape",
+      "items": [
+        "Addison Road: as set by the Master Transportation Plan.",
+        "Excel Parkway: Commercial Collector with Urban Pedestrian standards, with no on-street parking required.",
+        "New street along the south edge of Sub-District A: Commercial Collector with Urban Pedestrian standards, with on-street parking on both sides.",
+        "Dallas Parkway: an eight-foot sidewalk with parkway and landscape buffers with trees on both sides."
+      ]
+    },
+    {
+      "heading": "Sub-District B",
+      "items": [
+        "Buildings must be at least 6 stories tall.",
+        "At least 550,000 sq ft of office space.",
+        "70% structured parking.",
+        "An amendment to the ordinance is required when Sub-District B develops, to set more standards."
+      ]
+    }
+  ],
+  "history": {
+    "083-017": "Rezoned 8.2 acres from Commercial to PD with a retail and office use list",
+    "085-056": "Amended the site plan: two 12-story office towers, a retail center and restaurants",
+    "097-013": "Rezoned 17.7 acres from PD and Commercial-1 to a new PD",
+    "008-054": "Approved a hospital special use permit and plans for a hospital and medical office",
+    "020-047": "Rezoned 11.6 acres to an 11-story senior living PD and an office subdistrict"
+  }
+}

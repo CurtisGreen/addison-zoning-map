@@ -487,7 +487,7 @@
   "parking": [
     {
       "use": "All uses except a movie theater",
-      "requirement": "1 space per 225 sq ft of gross floor area",
+      "requirement": "4.4 per 1,000 sq ft of gross floor area",
       "rates": [
         {
           "spaces": 1,

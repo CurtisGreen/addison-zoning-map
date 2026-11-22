@@ -10,7 +10,6 @@ import {
   idWithName,
   isSplit,
   loadSiteData,
-  placeTypeInfo,
   showError,
   zonePageUrl,
   zoneTitle,
@@ -18,7 +17,7 @@ import {
 
 const noteNumber = (number) => `<sup>${number}</sup>`;
 
-/** `offset` leaves numbers free for a note that is already using them (the plan's FAA note). */
+/** `offset` leaves numbers free for notes that are already using them (the UDC table's own notes). */
 function createNotes(offset = 0) {
   const texts = [];
   return {
@@ -52,50 +51,13 @@ function renderHeading(zone) {
   return `<h1>${escapeHtml(zoneTitle(zone))}</h1>${purpose}`;
 }
 
-/** One line per category. The FAA note number goes on the category when every typology in it is flagged, else on each flagged one. */
-function typologyLines(placeType) {
-  const flagged = (name) => placeType.faaReview.includes(name);
-  const lines = Object.entries(placeType.typologies).map(
-    ([category, names]) => {
-      // When every typology in a category is flagged, the number goes on the category.
-      const wholeCategory = names.every(flagged);
-      const labels = names.map(
-        (name) =>
-          escapeHtml(name) +
-          (!wholeCategory && flagged(name) ? noteNumber(1) : ""),
-      );
-      return `${escapeHtml(category)}${wholeCategory ? noteNumber(1) : ""}: ${labels.join(", ")}`;
-    },
-  );
-  return lines.join("<br>");
-}
-
 function renderFacts(zone, base) {
-  // Place types are shown for PDs only; districts span several place types.
-  const placeTypes = (zone.kind === "pd" ? zone.index.placeTypes : [])
-    .map((name) => placeTypeInfo(name, base))
-    .filter(Boolean)
-    .map((placeType) =>
-      !zone.pdData?.insideAirportContour
-        ? { ...placeType, faaReview: [] }
-        : placeType,
-    );
-  const showFaaNote = placeTypes.some(
-    (placeType) => placeType.faaReview.length,
-  );
-  const notes = createNotes(showFaaNote ? 1 : 0); // the plan's FAA note is note 1
+  const notes = createNotes();
   const rows = [];
   if (zone.base) {
     const name = base.districts[zone.base]?.name || "";
     const link = `<a href="${zonePageUrl(zone.base)}">${escapeHtml(idWithName(zone.base, name))}</a>`;
     rows.push(["Base district", link + notes.mark(zone.review.base)]);
-  }
-  for (const placeType of placeTypes) {
-    const link = externalLink({ label: placeType.name, url: placeType.url });
-    rows.push([
-      "Place type",
-      `${link}<br><span class="muted">${typologyLines(placeType)}</span>`,
-    ]);
   }
   rows.push([
     "Source",
@@ -113,11 +75,7 @@ function renderFacts(zone, base) {
       `${zone.index.acres} acres${withRoads}${notes.mark(zone.review.acres)}`,
     ]);
   const facts = `<dl>${rows.map(([label, value]) => `<dt>${label}</dt><dd>${value}</dd>`).join("")}</dl>`;
-  // The plan's FAA note, quoted.
-  const faaNote = showFaaNote
-    ? `<p class="muted note">${noteNumber(1)} “${escapeHtml(base.faaNote)}”</p>`
-    : "";
-  return facts + faaNote + notes.render();
+  return facts + notes.render();
 }
 
 /** A value split by area, lot type, or street type is an object; anything else is one value. */

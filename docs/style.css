@@ -61,18 +61,18 @@ footer {
 }
 .legend {
   background: #fff;
-  padding: 6px 8px;
+  padding: 8px;
   border-radius: 4px;
   font-size: 12px;
   display: grid;
-  gap: 2px;
+  gap: 1px;
   box-shadow: 0 1px 3px #0003;
 }
 .legend i {
   display: inline-block;
   width: 12px;
   height: 12px;
-  margin-right: 6px;
+  margin-right: 8px;
   vertical-align: -2px;
   opacity: 0.8;
 }
@@ -82,13 +82,18 @@ footer {
 
 .leaflet-popup-content {
   font-size: 14px;
-  margin: 10px 12px;
+  margin: 12px;
 }
 .leaflet-popup-content > div {
   margin-top: 4px;
 }
+.leaflet-popup-content > b {
+  display: block;
+  margin-bottom: 4px;
+}
 .headline-uses {
   width: auto;
+  margin-bottom: 4px;
 }
 .headline-uses td {
   border: 0;
@@ -146,17 +151,17 @@ details summary {
 
 main h1 {
   font-size: 22px;
-  margin: 18px 0 6px;
+  margin: 16px 0 8px;
 }
 main h2 {
   font-size: 17px;
-  margin: 24px 0 6px;
+  margin: 24px 0 8px;
   border-bottom: 1px solid var(--line);
   padding-bottom: 4px;
 }
 main h3 {
   font-size: 14px;
-  margin: 12px 0 2px;
+  margin: 12px 0 1px;
   color: var(--muted);
 }
 dl {
@@ -187,7 +192,7 @@ th,
 td {
   text-align: left;
   vertical-align: top;
-  padding: 5px 8px;
+  padding: 4px 8px;
   border-bottom: 1px solid var(--line);
   font-weight: normal;
 }
@@ -213,11 +218,11 @@ tr.head td {
   margin-bottom: 12px;
 }
 .note {
-  margin: 2px 0 0;
+  margin: 1px 0 0;
 }
 .tag {
   display: inline-block;
-  padding: 0 6px;
+  padding: 0 8px;
   border: 1px solid var(--line);
   border-radius: 4px;
   font-size: 12px;

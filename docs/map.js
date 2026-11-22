@@ -36,8 +36,8 @@ function polygonStyle(zoneId, zoneIndex) {
 }
 
 /**
- * A table: Residential, Retail, Office down the left; sizes that need a special use permit, Restaurant,
- * Industry down the right. Values come from the zone's stored `popup` in zones.json, not from its uses.
+ * A table: Residential, Retail, Hotel, Office down the left; sizes that need a special use permit, Restaurant,
+ * Day care, Industry down the right. Values come from the zone's stored `popup` in zones.json, not from its uses.
  */
 function renderHeadlineUses(popup) {
   const pair = (label, code) => {
@@ -59,17 +59,16 @@ function renderHeadlineUses(popup) {
   const rows = [
     `<td class="${PERMISSIONS[labelCode].className}">Residential</td>${popup.residential ? sizeCell(popup.residential, "P") : `<td class="${PERMISSIONS.none.className}">${PERMISSIONS.none.mark}</td>`}${popup.residentialPermit ? pair(popup.residentialPermit, "S") : cottage}`,
     pair("Retail", popup.retail) + pair("Restaurant", popup.restaurant),
+    pair("Hotel", popup.hotel) + pair("Day care", popup.daycare),
     pair("Office", popup.office) + pair("Industry", popup.industry),
   ];
   return `<table class="headline-uses">${rows.map((row) => `<tr>${row}</tr>`).join("")}</table>`;
 }
 
-async function renderPopup(zoneId, placeTypeName) {
+async function renderPopup(zoneId) {
   const zone = await getZone(zoneId);
   const popup = zone.index.popup;
   const parts = [`<b>${escapeHtml(zoneTitle(zone))}</b>`];
-  if (placeTypeName && zone.kind === "pd")
-    parts.push(`<div class="muted">${escapeHtml(placeTypeName)}</div>`);
   if (popup) {
     parts.push(renderHeadlineUses(popup));
     if (popup.limits) parts.push(`<div>${escapeHtml(popup.limits)}</div>`);
@@ -136,7 +135,7 @@ async function initMap() {
   const allZones = Leaflet.geoJSON(zoneShapes, {
     style: (feature) => polygonStyle(feature.properties.zone, data.zoneIndex),
     onEachFeature: (feature, polygon) => {
-      const { zone: zoneId, placeType } = feature.properties;
+      const { zone: zoneId } = feature.properties;
       if (!polygonsByZone.has(zoneId)) polygonsByZone.set(zoneId, []);
       polygonsByZone.get(zoneId).push(polygon);
       polygon.bindTooltip(zoneLabel(zoneId, data), {
@@ -146,7 +145,7 @@ async function initMap() {
       polygon.on("mouseover", () => setZoneOpacity(zoneId, HOVER_OPACITY));
       polygon.on("mouseout", () => setZoneOpacity(zoneId, NORMAL_OPACITY));
       polygon.on("click", async (event) => {
-        const content = await renderPopup(zoneId, placeType);
+        const content = await renderPopup(zoneId);
         Leaflet.popup({ maxWidth: 300 })
           .setLatLng(event.latlng)
           .setContent(content)

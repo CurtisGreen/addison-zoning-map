@@ -13,7 +13,9 @@
         "restaurant": "P",
         "office": "P",
         "industry": "P",
-        "limits": "Height 70 ft, Front 25 ft"
+        "hotel": "S",
+        "daycare": "A",
+        "limits": "Max height 70 ft, Front 25 ft"
       }
     },
     "LI": {
@@ -32,7 +34,9 @@
         "restaurant": "P",
         "office": "P",
         "industry": "P",
-        "limits": "Height 70 ft, Front 25 ft"
+        "hotel": "S",
+        "daycare": "A",
+        "limits": "Max height 70 ft, Front 25 ft"
       }
     },
     "CG": {
@@ -52,6 +56,8 @@
         "restaurant": "P",
         "office": "P",
         "industry": "S",
+        "hotel": "S",
+        "daycare": "P",
         "limits": "No height limit, Front 25 ft"
       }
     },
@@ -67,7 +73,9 @@
         "restaurant": "",
         "office": "",
         "industry": "",
-        "limits": "Height 35 ft, Front 30 ft"
+        "hotel": "",
+        "daycare": "",
+        "limits": "Max height 35 ft, Front 30 ft"
       }
     },
     "R-2": {
@@ -82,7 +90,9 @@
         "restaurant": "",
         "office": "",
         "industry": "",
-        "limits": "Height 35 ft, Build-to 15–20 ft"
+        "hotel": "",
+        "daycare": "",
+        "limits": "Max height 35 ft, Build-to 15–20 ft"
       }
     },
     "CL": {
@@ -103,7 +113,9 @@
         "restaurant": "P",
         "office": "P",
         "industry": "",
-        "limits": "Height 35 ft, Front 25 ft"
+        "hotel": "S",
+        "daycare": "P",
+        "limits": "Max height 35 ft, Front 25 ft"
       }
     },
     "M-4": {
@@ -118,6 +130,8 @@
         "restaurant": "P",
         "office": "P",
         "industry": "",
+        "hotel": "S",
+        "daycare": "P",
         "limits": "No height limit, Build-to 0–10 ft"
       }
     },
@@ -137,7 +151,9 @@
         "restaurant": "",
         "office": "",
         "industry": "",
-        "limits": "Height 2 stories, Front 30 ft"
+        "hotel": "",
+        "daycare": "",
+        "limits": "Max height 2 stories, Front 30 ft"
       }
     },
     "PD-TH": {
@@ -152,6 +168,8 @@
         "restaurant": "",
         "office": "",
         "industry": "",
+        "hotel": "",
+        "daycare": "",
         "limits": "Front 25 ft"
       }
     },
@@ -167,7 +185,9 @@
         "restaurant": "P",
         "office": "P",
         "industry": "",
-        "limits": "Height 48 ft, Build-to 0–15 ft"
+        "hotel": "S",
+        "daycare": "S",
+        "limits": "Max height 48 ft, Build-to 0–15 ft"
       }
     },
     "M-2": {
@@ -182,7 +202,9 @@
         "restaurant": "P",
         "office": "P",
         "industry": "",
-        "limits": "Height 70 ft, Build-to 0–90 ft"
+        "hotel": "S",
+        "daycare": "P",
+        "limits": "Max height 70 ft, Build-to 0–90 ft"
       }
     },
     "R-3": {
@@ -197,7 +219,9 @@
         "restaurant": "",
         "office": "",
         "industry": "",
-        "limits": "Height 35–48 ft, Build-to 5–15 ft"
+        "hotel": "",
+        "daycare": "",
+        "limits": "Max height 35–48 ft, Build-to 5–15 ft"
       }
     },
     "PD-CC": {
@@ -212,6 +236,8 @@
         "restaurant": "",
         "office": "",
         "industry": "",
+        "hotel": "",
+        "daycare": "",
         "limits": ""
       }
     },
@@ -330,6 +356,8 @@
         "restaurant": "S",
         "office": "P",
         "industry": "",
+        "hotel": "S",
+        "daycare": "",
         "limits": "No height limit, Build-to 4–9 ft"
       }
     },
@@ -357,7 +385,9 @@
         "restaurant": "",
         "office": "",
         "industry": "",
-        "limits": "Height 35 ft, Front 10–25 ft"
+        "hotel": "",
+        "daycare": "",
+        "limits": "Max height 35 ft, Front 10–25 ft"
       }
     },
     "PD 91-038": {
@@ -413,10 +443,10 @@
     },
     "PD 94-011": {
       "kind": "pd",
-      "name": "",
+      "name": "Mary Kay",
       "base": null,
-      "done": false,
-      "acres": 35.1,
+      "done": true,
+      "acres": 34.3,
       "mainOrdinance": "094-011",
       "ordinances": [
         {
@@ -426,7 +456,20 @@
           "description": "Change of zoning from Commercial-1 (C-1) to PD"
         }
       ],
-      "placeTypes": ["High Intensity Urban Center"]
+      "placeTypes": ["High Intensity Urban Center"],
+      "family": "commercial",
+      "popup": {
+        "residential": "",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "D",
+        "office": "P",
+        "industry": "D",
+        "hotel": "P",
+        "daycare": "D",
+        "limits": "Max height 6 stories, Front 25 ft"
+      }
     },
     "PD 23-03": {
       "kind": "pd",
@@ -479,10 +522,12 @@
         "residential": "",
         "residentialPermit": "",
         "adu": "",
-        "retail": "",
-        "restaurant": "",
-        "office": "",
+        "retail": "P",
+        "restaurant": "S",
+        "office": "P",
         "industry": "",
+        "hotel": "S",
+        "daycare": "",
         "limits": ""
       }
     },
@@ -586,9 +631,9 @@
     },
     "PD 86-001": {
       "kind": "pd",
-      "name": "",
+      "name": "Hallmark Center",
       "base": null,
-      "done": false,
+      "done": true,
       "acres": 22.3,
       "mainOrdinance": "086-001",
       "ordinances": [
@@ -605,7 +650,20 @@
           "description": "Approval of development plans in an existing PD (086-001) and providing for special conditions"
         }
       ],
-      "placeTypes": ["High Intensity Urban Center"]
+      "placeTypes": ["High Intensity Urban Center"],
+      "family": "commercial",
+      "popup": {
+        "residential": "",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "",
+        "hotel": "P",
+        "daycare": "",
+        "limits": "Max height 200 ft, Front 25 ft"
+      }
     },
     "PD 625": {
       "kind": "pd",
@@ -845,9 +903,9 @@
     },
     "PD O20-47": {
       "kind": "pd",
-      "name": "",
+      "name": "Addison Road Senior Living",
       "base": null,
-      "done": false,
+      "done": true,
       "acres": 11.6,
       "mainOrdinance": "020-047",
       "ordinances": [
@@ -870,13 +928,32 @@
           "description": "Change zoning from PD (ORD 083-017 & 085-056) and C-1 to Planned Development"
         },
         {
+          "id": "008-054",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2008/008-054%201564-Z%20Dallas%20Spine%20Hospital.pdf",
+          "date": "2008-11-11",
+          "description": "Amending 083-017 and approving a SUP for a hospital in a planned development district and approving development plans for Hospital and medical office building in planned development district."
+        },
+        {
           "id": "020-047",
           "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2020/O20-47%20-%202020.pdf",
           "date": "2020-10-13",
           "description": "Rezoning Planned Dev District 008-054 to Planned Dev District 020-047 for a senior living facility"
         }
       ],
-      "placeTypes": ["High Intensity Urban Center"]
+      "placeTypes": ["High Intensity Urban Center"],
+      "family": "mixed",
+      "popup": {
+        "residential": "5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "S",
+        "office": "P",
+        "industry": "",
+        "hotel": "",
+        "daycare": "",
+        "limits": "Min height 129 ft,Front 10–30 ft"
+      }
     },
     "PD 387": {
       "kind": "pd",
@@ -1516,6 +1593,8 @@
         "restaurant": "",
         "office": "",
         "industry": "",
+        "hotel": "",
+        "daycare": "",
         "limits": ""
       }
     },
@@ -2136,6 +2215,8 @@
         "restaurant": "P",
         "office": "P",
         "industry": "S",
+        "hotel": "S",
+        "daycare": "P",
         "limits": "No height limit, Front 25 ft"
       }
     },
