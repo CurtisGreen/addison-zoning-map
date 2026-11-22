@@ -4,6 +4,7 @@
   "family": "mixed",
   "base": null,
   "pdUsesOnly": true,
+  "mustFollowPlan": true,
   "purpose": "",
   "uses": [],
   "otherUses": [
@@ -316,7 +317,7 @@
   ],
   "review": {
     "dimensions": "These standards apply to Sub-District A, the senior living site. Sub-District B has its own minimums, listed under Other requirements.",
-    "heightMin": "The ordinance sets a minimum of 11 stories or 129 ft. All heights are subject to FAA approval.",
+    "heightMin": "The ordinance sets a minimum of 11 stories or 129 ft.",
     "frontSetbackMin": "The 10 ft setback applies along Addison Road, the new street between Dallas Parkway and Addison Road, and Excel Parkway, not counting the motor court and loading and delivery areas. The Dallas Parkway setback is measured from back of curb."
   },
   "notes": [

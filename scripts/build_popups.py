@@ -11,9 +11,11 @@ Zones whose data is not written yet (a PD with no docs/data/pd file) get no `pop
 
 `popup` fields:
   residential        building sizes allowed by right, such as "1 unit" or "5+ units"; "" if none
+  residentialCode    "P*" for a PD with mustFollowPlan (sizes allowed by right, exactly as the plan shows); left out otherwise
+  mustFollowPlan     true for a PD with mustFollowPlan, shown as the last line before the links; left out otherwise
   residentialPermit  sizes that need a special use permit; "" if none
   adu                P, S or "" for an accessory dwelling; shown only when residentialPermit is empty
-  retail, restaurant, office, industry, hotel, daycare   P, S, D, A, T or "" (not allowed)
+  retail, restaurant, office, industry, hotel, daycare   P, P*, S, D, A, T or "" (not allowed)
   limits             text such as "Height 35 ft, Front 30 ft"
 """
 import json
@@ -123,28 +125,32 @@ def dwelling_sizes(uses, code):
 
 
 def zone_data(zone_id, base, index):
-    """(uses, dimensions) for a zone, as the site shows them, or None when the zone has no data yet."""
+    """(uses, dimensions, must_follow_plan) for a zone, as the site shows them, or None when the zone has no data yet."""
     district = base["districts"].get(zone_id)
     if district:
-        return district["uses"], district["dimensions"]
+        return district["uses"], district["dimensions"], False
     if index.get("kind") != "pd" or not index.get("done"):
         return None
     slug = zone_id.replace("?", "").replace(" ", "-")
     label = re.sub(r"[^A-Za-z0-9]+", "-", index.get("name") or "").strip("-")
     pd_data = read_json(DATA / "pd" / (f"{slug}-{label}.json" if label else f"{slug}.json"))
     base_district = base["districts"].get(pd_data.get("base"))
-    uses = {} if pd_data.get("pdUsesOnly") or not base_district else dict(base_district["uses"])
+    plan_only = pd_data.get("pdUsesOnly") or pd_data.get("mustFollowPlan")  # only the PD's own uses count
+    uses = {} if plan_only or not base_district else dict(base_district["uses"])
     for use in pd_data["uses"]:
         if use["permission"] == "none":
             uses.pop(use["name"], None)
         else:
             uses[use["name"]] = use["permission"]
+    must_follow_plan = bool(pd_data.get("mustFollowPlan"))
+    if must_follow_plan:  # by right becomes P*: allowed by right, but exactly as the development plan shows
+        uses = {name: "P*" if code == "P" else code for name, code in uses.items()}
     dimensions = {**(base_district or {}).get("dimensions", {}), **pd_data["dimensions"]}
-    return uses, dimensions
+    return uses, dimensions, must_follow_plan
 
 
-def build_popup(uses, dimensions, base):
-    allowed = dwelling_sizes(uses, "P")
+def build_popup(uses, dimensions, must_follow_plan, base):
+    allowed = dwelling_sizes(uses, "P*" if must_follow_plan else "P")
     permit = dwelling_sizes(uses, "S")
     adu = uses.get(ADU_USE)
     limits = []
@@ -164,6 +170,9 @@ def build_popup(uses, dimensions, base):
         "residentialPermit": permit,
         "adu": "P" if adu in ("P", "A") else (adu or ""),
     }
+    if must_follow_plan:
+        popup["residentialCode"] = "P*"
+        popup["mustFollowPlan"] = True
     for key, use in HEADLINE.items():
         popup[key] = uses.get(use, "")
     popup["limits"] = ", ".join(limits)

@@ -8,7 +8,22 @@ export const PERMISSIONS = {
   A: { mark: "A", label: "Accessory", className: "accessory" },
   T: { mark: "T", label: "Temporary", className: "accessory" },
   none: { mark: "—", label: "Not allowed", className: "not-allowed" },
+  // By right, but only as the PD's development plan shows it. Explained by a "*Must follow development plan exactly" line, not the legend.
+  "P*": {
+    mark: "✓*",
+    label: "By right, as shown on the development plan",
+    className: "allowed",
+    inLegend: false,
+  },
 };
+
+/**
+ * A PD with `mustFollowPlan` must be built exactly as its development plan shows, so a use allowed by right (P)
+ * is shown as P* (a check mark and an asterisk). D stays for a use that needs a change to the plan.
+ */
+export function planPermission(pdData, code) {
+  return pdData?.mustFollowPlan && code === "P" ? "P*" : code;
+}
 
 export const FAMILIES = {
   residential: { label: "Residential", color: "#f2c744" },
@@ -141,6 +156,8 @@ export async function getZone(zoneId) {
   if (!index.done) return zone;
 
   const pdData = await loadJson(pdFilePath(zoneId, index.name));
+  // A PD that must follow its plan allows only the uses the plan shows, not its base district's uses.
+  if (pdData.mustFollowPlan) pdData.pdUsesOnly = true;
   const baseDistrict = base.districts[pdData.base];
   const uses =
     pdData.pdUsesOnly || !baseDistrict ? {} : { ...baseDistrict.uses };
@@ -148,6 +165,8 @@ export async function getZone(zoneId) {
     if (use.permission === "none") delete uses[use.name];
     else uses[use.name] = use.permission;
   }
+  for (const name of Object.keys(uses))
+    uses[name] = planPermission(pdData, uses[name]);
   // Base district notes are dropped for dimensions the PD sets itself.
   const inheritedReview = Object.fromEntries(
     Object.entries(baseDistrict?.review || {}).filter(

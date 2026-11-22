@@ -2,13 +2,34 @@
   "id": "PD 22-11",
   "name": "Jefferson Aero",
   "base": "M-4",
+  "mustFollowPlan": true,
   "purpose": "",
-  "uses": [],
-  "otherUses": [],
+  "uses": [
+    {
+      "name": "Dwelling, multifamily",
+      "permission": "P",
+      "ordinance": "022-11",
+      "page": 2,
+      "quote": "The total amount of multifamily dwelling units shall not exceed 280 units"
+    },
+    {
+      "name": "Dwelling, live/work",
+      "permission": "P",
+      "ordinance": "022-11",
+      "page": 2,
+      "quote": "live/work dwelling units shall not be less than 7 units"
+    }
+  ],
+  "otherUses": [
+    {
+      "text": "Retail-ready space",
+      "ordinance": "022-11",
+      "page": 2,
+      "quote": "The total amount of \"retail ready\" area shall not be less than"
+    }
+  ],
   "dimensions": {},
-  "review": {
-    "base": "The original base was the legacy Urban Center (UC) district. The UDC replaced UC with M-4, so rules may differ"
-  },
+  "review": {},
   "notes": [
     {
       "heading": "Units and retail",
@@ -49,5 +70,6 @@
   "history": {
     "092-025": "Rezoned from PD 085-002 to Commercial-2",
     "022-11": "Rezoned to PD for up to 287 apartment and live/work units and 5,000 sq ft of retail-ready space"
-  }
+  },
+  "curtisNotes": "Jefferson Aero is built on the Residential Subdistrict of the old Urban Center (UC) district, which the UDC replaced with M-4. The dimensions shown are M-4's and may differ from the old UC rules."
 }

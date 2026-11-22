@@ -44,8 +44,10 @@ function renderHeadlineUses(popup) {
     const { mark, className } = PERMISSIONS[code || "none"];
     return `<td class="${className}">${label}</td><td class="${className}">${mark}</td>`;
   };
+  // A PD that must follow its development plan shows its residential sizes as P* (check mark and asterisk).
+  const residentialCode = popup.residentialCode || "P";
   const labelCode = popup.residential
-    ? "P"
+    ? residentialCode
     : popup.residentialPermit
       ? "S"
       : "none";
@@ -57,7 +59,7 @@ function renderHeadlineUses(popup) {
   const sizeCell = (text, code) =>
     `<td class="${PERMISSIONS[code].className}">${PERMISSIONS[code].mark} ${text}</td>`;
   const rows = [
-    `<td class="${PERMISSIONS[labelCode].className}">Residential</td>${popup.residential ? sizeCell(popup.residential, "P") : `<td class="${PERMISSIONS.none.className}">${PERMISSIONS.none.mark}</td>`}${popup.residentialPermit ? pair(popup.residentialPermit, "S") : cottage}`,
+    `<td class="${PERMISSIONS[labelCode].className}">Residential</td>${popup.residential ? sizeCell(popup.residential, residentialCode) : `<td class="${PERMISSIONS.none.className}">${PERMISSIONS.none.mark}</td>`}${popup.residentialPermit ? pair(popup.residentialPermit, "S") : cottage}`,
     pair("Retail", popup.retail) + pair("Restaurant", popup.restaurant),
     pair("Hotel", popup.hotel) + pair("Day care", popup.daycare),
     pair("Office", popup.office) + pair("Industry", popup.industry),
@@ -72,6 +74,8 @@ async function renderPopup(zoneId) {
   if (popup) {
     parts.push(renderHeadlineUses(popup));
     if (popup.limits) parts.push(`<div>${escapeHtml(popup.limits)}</div>`);
+    if (popup.mustFollowPlan)
+      parts.push("<div>*Must follow development plan exactly</div>");
   } else {
     parts.push("<div>Rules set by ordinance</div>");
   }

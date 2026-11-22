@@ -1,6 +1,7 @@
 // Detail page for one zone: zone.html?id=CG or zone.html?id=PD%20461
 import {
   PERMISSIONS,
+  planPermission,
   escapeHtml,
   evidenceLink,
   externalLink,
@@ -163,7 +164,8 @@ function useRows(pd, zone, base) {
       return true;
     })
     .map((use) => {
-      const { mark, label, className } = PERMISSIONS[use.permission ?? "P"];
+      const { mark, label, className } =
+        PERMISSIONS[planPermission(pd, use.permission ?? "P")];
       const permission = `<span class="${className}" title="${label}">${mark}</span>`;
       return `<tr><td>${escapeHtml(use.text)}</td><td>${permission}</td><td class="source">${evidenceLink(use, zone, base)}</td></tr>`;
     });
@@ -369,16 +371,24 @@ function renderUses(zone, base, standards) {
     byCategory.get(use.category).push(line);
   }
   const legend = Object.values(PERMISSIONS)
-    .filter((permission) => permission.className !== "not-allowed")
+    .filter(
+      (permission) =>
+        permission.className !== "not-allowed" && permission.inLegend !== false,
+    )
     .map((permission) => `${permission.mark} ${permission.label.toLowerCase()}`)
     .join(", ");
+  // The asterisk on a use's check mark (P*) points to this line.
+  const planNote = zone.pdData?.mustFollowPlan
+    ? '<p class="muted">*Must follow development plan exactly</p>'
+    : "";
   // A PD that lists all its own uses shows the ones with no UDC name as a last group.
   const ordinanceOnlyUses = zone.pdData?.pdUsesOnly
     ? zone.pdData.otherUses
     : [];
   if (ordinanceOnlyUses.length)
     for (const use of ordinanceOnlyUses) {
-      const { mark, className } = PERMISSIONS[use.permission ?? "P"];
+      const { mark, className } =
+        PERMISSIONS[planPermission(zone.pdData, use.permission ?? "P")];
       const category = use.group ?? "Other uses";
       if (!byCategory.has(category)) byCategory.set(category, []);
       byCategory
@@ -400,7 +410,7 @@ function renderUses(zone, base, standards) {
     ? `<details class="extra-requirements"><summary>Extra use requirements</summary>${folds.join("")}</details>`
     : "";
   return (
-    `<h2>${heading}</h2><p class="muted">${legend}</p>${groups.join("")}` +
+    `<h2>${heading}</h2><p class="muted">${legend}</p>${planNote}${groups.join("")}` +
     extraRequirements +
     notes.render()
   );

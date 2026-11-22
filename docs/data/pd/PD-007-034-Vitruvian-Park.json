@@ -763,7 +763,7 @@
   "review": {
     "buildTo": "A to E streets are shown on the Concept Plan. Measured from the closest right-of-way line. Not required in Block 211.",
     "facadeAtBuildToMin": "The text says not more than 30% of any street frontage (50% in Block 102) may vary from the build-to line. Not required in Block 211.",
-    "heightMax": "The 60 ft limit applies to the part of a building within 100 ft of land zoned single family or apartment or used for residential. All heights are subject to FAA approval. Within that 60 ft zone, turrets, spires, and towers may be up to 15 ft taller if their floorplate is 10% or less of the building's ground floor area.",
+    "heightMax": "The 60 ft limit applies to the part of a building within 100 ft of land zoned single family or apartment or used for residential. Within that 60 ft zone, turrets, spires, and towers may be up to 15 ft taller if their floorplate is 10% or less of the building's ground floor area.",
     "lotCoverageMax": "Porches and arcades fronting a public street are excluded. Above-grade parking structures are included.",
     "garageExposedLengthMax": "Longer is allowed when the structure has enhanced facade elements such as living walls or artistic design.",
     "masonryMin": "Masonry includes brick, stone, cultured stone, glazing and plate glass, and split face concrete masonry units.",
@@ -786,7 +786,20 @@
     "Parking garages: no ramps expressed on street-facing facades, and no steel garages or steel guard cables.",
     "Bicycle parking is required for all multifamily and commercial uses.",
     "A development plan approved by Planning and Zoning and Council is required before permits.",
-    "Council may waive any development standard with a development plan, but not to add a use or raise intensity or density."
+    "Council may waive any development standard with a development plan, but not to add a use or raise intensity or density.",
+    {
+      "heading": "Tracts with approved development plans",
+      "items": [
+        "Each tract below must follow the development plan the Council approved for it. Everywhere else, the district has only the concept plan, and a project needs an approved development plan before it can be built.",
+        "Ordinance 008-022 (2008): a multifamily building on 10.32 acres at 3900 and 4010 Brookhaven Club Drive.",
+        "Ordinance 009-036 (2009): a multifamily building on 3.643 acres at the same addresses.",
+        "Ordinance 011-032 (2011): a multifamily building on 5.46 acres on the southeast side of Vitruvian Way near Spring Valley Road, with waivers to design standards.",
+        "Ordinance 016-019 (2016): Vitruvian West I, a multifamily building and amenities center on 5.2 acres at 3737 and 3801 Vitruvian Way.",
+        "Ordinance 016-018 (2016): Brookhaven Village, a retail center with waivers, on 11.5 acres at the southeast corner of Marsh Lane and Spring Valley Road.",
+        "Ordinance 018-041 (2018): phases 2 and 3 of Vitruvian West, multifamily, on 6.854 acres at the northeast corner of Marsh Lane and Vitruvian Way.",
+        "Ordinance 021-045 (2021): 85 multifamily units on 5.1 acres at the southeast corner of Spring Valley Road and Vitruvian Way, with waivers to street build-to lines and exterior materials."
+      ]
+    }
   ],
   "acresWithRoads": 120.91,
   "history": {

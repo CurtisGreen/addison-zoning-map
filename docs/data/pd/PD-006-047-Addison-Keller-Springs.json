@@ -1,0 +1,38 @@
+{
+  "id": "PD 006-047",
+  "name": "Addison Keller Springs",
+  "base": "CL",
+  "family": "mixed",
+  "mustFollowPlan": true,
+  "purpose": "",
+  "uses": [
+    {
+      "name": "Dwelling, multifamily",
+      "permission": "P",
+      "text": "Apartment and condominium",
+      "ordinance": "006-047",
+      "page": 3,
+      "quote": "apartment, condominium, and all uses allowed in the LR"
+    }
+  ],
+  "otherUses": [],
+  "dimensions": {},
+  "review": {},
+  "notes": [
+    "Development must follow the development plans attached to ordinances 006-047 and 011-044.",
+    {
+      "heading": "Fire lanes",
+      "items": [
+        "The fire lanes on the east side and along the south property line must sit flush against the property line, with the trees on the west side of the east lane, in front of the units.",
+        "The fire lanes must be built so they can later become R-streets or mews streets.",
+        "Fire hydrants every 300 feet along the fire lane."
+      ]
+    }
+  ],
+  "history": {
+    "006-047": "Rezoned from Commercial-2 to PD for apartments, condominiums and local retail uses",
+    "011-044": "Approved revised plans for Keller Springs Lofts, 353 multifamily units",
+    "011-056": "Abandoned part of the Town's utility easement"
+  },
+  "curtisNotes": "Addison Keller Springs was originally based on the legacy Local Retail (LR) district with apartments and condos added on. LR is now Commercial Limited (CL) under the UDC."
+}

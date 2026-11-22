@@ -620,7 +620,7 @@
     }
   ],
   "review": {
-    "heightMaxStories": "Taller buildings must set the extra height back one foot from the street line for every two feet above six stories. FAA limits also apply.",
+    "heightMaxStories": "Taller buildings must set the extra height back one foot from the street line for every two feet above six stories.",
     "sideSetbackMin": "A corner lot that abuts an apartment district needs 25 ft on the side street. Other lots that abut an apartment district need 10 ft."
   },
   "notes": [

@@ -4,6 +4,7 @@
   "family": "commercial",
   "base": null,
   "pdUsesOnly": true,
+  "mustFollowPlan": true,
   "purpose": "",
   "uses": [],
   "otherUses": [
@@ -514,9 +515,7 @@
       "quote": "movie theater which shall be parked at 1 parking space per 3 theater seats"
     }
   ],
-  "review": {
-    "base": "No base district is named. The ordinance lists its own allowed uses and prohibits all others."
-  },
+  "review": {},
   "notes": [
     "Development must follow the site plan (Exhibit A) and the site, landscape, floor, facade and valet plans (Exhibit B) of the 2023 ordinance.",
     "A valet parking plan must be submitted to Town staff. If valet is offered, it must use park-and-stroll or similar drop-off at any valet stand, and customers must be able to request a car before arriving.",

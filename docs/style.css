@@ -84,13 +84,14 @@ footer {
   font-size: 14px;
   margin: 12px;
 }
-.leaflet-popup-content > div {
-  margin-top: 4px;
+.leaflet-popup-content > table {
+  margin-bottom: 4px;
 }
 .leaflet-popup-content > b {
   display: block;
   font-size: 16px;
   margin-bottom: 8px;
+  padding-right: 24px; /* keeps a long title clear of the close button */
 }
 .leaflet-container a.leaflet-popup-close-button {
   margin-right: 4px;
@@ -134,6 +135,9 @@ footer {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+.leaflet-popup-content > .links {
+  margin-top: 8px;
 }
 
 #zone-list {

@@ -255,6 +255,9 @@ def check(pd_id, pd, index):
             errors.append(f"dimensions.{field}: value must be a number, \"none\", {{min, max}}, {{options: [...]}}, or those split by type")
         check_evidence(f"dimensions.{field}", dimension)
 
+    if "mustFollowPlan" in pd_data and not isinstance(pd_data["mustFollowPlan"], bool):
+        errors.append("mustFollowPlan must be true or false")
+
     for warning in warnings:
         print("WARN  ", warning)
     for error in errors:

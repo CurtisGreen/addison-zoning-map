@@ -4,6 +4,7 @@
   "family": "commercial",
   "base": null,
   "pdUsesOnly": true,
+  "mustFollowPlan": true,
   "purpose": "",
   "uses": [],
   "otherUses": [
@@ -115,8 +116,6 @@
     }
   ],
   "review": {
-    "uses": "The ordinance text lists no uses. These come from the General Notes on the 1986 conceptual site plan (Exhibit page 7), which the development must follow. The square footages are the plan's building areas.",
-    "heightMax": "Subject to FAA approval. All proposed building heights are also reviewed by the FAA.",
     "floorAreaRatioMax": "An average for the whole property, set at 3 to 1 and subject to review case by case.",
     "frontSetbackMin": "From the General Notes on the 1986 conceptual site plan. The 1995 site plan shows 25 ft building setback lines along Keller Springs Road, Airport Parkway and the Dallas North Tollway service road."
   },

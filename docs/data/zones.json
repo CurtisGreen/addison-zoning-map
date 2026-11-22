@@ -522,12 +522,13 @@
         "residential": "",
         "residentialPermit": "",
         "adu": "",
-        "retail": "P",
+        "retail": "P*",
         "restaurant": "S",
-        "office": "P",
+        "office": "P*",
         "industry": "",
         "hotel": "S",
         "daycare": "",
+        "mustFollowPlan": true,
         "limits": ""
       }
     },
@@ -656,12 +657,13 @@
         "residential": "",
         "residentialPermit": "",
         "adu": "",
-        "retail": "P",
-        "restaurant": "P",
-        "office": "P",
+        "retail": "P*",
+        "restaurant": "P*",
+        "office": "P*",
         "industry": "",
-        "hotel": "P",
+        "hotel": "P*",
         "daycare": "",
+        "mustFollowPlan": true,
         "limits": "Max height 200 ft, Front 25 ft"
       }
     },
@@ -944,15 +946,17 @@
       "family": "mixed",
       "popup": {
         "residential": "5+ units",
+        "residentialCode": "P*",
         "residentialPermit": "",
         "adu": "",
-        "retail": "P",
+        "retail": "P*",
         "restaurant": "S",
-        "office": "P",
+        "office": "P*",
         "industry": "",
         "hotel": "",
         "daycare": "",
-        "limits": "Min height 129 ft,Front 10–30 ft"
+        "mustFollowPlan": true,
+        "limits": "Min height 129 ft, Front 10–30 ft"
       }
     },
     "PD 387": {
@@ -1286,9 +1290,10 @@
     },
     "PD 006-047": {
       "kind": "pd",
-      "name": "",
-      "base": null,
-      "done": false,
+      "name": "Addison Keller Springs",
+      "base": "CL",
+      "done": true,
+      "family": "mixed",
       "acres": 7.4,
       "mainOrdinance": "006-047",
       "ordinances": [
@@ -1311,7 +1316,21 @@
           "description": "The abandonment of the Town's interest in a portion of non-exclusive utility easement"
         }
       ],
-      "placeTypes": ["Urban Village"]
+      "placeTypes": ["Urban Village"],
+      "popup": {
+        "residential": "5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "residentialCode": "P*",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "hotel": "",
+        "daycare": "",
+        "mustFollowPlan": true,
+        "limits": "Max height 35 ft, Front 25 ft"
+      }
     },
     "PD 83-007": {
       "kind": "pd",
@@ -1943,14 +1962,16 @@
       "placeTypes": ["Urban Village"],
       "popup": {
         "residential": "5+ units",
+        "residentialCode": "P*",
         "residentialPermit": "",
         "adu": "",
-        "retail": "P",
-        "restaurant": "P",
-        "office": "P",
+        "retail": "P*",
+        "restaurant": "",
+        "office": "",
         "industry": "",
-        "hotel": "S",
-        "daycare": "P",
+        "hotel": "",
+        "daycare": "",
+        "mustFollowPlan": true,
         "limits": "No height limit"
       }
     },
