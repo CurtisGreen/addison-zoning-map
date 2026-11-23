@@ -216,6 +216,16 @@ th {
 .before {
   color: var(--faint);
 }
+th.nowrap,
+td.nowrap {
+  white-space: nowrap;
+}
+/* Equal-width boxes for the marks either side of an arrow, so the arrows line up whatever the mark is */
+.mark {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
 tr.head th,
 tr.head td {
   background: var(--table-head);

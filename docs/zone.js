@@ -164,10 +164,25 @@ function useRows(pd, zone, base) {
       return true;
     })
     .map((use) => {
-      const { mark, label, className } =
-        PERMISSIONS[planPermission(pd, use.permission ?? "P")];
-      const permission = `<span class="${className}" title="${label}">${mark}</span>`;
-      return `<tr><td>${escapeHtml(use.text)}</td><td>${permission}</td><td class="source">${evidenceLink(use, zone, base)}</td></tr>`;
+      const after = PERMISSIONS[planPermission(pd, use.permission ?? "P")];
+      const notAllowed = (title) =>
+        `<span class="before mark" title="${title}">✕</span>`; // a grey X, not the dash used in the lists
+      const afterMark =
+        after === PERMISSIONS.none
+          ? notAllowed(after.label)
+          : `<span class="${after.className} mark" title="${after.label}">${after.mark}</span>`;
+      let permission = afterMark;
+      if (pd.base) {
+        // "Before → after": the base district's mark for this use (a use with no UDC name was not allowed there).
+        const baseCode = base.districts[pd.base]?.uses[use.name] ?? "none";
+        const before = PERMISSIONS[baseCode];
+        const beforeMark =
+          before === PERMISSIONS.none
+            ? notAllowed(`${before.label} in ${escapeHtml(pd.base)}`)
+            : `<span class="before mark" title="${before.label} in ${escapeHtml(pd.base)}">${before.mark}</span>`;
+        permission = `<span role="img" aria-label="${before.label} in ${escapeHtml(pd.base)}, now ${after.label.toLowerCase()}">${beforeMark} → ${afterMark}</span>`;
+      }
+      return `<tr><td>${escapeHtml(use.text)}</td><td class="nowrap">${permission}</td><td class="source">${evidenceLink(use, zone, base)}</td></tr>`;
     });
 }
 
@@ -189,7 +204,7 @@ function renderPdRules(zone, base) {
   const rows = useRows(pd, zone, base);
   const useTable = rows.length
     ? tableOf([
-        `<tr class="head"><th>Use</th><th>Permission</th><th></th></tr>`,
+        `<tr class="head"><th>Use</th><th class="nowrap">${pd.base ? "Before → after" : "Permission"}</th><th></th></tr>`,
         ...rows,
       ])
     : "";

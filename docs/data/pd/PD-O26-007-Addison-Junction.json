@@ -1,0 +1,50 @@
+{
+  "id": "PD O26-007",
+  "name": "Addison Junction",
+  "base": "M-4",
+  "purpose": "",
+  "uses": [
+    {
+      "name": "Recreation facility, outdoor",
+      "permission": "P",
+      "ordinance": "026-007",
+      "page": 5,
+      "quote": "Permitted Uses: A. Recreation Facility, Outdoor."
+    },
+    {
+      "name": "Brewpub, distillery, or winery",
+      "permission": "S",
+      "ordinance": "026-007",
+      "page": 5,
+      "quote": "B. Brewpub, Distillery, or Winery (allowed by Special Use Permit)."
+    },
+    {
+      "name": "Hotel, Full Service",
+      "permission": "P",
+      "ordinance": "026-007",
+      "page": 5,
+      "quote": "C. Hotel, Full Service."
+    }
+  ],
+  "otherUses": [
+    {
+      "text": "Entertainment or event facility, indoor or outdoor (a commercial entertainment or event use for cultural, recreational, artistic, athletic or social events; it does not include adult entertainment, casinos, nightclubs or private event venues)",
+      "ordinance": "026-007",
+      "page": 5,
+      "quote": "D. Entertainment/Event Facility (Indoor and/or Outdoor)."
+    }
+  ],
+  "dimensions": {},
+  "review": {},
+  "notes": [
+    "Development plans must follow the permitted uses and standards (Exhibit B) and the concept plan (Exhibit C).",
+    "Final planned development site plan approval is required before a permit for site infrastructure.",
+    "The build-to range follows the concept plan.",
+    "The number of parking spaces, shared parking and the retail parking in the parking structures depend on the agreements between the Town and the developer.",
+    "Rooftop mechanical equipment must be screened from view from all rights-of-way.",
+    "Solid waste and recycling should be shared where feasible, and dumpsters and compactors may not stand free on the site."
+  ],
+  "history": {
+    "026-007": "Rezoned Commercial General land and four earlier PDs to a new transit-oriented mixed-use PD on an M-4 base"
+  }
+}

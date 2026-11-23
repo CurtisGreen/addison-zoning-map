@@ -16,8 +16,8 @@ import re
 import urllib.parse
 from pathlib import Path
 
-from shapely.geometry import mapping, shape
-from shapely.ops import unary_union
+from shapely.geometry import LineString, mapping, shape
+from shapely.ops import split, unary_union
 
 import gis_api
 
@@ -47,6 +47,27 @@ EXTRA_ORDINANCES = {
 # Zones the town map draws separately that belong to another PD
 MERGED_ZONES = {
     "PD O16-018": "PD 007-034",
+    # Ordinance O26-007 (2026) replaced PD 23-08 with the Addison Junction PD; the town map has not caught up
+    "PD 23-08": "PD O26-007",
+}
+# Town polygons cut by a line, by OBJECTID. The half on the left of the line (looking from its start to its end)
+# belongs to the PD whose ordinance code is `left_zone`; the other half keeps its town zone. With `join_to`, the PD half
+# is merged into the town polygon with that OBJECTID instead of standing alone.
+# 286: the CG polygon at the Addison Transit Center. Ordinance O26-007 rezoned its north-east half. The line starts at
+# the south-west corner of the third 23-08 polygon (counting west to east), runs perpendicular to the polygon's long
+# axis and is long enough to cross it.
+# 240: PD 83-033, south of the first 23-08 polygon (252). O26-007 took its east strip, cut 25 m west of its east edge,
+# and the strip joins polygon 252.
+SPLIT_POLYGONS = {
+    286: {
+        "line": [(-96.82780568, 32.95975044), (-96.82502825, 32.95436050)],
+        "left_zone": "O26-007",
+    },
+    240: {
+        "line": [(-96.8287003, 32.9596), (-96.8287003, 32.9582)],
+        "left_zone": "O26-007",
+        "join_to": 252,
+    },
 }
 # Polygons the town labels PD but that are really a UDC district. PD 84?: the Brooktown Townhouse condos, built
 # 1971-72 on land zoned Apartment (A) by ordinance 068-084; no PD ordinance covers them.
@@ -54,7 +75,7 @@ RECLASSIFIED_ZONES = {
     "PD 84?": "A",
 }
 KEEP_ZONES = {
-    "PD 23-08": "Development site between Addison Circle Park and the DART Addison Transit Center; the parks layer's Addison Circle Park shape overlaps it",
+    "PD O26-007": "Development site between Addison Circle Park and the DART Addison Transit Center; the parks layer's Addison Circle Park shape overlaps it",
 }
 # Parcels (DCAD account ids) whose zoning polygons are left off the map, like parks
 # Parcel classes whose zoning polygons are left off the map (DART and Union Pacific rail corridors)
@@ -110,6 +131,42 @@ def is_all_excluded(geom, excluded):
     rest = geom.difference(excluded)
     pieces = [g for g in getattr(rest, "geoms", [rest]) if g.geom_type == "Polygon" and g.area >= MIN_PIECE]
     return not pieces
+
+
+def split_polygons(features):
+    """Yield the town's zoning polygons, with each polygon in SPLIT_POLYGONS cut in two (see there)."""
+    kept, joins = [], {}
+    for feature in features:
+        rule = SPLIT_POLYGONS.get(feature["properties"].get("OBJECTID"))
+        if not rule:
+            kept.append(feature)
+            continue
+        geom = shape(feature["geometry"]).buffer(0)
+        (x0, y0), (x1, y1) = rule["line"]
+        pieces = list(split(geom, LineString(rule["line"])).geoms)
+        if len(pieces) != 2:
+            sys.exit(f"SPLIT_POLYGONS: the line cuts polygon {feature['properties']['OBJECTID']} into {len(pieces)} pieces, not 2")
+        for piece in pieces:
+            point = piece.representative_point()
+            on_left = (x1 - x0) * (point.y - y0) - (y1 - y0) * (point.x - x0) > 0
+            properties = dict(feature["properties"])
+            properties["Shape.STArea()"] = properties["Shape.STArea()"] * piece.area / geom.area
+            if on_left and rule.get("join_to"):
+                joins.setdefault(rule["join_to"], []).append((piece, properties["Shape.STArea()"]))
+                continue
+            if on_left:  # becomes part of the PD
+                properties.update({"ZONE_UDC": "PD", "ZONE_CODE": rule["left_zone"], "ZCODE_TOT": "O25-015", "ZONE_HIST": " "})
+            kept.append({"type": "Feature", "properties": properties, "geometry": mapping(piece)})
+    for feature in kept:
+        extra = joins.pop(feature["properties"].get("OBJECTID"), [])
+        if extra:
+            merged = unary_union([shape(feature["geometry"]).buffer(0)] + [piece for piece, _ in extra]).buffer(0)
+            properties = dict(feature["properties"])
+            properties["Shape.STArea()"] += sum(area for _, area in extra)
+            feature = {"type": "Feature", "properties": properties, "geometry": mapping(merged)}
+        yield feature
+    if joins:
+        sys.exit(f"SPLIT_POLYGONS: no polygon with OBJECTID {sorted(joins)} to join to")
 
 
 def place_type_areas(geom, place_types):
@@ -174,7 +231,7 @@ def main():
     features, zones, place_type_totals, unmatched = [], {}, {}, set()
     global unmatched_codes
     unmatched_codes = unmatched
-    for feature in gis_api.udc_zoning(geometry=True, geojson=True):
+    for feature in split_polygons(gis_api.udc_zoning(geometry=True, geojson=True)):
         record = feature["properties"]
         district = record["ZONE_UDC"].strip()
         chain = [c.strip() for c in zone_chain(record).split("/")

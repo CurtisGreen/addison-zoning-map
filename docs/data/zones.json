@@ -41,7 +41,7 @@
     },
     "CG": {
       "kind": "district",
-      "acres": 178.5,
+      "acres": 176.8,
       "placeTypes": [
         "Urban Village",
         "High Intensity Urban Center",
@@ -522,13 +522,14 @@
         "residential": "",
         "residentialPermit": "",
         "adu": "",
+        "residentialCode": "P*",
+        "mustFollowPlan": true,
         "retail": "P*",
         "restaurant": "S",
         "office": "P*",
         "industry": "",
         "hotel": "S",
         "daycare": "",
-        "mustFollowPlan": true,
         "limits": ""
       }
     },
@@ -657,13 +658,14 @@
         "residential": "",
         "residentialPermit": "",
         "adu": "",
+        "residentialCode": "P*",
+        "mustFollowPlan": true,
         "retail": "P*",
         "restaurant": "P*",
         "office": "P*",
         "industry": "",
         "hotel": "P*",
         "daycare": "",
-        "mustFollowPlan": true,
         "limits": "Max height 200 ft, Front 25 ft"
       }
     },
@@ -1063,46 +1065,34 @@
       ],
       "placeTypes": ["Urban Village", "Residential Living"]
     },
-    "PD 23-08": {
+    "PD O26-007": {
       "kind": "pd",
-      "name": "",
-      "base": null,
-      "done": false,
-      "acres": 10.1,
-      "mainOrdinance": "023-08",
+      "name": "Addison Junction",
+      "base": "M-4",
+      "done": true,
+      "acres": 12.2,
+      "mainOrdinance": "026-007",
       "ordinances": [
         {
-          "id": "023-08",
-          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-08%20-%202023.pdf",
-          "date": "2023-02-13",
-          "description": "Changing from C-1, PD, and UC to a new PD to allow trainsit oriented mixed use development"
-        },
-        {
-          "id": "023-11",
-          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-11%20-%202023.pdf",
-          "date": "2023-02-13",
-          "description": "Development plan for multifamily residential building, retail/restaurants, road realignment"
-        },
-        {
-          "id": "023-09",
-          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-09%20-%202023.pdf",
-          "date": "2023-02-13",
-          "description": "Approval of a development plan for lots 1 and 5X, block A, Addison Circle Station-Phase 1, to allow for the development of an office building with ground floor retail/restaurant uses, a parking structure, and site access drives."
-        },
-        {
-          "id": "023-12",
-          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-12%20-%202023.pdf",
-          "date": "2023-02-13",
-          "description": "Construction of emergency access drives, pedestrian ways, Festival Way streetscape improvements"
-        },
-        {
-          "id": "023-10",
-          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-10%20-%202023.pdf",
-          "date": "2023-02-13",
-          "description": "Approval of development plan for multifamily residential building with retail/restaurant uses and streetscape improvements."
+          "id": "026-007",
+          "url": "https://library.municode.com/tx/addison/munidocs/munidocs?nodeId=8d2fc8993f793",
+          "date": "2026-02-10",
+          "description": "Rezoning 15.5 acres from Commercial General and Planned Development to a new transit-oriented mixed-use Planned Development (Case 1947-Z, Addison Junction)"
         }
       ],
-      "placeTypes": ["Urban Village", "High Intensity Urban Center"]
+      "placeTypes": ["Urban Village", "High Intensity Urban Center"],
+      "popup": {
+        "residential": "5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "",
+        "hotel": "P",
+        "daycare": "P",
+        "limits": "No height limit, Build-to 0–10 ft"
+      }
     },
     "PD 601": {
       "kind": "pd",
@@ -2196,7 +2186,7 @@
       "name": "",
       "base": null,
       "done": false,
-      "acres": 2.1,
+      "acres": 1.7,
       "mainOrdinance": "083-033",
       "ordinances": [
         {
