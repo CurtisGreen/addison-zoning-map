@@ -82,6 +82,12 @@ function renderFacts(zone, base) {
 /** A value split by area, lot type, or street type is an object; anything else is one value. */
 const partsOf = (value) => (isSplit(value) ? Object.keys(value) : []);
 
+/** True when some dimensions are split by part and others are not, so the single-value table needs an "All" header. */
+function hasSplitAndSingle(groups) {
+  const split = groups.map((group) => partsOf(group[0][1].value).length > 0);
+  return split.includes(true) && split.includes(false);
+}
+
 function groupBySplit(entries) {
   const groups = new Map();
   for (const entry of entries) {
@@ -97,13 +103,18 @@ function groupBySplit(entries) {
  *                    | Zero-Lot-Line | Single Family Detached | Duplex
  *   Lot area, min    | 5,750 sq ft   | 7,200 sq ft            | 8,800 sq ft
  *   Lot width, min   | 50 ft         | 60 ft                  | 80 ft
- * Single values have no header. `notes` marks rows with a note; `baseDimensions` makes values read "base → new".
+ * Single values have no header, unless `labelSingle` is set (another table on the page has one): then "All". `notes` marks rows with a note; `baseDimensions` makes values read "base → new".
  */
-function dimensionTable(group, { zone, base, markFor, baseDimensions }) {
+function dimensionTable(
+  group,
+  { zone, base, markFor, baseDimensions, labelSingle },
+) {
   const parts = partsOf(group[0][1].value);
   const header = parts.length
     ? `<tr class="head"><th></th>${parts.map((part) => `<th>${escapeHtml(part)}</th>`).join("")}<th></th></tr>`
-    : "";
+    : labelSingle
+      ? `<tr class="head"><th></th><th>All</th><th></th></tr>`
+      : "";
   const rows = group.map(([field, dimension]) => {
     const { label, unit } = base.dimensionFields[field];
     const mark = markFor ? markFor(field) : "";
@@ -211,8 +222,10 @@ function renderPdRules(zone, base) {
   // Without a base, the PD's dimensions already appear under Dimensions.
   const changed = pd.base ? Object.entries(pd.dimensions) : [];
   const baseDimensions = base.districts[pd.base]?.dimensions || {};
-  const dimensionTables = groupBySplit(changed).map((group) =>
-    dimensionTable(group, { zone, base, baseDimensions }),
+  const changedGroups = groupBySplit(changed);
+  const labelSingle = hasSplitAndSingle(changedGroups);
+  const dimensionTables = changedGroups.map((group) =>
+    dimensionTable(group, { zone, base, baseDimensions, labelSingle }),
   );
   const shownElsewhere = new Set([
     ...NOTES_SHOWN_ELSEWHERE,
@@ -451,8 +464,10 @@ function renderDimensions(zone, base) {
     const rendered = udcNotes + notes.render();
     return rendered ? `<h2>${heading}</h2>${rendered}` : "";
   }
-  const tables = groupBySplit(entries).map((group) =>
-    dimensionTable(group, { zone, base, markFor }),
+  const groups = groupBySplit(entries);
+  const labelSingle = hasSplitAndSingle(groups);
+  const tables = groups.map((group) =>
+    dimensionTable(group, { zone, base, markFor, labelSingle }),
   );
   return `<h2>${heading}</h2>${tables.join("")}${udcNotes}${notes.render()}`;
 }

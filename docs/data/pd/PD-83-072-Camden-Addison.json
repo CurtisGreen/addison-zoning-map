@@ -1,0 +1,120 @@
+{
+  "id": "PD 83-072",
+  "name": "Camden Addison",
+  "family": "residential",
+  "base": null,
+  "pdUsesOnly": true,
+  "purpose": "",
+  "uses": [],
+  "otherUses": [
+    {
+      "text": "Multiple family dwelling (apartments)",
+      "ordinance": "094-041",
+      "page": 2,
+      "quote": "Multiple family dwelling (apartments)."
+    },
+    {
+      "text": "Community, social or hobby buildings for tenants as part of a multiple family dwelling or housing project",
+      "ordinance": "094-041",
+      "page": 2,
+      "quote": "Community, social or hobby buildings for tenants as part"
+    },
+    {
+      "text": "Accessory buildings, including a private laundry, utility or storage building and carports",
+      "permission": "A",
+      "ordinance": "094-041",
+      "page": 2,
+      "quote": "Accessory buildings including a private laundry,"
+    }
+  ],
+  "dimensions": {
+    "heightMaxStories": {
+      "value": { "Zone 1": 2, "Zone 2": 3 },
+      "ordinance": "094-041",
+      "page": 3,
+      "quote": "No building may exceed two (2) standard stories in height."
+    },
+    "unitSizeMin": {
+      "value": 775,
+      "ordinance": "094-041",
+      "page": 2,
+      "quote": "The minimum dwelling unit size shall be 775 square feet."
+    },
+    "frontSetbackMin": {
+      "value": 25,
+      "ordinance": "094-041",
+      "page": 3,
+      "quote": "There shall be a front yard having a minimum depth"
+    },
+    "sideSetbackMin": {
+      "value": 20,
+      "ordinance": "094-041",
+      "page": 3,
+      "quote": "parallel to the side lot line, the side yard shall be"
+    },
+    "masonryMin": {
+      "value": 80,
+      "ordinance": "094-041",
+      "page": 3,
+      "quote": "buildings shall contain at least 80% brick, excluding window"
+    },
+    "densityMax": {
+      "value": 18,
+      "ordinance": "094-041",
+      "page": 2,
+      "quote": "Allowable density shall be 18 units per acre multiplied"
+    }
+  },
+  "parking": [
+    {
+      "use": "Efficiency",
+      "requirement": "1 space per unit",
+      "rates": [{ "spaces": 1, "per": 1, "unit": "unit" }],
+      "ordinance": "094-041",
+      "page": 5,
+      "quote": "Efficiency: 1 space per unit"
+    },
+    {
+      "use": "One bedroom",
+      "requirement": "1.5 spaces per unit",
+      "rates": [{ "spaces": 1.5, "per": 1, "unit": "unit" }],
+      "ordinance": "094-041",
+      "page": 5,
+      "quote": "One Bedroom: 1.5 spaces per unit"
+    },
+    {
+      "use": "Two bedroom",
+      "requirement": "2 spaces per unit",
+      "rates": [{ "spaces": 2, "per": 1, "unit": "unit" }],
+      "ordinance": "094-041",
+      "page": 5,
+      "quote": "Two Bedroom: 2 spaces per unit"
+    },
+    {
+      "use": "Three bedroom",
+      "requirement": "2.5 spaces per unit",
+      "rates": [{ "spaces": 2.5, "per": 1, "unit": "unit" }],
+      "ordinance": "094-041",
+      "page": 5,
+      "quote": "Three Bedroom: 2.5 spaces per unit"
+    }
+  ],
+  "review": {
+    "unitSizeMin": "The average unit size must be 1,000 sq ft in Zone 1 and 900 sq ft in Zone 2.",
+    "sideSetbackMin": "The side yard is the greater of 20 ft or 10% of the building side length along the lot line."
+  },
+  "notes": [
+    "Zone 2 refers to the park and the units next to the park.",
+    "No parking is allowed in any front yard.",
+    "All units in Zone 1 must have garages; at least 30% of units in Zone 2 must have garages.",
+    "Zone 1 may have no exterior stairways.",
+    "No vehicle access is allowed to the public space, and the site must have vehicle access to both Westgrove Drive and Addison Road.",
+    "Any fence along the public space must provide an open view.",
+    "The plat must dedicate 3.265 acres (Tract II) to the Town for park purposes, plus 12 feet of right-of-way for Addison Road.",
+    "Landscaping must screen the air conditioning units that face the public space."
+  ],
+  "history": {
+    "093-072": "Rezoned 25.4 acres from Single-Family Residential (R-1) to a two-zone apartment PD",
+    "094-041": "Set apartment standards for each zone and added park dedication and screening conditions"
+  }
+}

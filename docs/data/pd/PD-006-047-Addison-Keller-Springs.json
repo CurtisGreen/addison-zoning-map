@@ -2,7 +2,7 @@
   "id": "PD 006-047",
   "name": "Addison Keller Springs",
   "base": "CL",
-  "family": "mixed",
+  "family": "residential",
   "mustFollowPlan": true,
   "purpose": "",
   "uses": [
@@ -33,6 +33,5 @@
     "006-047": "Rezoned from Commercial-2 to PD for apartments, condominiums and local retail uses",
     "011-044": "Approved revised plans for Keller Springs Lofts, 353 multifamily units",
     "011-056": "Abandoned part of the Town's utility easement"
-  },
-  "curtisNotes": "Addison Keller Springs was originally based on the legacy Local Retail (LR) district with apartments and condos added on. LR is now Commercial Limited (CL) under the UDC."
+  }
 }

@@ -610,17 +610,18 @@
     },
     "PD 83-072": {
       "kind": "pd",
-      "name": "",
+      "name": "Camden Addison",
       "base": null,
-      "done": false,
+      "family": "residential",
+      "done": true,
       "acres": 22.5,
-      "mainOrdinance": "083-072",
+      "mainOrdinance": "093-072",
       "ordinances": [
         {
-          "id": "083-072",
-          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-072%20-%201983.pdf",
-          "date": "1983-11-22",
-          "description": "SUP for a restaurant and the sale of alcoholic beverages for on-premises consumption"
+          "id": "093-072",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1993/093-072%20-%201993.pdf",
+          "date": "1993-11-23",
+          "description": "Change zoning from Single Family Residential (R-1) to Planned Development (PD)"
         },
         {
           "id": "094-041",
@@ -629,7 +630,19 @@
           "description": "Amend ORD 093-072 to provide for approval of site development plans and special conditions"
         }
       ],
-      "placeTypes": ["Urban Village"]
+      "placeTypes": ["Urban Village"],
+      "popup": {
+        "residential": "5+ units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "hotel": "",
+        "daycare": "",
+        "limits": "Max height 2–3 stories, Front 25 ft"
+      }
     },
     "PD 86-001": {
       "kind": "pd",
@@ -1074,6 +1087,36 @@
       "mainOrdinance": "026-007",
       "ordinances": [
         {
+          "id": "023-08",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-08%20-%202023.pdf",
+          "date": "2023-02-13",
+          "description": "Changing from C-1, PD, and UC to a new PD to allow trainsit oriented mixed use development"
+        },
+        {
+          "id": "023-11",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-11%20-%202023.pdf",
+          "date": "2023-02-13",
+          "description": "Development plan for multifamily residential building, retail/restaurants, road realignment"
+        },
+        {
+          "id": "023-09",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-09%20-%202023.pdf",
+          "date": "2023-02-13",
+          "description": "Approval of a development plan for lots 1 and 5X, block A, Addison Circle Station-Phase 1, to allow for the development of an office building with ground floor retail/restaurant uses, a parking structure, and site access drives."
+        },
+        {
+          "id": "023-12",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-12%20-%202023.pdf",
+          "date": "2023-02-13",
+          "description": "Construction of emergency access drives, pedestrian ways, Festival Way streetscape improvements"
+        },
+        {
+          "id": "023-10",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-10%20-%202023.pdf",
+          "date": "2023-02-13",
+          "description": "Approval of development plan for multifamily residential building with retail/restaurant uses and streetscape improvements."
+        },
+        {
           "id": "026-007",
           "url": "https://library.municode.com/tx/addison/munidocs/munidocs?nodeId=8d2fc8993f793",
           "date": "2026-02-10",
@@ -1283,7 +1326,7 @@
       "name": "Addison Keller Springs",
       "base": "CL",
       "done": true,
-      "family": "mixed",
+      "family": "residential",
       "acres": 7.4,
       "mainOrdinance": "006-047",
       "ordinances": [
@@ -1823,7 +1866,19 @@
           "description": "Change zoning from Commercial (C) to Planned Development (PD)"
         }
       ],
-      "placeTypes": ["High Intensity Urban Center", "Urban Village"]
+      "placeTypes": ["High Intensity Urban Center", "Urban Village"],
+      "popup": {
+        "residential": "",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "hotel": "",
+        "daycare": "",
+        "limits": ""
+      }
     },
     "PD 85-083": {
       "kind": "pd",
