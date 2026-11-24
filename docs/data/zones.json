@@ -1221,9 +1221,10 @@
     },
     "PD 84-097": {
       "kind": "pd",
-      "name": "",
+      "name": "Millennium Tower",
       "base": null,
-      "done": false,
+      "family": "commercial",
+      "done": true,
       "acres": 8.5,
       "mainOrdinance": "084-097",
       "ordinances": [
@@ -1240,7 +1241,19 @@
           "description": "Amend ordinance 087-097, in order to revise section 1 to revise the legal description; section 3 to revise the allowed square footages for development; and section 4 to revise special conditions."
         }
       ],
-      "placeTypes": ["High Intensity Urban Center"]
+      "placeTypes": ["High Intensity Urban Center"],
+      "popup": {
+        "residential": "",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "S",
+        "office": "P",
+        "industry": "",
+        "hotel": "",
+        "daycare": "",
+        "limits": "Max height 14 stories"
+      }
     },
     "PD 85-003": {
       "kind": "pd",
