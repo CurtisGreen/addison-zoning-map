@@ -9,21 +9,18 @@
   "otherUses": [
     {
       "text": "Office space",
-      "group": "Uses",
       "ordinance": "098-032",
       "page": 6,
       "quote": "Office space - total of 1,020,000 square feet"
     },
     {
       "text": "Retail uses contained within the office buildings",
-      "group": "Uses",
       "ordinance": "098-032",
       "page": 6,
       "quote": "Retail uses contained within the office buildings"
     },
     {
       "text": "Restaurant use with the sale of alcoholic beverages for on-premises consumption",
-      "group": "Uses",
       "permission": "S",
       "ordinance": "098-032",
       "page": 6,
@@ -47,7 +44,7 @@
       },
       "ordinance": "098-032",
       "page": 6,
-      "quote": "Office space - total of 1,020,000 square feet"
+      "quote": "Office space - total of 1,020,000 square feet Two, 14-story office buildings of 374,000 square feet each"
     }
   },
   "review": {},
@@ -59,7 +56,7 @@
         "The Phase 1 parking structure must have concrete panels on three sides, with metal grid panels at least 48 inches high allowed on the north side. The Phase 2 structure must have concrete panels on all four sides.",
         "Before a building permit, a master sewer, water and storm drainage plan is required for Phases 1 to 3 and the area to the west (Area E), with on-site detention if necessary.",
         "Before a building permit, plans must go to the FAA to check compliance with Addison's height hazard zoning.",
-        "Entrances on the south side must line up with the Arapaho Road island openings and be at least 24 ft wide. A deceleration lane is required at the southernmost Tollway entrance.",
+        "Entrances on the south side must line up with the Arapaho Road island openings and should be at least 24 ft wide. A deceleration lane is required at the southernmost Tollway entrance.",
         "A 5 ft sidewalk is required along the Dallas North Tollway, within a 25 ft landscaping buffer.",
         "A solid line of trees, 25 ft on center, is required along the west and north property lines to screen the parking structure, planted before the certificate of occupancy for Phase 2.",
         "The landscaping plan must show what is installed in each of Phases 1, 2 and 3.",
@@ -71,5 +68,21 @@
     "084-097": "Rezoned 8 acres from Industrial (I-1) to a PD for offices and restaurants",
     "098-032": "Revised the land description, allowed uses and conditions for three office buildings"
   },
-  "curtisNote": "The development plan shows 3 phases, but only phase 1 was built"
+  "curtisNote": "The development plan shows 3 phases, but only phase 1 was built",
+  "parking": [
+    {
+      "use": "Office buildings",
+      "requirement": "2.8 per 1,000 sq ft GFA",
+      "rates": [
+        {
+          "spaces": 1060,
+          "per": 374000,
+          "unit": "sq ft gross"
+        }
+      ],
+      "ordinance": "098-032",
+      "page": 10,
+      "quote": "Development Data"
+    }
+  ]
 }

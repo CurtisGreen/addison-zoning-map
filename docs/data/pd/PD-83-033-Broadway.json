@@ -9,217 +9,186 @@
   "otherUses": [
     {
       "text": "Antique shop",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Antique Shop"
     },
     {
       "text": "Art gallery",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Art Gallery Bakery, retail sales only"
     },
     {
       "text": "Bakery, retail sales only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Bakery, retail sales only"
     },
     {
       "text": "Bank",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Bank Barber and beauty shop"
     },
     {
       "text": "Barber and beauty shop",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Barber and beauty shop"
     },
     {
       "text": "Bird and/or pet shops, retail sales only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Bird and/or pet shops, retail sales only"
     },
     {
       "text": "Camera shop",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Camera Shop Candy Shop"
     },
     {
       "text": "Candy shop",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Candy Shop Caterer and/or wedding service"
     },
     {
       "text": "Caterer and/or wedding service",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Caterer and/or wedding service"
     },
     {
       "text": "Cleaning and laundry pick-up station for receiving and delivery of articles to be cleaned and laundered, but no actual work to be done on premises",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Cleaning and laundry pick-up station for receiving and"
     },
     {
       "text": "Department store, novelty or variety shop, retail sales only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Department store, novelty or variety shop, retail sales only"
     },
     {
       "text": "Drug store, retail sales only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Drug store, retail sales only"
     },
     {
       "text": "Electrical goods, retail sales only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Electrical goods, retail sales only"
     },
     {
       "text": "Film developing and printing",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Film developing and printing"
     },
     {
       "text": "Florist, retail sales only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Florist, retail sales only"
     },
     {
       "text": "Furniture store, retail sales only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Furniture store, retail sales only"
     },
     {
       "text": "Grocery store",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Grocery store"
     },
     {
       "text": "Hardware, sporting goods, toys, paints, wall paper, and/or clothing stores, retail sales only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Hardware, sporting goods, toys, paints, wall paper, and/or"
     },
     {
       "text": "Hotel and/or motel",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Hotel and/or motel"
     },
     {
       "text": "Household and/or office furnishings and appliances",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Household and/or office furnishings and appliances"
     },
     {
       "text": "Job printing",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 2,
       "quote": "Job printing"
     },
     {
       "text": "Jewelry, optical goods, photographic supplies, retail sales only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Jewelry, optical goods, photographic supplies, retail sales"
     },
     {
       "text": "Letter and/or mimeograph shop",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Letter and/or mimeograph shop"
     },
     {
       "text": "Library, rental only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Library, rental only"
     },
     {
       "text": "Meat market, retail sales only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Meat market, retail sales only"
     },
     {
       "text": "Office (general)",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Office (general)"
     },
     {
       "text": "Photographers or artists studio",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Photographers or artists studio"
     },
     {
       "text": "Professional offices for architect, attorney, engineer and real estate",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Professional offices for architect, attorney, engineer and"
     },
     {
       "text": "Piano and/or musical instruments, retail sales only",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Piano and/or musical instruments, retail sales only"
     },
     {
       "text": "Residential uses (permanent dwelling)",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Residential uses (permanent dwelling)"
     },
     {
       "text": "Restaurants",
-      "group": "Uses",
       "permission": "S",
       "ordinance": "085-059",
       "page": 3,
@@ -227,63 +196,54 @@
     },
     {
       "text": "Retail (general)",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Retail (general)"
     },
     {
       "text": "Retail store or shop for custom work or the making of articles to be sold for retail on the premises",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Retail store or shop for custom work or the making of"
     },
     {
       "text": "Seamstress, dress maker or tailor",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Seamstress, dress maker or tailor"
     },
     {
       "text": "Shoe repair shop and/or retail sales",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Shoe repair shop and/or retail sales"
     },
     {
       "text": "Studios for dance, music or drama",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Studios for dance, music or drama"
     },
     {
       "text": "Studio for the display and sale of glass, china and/or art objects",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Studio for the display and sale of glass, china and/or art"
     },
     {
       "text": "Veterinary objects",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Veterinary objects"
     },
     {
       "text": "Wearing apparel",
-      "group": "Uses",
       "ordinance": "085-059",
       "page": 3,
       "quote": "Wearing apparel"
     },
     {
       "text": "Accessory uses customarily incidental to the above uses",
-      "group": "Uses",
       "permission": "A",
       "ordinance": "085-059",
       "page": 3,
@@ -403,7 +363,6 @@
     }
   ],
   "review": {
-    "uses": "085-059 lists lots 1 to 11 and 13 of Block A. 083-033, 082-827 and 084-017 gave some of these lots their own PD rules earlier, and the ordinances do not say which governs.",
     "heightMaxStories": "More than 3 stories can be approved through the site development plan process.",
     "frontSetbackMin": {
       "North of Broadway": "A 4 ft minimum sidewalk is included in the 7 ft setback."

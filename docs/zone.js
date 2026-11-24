@@ -424,7 +424,8 @@ function renderUses(zone, base, standards) {
     for (const use of ordinanceOnlyUses) {
       const { mark, className } =
         PERMISSIONS[planPermission(zone.pdData, use.permission ?? "P")];
-      const category = use.group ?? "Other uses";
+      // With no base district and no group named, the uses need no sub-heading under "Allowed uses".
+      const category = use.group ?? (zone.base ? "Other uses" : "");
       if (!byCategory.has(category)) byCategory.set(category, []);
       byCategory
         .get(category)
@@ -434,7 +435,7 @@ function renderUses(zone, base, standards) {
     }
   const groups = [...byCategory].map(
     ([category, lines]) =>
-      `<h3>${escapeHtml(category)}</h3><ul class="uses">${lines.join("")}</ul>`,
+      `${category ? `<h3>${escapeHtml(category)}</h3>` : ""}<ul class="uses">${lines.join("")}</ul>`,
   );
   // No uses to list and no note about them: leave the whole section out.
   if (!groups.length && !zone.review.uses) return "";
