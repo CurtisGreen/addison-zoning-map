@@ -1,0 +1,460 @@
+{
+  "id": "PD 83-033",
+  "name": "Broadway",
+  "family": "mixed",
+  "base": null,
+  "pdUsesOnly": true,
+  "purpose": "",
+  "uses": [],
+  "otherUses": [
+    {
+      "text": "Antique shop",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Antique Shop"
+    },
+    {
+      "text": "Art gallery",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Art Gallery Bakery, retail sales only"
+    },
+    {
+      "text": "Bakery, retail sales only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Bakery, retail sales only"
+    },
+    {
+      "text": "Bank",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Bank Barber and beauty shop"
+    },
+    {
+      "text": "Barber and beauty shop",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Barber and beauty shop"
+    },
+    {
+      "text": "Bird and/or pet shops, retail sales only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Bird and/or pet shops, retail sales only"
+    },
+    {
+      "text": "Camera shop",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Camera Shop Candy Shop"
+    },
+    {
+      "text": "Candy shop",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Candy Shop Caterer and/or wedding service"
+    },
+    {
+      "text": "Caterer and/or wedding service",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Caterer and/or wedding service"
+    },
+    {
+      "text": "Cleaning and laundry pick-up station for receiving and delivery of articles to be cleaned and laundered, but no actual work to be done on premises",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Cleaning and laundry pick-up station for receiving and"
+    },
+    {
+      "text": "Department store, novelty or variety shop, retail sales only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Department store, novelty or variety shop, retail sales only"
+    },
+    {
+      "text": "Drug store, retail sales only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Drug store, retail sales only"
+    },
+    {
+      "text": "Electrical goods, retail sales only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Electrical goods, retail sales only"
+    },
+    {
+      "text": "Film developing and printing",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Film developing and printing"
+    },
+    {
+      "text": "Florist, retail sales only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Florist, retail sales only"
+    },
+    {
+      "text": "Furniture store, retail sales only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Furniture store, retail sales only"
+    },
+    {
+      "text": "Grocery store",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Grocery store"
+    },
+    {
+      "text": "Hardware, sporting goods, toys, paints, wall paper, and/or clothing stores, retail sales only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Hardware, sporting goods, toys, paints, wall paper, and/or"
+    },
+    {
+      "text": "Hotel and/or motel",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Hotel and/or motel"
+    },
+    {
+      "text": "Household and/or office furnishings and appliances",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Household and/or office furnishings and appliances"
+    },
+    {
+      "text": "Job printing",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 2,
+      "quote": "Job printing"
+    },
+    {
+      "text": "Jewelry, optical goods, photographic supplies, retail sales only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Jewelry, optical goods, photographic supplies, retail sales"
+    },
+    {
+      "text": "Letter and/or mimeograph shop",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Letter and/or mimeograph shop"
+    },
+    {
+      "text": "Library, rental only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Library, rental only"
+    },
+    {
+      "text": "Meat market, retail sales only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Meat market, retail sales only"
+    },
+    {
+      "text": "Office (general)",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Office (general)"
+    },
+    {
+      "text": "Photographers or artists studio",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Photographers or artists studio"
+    },
+    {
+      "text": "Professional offices for architect, attorney, engineer and real estate",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Professional offices for architect, attorney, engineer and"
+    },
+    {
+      "text": "Piano and/or musical instruments, retail sales only",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Piano and/or musical instruments, retail sales only"
+    },
+    {
+      "text": "Residential uses (permanent dwelling)",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Residential uses (permanent dwelling)"
+    },
+    {
+      "text": "Restaurants",
+      "group": "Uses",
+      "permission": "S",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Restaurants with the approval of a Special Use Permit"
+    },
+    {
+      "text": "Retail (general)",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Retail (general)"
+    },
+    {
+      "text": "Retail store or shop for custom work or the making of articles to be sold for retail on the premises",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Retail store or shop for custom work or the making of"
+    },
+    {
+      "text": "Seamstress, dress maker or tailor",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Seamstress, dress maker or tailor"
+    },
+    {
+      "text": "Shoe repair shop and/or retail sales",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Shoe repair shop and/or retail sales"
+    },
+    {
+      "text": "Studios for dance, music or drama",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Studios for dance, music or drama"
+    },
+    {
+      "text": "Studio for the display and sale of glass, china and/or art objects",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Studio for the display and sale of glass, china and/or art"
+    },
+    {
+      "text": "Veterinary objects",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Veterinary objects"
+    },
+    {
+      "text": "Wearing apparel",
+      "group": "Uses",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Wearing apparel"
+    },
+    {
+      "text": "Accessory uses customarily incidental to the above uses",
+      "group": "Uses",
+      "permission": "A",
+      "ordinance": "085-059",
+      "page": 3,
+      "quote": "Accessory uses customarily incidents to the above uses"
+    }
+  ],
+  "dimensions": {
+    "frontSetbackMin": {
+      "value": {
+        "North of Broadway": 7,
+        "South of Broadway": 0
+      },
+      "ordinance": "085-059",
+      "page": 4,
+      "quote": "Seven (7) feet required from the front"
+    },
+    "rearSetbackMin": {
+      "value": {
+        "North of Broadway": 20,
+        "South of Broadway": 0
+      },
+      "ordinance": "085-059",
+      "page": 4,
+      "quote": "20 feet from property line on north side"
+    },
+    "heightMaxStories": {
+      "value": 3,
+      "ordinance": "085-059",
+      "page": 4,
+      "quote": "limited to three (3) stories unless otherwise approved"
+    }
+  },
+  "parking": [
+    {
+      "use": "Restaurant",
+      "requirement": "6.7 per 1,000 sq ft gross",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 150,
+          "unit": "sq ft gross"
+        }
+      ],
+      "ordinance": "085-059",
+      "page": 4,
+      "quote": "Restaurant 1/150 gross sq. ft."
+    },
+    {
+      "use": "Retail",
+      "requirement": "3.3 per 1,000 sq ft gross",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft gross"
+        }
+      ],
+      "ordinance": "085-059",
+      "page": 4,
+      "quote": "Retail 1/300 gross sq. ft."
+    },
+    {
+      "use": "Office/clinic",
+      "requirement": "3.3 per 1,000 sq ft usable",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft usable"
+        }
+      ],
+      "ordinance": "085-059",
+      "page": 4,
+      "quote": "usable sq. ft."
+    },
+    {
+      "use": "Residential",
+      "requirement": "2 per dwelling",
+      "rates": [
+        {
+          "spaces": 2,
+          "per": 1,
+          "unit": "dwelling"
+        }
+      ],
+      "ordinance": "085-059",
+      "page": 4,
+      "quote": "2/dwelling Residential"
+    },
+    {
+      "use": "Furniture/antiques",
+      "requirement": "1 per 1,000 sq ft gross",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1000,
+          "unit": "sq ft gross"
+        }
+      ],
+      "ordinance": "085-059",
+      "page": 4,
+      "quote": "Furniture/Antiques 1/1,000 gross sq. ft."
+    },
+    {
+      "use": "Hotel/motel",
+      "requirement": "1 per room",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1,
+          "unit": "room"
+        }
+      ],
+      "ordinance": "085-059",
+      "page": 4,
+      "quote": "Hotel/Motel l/room"
+    }
+  ],
+  "review": {
+    "uses": "085-059 lists lots 1 to 11 and 13 of Block A. 083-033, 082-827 and 084-017 gave some of these lots their own PD rules earlier, and the ordinances do not say which governs.",
+    "heightMaxStories": "More than 3 stories can be approved through the site development plan process.",
+    "frontSetbackMin": {
+      "North of Broadway": "A 4 ft minimum sidewalk is included in the 7 ft setback."
+    }
+  },
+  "notes": [
+    {
+      "heading": "Old Addison standards, ordinances 084-033 and 085-059",
+      "items": [
+        "The streets' rights of way are widened to 80 ft to allow on-street parking, and the alley to 25 ft for fire lanes. Adjacent property owners pay for the streets, parking, alleys, sidewalks and streetscape.",
+        "Buildings must be in a turn-of-the-century, small-town style. The Architectural Review Committee reviews all new construction and changes, and approves exterior materials.",
+        "Fire protection: 2-hour fire walls between all buildings, monitored alarms in all buildings, and a fully automatic sprinkler system.",
+        "No development may use more than one-third of its floor area for restaurants unless it provides the required restaurant parking.",
+        "Deliveries are made at the rear, not from the street, and waste is kept in enclosed areas.",
+        "Signs must be approved by the Architectural Review Committee and fit the district's theme."
+      ]
+    },
+    {
+      "heading": "Lots 8 and 9 (4815 Broadway), ordinance 085-091",
+      "items": [
+        "The final plan is approved, and development must follow it.",
+        "A fully automatic fire sprinkler system must be installed before the building is occupied.",
+        "Water service must be improved before any building permit, and the site must be platted.",
+        "Landscaping escrow is shared by each owner's land area."
+      ]
+    },
+    {
+      "heading": "Lot 10 (4819 Broadway), ordinances 084-017 and 085-071",
+      "items": [
+        "Development must follow the attached development plans, and the final plan was approved in 1985.",
+        "Landscaping goes on the front of the site, and the applicant must follow the recommendations of the Fire Department and Building Inspections.",
+        "Water service must be improved before any building permit, except a foundation permit. Landscaping escrow is shared by each owner's land area."
+      ]
+    },
+    {
+      "heading": "Broadway frontage, ordinances 084-016 and 085-059",
+      "items": [
+        "On-street parking on Broadway counts toward an adjoining property's on-site parking, in proportion to lot area.",
+        "085-059 allocates the 52 Broadway spaces across 47,194 sq ft of developable land, which is 1.1 spaces per 1,000 sq ft."
+      ]
+    }
+  ],
+  "history": {
+    "078-426": "Allowed less than 80% masonry for an antique shop on lots 10 to 12",
+    "082-827": "Rezoned lots 6 and 7 from Commercial to a PD for offices and two dwellings",
+    "083-033": "Rezoned 4803 Broadway from Commercial to a planned development, following attached plans",
+    "084-016": "Counted on-street parking on Broadway toward adjoining properties' parking",
+    "084-017": "Rezoned lot 10 from Commercial to a planned development, following attached plans",
+    "084-033": "Rezoned Old Addison from Local Retail and Commercial to one retail PD with design review",
+    "085-059": "Set Broadway block uses, parking, 3-story limit and setbacks (lots 1 to 11, 13)",
+    "085-071": "Approved the lot 10 final plan, with water, code and landscaping escrow conditions",
+    "085-091": "Approved the final plan for lots 8 and 9, with sprinkler and landscaping conditions"
+  }
+}

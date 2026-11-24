@@ -107,7 +107,7 @@ function groupBySplit(entries) {
  */
 function dimensionTable(
   group,
-  { zone, base, markFor, baseDimensions, labelSingle },
+  { zone, base, markFor, markForPart, baseDimensions, labelSingle },
 ) {
   const parts = partsOf(group[0][1].value);
   const header = parts.length
@@ -129,7 +129,14 @@ function dimensionTable(
     const cell = (value) =>
       `<td>${changeText(baseValue, value, unit, baseUnit)}</td>`;
     return parts.length
-      ? `<tr><th>${escapeHtml(label)}${mark}</th>${parts.map((part) => cell(dimension.value[part])).join("")}${source}</tr>`
+      ? `<tr><th>${escapeHtml(label)}${mark}</th>${parts
+          .map((part) =>
+            cell(dimension.value[part]).replace(
+              "</td>",
+              `${markForPart ? markForPart(field, part) : ""}</td>`,
+            ),
+          )
+          .join("")}${source}</tr>`
       : `<tr><th>${escapeHtml(label)}</th>${cell(dimension.value).replace("</td>", `${mark}</td>`)}${source}</tr>`;
   });
   return tableOf([header, ...rows]);
@@ -429,6 +436,8 @@ function renderUses(zone, base, standards) {
     ([category, lines]) =>
       `<h3>${escapeHtml(category)}</h3><ul class="uses">${lines.join("")}</ul>`,
   );
+  // No uses to list and no note about them: leave the whole section out.
+  if (!groups.length && !zone.review.uses) return "";
   const folds = [...applicableStandards]
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([id, { standard, items }]) =>
@@ -449,9 +458,14 @@ function renderDimensions(zone, base) {
   const entries = Object.entries(zone.dimensions);
   const shownNumbers = new Set(Object.values(zone.noteRefs).flat());
   const notes = createNotes(Math.max(0, ...shownNumbers)); // other notes continue after the UDC's numbers
+  // A review note can be one text for the whole row, or an object of texts by part ({"North side": "…"}) for a single value.
+  const isPartNotes = (note) =>
+    Boolean(note) && typeof note === "object" && !Array.isArray(note);
   const markFor = (key) =>
     (zone.noteRefs[key] ? noteNumber(zone.noteRefs[key].join(",")) : "") +
-    notes.mark(zone.review[key]);
+    (isPartNotes(zone.review[key]) ? "" : notes.mark(zone.review[key]));
+  const markForPart = (key, part) =>
+    isPartNotes(zone.review[key]) ? notes.mark(zone.review[key][part]) : "";
   const heading = `Dimensions${markFor("dimensions")}`;
   const udcNotes = [...shownNumbers]
     .sort((a, b) => a - b)
@@ -467,7 +481,7 @@ function renderDimensions(zone, base) {
   const groups = groupBySplit(entries);
   const labelSingle = hasSplitAndSingle(groups);
   const tables = groups.map((group) =>
-    dimensionTable(group, { zone, base, markFor, labelSingle }),
+    dimensionTable(group, { zone, base, markFor, markForPart, labelSingle }),
   );
   return `<h2>${heading}</h2>${tables.join("")}${udcNotes}${notes.render()}`;
 }

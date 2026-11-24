@@ -41,6 +41,8 @@ python scripts/pd.py fetch "PD 461"
 
 It downloads each ordinance in the PD's chain to `pdfs/<id>/`, writes page text to `pdfs/<id>/<ordinance>/pNNN.txt` (OCR for scanned pages, marked `[OCR]`), into the ignored `pdfs/` folder. It never writes under `docs/data`; create `docs/data/pd/<id>.json` yourself. If an ordinance has no URL, tell the user; do not search the web for it unless they ask. Add every ordinance or attachment you need but cannot get (no PDF, an exhibit missing from the PDF, a document the ordinance relies on) to `missing-ordinances.md`, with the PD and where it is cited; move it to "Found" when the user supplies it.
 
+After the chain it lists the town-map ordinances whose point lies inside the PD's polygon but that the chain lacks. The zoning layer's chain is often incomplete, and these points are the only link to the land. Read each one and decide whether it belongs: an amendment or a site plan for the PD does, and so does an earlier or later ordinance that sets the PD's uses or standards; a per-tenant permit does not (see the SUP rule above). Add the ones that belong to the PD's `ordinances` in `zones.json` (id, url, date and description from `gis_api.py ordinances`) and read them with the rest; if the PD is made of several separate ordinances for different lots, say so in the report. Tell the user which you added and which you left out, and why.
+
 ## 3. Read
 
 - Read every ordinance, oldest first. A later ordinance amends earlier ones; the latest wording wins.

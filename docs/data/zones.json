@@ -2245,20 +2245,81 @@
     },
     "PD 83-033": {
       "kind": "pd",
-      "name": "",
+      "name": "Broadway",
       "base": null,
-      "done": false,
+      "family": "mixed",
+      "done": true,
       "acres": 1.7,
       "mainOrdinance": "083-033",
       "ordinances": [
+        {
+          "id": "078-426",
+          "url": "https://mcclibraryfunctions.azurewebsites.us/api/munidocDownload/31101/5d73a2b6dc3c8/pdf",
+          "date": "1978-09-12",
+          "description": "Variance from the 80% masonry requirement in the Commercial district for an antique shop on Block A, lots 10, 11 and 12"
+        },
+        {
+          "id": "082-827",
+          "url": "https://mcclibraryfunctions.azurewebsites.us/api/munidocDownload/31101/5d738818c5473/pdf",
+          "date": "1982-09-21",
+          "description": "Change from Commercial to Planned Development No. 28 for offices and two dwellings on Block A, lots 6 and 7"
+        },
         {
           "id": "083-033",
           "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-033%20-%201983.pdf",
           "date": "1983-05-24",
           "description": "Presently zoned \"C\" (Commercial) to be used under Planned Development District No. 34."
+        },
+        {
+          "id": "084-016",
+          "url": "https://mcclibraryfunctions.azurewebsites.us/api/munidocDownload/31101/5d73832bfd3a5/pdf",
+          "date": "1984-04-10",
+          "description": "Count on-street parking on Broadway Street toward adjoining property's on-site parking requirement"
+        },
+        {
+          "id": "084-017",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-017%20-%201984.pdf",
+          "date": "1984-04-10",
+          "description": "Change the zoning from District 'C' (Commercial) to District 'PD' (Planned Development) on Block A, lot 10"
+        },
+        {
+          "id": "084-033",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-033%20-%201984.pdf",
+          "date": "1984-05-22",
+          "description": "Change zoning from Local Retail (LR) and Commercial (C) to the Old Addison Planned Development (PD)"
+        },
+        {
+          "id": "085-059",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-059%20-%201985.pdf",
+          "date": "1985-07-09",
+          "description": "Amend 084-033 for Block A lots 1 to 11 and 13, north and south of Broadway: uses, parking, setbacks and style standards"
+        },
+        {
+          "id": "085-071",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-071%20-%201985.pdf",
+          "date": "1985-09-24",
+          "description": "Approve the final plan for lot 10 under 084-017, with water, code and landscaping escrow conditions"
+        },
+        {
+          "id": "085-091",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-091%20-%201985.pdf",
+          "date": "1985-11-05",
+          "description": "Approve the final plan for lots 8 and 9 under 085-059, with sprinkler, water and landscaping escrow conditions"
         }
       ],
-      "placeTypes": ["Urban Village"]
+      "placeTypes": ["Urban Village"],
+      "popup": {
+        "residential": "Permanent dwelling",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "S",
+        "office": "P",
+        "industry": "",
+        "hotel": "P",
+        "daycare": "",
+        "limits": "Max height 3 stories, Front 0–7 ft"
+      }
     },
     "PD 84-035": {
       "kind": "pd",

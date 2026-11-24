@@ -1,6 +1,7 @@
 """Helper for adding one Planned Development (PD). Used by the add-pd skill.
 
-  python scripts/pd.py fetch "PD 461"   download ordinances and extract page text (OCR if scanned) into pdfs/
+  python scripts/pd.py fetch "PD 461"   download ordinances and extract page text (OCR if scanned) into pdfs/; also lists
+                                        town-map ordinance points inside the PD that are not in its chain
   python scripts/pd.py check "PD 461"   validate docs/data/pd/<id>.json and say what zones.json should hold
 
 Needs pdftotext, pdftoppm (poppler) and tesseract, checked on startup. Stdlib only otherwise.
@@ -13,6 +14,9 @@ import subprocess
 import sys
 import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import gis_api
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "docs" / "data"
@@ -115,6 +119,53 @@ def page_texts(pdf):
     return texts, ocr_pages, folder
 
 
+MAP_TOLERANCE = 0.00005  # degrees (~5 m): a point on or just outside the polygon edge still counts
+
+
+def polygons_of(geometry):
+    return geometry["coordinates"] if geometry["type"] == "MultiPolygon" else [geometry["coordinates"]]
+
+
+def segment_distance(point, start, end):
+    (x, y), (x1, y1), (x2, y2) = point, start, end
+    dx, dy = x2 - x1, y2 - y1
+    length = dx * dx + dy * dy
+    t = 0 if not length else max(0, min(1, ((x - x1) * dx + (y - y1) * dy) / length))
+    return ((x - x1 - t * dx) ** 2 + (y - y1 - t * dy) ** 2) ** 0.5
+
+
+def point_in_polygon(point, rings):
+    """Even-odd test over all rings (holes included), or within MAP_TOLERANCE of an edge."""
+    x, y = point
+    inside = False
+    for ring in rings:
+        for start, end in zip(ring, ring[1:]):
+            if segment_distance(point, start, end) <= MAP_TOLERANCE:
+                return True
+            if (start[1] > y) != (end[1] > y) and x < (end[0] - start[0]) * (y - start[1]) / (end[1] - start[1]) + start[0]:
+                inside = not inside
+    return inside
+
+
+def ordinances_on_map(pd_id, pd):
+    """Ordinances the town map places inside the PD's polygon that the PD's chain lacks.
+
+    The chain in the zoning layer is often incomplete, and an ordinance's point on the map is the only link to the land.
+    A point has no area, so this tests whether each point lies inside the polygon.
+    """
+    geojson = read_json(DATA / "zones.geojson")
+    shapes = [polygons_of(f["geometry"]) for f in geojson["features"] if f["properties"]["zone"] == pd_id]
+    in_chain = {o["id"] for o in pd["ordinances"]}
+    found = []
+    for feature in gis_api.ordinances(geometry=True, geojson=True):
+        geometry, row = feature["geometry"], feature["properties"]
+        if not geometry or geometry["type"] != "Point" or row["ORD_ID"].strip() in in_chain:
+            continue
+        if any(point_in_polygon(geometry["coordinates"], rings) for polygons in shapes for rings in polygons):
+            found.append(row)
+    return found
+
+
 def fetch(pd_id, pd):
     folder = PDFS / file_slug(pd_id)
     folder.mkdir(parents=True, exist_ok=True)
@@ -133,6 +184,11 @@ def fetch(pd_id, pd):
         print(f"  {ordinance['id']}  {ordinance['date']}  {len(texts)} pages{ocr_note}\n"
               f"     {ordinance['description'][:140]}\n"
               f"     text: {text_folder.relative_to(ROOT)}/pNNN.txt   pdf: {pdf.relative_to(ROOT)}")
+    extra = ordinances_on_map(pd_id, pd)
+    if extra:
+        print("\nOrdinances the town map places inside this PD that are not in its chain (read them; some may be per-tenant permits):")
+        for row in extra:
+            print(f"  {row['ORD_ID'].strip()}  {(row['DESCRIPTIO'] or '').strip()[:110]}  [{(row['ADDRESS'] or '').strip()}]  {row['HYPERLINK'] or 'no link'}")
     pd_file = pd_data_file(pd_id, pd["name"])
     state = "exists" if pd_file.exists() else "does not exist yet; create it from the schema in the add-pd skill"
     print(f"\nData file {pd_file.relative_to(ROOT)} {state}. Nothing under docs/data was changed.")
