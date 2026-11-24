@@ -805,9 +805,10 @@
     },
     "PD 604": {
       "kind": "pd",
-      "name": "",
+      "name": "Addison Place",
       "base": null,
-      "done": false,
+      "family": "residential",
+      "done": true,
       "acres": 15.0,
       "mainOrdinance": "080-604",
       "ordinances": [
@@ -816,15 +817,21 @@
           "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1980/604%20-%201980.pdf",
           "date": "1980-08-12",
           "description": "Change zoning from Residential (R-1) to Planned Development (PD)"
-        },
-        {
-          "id": "085-089",
-          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-089%20-%201985.pdf",
-          "date": "1985-11-05",
-          "description": "SUP for a restaurant and the sale of alcoholic beverages for on premises consumption"
         }
       ],
-      "placeTypes": ["Residential Living", "Urban Village"]
+      "placeTypes": ["Residential Living", "Urban Village"],
+      "popup": {
+        "residential": "1–2 units",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "",
+        "restaurant": "",
+        "office": "",
+        "industry": "",
+        "hotel": "",
+        "daycare": "",
+        "limits": "Max height 36 ft"
+      }
     },
     "PD 84-092": {
       "kind": "pd",
