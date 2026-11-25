@@ -27,6 +27,7 @@ Rules for any page, script or content change in this repo.
 8. **Don't reset the user's work.** Keep filters, scroll position and form entries on back and reload.
 9. **Don't show success that isn't real.** No "saved" or "sent" message without a confirmed result.
 10. **Don't claim it's finished without checking.** Run it, test it, and say what you didn't check.
+11. **Don't over-comment.** Comment only a non-obvious reason or a constraint a reader could trip over, never what a line does, why a list is in a given order, or a small edit. Keep comments short, and end a one-sentence comment without a period.
 
 ## Design standards
 

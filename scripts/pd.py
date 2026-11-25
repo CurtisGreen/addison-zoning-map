@@ -25,7 +25,7 @@ PDFS = ROOT / "pdfs"
 PERMISSIONS = {"P", "S", "D", "A", "T"}
 GARBLED_CHARACTERS = "~=^"
 GARBLED_THRESHOLD = 8
-# An acreage whose decimal point was lost, such as "4 5 611 acres" or "21 8 acres".
+# An acreage whose decimal point was lost, such as "4 5 611 acres" or "21 8 acres"
 SPLIT_ACREAGE = re.compile(r"\d[ \t]*\n?[ \t]*\d[\d \t\n]*[ \t\n]acres?\b", re.IGNORECASE)
 MIN_QUOTE_LENGTH = 12
 QUOTE_MATCH_RATIO = 0.85
@@ -206,12 +206,12 @@ def quote_on_page(quote, page_text):
     match = difflib.SequenceMatcher(None, page_text, quote, autojunk=False).find_longest_match(
         0, len(page_text), 0, len(quote))
     start = match.a - match.b  # where the quote would begin on the page
-    # Compare same-length stretches of page text near that spot, allowing a few dropped or extra characters.
+    # Compare same-length stretches of page text near that spot, allowing a few dropped or extra characters
     ratio, offset = max((difflib.SequenceMatcher(None, page_text[max(0, s): max(0, s) + len(quote)], quote).ratio(), s)
                         for s in range(start - 5, start + 6))
     if ratio < QUOTE_MATCH_RATIO:
         return False
-    # Letters may differ a little (OCR noise), but numbers must match exactly.
+    # Letters may differ a little (OCR noise), but numbers must match exactly
     quote_numbers = re.findall(r"\d+", quote)
     nearby_numbers = re.findall(r"\d+", page_text[max(0, offset - 5): max(0, offset) + len(quote) + 5])
     return any(nearby_numbers[i: i + len(quote_numbers)] == quote_numbers for i in range(len(nearby_numbers) + 1))
@@ -266,7 +266,7 @@ def check(pd_id, pd, index):
 
     purpose = pd_data.get("purpose", "")
     if purpose:
-        # Exact wording, possibly shortened with "…": every piece must appear in the ordinance text.
+        # Exact wording, possibly shortened with "…": every piece must appear in the ordinance text
         all_text = " ".join(" ".join(pages) for pages in pages_by_ordinance.values())
         for piece in re.split(r"…|\.\.\.", purpose):
             if normalize(piece) and normalize(piece) not in normalize(all_text):

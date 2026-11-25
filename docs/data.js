@@ -1,12 +1,12 @@
-// Loads the data files and turns a zone id into one zone object, for districts and planned developments (PDs) alike.
+// Loads the data files and turns a zone id into one zone object, for districts and planned developments (PDs) alike
 
-/** Permission codes from UDC Table 4.2-1, plus "D" (a PD use that needs development plan approval) and "none" for a use a PD removes. */
+/** Permission codes from UDC Table 4.2-1, plus "D" (a PD use that needs development plan approval) and "none" for a use a PD removes */
 export const PERMISSIONS = {
   P: { mark: "✓", label: "By right", className: "allowed" },
   S: { mark: "S", label: "Special use permit", className: "permit" },
-  D: { mark: "D", label: "Development plan approval", className: "permit" },
   A: { mark: "A", label: "Accessory", className: "accessory" },
   T: { mark: "T", label: "Temporary", className: "accessory" },
+  D: { mark: "D", label: "Development plan approval", className: "permit" },
   none: { mark: "—", label: "Not allowed", className: "not-allowed" },
   // By right, but only as the PD's development plan shows it. Explained by a "*Must follow development plan exactly" line, not the legend.
   "P*": {
@@ -68,7 +68,7 @@ export async function loadJson(path) {
 
 let siteData;
 
-/** base.json (UDC rules) and zones.json (zones on the map), loaded once per page. */
+/** base.json (UDC rules) and zones.json (zones on the map), loaded once per page */
 export function loadSiteData() {
   siteData ||= Promise.all([
     loadJson("data/base.json"),
@@ -86,10 +86,10 @@ export function showError(element, error) {
   element.innerHTML = `<p class="error">Couldn't load data. Try reloading the page.</p>`;
 }
 
-/** "R-2: Residential 2", or just the id when there is no name. */
+/** "R-2: Residential 2", or just the id when there is no name */
 export const idWithName = (id, name) => (name ? `${id}: ${name}` : id);
 
-/** "CG: Commercial General" or "PD 461: Midway Meadows". */
+/** "CG: Commercial General" or "PD 461: Midway Meadows" */
 export function zoneLabel(zoneId, { base, zoneIndex }) {
   const name = base.districts[zoneId]?.name || zoneIndex.zones[zoneId]?.name;
   return idWithName(zoneId, name);
@@ -98,7 +98,7 @@ export function zoneLabel(zoneId, { base, zoneIndex }) {
 export const zonePageUrl = (zoneId) =>
   `zone.html?id=${encodeURIComponent(zoneId)}`;
 
-/** "PD 461" + "Midway Meadows" -> data/pd/PD-461-Midway-Meadows.json; a PD with no name uses just the id. */
+/** "PD 461" + "Midway Meadows" -> data/pd/PD-461-Midway-Meadows.json; a PD with no name uses just the id */
 function pdFilePath(zoneId, name) {
   const id = zoneId.replace("?", "").replaceAll(" ", "-");
   const label = (name || "")
@@ -156,7 +156,7 @@ export async function getZone(zoneId) {
   if (!index.done) return zone;
 
   const pdData = await loadJson(pdFilePath(zoneId, index.name));
-  // A PD that must follow its plan allows only the uses the plan shows, not its base district's uses.
+  // A PD that must follow its plan allows only the uses the plan shows, not its base district's uses
   if (pdData.mustFollowPlan) pdData.pdUsesOnly = true;
   const baseDistrict = base.districts[pdData.base];
   const uses =
@@ -167,7 +167,7 @@ export async function getZone(zoneId) {
   }
   for (const name of Object.keys(uses))
     uses[name] = planPermission(pdData, uses[name]);
-  // Base district notes are dropped for dimensions the PD sets itself.
+  // Base district notes are dropped for dimensions the PD sets itself
   const inheritedReview = Object.fromEntries(
     Object.entries(baseDistrict?.review || {}).filter(
       ([key]) => !(key in pdData.dimensions),
@@ -194,7 +194,7 @@ export async function getZone(zoneId) {
 
 export const zoneTitle = (zone) => idWithName(zone.id, zone.name);
 
-/** The source to show in a popup: the UDC section, the PD's one ordinance, or the count when a PD has several. */
+/** The source to show in a popup: the UDC section, the PD's one ordinance, or the count when a PD has several */
 export function sourceHtml(zone) {
   if (zone.kind === "district") return externalLink(zone.sources[0]);
   const ordinances = zone.index.ordinances;
@@ -215,7 +215,7 @@ export function externalLink({ label, url }) {
   return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(label)} ${EXTERNAL_LINK_ICON}</a>`;
 }
 
-/** Link to the PDF page a value came from: the PD ordinance it cites, else the UDC. */
+/** Link to the PDF page a value came from: the PD ordinance it cites, else the UDC */
 export function evidenceLink(evidence, zone, base) {
   if (!evidence?.page) return "";
   const label = `p. ${evidence.page}`;
@@ -249,7 +249,7 @@ export function isSplit(value) {
   );
 }
 
-/** 70 -> "70 ft", "none" -> "None", {min: 5, max: 15} -> "5–15 ft", {options: [10, 20]} -> "10 or 20 ft", {Interior: 5, Street: 20} -> "Interior 5 ft, Street 20 ft". */
+/** 70 -> "70 ft", "none" -> "None", {min: 5, max: 15} -> "5–15 ft", {options: [10, 20]} -> "10 or 20 ft", {Interior: 5, Street: 20} -> "Interior 5 ft, Street 20 ft" */
 export function formatValue(value, unit) {
   if (isSplit(value)) {
     return Object.entries(value)

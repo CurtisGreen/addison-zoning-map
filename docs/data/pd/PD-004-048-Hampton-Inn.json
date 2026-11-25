@@ -1,0 +1,78 @@
+{
+  "id": "PD 004-048",
+  "name": "Hampton Inn",
+  "family": "commercial",
+  "base": null,
+  "pdUsesOnly": true,
+  "purpose": "",
+  "uses": [],
+  "otherUses": [
+    {
+      "text": "Hotel/motel",
+      "permission": "S",
+      "ordinance": "098-022",
+      "page": 2,
+      "quote": "to a hotel/motel. Said zoning amendment shall be noted"
+    },
+    {
+      "text": "Restaurant",
+      "permission": "S",
+      "ordinance": "004-048",
+      "page": 1,
+      "quote": "USE PERMIT FOR A RESTAURANT"
+    },
+    {
+      "text": "Sale of alcoholic beverages for on-premises consumption, in restaurants",
+      "permission": "S",
+      "ordinance": "004-048",
+      "page": 6,
+      "quote": "sale of alcoholic beverages under this special use permit shall be"
+    }
+  ],
+  "dimensions": {
+    "masonryMin": {
+      "value": 90,
+      "ordinance": "004-048",
+      "page": 5,
+      "quote": "The facades for the building shall be constructed of 90% brick or a"
+    }
+  },
+  "review": {
+    "masonryMin": "Brick, or a combination of brick and EIFS, counts toward the 90%."
+  },
+  "notes": [
+    "The hotel must be improved in accordance with the site plan, landscape plan, floor plan and facade plans in Exhibit A of 023-51, which adopts a new development plan for the existing hotel.",
+    {
+      "heading": "Special conditions",
+      "items": [
+        "023-51 lists only the plan condition and does not say whether the conditions below still apply.",
+        "On-site detention is required for stormwater runoff.",
+        "The site is in the 70 to 75 Ldn noise contours, so an avigation easement is required.",
+        "Before any development, plans must go to the FAA to check compliance with Addison's height hazard zoning.",
+        "Before a building permit and again on completion, a certified acoustical expert must verify the building meets 30 dB of outside-to-inside sound attenuation.",
+        "The north entrance must match up with the median opening in the proposed Arapaho Road and should be at least 36 ft wide.",
+        "Trees along Arapaho Road and Quorum Drive must follow the Town's streetscape plan for tree spacing.",
+        "The undeveloped open space west of the building must be irrigated and maintained with the rest of the site.",
+        "A detailed landscape and irrigation plan is required before a building permit.",
+        "The dumpster enclosure must be made of the same material as the building and be large enough for all dumpsters.",
+        "Mechanical equipment must be screened by a parapet wall or screening device that is architecturally compatible with the building.",
+        "The building and site must meet all fire code requirements."
+      ]
+    },
+    {
+      "heading": "Alcohol sales",
+      "items": [
+        "Alcohol may be sold only in restaurants, meaning places that get at least 60% of gross revenue from food.",
+        "Bookkeeping records must be available to the Town for inspection.",
+        "Exterior signs may not advertise alcohol sales or use terms like \"bar\" or \"tavern.\"",
+        "If the alcohol license or permit is revoked, terminated or canceled, the City Council may hold hearings on changing the zoning."
+      ]
+    }
+  ],
+  "history": {
+    "098-022": "Special use permit for a hotel/motel on 2.8 acres, with 90% brick facades",
+    "004-048": "Rezoned from C-1 to a PD, with restaurant and alcohol sale permits",
+    "007-029": "Revised the hotel's site plan, landscaping, floor plans and elevations",
+    "023-51": "Adopted a new development plan for the existing hotel"
+  }
+}

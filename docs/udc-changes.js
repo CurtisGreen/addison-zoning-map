@@ -1,4 +1,4 @@
-// The UDC changes page: one section per amendment, newest first, from data/udc-changes.json.
+// The UDC changes page: one section per amendment, newest first, from data/udc-changes.json
 import {
   PERMISSIONS,
   escapeHtml,
@@ -42,7 +42,7 @@ const KIND_LABELS = {
   removed: "Removed",
 };
 
-/** "2026-12" -> "December 2026", "2025-03-25" -> "March 25, 2025". */
+/** "2026-12" -> "December 2026", "2025-03-25" -> "March 25, 2025" */
 function formatDate(date) {
   if (!date) return "";
   const [year, month, day] = date.split("-").map(Number);

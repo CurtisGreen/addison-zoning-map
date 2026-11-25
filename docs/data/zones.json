@@ -2224,20 +2224,51 @@
     },
     "PD 004-048": {
       "kind": "pd",
-      "name": "",
+      "name": "Hampton Inn",
       "base": null,
-      "done": false,
+      "family": "commercial",
+      "done": true,
       "acres": 2.2,
       "mainOrdinance": "004-048",
       "ordinances": [
+        {
+          "id": "098-022",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1998/098-022%20-%201998.pdf",
+          "date": "1998-04-14",
+          "description": "Special use permit for a hotel/motel on 2.788 acres at Quorum Drive and Arapaho Road"
+        },
         {
           "id": "004-048",
           "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2004/004-048%20-%202004.pdf",
           "date": "2004-11-09",
           "description": "Change the zone from C-1 to PD, SUP for restaurant & sale of alcoholic beverages on premises consumption only"
+        },
+        {
+          "id": "007-029",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2007/007-029%20Zoning%20-%20Holiday%20Inn.pdf",
+          "date": "2007-09-11",
+          "description": "Amend SUP 098-022 to revise the site plan, landscaping plan, floor plans and elevations"
+        },
+        {
+          "id": "023-51",
+          "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-51%20-%202023.pdf",
+          "date": "2023-11-14",
+          "description": "Amend SUP 098-022 to adopt a new development plan for the existing hotel"
         }
       ],
-      "placeTypes": ["Urban Village"]
+      "placeTypes": ["Urban Village"],
+      "popup": {
+        "residential": "",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "",
+        "restaurant": "S",
+        "office": "",
+        "industry": "",
+        "hotel": "S",
+        "daycare": "",
+        "limits": ""
+      }
     },
     "PD 005-014": {
       "kind": "pd",

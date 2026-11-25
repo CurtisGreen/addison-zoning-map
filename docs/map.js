@@ -1,4 +1,4 @@
-// Map page: zoning polygons, hover names, click popups, legend, and the zone list.
+// Map page: zoning polygons, hover names, click popups, legend, and the zone list
 import {
   FAMILIES,
   PERMISSIONS,
@@ -14,7 +14,7 @@ import {
   zoneTitle,
 } from "./data.js";
 
-// Leaflet, loaded by index.html as window.L.
+// Leaflet, loaded by index.html as window.L
 const Leaflet = window.L;
 
 const NORMAL_OPACITY = 0.5;
@@ -23,7 +23,7 @@ const TILES = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 const TILE_CREDIT =
   '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 
-/** PDs are dashed; color comes from the district family (a PD uses its base district once known). */
+/** PDs are dashed; color comes from the district family (a PD uses its base district once known) */
 function polygonStyle(zoneId, zoneIndex) {
   const isPd = zoneIndex.zones[zoneId]?.kind === "pd";
   return {
@@ -44,14 +44,14 @@ function renderHeadlineUses(popup) {
     const { mark, className } = PERMISSIONS[code || "none"];
     return `<td class="${className}">${label}</td><td class="${className}">${mark}</td>`;
   };
-  // A PD that must follow its development plan shows its residential sizes as P* (check mark and asterisk).
+  // A PD that must follow its development plan shows its residential sizes as P* (check mark and asterisk)
   const residentialCode = popup.residentialCode || "P";
   const labelCode = popup.residential
     ? residentialCode
     : popup.residentialPermit
       ? "S"
       : "none";
-  // Zones with no special-permit sizes show whether an accessory dwelling ("ADU") is allowed.
+  // Zones with no special-permit sizes show whether an accessory dwelling ("ADU") is allowed
   const cottage =
     popup.residential && !popup.residentialPermit
       ? pair("ADU", popup.adu)

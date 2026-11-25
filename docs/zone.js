@@ -18,7 +18,7 @@ import {
 
 const noteNumber = (number) => `<sup>${number}</sup>`;
 
-/** `offset` leaves numbers free for notes that are already using them (the UDC table's own notes). */
+/** `offset` leaves numbers free for notes that are already using them (the UDC table's own notes) */
 function createNotes(offset = 0) {
   const texts = [];
   return {
@@ -47,7 +47,7 @@ const tableOf = (rows) =>
   `<div class="table-wrap"><table>${rows.filter(Boolean).join("")}</table></div>`;
 
 function renderHeading(zone) {
-  // Purposes are exact quotes from the UDC or the PD ordinance.
+  // Purposes are exact quotes from the UDC or the PD ordinance
   const purpose = zone.purpose ? `<p>“${escapeHtml(zone.purpose)}”</p>` : "";
   return `<h1>${escapeHtml(zoneTitle(zone))}</h1>${purpose}`;
 }
@@ -65,7 +65,7 @@ function renderFacts(zone, base) {
     zone.sources.map(externalLink).join(", ") +
       notes.mark(zone.review.ordinances),
   ]);
-  // The ordinance's acreage, when its boundary includes the roads.
+  // The ordinance's acreage, when its boundary includes the roads
   const acresWithRoads = zone.pdData?.acresWithRoads;
   const withRoads = acresWithRoads
     ? ` (${acresWithRoads.toFixed(1)} including roads)`
@@ -79,10 +79,10 @@ function renderFacts(zone, base) {
   return facts + notes.render();
 }
 
-/** A value split by area, lot type, or street type is an object; anything else is one value. */
+/** A value split by area, lot type, or street type is an object; anything else is one value */
 const partsOf = (value) => (isSplit(value) ? Object.keys(value) : []);
 
-/** True when some dimensions are split by part and others are not, so the single-value table needs an "All" header. */
+/** True when some dimensions are split by part and others are not, so the single-value table needs an "All" header */
 function hasSplitAndSingle(groups) {
   const split = groups.map((group) => partsOf(group[0][1].value).length > 0);
   return split.includes(true) && split.includes(false);
@@ -119,9 +119,9 @@ function dimensionTable(
     const { label, unit } = base.dimensionFields[field];
     const mark = markFor ? markFor(field) : "";
     const source = `<td class="source">${evidenceLink(dimension, zone, base)}</td>`;
-    // Height in feet and height in stories are compared with each other.
+    // Height in feet and height in stories are compared with each other
     const baseField = baseDimensions?.[field] ? field : SAME_QUANTITY[field];
-    // A base with no value reads as "None".
+    // A base with no value reads as "None"
     const baseValue = baseDimensions
       ? (baseDimensions[baseField]?.value ?? "none")
       : undefined;
@@ -142,7 +142,7 @@ function dimensionTable(
   return tableOf([header, ...rows]);
 }
 
-/** Dimension fields that measure the same thing in different units, so a change can be shown from one to the other. */
+/** Dimension fields that measure the same thing in different units, so a change can be shown from one to the other */
 const SAME_QUANTITY = {
   heightMax: "heightMaxStories",
   heightMaxStories: "heightMax",
@@ -164,15 +164,15 @@ function changeText(baseValue, newValue, unit, baseUnit = unit) {
   return `<span class="before">${from} →</span> ${to}`;
 }
 
-/** Uses a PD adds or changes, or other uses it lists. */
+/** Uses a PD adds or changes, or other uses it lists */
 function useRows(pd, zone, base) {
-  // A PD that lists all its own uses (pdUsesOnly) shows them once, under Allowed uses.
+  // A PD that lists all its own uses (pdUsesOnly) shows them once, under Allowed uses
   const listed =
     pd.base && !pd.pdUsesOnly
       ? pd.uses.map((use) => ({ text: use.name, ...use }))
       : [];
   const other = pd.pdUsesOnly ? [] : pd.otherUses;
-  // Several UDC uses can come from one ordinance phrase (`text`), which is shown once.
+  // Several UDC uses can come from one ordinance phrase (`text`), which is shown once
   const seen = new Set();
   return [...listed, ...other]
     .filter((use) => {
@@ -191,7 +191,7 @@ function useRows(pd, zone, base) {
           : `<span class="${after.className} mark" title="${after.label}">${after.mark}</span>`;
       let permission = afterMark;
       if (pd.base) {
-        // "Before → after": the base district's mark for this use (a use with no UDC name was not allowed there).
+        // "Before → after": the base district's mark for this use (a use with no UDC name was not allowed there)
         const baseCode = base.districts[pd.base]?.uses[use.name] ?? "none";
         const before = PERMISSIONS[baseCode];
         const beforeMark =
@@ -204,7 +204,7 @@ function useRows(pd, zone, base) {
     });
 }
 
-/** Review keys whose notes appear next to what they are about. */
+/** Review keys whose notes appear next to what they are about */
 const NOTES_SHOWN_ELSEWHERE = [
   "base",
   "ordinances",
@@ -215,7 +215,7 @@ const NOTES_SHOWN_ELSEWHERE = [
   "parking",
 ];
 
-/** What a PD changes from its base district, plus uses with no UDC match, notes, and other review items. */
+/** What a PD changes from its base district, plus uses with no UDC match, notes, and other review items */
 function renderPdRules(zone, base) {
   const pd = zone.pdData;
   if (!pd) return "";
@@ -227,7 +227,7 @@ function renderPdRules(zone, base) {
         ...rows,
       ])
     : "";
-  // Without a base, the PD's dimensions already appear under Dimensions.
+  // Without a base, the PD's dimensions already appear under Dimensions
   const changed = pd.base ? Object.entries(pd.dimensions) : [];
   const baseDimensions = base.districts[pd.base]?.dimensions || {};
   const changedGroups = groupBySplit(changed);
@@ -267,7 +267,7 @@ function renderCurtisNotes(zone) {
   return text ? `<h2>Curtis's notes</h2><p>${escapeHtml(text)}</p>` : "";
 }
 
-/** A PD's own parking ratios, one row per use. */
+/** A PD's own parking ratios, one row per use */
 function renderParking(zone, base) {
   const rows = zone.pdData?.parking || [];
   if (!rows.length) return "";
@@ -275,13 +275,13 @@ function renderParking(zone, base) {
     (row) =>
       `<tr><td>${escapeHtml(row.use)}</td><td>${escapeHtml(row.requirement)}</td><td class="source">${evidenceLink(row, zone, base)}</td></tr>`,
   );
-  // A review note under the key "parking" is a footnote on the table's heading.
+  // A review note under the key "parking" is a footnote on the table's heading
   const notes = createNotes();
   const heading = `Parking${notes.mark(zone.review.parking)}`;
   return `<h2>${heading}</h2>${tableOf([`<tr class="head"><th>Use</th><th>Spaces required</th><th></th></tr>`, ...body])}${notes.render()}`;
 }
 
-/** A PD's general conditions from the ordinance, one per line. */
+/** A PD's general conditions from the ordinance, one per line */
 function renderNotes(zone) {
   const items = zone.pdData?.notes || [];
   if (!items.length) return "";
@@ -360,7 +360,7 @@ function renderStandardItems(items, district) {
 
 const standardAnchor = (id) => `standard-${id}`;
 
-/** A use-specific standard from UDC Article 4, as a closed fold. */
+/** A use-specific standard from UDC Article 4, as a closed fold */
 function renderStandard({ id, standard, items, district, base }) {
   const udcLink = externalLink({
     label: `UDC page ${standard.page}`,
@@ -380,9 +380,9 @@ function renderUses(zone, base, standards) {
   }
   if (!zone.uses) return "";
   const district = zone.kind === "pd" ? zone.base : zone.id;
-  // A PD with no base district has its own rules, so the UDC's use standards are not shown.
+  // A PD with no base district has its own rules, so the UDC's use standards are not shown
   const showStandards = Boolean(district);
-  // A PD that builds on a base district shows that district's uses plus its own changes.
+  // A PD that builds on a base district shows that district's uses plus its own changes
   const fromBase =
     zone.kind === "pd" && zone.base && !zone.pdData?.pdUsesOnly
       ? ` (From base ${escapeHtml(zone.base)})`
@@ -416,11 +416,11 @@ function renderUses(zone, base, standards) {
     )
     .map((permission) => `${permission.mark} ${permission.label.toLowerCase()}`)
     .join(", ");
-  // The asterisk on a use's check mark (P*) points to this line.
+  // The asterisk on a use's check mark (P*) points to this line
   const planNote = zone.pdData?.mustFollowPlan
     ? '<p class="muted">*Must follow development plan exactly</p>'
     : "";
-  // A PD that lists all its own uses shows the ones with no UDC name as a last group.
+  // A PD that lists all its own uses shows the ones with no UDC name as a last group
   const ordinanceOnlyUses = zone.pdData?.pdUsesOnly
     ? zone.pdData.otherUses
     : [];
@@ -428,7 +428,7 @@ function renderUses(zone, base, standards) {
     for (const use of ordinanceOnlyUses) {
       const { mark, className } =
         PERMISSIONS[planPermission(zone.pdData, use.permission ?? "P")];
-      // With no base district and no group named, the uses need no sub-heading under "Allowed uses".
+      // With no base district and no group named, the uses need no sub-heading under "Allowed uses"
       const category = use.group ?? (zone.base ? "Other uses" : "");
       if (!byCategory.has(category)) byCategory.set(category, []);
       byCategory
@@ -441,7 +441,7 @@ function renderUses(zone, base, standards) {
     ([category, lines]) =>
       `${category ? `<h3>${escapeHtml(category)}</h3>` : ""}<ul class="uses">${lines.join("")}</ul>`,
   );
-  // No uses to list and no note about them: leave the whole section out.
+  // No uses to list and no note about them: leave the whole section out
   if (!groups.length && !zone.review.uses) return "";
   const folds = [...applicableStandards]
     .sort(([a], [b]) => a.localeCompare(b))
@@ -458,12 +458,12 @@ function renderUses(zone, base, standards) {
   );
 }
 
-/** The table's own notes keep the UDC's numbers, so AA's "Minimum of 10 feet" note is 1, as in the table. */
+/** The table's own notes keep the UDC's numbers, so AA's "Minimum of 10 feet" note is 1, as in the table */
 function renderDimensions(zone, base) {
   const entries = Object.entries(zone.dimensions);
   const shownNumbers = new Set(Object.values(zone.noteRefs).flat());
   const notes = createNotes(Math.max(0, ...shownNumbers)); // other notes continue after the UDC's numbers
-  // A review note can be one text for the whole row, or an object of texts by part ({"North side": "…"}) for a single value.
+  // A review note can be one text for the whole row, or an object of texts by part ({"North side": "…"}) for a single value
   const isPartNotes = (note) =>
     Boolean(note) && typeof note === "object" && !Array.isArray(note);
   const markFor = (key) =>
@@ -517,7 +517,7 @@ async function initZonePage() {
   ].join("");
 }
 
-/** Opens every fold around the element a #link points to, then scrolls to it. */
+/** Opens every fold around the element a #link points to, then scrolls to it */
 function openFoldFor(hash) {
   const target =
     hash && document.getElementById(decodeURIComponent(hash.slice(1)));
