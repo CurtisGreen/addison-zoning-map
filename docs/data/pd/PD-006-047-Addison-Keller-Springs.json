@@ -1,8 +1,8 @@
 {
   "id": "PD 006-047",
   "name": "Addison Keller Springs",
-  "base": "CL",
   "family": "residential",
+  "base": "CL",
   "mustFollowPlan": true,
   "purpose": "",
   "uses": [
@@ -15,9 +15,7 @@
       "quote": "apartment, condominium, and all uses allowed in the LR"
     }
   ],
-  "otherUses": [],
   "dimensions": {},
-  "review": {},
   "notes": [
     "Development must follow the development plans attached to ordinances 006-047 and 011-044.",
     {

@@ -5,8 +5,7 @@
   "base": null,
   "pdUsesOnly": true,
   "purpose": "",
-  "uses": [],
-  "otherUses": [
+  "uses": [
     {
       "text": "Single-family unit on a platted lot",
       "ordinance": "080-604",
@@ -31,7 +30,8 @@
       "value": 2,
       "ordinance": "080-604",
       "page": 4,
-      "quote": "Generally no building shall exceed two (2) stories in height,"
+      "quote": "Generally no building shall exceed two (2) stories in height,",
+      "note": "Three-story units may be considered if the overall average is two stories."
     },
     "heightMax": {
       "value": 36,
@@ -40,26 +40,32 @@
       "quote": "feet to the top of ridge of roof from average grade will be"
     },
     "lotCoverageMax": {
-      "value": { "min": 35, "max": 53 },
+      "value": {
+        "min": 35,
+        "max": 53
+      },
       "ordinance": "080-604",
       "page": 3,
-      "quote": "35% floor area to total land area as a base"
+      "quote": "35% floor area to total land area as a base",
+      "note": "Building area is the land area times a percentage. The base is 35%, plus 5% for garages, 5% for detached units and 8% if 70% or more of units front on landscaped courts, for a total of 53%."
     }
   },
   "parking": [
     {
       "use": "Dwelling unit",
       "requirement": "3 spaces per unit",
-      "rates": [{ "spaces": 3, "per": 1, "unit": "unit" }],
+      "rates": [
+        {
+          "spaces": 3,
+          "per": 1,
+          "unit": "unit"
+        }
+      ],
       "ordinance": "080-604",
       "page": 4,
       "quote": "less than 3 spaces per unit"
     }
   ],
-  "review": {
-    "heightMaxStories": "Three-story units may be considered if the overall average is two stories.",
-    "lotCoverageMax": "Building area is the land area times a percentage. The base is 35%, plus 5% for garages, 5% for detached units and 8% if 70% or more of units front on landscaped courts, for a total of 53%."
-  },
   "notes": [
     "A lotting plan is part of the Detailed Development Plan; no lot dimensions or unit sizes are set.",
     "Setbacks are guides: 20 ft from the curb to the face of a garage and 10 ft from the curb to the face of other buildings.",

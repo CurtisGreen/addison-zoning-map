@@ -5,8 +5,7 @@
   "base": null,
   "pdUsesOnly": true,
   "purpose": "",
-  "uses": [],
-  "otherUses": [
+  "uses": [
     {
       "text": "Antique shop",
       "ordinance": "085-059",
@@ -258,7 +257,10 @@
       },
       "ordinance": "085-059",
       "page": 4,
-      "quote": "Seven (7) feet required from the front"
+      "quote": "Seven (7) feet required from the front",
+      "partNotes": {
+        "North of Broadway": "A 4 ft minimum sidewalk is included in the 7 ft setback."
+      }
     },
     "rearSetbackMin": {
       "value": {
@@ -273,7 +275,8 @@
       "value": 3,
       "ordinance": "085-059",
       "page": 4,
-      "quote": "limited to three (3) stories unless otherwise approved"
+      "quote": "limited to three (3) stories unless otherwise approved",
+      "note": "More than 3 stories can be approved through the site development plan process."
     }
   },
   "parking": [
@@ -362,12 +365,6 @@
       "quote": "Hotel/Motel l/room"
     }
   ],
-  "review": {
-    "heightMaxStories": "More than 3 stories can be approved through the site development plan process.",
-    "frontSetbackMin": {
-      "North of Broadway": "A 4 ft minimum sidewalk is included in the 7 ft setback."
-    }
-  },
   "notes": [
     {
       "heading": "Old Addison standards, ordinances 084-033 and 085-059",

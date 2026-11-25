@@ -167,14 +167,12 @@ function changeText(baseValue, newValue, unit, baseUnit = unit) {
 /** Uses a PD adds or changes, or other uses it lists */
 function useRows(pd, zone, base) {
   // A PD that lists all its own uses (pdUsesOnly) shows them once, under Allowed uses
-  const listed =
-    pd.base && !pd.pdUsesOnly
-      ? pd.uses.map((use) => ({ text: use.name, ...use }))
-      : [];
-  const other = pd.pdUsesOnly ? [] : pd.otherUses;
+  const listed = pd.pdUsesOnly
+    ? []
+    : pd.uses.map((use) => ({ text: use.name, ...use }));
   // Several UDC uses can come from one ordinance phrase (`text`), which is shown once
   const seen = new Set();
-  return [...listed, ...other]
+  return listed
     .filter((use) => {
       const key = `${use.text}|${use.permission ?? "P"}`;
       if (seen.has(key)) return false;
@@ -204,22 +202,10 @@ function useRows(pd, zone, base) {
     });
 }
 
-/** Review keys whose notes appear next to what they are about */
-const NOTES_SHOWN_ELSEWHERE = [
-  "base",
-  "ordinances",
-  "acres",
-  "uses",
-  "legacyUses",
-  "dimensions",
-  "parking",
-];
-
 /** What a PD changes from its base district, plus uses with no UDC match, notes, and other review items */
 function renderPdRules(zone, base) {
   const pd = zone.pdData;
   if (!pd) return "";
-  const notes = createNotes();
   const rows = useRows(pd, zone, base);
   const useTable = rows.length
     ? tableOf([
@@ -235,16 +221,9 @@ function renderPdRules(zone, base) {
   const dimensionTables = changedGroups.map((group) =>
     dimensionTable(group, { zone, base, baseDimensions, labelSingle }),
   );
-  const shownElsewhere = new Set([
-    ...NOTES_SHOWN_ELSEWHERE,
-    ...Object.keys(pd.dimensions),
-  ]);
-  const marks = Object.entries(pd.review)
-    .filter(([key]) => !shownElsewhere.has(key))
-    .map(([, text]) => notes.mark(text));
-  if (!useTable && !dimensionTables.length && !marks.length) return "";
+  if (!useTable && !dimensionTables.length) return "";
   const heading = pd.base ? "Changes from base" : "Other uses and rules";
-  return `<h2>${heading}${marks.join(" ")}</h2>${useTable}${dimensionTables.join("")}${notes.render()}`;
+  return `<h2>${heading}</h2>${useTable}${dimensionTables.join("")}`;
 }
 
 /** A PD's ordinances, oldest first. A PD's data file can give a shorter description than the town map's. */
@@ -422,7 +401,7 @@ function renderUses(zone, base, standards) {
     : "";
   // A PD that lists all its own uses shows the ones with no UDC name as a last group
   const ordinanceOnlyUses = zone.pdData?.pdUsesOnly
-    ? zone.pdData.otherUses
+    ? zone.pdData.uses.filter((use) => !use.name)
     : [];
   if (ordinanceOnlyUses.length)
     for (const use of ordinanceOnlyUses) {
@@ -463,14 +442,13 @@ function renderDimensions(zone, base) {
   const entries = Object.entries(zone.dimensions);
   const shownNumbers = new Set(Object.values(zone.noteRefs).flat());
   const notes = createNotes(Math.max(0, ...shownNumbers)); // other notes continue after the UDC's numbers
-  // A review note can be one text for the whole row, or an object of texts by part ({"North side": "…"}) for a single value
-  const isPartNotes = (note) =>
-    Boolean(note) && typeof note === "object" && !Array.isArray(note);
+  // A dimension's own `note` marks its row, and `partNotes` marks one column of it
   const markFor = (key) =>
     (zone.noteRefs[key] ? noteNumber(zone.noteRefs[key].join(",")) : "") +
-    (isPartNotes(zone.review[key]) ? "" : notes.mark(zone.review[key]));
+    notes.mark(zone.review[key]) +
+    notes.mark(zone.dimensions[key]?.note);
   const markForPart = (key, part) =>
-    isPartNotes(zone.review[key]) ? notes.mark(zone.review[key][part]) : "";
+    notes.mark(zone.dimensions[key]?.partNotes?.[part]);
   const heading = `Dimensions${markFor("dimensions")}`;
   const udcNotes = [...shownNumbers]
     .sort((a, b) => a - b)

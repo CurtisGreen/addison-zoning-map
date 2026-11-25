@@ -3,11 +3,10 @@
   "name": "Addison Road Senior Living",
   "family": "mixed",
   "base": null,
-  "pdUsesOnly": true,
   "mustFollowPlan": true,
+  "pdUsesOnly": true,
   "purpose": "",
-  "uses": [],
-  "otherUses": [
+  "uses": [
     {
       "text": "Continuing care retirement community, inclusive of independent living, assisted living, and memory care facility, for adults 55 and older (the only residential use allowed)",
       "group": "Permitted uses by right",
@@ -147,7 +146,8 @@
       "value": 129,
       "ordinance": "020-047",
       "page": 2,
-      "quote": "Minimum of eleven (11) stories, or one hundred twenty-nine"
+      "quote": "Minimum of eleven (11) stories, or one hundred twenty-nine",
+      "note": "The ordinance sets a minimum of 11 stories or 129 ft."
     },
     "heightMax": {
       "value": "none",
@@ -162,7 +162,8 @@
       },
       "ordinance": "020-047",
       "page": 2,
-      "quote": "Minimum building setback for this sub-district is ten"
+      "quote": "Minimum building setback for this sub-district is ten",
+      "note": "The 10 ft setback applies along Addison Road, the new street between Dallas Parkway and Addison Road, and Excel Parkway, not counting the motor court and loading and delivery areas. The Dallas Parkway setback is measured from back of curb."
     },
     "sideSetbackMin": {
       "value": "none",
@@ -200,6 +201,9 @@
       "page": 3,
       "quote": "Maximum lot coverage is 95%"
     }
+  },
+  "sectionNotes": {
+    "dimensions": "These standards apply to Sub-District A, the senior living site. Sub-District B has its own minimums, listed under Other requirements."
   },
   "parking": [
     {
@@ -315,11 +319,6 @@
       "quote": "Health Club or Spa -- (1/100) One space per each 100 square"
     }
   ],
-  "review": {
-    "dimensions": "These standards apply to Sub-District A, the senior living site. Sub-District B has its own minimums, listed under Other requirements.",
-    "heightMin": "The ordinance sets a minimum of 11 stories or 129 ft.",
-    "frontSetbackMin": "The 10 ft setback applies along Addison Road, the new street between Dallas Parkway and Addison Road, and Excel Parkway, not counting the motor court and loading and delivery areas. The Dallas Parkway setback is measured from back of curb."
-  },
   "notes": [
     "Sub-District A must follow the site plan, landscape plans and building elevations in Exhibit B.",
     {

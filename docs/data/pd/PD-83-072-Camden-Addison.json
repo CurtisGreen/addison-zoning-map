@@ -5,8 +5,7 @@
   "base": null,
   "pdUsesOnly": true,
   "purpose": "",
-  "uses": [],
-  "otherUses": [
+  "uses": [
     {
       "text": "Multiple family dwelling (apartments)",
       "ordinance": "094-041",
@@ -29,7 +28,10 @@
   ],
   "dimensions": {
     "heightMaxStories": {
-      "value": { "Zone 1": 2, "Zone 2": 3 },
+      "value": {
+        "Zone 1": 2,
+        "Zone 2": 3
+      },
       "ordinance": "094-041",
       "page": 3,
       "quote": "No building may exceed two (2) standard stories in height."
@@ -38,7 +40,8 @@
       "value": 775,
       "ordinance": "094-041",
       "page": 2,
-      "quote": "The minimum dwelling unit size shall be 775 square feet."
+      "quote": "The minimum dwelling unit size shall be 775 square feet.",
+      "note": "The average unit size must be 1,000 sq ft in Zone 1 and 900 sq ft in Zone 2."
     },
     "frontSetbackMin": {
       "value": 25,
@@ -50,7 +53,8 @@
       "value": 20,
       "ordinance": "094-041",
       "page": 3,
-      "quote": "parallel to the side lot line, the side yard shall be"
+      "quote": "parallel to the side lot line, the side yard shall be",
+      "note": "The side yard is the greater of 20 ft or 10% of the building side length along the lot line."
     },
     "masonryMin": {
       "value": 80,
@@ -69,7 +73,13 @@
     {
       "use": "Efficiency",
       "requirement": "1 space per unit",
-      "rates": [{ "spaces": 1, "per": 1, "unit": "unit" }],
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1,
+          "unit": "unit"
+        }
+      ],
       "ordinance": "094-041",
       "page": 5,
       "quote": "Efficiency: 1 space per unit"
@@ -77,7 +87,13 @@
     {
       "use": "One bedroom",
       "requirement": "1.5 spaces per unit",
-      "rates": [{ "spaces": 1.5, "per": 1, "unit": "unit" }],
+      "rates": [
+        {
+          "spaces": 1.5,
+          "per": 1,
+          "unit": "unit"
+        }
+      ],
       "ordinance": "094-041",
       "page": 5,
       "quote": "One Bedroom: 1.5 spaces per unit"
@@ -85,7 +101,13 @@
     {
       "use": "Two bedroom",
       "requirement": "2 spaces per unit",
-      "rates": [{ "spaces": 2, "per": 1, "unit": "unit" }],
+      "rates": [
+        {
+          "spaces": 2,
+          "per": 1,
+          "unit": "unit"
+        }
+      ],
       "ordinance": "094-041",
       "page": 5,
       "quote": "Two Bedroom: 2 spaces per unit"
@@ -93,16 +115,18 @@
     {
       "use": "Three bedroom",
       "requirement": "2.5 spaces per unit",
-      "rates": [{ "spaces": 2.5, "per": 1, "unit": "unit" }],
+      "rates": [
+        {
+          "spaces": 2.5,
+          "per": 1,
+          "unit": "unit"
+        }
+      ],
       "ordinance": "094-041",
       "page": 5,
       "quote": "Three Bedroom: 2.5 spaces per unit"
     }
   ],
-  "review": {
-    "unitSizeMin": "The average unit size must be 1,000 sq ft in Zone 1 and 900 sq ft in Zone 2.",
-    "sideSetbackMin": "The side yard is the greater of 20 ft or 10% of the building side length along the lot line."
-  },
   "notes": [
     "Zone 2 refers to the park and the units next to the park.",
     "No parking is allowed in any front yard.",

@@ -161,7 +161,8 @@ export async function getZone(zoneId) {
   const baseDistrict = base.districts[pdData.base];
   const uses =
     pdData.pdUsesOnly || !baseDistrict ? {} : { ...baseDistrict.uses };
-  for (const use of pdData.uses) {
+  // An entry with a UDC use `name` changes the base; one with only `text` is a use with no UDC match
+  for (const use of pdData.uses.filter((use) => use.name)) {
     if (use.permission === "none") delete uses[use.name];
     else uses[use.name] = use.permission;
   }
@@ -186,7 +187,7 @@ export async function getZone(zoneId) {
     base: pdData.base,
     uses,
     dimensions: { ...baseDistrict?.dimensions, ...pdData.dimensions },
-    review: { ...inheritedReview, ...pdData.review },
+    review: { ...inheritedReview, ...pdData.sectionNotes },
     tableNotes: baseDistrict?.tableNotes || {},
     noteRefs: inheritedNoteRefs,
   };

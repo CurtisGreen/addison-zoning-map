@@ -5,8 +5,7 @@
   "base": null,
   "pdUsesOnly": true,
   "purpose": "The purpose of this Planned Development District No. 007-034 … is to create a mixed use environment under a unified plan consisting of retail, restaurant, residential and office uses within a pedestrian-oriented village setting",
-  "uses": [],
-  "otherUses": [
+  "uses": [
     {
       "text": "Townhouse",
       "group": "Residential",
@@ -633,7 +632,8 @@
       "ordinance": "016-017",
       "page": 9,
       "quote": "Street build-to lines within the Property are as follows",
-      "except": ["Block 211"]
+      "except": ["Block 211"],
+      "note": "A to E streets are shown on the Concept Plan. Measured from the closest right-of-way line. Not required in Block 211."
     },
     "facadeAtBuildToMin": {
       "value": {
@@ -643,7 +643,8 @@
       "ordinance": "016-017",
       "page": 9,
       "quote": "not more than 30 percent of any street frontage may vary from the build-to line",
-      "except": ["Block 211"]
+      "except": ["Block 211"],
+      "note": "The text says not more than 30% of any street frontage (50% in Block 102) may vary from the build-to line. Not required in Block 211."
     },
     "sideSetbackMin": {
       "value": "none",
@@ -664,7 +665,8 @@
       },
       "ordinance": "016-017",
       "page": 10,
-      "quote": "No maximum height; except the portion of any building or other structure which is located within 100 feet of the property line"
+      "quote": "No maximum height; except the portion of any building or other structure which is located within 100 feet of the property line",
+      "note": "The 60 ft limit applies to the part of a building within 100 ft of land zoned single family or apartment or used for residential. Within that 60 ft zone, turrets, spires, and towers may be up to 15 ft taller if their floorplate is 10% or less of the building's ground floor area."
     },
     "lotAreaMin": {
       "value": "none",
@@ -700,7 +702,8 @@
       "value": 95,
       "ordinance": "016-017",
       "page": 10,
-      "quote": "Maximum lot coverage 95%"
+      "quote": "Maximum lot coverage 95%",
+      "note": "Porches and arcades fronting a public street are excluded. Above-grade parking structures are included."
     },
     "floorAreaMax": {
       "value": {
@@ -709,7 +712,8 @@
       },
       "ordinance": "016-017",
       "page": 10,
-      "quote": "Maximum nonresidential square footage"
+      "quote": "Maximum nonresidential square footage",
+      "note": "Office and retail, restaurant, and personal service uses each have their own 500,000 sq ft limit."
     },
     "openSpacePer1000Residents": {
       "value": {
@@ -718,7 +722,8 @@
       },
       "ordinance": "016-017",
       "page": 11,
-      "quote": "Two acres for every 1,000 residents shall be dedicated for public open space use"
+      "quote": "Two acres for every 1,000 residents shall be dedicated for public open space use",
+      "note": "Residents are estimated from the number of dwelling units."
     },
     "residentsPerUnit": {
       "value": 1.5,
@@ -745,7 +750,8 @@
       "except": ["Block 211"],
       "ordinance": "016-017",
       "page": 13,
-      "quote": "at least 80 percent of the exterior cladding of all exterior walls fronting or visible from public streets"
+      "quote": "at least 80 percent of the exterior cladding of all exterior walls fronting or visible from public streets",
+      "note": "Masonry includes brick, stone, cultured stone, glazing and plate glass, and split face concrete masonry units."
     },
     "claddingMaterialsMax": {
       "value": 3,
@@ -757,68 +763,9 @@
       "value": 200,
       "ordinance": "016-017",
       "page": 13,
-      "quote": "length of an exposed parking structure along a street is 200 feet unless"
+      "quote": "length of an exposed parking structure along a street is 200 feet unless",
+      "note": "Longer is allowed when the structure has enhanced facade elements such as living walls or artistic design."
     }
-  },
-  "review": {
-    "buildTo": "A to E streets are shown on the Concept Plan. Measured from the closest right-of-way line. Not required in Block 211.",
-    "facadeAtBuildToMin": "The text says not more than 30% of any street frontage (50% in Block 102) may vary from the build-to line. Not required in Block 211.",
-    "heightMax": "The 60 ft limit applies to the part of a building within 100 ft of land zoned single family or apartment or used for residential. Within that 60 ft zone, turrets, spires, and towers may be up to 15 ft taller if their floorplate is 10% or less of the building's ground floor area.",
-    "lotCoverageMax": "Porches and arcades fronting a public street are excluded. Above-grade parking structures are included.",
-    "garageExposedLengthMax": "Longer is allowed when the structure has enhanced facade elements such as living walls or artistic design.",
-    "masonryMin": "Masonry includes brick, stone, cultured stone, glazing and plate glass, and split face concrete masonry units.",
-    "floorAreaMax": "Office and retail, restaurant, and personal service uses each have their own 500,000 sq ft limit.",
-    "openSpacePer1000Residents": "Residents are estimated from the number of dwelling units."
-  },
-  "notes": [
-    {
-      "heading": "Block 211",
-      "items": [
-        "Retail is allowed, but portable kiosks are not.",
-        "Gas station and restaurant with drive-through are allowed with a special use permit; they are not allowed in other blocks.",
-        "Exempt from the build-to line and façade requirements, the 200 to 750 ft block length, the 80% masonry rule, the landscaping rules, and the sustainability program."
-      ]
-    },
-    "Outside Block 211, retail is allowed only as part of a mixed use, or from a portable kiosk (25 to 500 sq ft). Free-standing retail is prohibited.",
-    "Off-premises beer and wine sales are allowed with a special use permit in Blocks 209, 210, and 211 only.",
-    "The whole PD counts as one lot for parking and open space, and each phase must still meet the parking standards.",
-    "Shared parking is allowed when uses peak at different times, based on a parking study approved by the director of development services. Below-grade parking may extend to the lot lines.",
-    "Parking garages: no ramps expressed on street-facing facades, and no steel garages or steel guard cables.",
-    "Bicycle parking is required for all multifamily and commercial uses.",
-    "A development plan approved by Planning and Zoning and Council is required before permits.",
-    "Council may waive any development standard with a development plan, but not to add a use or raise intensity or density.",
-    {
-      "heading": "Tracts with approved development plans",
-      "items": [
-        "Each tract below must follow the development plan the Council approved for it. Everywhere else, the district has only the concept plan, and a project needs an approved development plan before it can be built.",
-        "Ordinance 008-022 (2008): a multifamily building on 10.32 acres at 3900 and 4010 Brookhaven Club Drive.",
-        "Ordinance 009-036 (2009): a multifamily building on 3.643 acres at the same addresses.",
-        "Ordinance 011-032 (2011): a multifamily building on 5.46 acres on the southeast side of Vitruvian Way near Spring Valley Road, with waivers to design standards.",
-        "Ordinance 016-019 (2016): Vitruvian West I, a multifamily building and amenities center on 5.2 acres at 3737 and 3801 Vitruvian Way.",
-        "Ordinance 016-018 (2016): Brookhaven Village, a retail center with waivers, on 11.5 acres at the southeast corner of Marsh Lane and Spring Valley Road.",
-        "Ordinance 018-041 (2018): phases 2 and 3 of Vitruvian West, multifamily, on 6.854 acres at the northeast corner of Marsh Lane and Vitruvian Way.",
-        "Ordinance 021-045 (2021): 85 multifamily units on 5.1 acres at the southeast corner of Spring Valley Road and Vitruvian Way, with waivers to street build-to lines and exterior materials."
-      ]
-    }
-  ],
-  "acresWithRoads": 120.91,
-  "history": {
-    "068-084": "Assigned Apartment (A) zoning to a large tract east of Marsh Lane",
-    "074-171": "Rezoned to Apartment (A) for 3-story apartments",
-    "076-267": "Variance to Apartment (A) zoning for smaller 3-story units (The Pier Apartments)",
-    "083-074": "Rezoned 0.5 acre from local retail to PD for a Goodyear Tire and Service site",
-    "007-034": "Rezoned to Planned Development for a phased mixed-use development (Brookhaven Village)",
-    "008-022": "Development plan for a multifamily building on 10.3 acres, with an 8 ft screening wall and trees next to Brooktown Townhomes",
-    "009-002": "Updated street designs for the main boulevard",
-    "009-036": "Development plan for a multifamily building on 3.6 acres",
-    "010-005": "Renamed Brookhaven Club Drive to Vitruvian Way",
-    "011-032": "Development plan for apartments on 5.5 acres, with waivers for setbacks over 9 ft on Vitruvian Way and Bella Lane",
-    "013-026": "Added 21.8 acres rezoned from Local Retail, revised uses and standards, new concept plan (120.9 acres)",
-    "016-017": "Added gas station, drive-through restaurant, and movie theater uses; limited the Block 209 and 210 exemptions to Block 211; revised concept plan",
-    "016-019": "Development plan for apartments and an amenity center on 5.2 acres, with waivers for smaller 1-bedroom units, less masonry, and four materials",
-    "018-041": "Development plan for apartments on 6.9 acres, with a waiver for four building materials",
-    "021-045": "Revised concept plan and development plan for 85 apartments on 5.1 acres, with waivers for build-to line, materials, and colors",
-    "016-018": "Development plan for a retail center on 11.5 acres, with a waiver for 6 building materials on Building B"
   },
   "parking": [
     {
@@ -976,5 +923,55 @@
       "page": 12,
       "quote": "Movie picture theater. One space for every four seats."
     }
-  ]
+  ],
+  "notes": [
+    {
+      "heading": "Block 211",
+      "items": [
+        "Retail is allowed, but portable kiosks are not.",
+        "Gas station and restaurant with drive-through are allowed with a special use permit; they are not allowed in other blocks.",
+        "Exempt from the build-to line and façade requirements, the 200 to 750 ft block length, the 80% masonry rule, the landscaping rules, and the sustainability program."
+      ]
+    },
+    "Outside Block 211, retail is allowed only as part of a mixed use, or from a portable kiosk (25 to 500 sq ft). Free-standing retail is prohibited.",
+    "Off-premises beer and wine sales are allowed with a special use permit in Blocks 209, 210, and 211 only.",
+    "The whole PD counts as one lot for parking and open space, and each phase must still meet the parking standards.",
+    "Shared parking is allowed when uses peak at different times, based on a parking study approved by the director of development services. Below-grade parking may extend to the lot lines.",
+    "Parking garages: no ramps expressed on street-facing facades, and no steel garages or steel guard cables.",
+    "Bicycle parking is required for all multifamily and commercial uses.",
+    "A development plan approved by Planning and Zoning and Council is required before permits.",
+    "Council may waive any development standard with a development plan, but not to add a use or raise intensity or density.",
+    {
+      "heading": "Tracts with approved development plans",
+      "items": [
+        "Each tract below must follow the development plan the Council approved for it. Everywhere else, the district has only the concept plan, and a project needs an approved development plan before it can be built.",
+        "Ordinance 008-022 (2008): a multifamily building on 10.32 acres at 3900 and 4010 Brookhaven Club Drive.",
+        "Ordinance 009-036 (2009): a multifamily building on 3.643 acres at the same addresses.",
+        "Ordinance 011-032 (2011): a multifamily building on 5.46 acres on the southeast side of Vitruvian Way near Spring Valley Road, with waivers to design standards.",
+        "Ordinance 016-019 (2016): Vitruvian West I, a multifamily building and amenities center on 5.2 acres at 3737 and 3801 Vitruvian Way.",
+        "Ordinance 016-018 (2016): Brookhaven Village, a retail center with waivers, on 11.5 acres at the southeast corner of Marsh Lane and Spring Valley Road.",
+        "Ordinance 018-041 (2018): phases 2 and 3 of Vitruvian West, multifamily, on 6.854 acres at the northeast corner of Marsh Lane and Vitruvian Way.",
+        "Ordinance 021-045 (2021): 85 multifamily units on 5.1 acres at the southeast corner of Spring Valley Road and Vitruvian Way, with waivers to street build-to lines and exterior materials."
+      ]
+    }
+  ],
+  "acresWithRoads": 120.91,
+  "history": {
+    "068-084": "Assigned Apartment (A) zoning to a large tract east of Marsh Lane",
+    "074-171": "Rezoned to Apartment (A) for 3-story apartments",
+    "076-267": "Variance to Apartment (A) zoning for smaller 3-story units (The Pier Apartments)",
+    "083-074": "Rezoned 0.5 acre from local retail to PD for a Goodyear Tire and Service site",
+    "007-034": "Rezoned to Planned Development for a phased mixed-use development (Brookhaven Village)",
+    "008-022": "Development plan for a multifamily building on 10.3 acres, with an 8 ft screening wall and trees next to Brooktown Townhomes",
+    "009-002": "Updated street designs for the main boulevard",
+    "009-036": "Development plan for a multifamily building on 3.6 acres",
+    "010-005": "Renamed Brookhaven Club Drive to Vitruvian Way",
+    "011-032": "Development plan for apartments on 5.5 acres, with waivers for setbacks over 9 ft on Vitruvian Way and Bella Lane",
+    "013-026": "Added 21.8 acres rezoned from Local Retail, revised uses and standards, new concept plan (120.9 acres)",
+    "016-017": "Added gas station, drive-through restaurant, and movie theater uses; limited the Block 209 and 210 exemptions to Block 211; revised concept plan",
+    "016-019": "Development plan for apartments and an amenity center on 5.2 acres, with waivers for smaller 1-bedroom units, less masonry, and four materials",
+    "018-041": "Development plan for apartments on 6.9 acres, with a waiver for four building materials",
+    "021-045": "Revised concept plan and development plan for 85 apartments on 5.1 acres, with waivers for build-to line, materials, and colors",
+    "016-018": "Development plan for a retail center on 11.5 acres, with a waiver for 6 building materials on Building B"
+  }
 }

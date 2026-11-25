@@ -18,9 +18,7 @@
       "ordinance": "078-461",
       "page": 3,
       "quote": "Single-family and two-family residence"
-    }
-  ],
-  "otherUses": [
+    },
     {
       "text": "Uses customarily incidental to the residence, in the same dwelling, as a secondary use by the immediate family only",
       "permission": "A",
@@ -117,7 +115,6 @@
       "quote": "Minimum dwelling unit area - 1200 sq. ft. of living area"
     }
   },
-  "review": {},
   "notes": [
     "70% masonry exterior below the first-floor ceiling plate line.",
     "Two off-street parking spaces per dwelling unit.",

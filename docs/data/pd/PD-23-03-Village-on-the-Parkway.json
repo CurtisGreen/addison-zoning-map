@@ -3,11 +3,10 @@
   "name": "Village on the Parkway",
   "family": "commercial",
   "base": null,
-  "pdUsesOnly": true,
   "mustFollowPlan": true,
+  "pdUsesOnly": true,
   "purpose": "",
-  "uses": [],
-  "otherUses": [
+  "uses": [
     {
       "text": "Antique shop",
       "ordinance": "012-002",
@@ -515,7 +514,6 @@
       "quote": "movie theater which shall be parked at 1 parking space per 3 theater seats"
     }
   ],
-  "review": {},
   "notes": [
     "Development must follow the site plan (Exhibit A) and the site, landscape, floor, facade and valet plans (Exhibit B) of the 2023 ordinance.",
     "A valet parking plan must be submitted to Town staff. If valet is offered, it must use park-and-stroll or similar drop-off at any valet stand, and customers must be able to request a car before arriving.",

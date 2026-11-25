@@ -5,8 +5,7 @@
   "base": null,
   "pdUsesOnly": true,
   "purpose": "",
-  "uses": [],
-  "otherUses": [
+  "uses": [
     {
       "text": "Office space",
       "ordinance": "098-032",
@@ -47,7 +46,22 @@
       "quote": "Office space - total of 1,020,000 square feet Two, 14-story office buildings of 374,000 square feet each"
     }
   },
-  "review": {},
+  "parking": [
+    {
+      "use": "Office buildings",
+      "requirement": "2.8 per 1,000 sq ft GFA",
+      "rates": [
+        {
+          "spaces": 1060,
+          "per": 374000,
+          "unit": "sq ft gross"
+        }
+      ],
+      "ordinance": "098-032",
+      "page": 10,
+      "quote": "Development Data"
+    }
+  ],
   "notes": [
     "Development must follow the attached development plans, and the building heights and setbacks are approved as shown on them.",
     {
@@ -68,21 +82,5 @@
     "084-097": "Rezoned 8 acres from Industrial (I-1) to a PD for offices and restaurants",
     "098-032": "Revised the land description, allowed uses and conditions for three office buildings"
   },
-  "curtisNote": "The development plan shows 3 phases, but only phase 1 was built",
-  "parking": [
-    {
-      "use": "Office buildings",
-      "requirement": "2.8 per 1,000 sq ft GFA",
-      "rates": [
-        {
-          "spaces": 1060,
-          "per": 374000,
-          "unit": "sq ft gross"
-        }
-      ],
-      "ordinance": "098-032",
-      "page": 10,
-      "quote": "Development Data"
-    }
-  ]
+  "curtisNote": "The development plan shows 3 phases, but only phase 1 was built"
 }

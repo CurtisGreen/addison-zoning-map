@@ -5,8 +5,7 @@
   "base": null,
   "pdUsesOnly": true,
   "purpose": "",
-  "uses": [],
-  "otherUses": [
+  "uses": [
     {
       "text": "Antique shop",
       "group": "Use regulations",
@@ -476,7 +475,8 @@
       "value": 6,
       "ordinance": "094-011",
       "page": 8,
-      "quote": "No building or structure shall exceed six (6) standard stories in height"
+      "quote": "No building or structure shall exceed six (6) standard stories in height",
+      "note": "Taller buildings must set the extra height back one foot from the street line for every two feet above six stories."
     },
     "frontSetbackMin": {
       "value": 25,
@@ -492,7 +492,8 @@
       },
       "ordinance": "094-011",
       "page": 9,
-      "quote": "On a corner lot, a minimum required side yard of twenty-five (25) feet must be provided on the side street"
+      "quote": "On a corner lot, a minimum required side yard of twenty-five (25) feet must be provided on the side street",
+      "note": "A corner lot that abuts an apartment district needs 25 ft on the side street. Other lots that abut an apartment district need 10 ft."
     },
     "rearSetbackMin": {
       "value": {
@@ -619,10 +620,6 @@
       "quote": "Health Club or Studio for dance, music, drama, health"
     }
   ],
-  "review": {
-    "heightMaxStories": "Taller buildings must set the extra height back one foot from the street line for every two feet above six stories.",
-    "sideSetbackMin": "A corner lot that abuts an apartment district needs 25 ft on the side street. Other lots that abut an apartment district need 10 ft."
-  },
   "notes": [
     "The existing Corporate One building may use any use allowed under its Phase One development plans, as well as any listed use.",
     "At least 80 percent of the exterior walls of all structures must be masonry, not counting door and window openings. All facades visible from a divided thoroughfare must be brick or stone construction. Glass tile, glass block and plate glass may count as masonry.",

@@ -277,17 +277,17 @@ def check(pd_id, pd, index):
         warnings.append("base is null: the site shows only this PD's own uses and dimensions")
     elif pd_data["base"] not in base["districts"]:
         errors.append(f"base {pd_data['base']!r} is not a district in base.json")
+    # An entry with a UDC `name` changes the base; one with only `text` is a use with no UDC match
     for i, use in enumerate(pd_data.get("uses", [])):
-        label = f"uses[{i}] {use.get('name')}"
-        if use.get("name") not in use_names:
-            errors.append(f"{label}: not a UDC use name (put non-matching uses in otherUses)")
-        if use.get("permission") not in PERMISSIONS | {"none"}:
-            errors.append(f"{label}: permission must be P, S, D, A, T, or none")
+        label = f"uses[{i}] {use.get('name') or use.get('text', '')[:40]}"
+        if use.get("name") and use["name"] not in use_names:
+            errors.append(f"{label}: not a UDC use name (leave `name` out and give `text` instead)")
+        if not use.get("name") and not use.get("text"):
+            errors.append(f"{label}: needs a UDC `name` or its own `text`")
+        allowed = PERMISSIONS | {"none"} if use.get("name") else PERMISSIONS
+        if use.get("permission", "P") not in allowed:
+            errors.append(f"{label}: permission must be one of {sorted(allowed)} (P is the default)")
         check_evidence(label, use)
-    for i, use in enumerate(pd_data.get("otherUses", [])):
-        if use.get("permission", "P") not in PERMISSIONS:
-            errors.append(f"otherUses[{i}]: permission must be P, S, D, A, or T (or left out)")
-        check_evidence(f"otherUses[{i}]", use)
     for i, row in enumerate(pd_data.get("parking", [])):
         if not row.get("use") or not row.get("requirement"):
             errors.append(f"parking[{i}]: needs use and requirement")
@@ -318,7 +318,13 @@ def check(pd_id, pd, index):
         print("WARN  ", warning)
     for error in errors:
         print("ERROR ", error)
-    for key, text in pd_data.get("review", {}).items():
+    notes = dict(pd_data.get("sectionNotes", {}))
+    for field, dimension in pd_data.get("dimensions", {}).items():
+        if dimension.get("note"):
+            notes[field] = dimension["note"]
+        for part, text in dimension.get("partNotes", {}).items():
+            notes[f"{field} ({part})"] = text
+    for key, text in notes.items():
         print("REVIEW", key, "-", text)
     if errors:
         sys.exit(1)
