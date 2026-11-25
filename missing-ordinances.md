@@ -6,17 +6,17 @@ Last checked against the Town GIS: 2026-11-23.
 
 ## Ordinances with no PDF on the Town GIS
 
-| Ordinance | PD                | Where it is cited                                                                       | Town GIS                        |
-| --------- | ----------------- | --------------------------------------------------------------------------------------- | ------------------------------- |
-| O24-022   | PD O26-007        | O26-007 lists it as zoning replaced by Addison Junction                                 | No row                          |
-| O24-023   | PD O26-007        | O26-007 lists it as zoning replaced by Addison Junction                                 | No row                          |
-| O24-024   | PD O26-007        | O26-007 lists it as zoning replaced by Addison Junction                                 | No row                          |
-| O20-08    | PD 23-03          | Zoning layer chain (ZONE_HIST); amended by 023-03                                       | No row                          |
-| O26-022   | PD 23-03          | Zoning layer chain                                                                      | Row with no description or link |
-| O20-053   | PD 23-39          | Zoning layer chain                                                                      | No row                          |
-| O26-034   | PD 549, PD 89-015 | Zoning layer chain; "380 multifamily dwelling units … waiver of park land dedication"   | Row with description, no link   |
-| O26-023   | PD 85-100         | Zoning layer chain (the town's id has a stray backtick: "O26-023`")                     | Row with no description or link |
-| O26-031   | PD 92-037         | Zoning layer chain; "Amend PD permitted uses (dental office) … parking ratios with UDC" | Row with description, no link   |
+| Ordinance | PD                | Where it is cited                                                                         | Town GIS                        |
+| --------- | ----------------- | ----------------------------------------------------------------------------------------- | ------------------------------- |
+| O24-022   | PD O26-007        | O26-007 lists it as zoning replaced by Addison Junction                                   | No row                          |
+| O24-023   | PD O26-007        | O26-007 lists it as zoning replaced by Addison Junction                                   | No row                          |
+| O24-024   | PD O26-007        | O26-007 lists it as zoning replaced by Addison Junction                                   | No row                          |
+| O20-08    | PD 23-03          | Zoning layer chain (ZONE_HIST); amended by 023-03                                         | No row                          |
+| O26-022   | PD 23-03          | Zoning layer chain                                                                        | Row with no description or link |
+| O20-053   | PD 23-39          | Zoning layer chain; 023-39 amends and restates it in full, so only its history is missing | No row                          |
+| O26-034   | PD 549, PD 89-015 | Zoning layer chain; "380 multifamily dwelling units … waiver of park land dedication"     | Row with description, no link   |
+| O26-023   | PD 85-100         | Zoning layer chain (the town's id has a stray backtick: "O26-023`")                       | Row with no description or link |
+| O26-031   | PD 92-037         | Zoning layer chain; "Amend PD permitted uses (dental office) … parking ratios with UDC"   | Row with description, no link   |
 
 ## Other documents to find
 

@@ -1125,7 +1125,7 @@
         },
         {
           "id": "026-007",
-          "url": "https://library.municode.com/tx/addison/munidocs/munidocs?nodeId=8d2fc8993f793",
+          "url": "https://mcclibraryfunctions.azurewebsites.us/api/munidocDownload/31101/8d2fc8993f793/pdf",
           "date": "2026-02-10",
           "description": "Rezoning 15.5 acres from Commercial General and Planned Development to a new transit-oriented mixed-use Planned Development (Case 1947-Z, Addison Junction)"
         }
@@ -2821,9 +2821,9 @@
     },
     "PD 23-39": {
       "kind": "pd",
-      "name": "",
-      "base": null,
-      "done": false,
+      "name": "One Addison Place",
+      "base": "M-4",
+      "done": true,
       "acres": 0.6,
       "mainOrdinance": "023-39",
       "ordinances": [
@@ -2840,7 +2840,19 @@
           "description": "Restating NO. O20-53 to allow multifamilly residential use witin a 5-story commercial building"
         }
       ],
-      "placeTypes": ["Urban Village"]
+      "placeTypes": ["Urban Village"],
+      "popup": {
+        "residential": "1 unit",
+        "residentialPermit": "",
+        "adu": "",
+        "retail": "P",
+        "restaurant": "P",
+        "office": "P",
+        "industry": "",
+        "hotel": "S",
+        "daycare": "P",
+        "limits": "No height limit, Build-to 0–10 ft"
+      }
     },
     "PD O15-035": {
       "kind": "pd",

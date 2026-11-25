@@ -183,11 +183,11 @@ function useRows(pd, zone, base) {
     })
     .map((use) => {
       const after = PERMISSIONS[planPermission(pd, use.permission ?? "P")];
-      const notAllowed = (title) =>
-        `<span class="before mark" title="${title}">✕</span>`; // a grey X, not the dash used in the lists
+      const notAllowed = (title, className = "before") =>
+        `<span class="${className} mark" title="${title}">✕</span>`;
       const afterMark =
         after === PERMISSIONS.none
-          ? notAllowed(after.label)
+          ? notAllowed(after.label, "denied")
           : `<span class="${after.className} mark" title="${after.label}">${after.mark}</span>`;
       let permission = afterMark;
       if (pd.base) {
@@ -212,6 +212,7 @@ const NOTES_SHOWN_ELSEWHERE = [
   "uses",
   "legacyUses",
   "dimensions",
+  "parking",
 ];
 
 /** What a PD changes from its base district, plus uses with no UDC match, notes, and other review items. */
@@ -274,7 +275,10 @@ function renderParking(zone, base) {
     (row) =>
       `<tr><td>${escapeHtml(row.use)}</td><td>${escapeHtml(row.requirement)}</td><td class="source">${evidenceLink(row, zone, base)}</td></tr>`,
   );
-  return `<h2>Parking</h2>${tableOf([`<tr class="head"><th>Use</th><th>Spaces required</th><th></th></tr>`, ...body])}`;
+  // A review note under the key "parking" is a footnote on the table's heading.
+  const notes = createNotes();
+  const heading = `Parking${notes.mark(zone.review.parking)}`;
+  return `<h2>${heading}</h2>${tableOf([`<tr class="head"><th>Use</th><th>Spaces required</th><th></th></tr>`, ...body])}${notes.render()}`;
 }
 
 /** A PD's general conditions from the ordinance, one per line. */

@@ -1,0 +1,90 @@
+{
+  "id": "PD 23-39",
+  "name": "One Addison Place",
+  "base": "M-4",
+  "purpose": "",
+  "uses": [
+    {
+      "name": "Dwelling, multifamily",
+      "permission": "none",
+      "ordinance": "023-39",
+      "page": 2,
+      "quote": "All other residential uses, including residential subdistricts, are prohibited"
+    },
+    {
+      "name": "Dwelling, live/work",
+      "permission": "none",
+      "ordinance": "023-39",
+      "page": 2,
+      "quote": "All other residential uses, including residential subdistricts, are prohibited"
+    }
+  ],
+  "otherUses": [
+    {
+      "text": "One residential dwelling unit on the fifth floor, for one family",
+      "ordinance": "023-39",
+      "page": 2,
+      "quote": "only one residential dwelling unit that is designed and constructed for occupancy by one family"
+    }
+  ],
+  "dimensions": {},
+  "review": {
+    "parking": "These minimums are reduced by 10% because the site is within 0.25 mi of the Addison Transit Center"
+  },
+  "notes": [
+    "Development must follow the site plan, landscape plan, floor plan and building elevations in Exhibit B.",
+    "No residential use is allowed within the 65 LDN airport noise contour.",
+    "Along Edwin Lewis Drive, the building must be at least 3 ft from the edge of the sidewalk.",
+    "The second floor must be built so it can later become a parking garage, and the parking lift to the second floor must meet the Fire Code.",
+    "The site plan shows a 78 ft building (to the mechanical screening), 5 stories, 40% lot coverage, and 44 parking spaces required with 45 provided: 23 in the garage, 18 on the surface and 5 on the street."
+  ],
+  "history": {
+    "004-048": "Rezoned 2.8 acres at 4960 Arapaho from C-1 to a PD with restaurant permits",
+    "023-39": "Restated PD 020-53 to allow one fifth-floor dwelling in a 5-story commercial building"
+  },
+  "curtisNotes": "One Addison Place PD was originally based on the legacy Urban Center (UC) district. UC was replaced by M-4 so some things might be different from the original plan. This PD also used the transit center's 10% minimum parking reduction (provided: 45 space, required: 49 - 5 = 44), I'm unsure if it's now non-coforming or if the 10% reduction stays with the PD.",
+  "parking": [
+    {
+      "use": "Office",
+      "requirement": "3.3 per 1,000 sq ft net usable",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft net usable"
+        }
+      ],
+      "ordinance": "023-39",
+      "page": 6,
+      "quote": "SITE PLAN NOTES"
+    },
+    {
+      "use": "Showroom",
+      "requirement": "1 per 1,000 sq ft net usable",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1000,
+          "unit": "sq ft net usable"
+        }
+      ],
+      "ordinance": "023-39",
+      "page": 6,
+      "quote": "SITE PLAN NOTES"
+    },
+    {
+      "use": "Residence",
+      "requirement": "2 per dwelling",
+      "rates": [
+        {
+          "spaces": 2,
+          "per": 1,
+          "unit": "dwelling"
+        }
+      ],
+      "ordinance": "023-39",
+      "page": 6,
+      "quote": "SITE PLAN NOTES"
+    }
+  ]
+}
