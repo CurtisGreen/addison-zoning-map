@@ -22,15 +22,11 @@ const noteNumber = (number) => `<sup>${number}</sup>`;
 function createNotes(offset = 0) {
   const texts = [];
   return {
-    /** Returns the number(s) to put next to the item, or "" when there is no note. A list gives one number per note. */
-    mark(textOrList) {
-      const numbers = [textOrList ?? []].flat().map((text) => {
-        if (!texts.includes(text)) texts.push(text);
-        return offset + texts.indexOf(text) + 1;
-      });
-      return numbers.length
-        ? noteNumber(numbers.sort((a, b) => a - b).join(","))
-        : "";
+    /** Returns the number to put next to the item, or "" when there is no note */
+    mark(text) {
+      if (!text) return "";
+      if (!texts.includes(text)) texts.push(text);
+      return noteNumber(offset + texts.indexOf(text) + 1);
     },
     render() {
       return texts
@@ -53,30 +49,21 @@ function renderHeading(zone) {
 }
 
 function renderFacts(zone, base) {
-  const notes = createNotes();
   const rows = [];
   if (zone.base) {
     const name = base.districts[zone.base]?.name || "";
     const link = `<a href="${zonePageUrl(zone.base)}">${escapeHtml(idWithName(zone.base, name))}</a>`;
-    rows.push(["Base district", link + notes.mark(zone.review.base)]);
+    rows.push(["Base district", link]);
   }
-  rows.push([
-    "Source",
-    zone.sources.map(externalLink).join(", ") +
-      notes.mark(zone.review.ordinances),
-  ]);
+  rows.push(["Source", zone.sources.map(externalLink).join(", ")]);
   // The ordinance's acreage, when its boundary includes the roads
   const acresWithRoads = zone.pdData?.acresWithRoads;
   const withRoads = acresWithRoads
     ? ` (${acresWithRoads.toFixed(1)} including roads)`
     : "";
   if (zone.kind === "pd")
-    rows.push([
-      "Area",
-      `${zone.index.acres} acres${withRoads}${notes.mark(zone.review.acres)}`,
-    ]);
-  const facts = `<dl>${rows.map(([label, value]) => `<dt>${label}</dt><dd>${value}</dd>`).join("")}</dl>`;
-  return facts + notes.render();
+    rows.push(["Area", `${zone.index.acres} acres${withRoads}`]);
+  return `<dl>${rows.map(([label, value]) => `<dt>${label}</dt><dd>${value}</dd>`).join("")}</dl>`;
 }
 
 /** A value split by area, lot type, or street type is an object; anything else is one value */
