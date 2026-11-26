@@ -19,6 +19,7 @@ const Leaflet = window.L;
 
 const NORMAL_OPACITY = 0.5;
 const HOVER_OPACITY = 0.8;
+const DOUBLE_TAP_MS = 300;
 const TILES = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 const TILE_CREDIT =
   '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
@@ -117,12 +118,30 @@ function renderZoneList(data, polygonsByZone) {
     `<h3>Planned developments</h3><ul>${pds.map(listItem).join("")}</ul>`;
 }
 
+// Leaflet's own double-tap fallback needs two clicks within 200ms, which most touch users miss
+function enableDoubleTapZoom(map) {
+  let firstTap = null;
+
+  map.getContainer().addEventListener("pointerdown", (event) => {
+    if (!event.isPrimary) return; // Ignore 2nd finger pinch
+    const now = Date.now();
+    if (firstTap && firstTap.time - now >= DOUBLE_TAP_MS) {
+      map.setZoomAround(firstTap.point, map.getZoom() + 1);
+      firstTap = null;
+    } else {
+      firstTap = { time: now, point: map.mouseEventToContainerPoint(event) };
+    }
+  });
+}
+
 async function initMap() {
   const data = await loadSiteData();
   const zoneShapes = await loadJson("data/zones.geojson");
   const map = Leaflet.map("map", {
     renderer: Leaflet.canvas({ padding: 0.5 }),
+    doubleClickZoom: false,
   });
+  enableDoubleTapZoom(map);
   Leaflet.tileLayer(TILES, {
     maxZoom: 19,
     attribution: TILE_CREDIT,
