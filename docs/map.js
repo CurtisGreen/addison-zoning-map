@@ -24,10 +24,10 @@ const TILE_CREDIT =
   '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 
 /** PDs are dashed; color comes from the district family (a PD uses its base district once known) */
-function polygonStyle(zoneId, zoneIndex) {
-  const isPd = zoneIndex.zones[zoneId]?.kind === "pd";
+function polygonStyle(zoneId, zones) {
+  const isPd = zones[zoneId]?.kind === "pd";
   return {
-    fillColor: FAMILIES[familyOf(zoneId, zoneIndex)].color,
+    fillColor: FAMILIES[familyOf(zoneId, zones)].color,
     fillOpacity: NORMAL_OPACITY,
     color: isPd ? "#333" : "#fff",
     weight: 1,
@@ -101,16 +101,12 @@ function addLegend(map) {
 }
 
 function renderZoneList(data, polygonsByZone) {
-  const zoneIds = Object.keys(data.zoneIndex.zones).filter((zoneId) =>
+  const listed = Object.entries(data.zones).filter(([zoneId]) =>
     polygonsByZone.has(zoneId),
   );
-  const districts = zoneIds.filter(
-    (zoneId) => data.zoneIndex.zones[zoneId].kind === "district",
-  );
-  const pds = zoneIds.filter(
-    (zoneId) => data.zoneIndex.zones[zoneId].kind === "pd",
-  );
-  const listItem = (zoneId) =>
+  const districts = listed.filter(([, zone]) => zone.kind === "district");
+  const pds = listed.filter(([, zone]) => zone.kind === "pd");
+  const listItem = ([zoneId]) =>
     `<li><a href="zone.html?id=${encodeURIComponent(zoneId)}">${escapeHtml(zoneLabel(zoneId, data))}</a></li>`;
   document.getElementById("zone-list").innerHTML =
     `<h3>Districts</h3><ul>${districts.map(listItem).join("")}</ul>` +
@@ -155,7 +151,7 @@ async function initMap() {
       .forEach((polygon) => polygon.setStyle({ fillOpacity: opacity }));
 
   const allZones = Leaflet.geoJSON(zoneShapes, {
-    style: (feature) => polygonStyle(feature.properties.zone, data.zoneIndex),
+    style: (feature) => polygonStyle(feature.properties.zone, data.zones),
     onEachFeature: (feature, polygon) => {
       const { zone: zoneId } = feature.properties;
       if (!polygonsByZone.has(zoneId)) polygonsByZone.set(zoneId, []);
@@ -179,7 +175,6 @@ async function initMap() {
 
   addLegend(map);
   renderZoneList(data, polygonsByZone);
-  document.getElementById("as-of").textContent = data.zoneIndex.asOf;
 }
 
 initMap().catch((error) => showError(document.getElementById("map"), error));

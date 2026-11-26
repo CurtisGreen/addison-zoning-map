@@ -138,6 +138,8 @@ Fix every `ERROR` and run again. The script never edits `docs/data`. On a clean 
 
 Then run `python scripts/build_popups.py` to add the PD's map-popup summary (`popup` in `zones.json`). It only fills zones that have none, so hand edits are kept. Check the values against the ordinance and edit them in `zones.json` where the uses don't map cleanly to UDC names (for example a PD that lists "Multifamily" in `otherUses`).
 
+Finally, set the "Data as of" date in the footer of `docs/index.html` to today's date (`YYYY-MM-DD`), so visitors can see when the data last changed.
+
 ## 6. Report
 
 Tell the user, in a few lines:

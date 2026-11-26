@@ -226,7 +226,7 @@ def main():
         print("Excluded parcels not found in the parcel layer:", ", ".join(sorted(missing)))
     excluded = unary_union(parks + [shape(f["geometry"]).buffer(0) for f in parcels])
     index_file = DATA / "zones.json"
-    previous = json.loads(index_file.read_text(encoding="utf-8"))["zones"] if index_file.exists() else {}
+    previous = json.loads(index_file.read_text(encoding="utf-8")) if index_file.exists() else {}
 
     features, zones, place_type_totals, unmatched = [], {}, {}, set()
     global unmatched_codes
@@ -289,7 +289,7 @@ def main():
     districts = sorted((z for z in zones.items() if z[1]["kind"] == "district"), key=lambda z: -z[1]["acres"])
     pds = sorted((z for z in zones.items() if z[1]["kind"] == "pd"), key=lambda z: -z[1]["acres"])
 
-    new_index = {"asOf": datetime.date.today().isoformat(), "zones": dict(districts + pds)}
+    new_zones = dict(districts + pds)
     new_geojson = {"type": "FeatureCollection", "features": features}
     if "--out" in sys.argv:
         out = Path(sys.argv[sys.argv.index("--out") + 1]).resolve()
@@ -297,9 +297,10 @@ def main():
             sys.exit("--out must not be docs/data")
         out.mkdir(parents=True, exist_ok=True)
         write_text(out / "zones.geojson", json.dumps(new_geojson, separators=(",", ":")))
-        write_text(out / "zones.json", json.dumps(new_index, indent=2))
+        write_text(out / "zones.json", json.dumps(new_zones, indent=2))
         print(f"Fresh files written to {out}")
-    report_differences(previous, new_index["zones"], features)
+    report_differences(previous, new_zones, features)
+    print(f"If you copy these in, set \"Data as of\" in docs/index.html to {datetime.date.today().isoformat()}")
     return
 
 

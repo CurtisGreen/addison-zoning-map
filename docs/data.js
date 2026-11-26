@@ -52,10 +52,10 @@ const DISTRICT_FAMILY = {
 };
 
 /** A district's family. A PD uses its own family if it has one, else its base district's, else "planned". */
-export function familyOf(zoneId, zoneIndex) {
-  const entry = zoneIndex.zones[zoneId];
-  if (entry?.family) return entry.family;
-  const district = entry?.kind === "pd" ? entry.base : zoneId;
+export function familyOf(zoneId, zones) {
+  const zone = zones[zoneId];
+  if (zone?.family) return zone.family;
+  const district = zone?.kind === "pd" ? zone.base : zoneId;
   return DISTRICT_FAMILY[district] || "planned";
 }
 
@@ -73,9 +73,9 @@ export function loadSiteData() {
   siteData ||= Promise.all([
     loadJson("data/base.json"),
     loadJson("data/zones.json"),
-  ]).then(([base, zoneIndex]) => ({
+  ]).then(([base, zones]) => ({
     base,
-    zoneIndex,
+    zones,
     useByName: new Map(base.uses.map((use) => [use.name, use])),
   }));
   return siteData;
@@ -90,8 +90,8 @@ export function showError(element, error) {
 export const idWithName = (id, name) => (name ? `${id}: ${name}` : id);
 
 // "CG: Commercial General" or "PD 461: Midway Meadows"
-export function zoneLabel(zoneId, { base, zoneIndex }) {
-  const name = base.districts[zoneId]?.name || zoneIndex.zones[zoneId]?.name;
+export function zoneLabel(zoneId, { base, zones }) {
+  const name = base.districts[zoneId]?.name || zones[zoneId]?.name;
   return idWithName(zoneId, name);
 }
 
@@ -102,8 +102,8 @@ export function zoneLabel(zoneId, { base, zoneIndex }) {
  * (UDC §3.7.3.C and §3.7.4.D). A PD with no data yet has only its index entry and ordinance links.
  */
 export async function getZone(zoneId) {
-  const { base, zoneIndex } = await loadSiteData();
-  const index = zoneIndex.zones[zoneId] || {
+  const { base, zones } = await loadSiteData();
+  const index = zones[zoneId] || {
     placeTypes: [],
   };
   const district = base.districts[zoneId];

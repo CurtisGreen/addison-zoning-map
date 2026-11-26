@@ -232,7 +232,7 @@ def valid_value(value, split_allowed=True):
     return False
 
 
-def check(pd_id, pd, index):
+def check(pd_id, pd):
     base = read_json(DATA / "base.json")
     pd_path = DATA / "pd" / pd["file"] if pd.get("file") else pd_data_file(pd_id, pd["name"])
     if not pd_path.exists():  # a new PD's file has no name in it until zones.json is updated
@@ -349,16 +349,16 @@ def main():
     for tool in REQUIRED_TOOLS:  # checked first: a missing tool would otherwise fail partway through
         require(tool)
     command, pd_id = sys.argv[1], sys.argv[2]
-    index = read_json(DATA / "zones.json")
-    pd = index["zones"].get(pd_id)
+    zones = read_json(DATA / "zones.json")
+    pd = zones.get(pd_id)
     if not pd or pd["kind"] != "pd":
         number = pd_id.replace("PD", "").strip()
-        close = [zone_id for zone_id, zone in index["zones"].items() if zone["kind"] == "pd" and number in zone_id]
+        close = [zone_id for zone_id, zone in zones.items() if zone["kind"] == "pd" and number in zone_id]
         sys.exit(f"{pd_id!r} is not a PD in zones.json. Close matches: {close or 'none'}")
     if command == "fetch":
         fetch(pd_id, pd)
     else:
-        check(pd_id, pd, index)
+        check(pd_id, pd)
 
 
 if __name__ == "__main__":

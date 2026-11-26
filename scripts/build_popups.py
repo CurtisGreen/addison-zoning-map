@@ -19,7 +19,6 @@ Zones whose data is not written yet (a PD with no docs/data/pd file) get no `pop
   limits             text such as "Height 35 ft, Front 30 ft"
 """
 import json
-import re
 import sys
 from pathlib import Path
 
@@ -124,16 +123,14 @@ def dwelling_sizes(uses, code):
     return f"{', '.join(texts)} {'unit' if texts == ['1'] else 'units'}"
 
 
-def zone_data(zone_id, base, index):
+def zone_data(zone_id, base, zone):
     """(uses, dimensions, must_follow_plan) for a zone, as the site shows them, or None when the zone has no data yet."""
     district = base["districts"].get(zone_id)
     if district:
         return district["uses"], district["dimensions"], False
-    if index.get("kind") != "pd" or not index.get("done"):
+    if zone.get("kind") != "pd" or not zone.get("done"):
         return None
-    slug = zone_id.replace("?", "").replace(" ", "-")
-    label = re.sub(r"[^A-Za-z0-9]+", "-", index.get("name") or "").strip("-")
-    pd_data = read_json(DATA / "pd" / (f"{slug}-{label}.json" if label else f"{slug}.json"))
+    pd_data = read_json(DATA / "pd" / zone["file"])
     base_district = base["districts"].get(pd_data.get("base"))
     plan_only = pd_data.get("pdUsesOnly") or pd_data.get("mustFollowPlan")  # only the PD's own uses count
     uses = {} if plan_only or not base_district else dict(base_district["uses"])
@@ -184,30 +181,30 @@ def main():
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     force, dry_run = "--force" in sys.argv, "--dry-run" in sys.argv
     base = read_json(DATA / "base.json")
-    index = read_json(DATA / "zones.json")
+    zones = read_json(DATA / "zones.json")
     added = []
-    for zone_id, entry in index["zones"].items():
-        found = zone_data(zone_id, base, entry)
+    for zone_id, zone in zones.items():
+        found = zone_data(zone_id, base, zone)
         if not found:
             continue
         built = build_popup(*found, base)
-        if "popup" in entry and not force:
+        if "popup" in zone and not force:
             # keep every stored value, add only fields the popup gained since it was written
-            merged = {key: entry["popup"].get(key, value) for key, value in built.items()}
-            if merged == entry["popup"]:
+            merged = {key: zone["popup"].get(key, value) for key, value in built.items()}
+            if merged == zone["popup"]:
                 continue
-            new_keys = [key for key in built if key not in entry["popup"]]
-            entry["popup"] = merged
+            new_keys = [key for key in built if key not in zone["popup"]]
+            zone["popup"] = merged
             print(f"{zone_id}: added {', '.join(new_keys)}")
         else:
-            entry["popup"] = built
+            zone["popup"] = built
             print(f"{zone_id}: {json.dumps(built, ensure_ascii=False)}")
         added.append(zone_id)
     if dry_run or not added:
         print(f"{len(added)} zones {'would be ' if dry_run else ''}updated." if added else "Nothing to add.")
         return
     with open(DATA / "zones.json", "w", encoding="utf-8", newline="\n") as file:
-        json.dump(index, file, indent=2, ensure_ascii=False)
+        json.dump(zones, file, indent=2, ensure_ascii=False)
         file.write("\n")
     print(f"Added popup to {len(added)} zones. Run `npm run format` to restore Prettier formatting.")
 
