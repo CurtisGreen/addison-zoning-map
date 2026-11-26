@@ -73,13 +73,13 @@ def page_count(pdf):
 
 
 def file_slug(pd_id):
-    """'PD 461' -> 'PD-461' (same rule as data.js)."""
+    """'PD 461' -> 'PD-461'"""
     return pd_id.replace("?", "").replace(" ", "-")
 
 
 def pd_data_file(pd_id, name):
-    """docs/data/pd file for a PD: the id plus its name, 'PD 461' + 'Midway Meadows' -> PD-461-Midway-Meadows.json
-    (same rule as data.js). A PD with no name yet uses just the id."""
+    """Suggested docs/data/pd file for a PD: the id plus its name, 'PD 461' + 'Midway Meadows' -> PD-461-Midway-Meadows.json.
+    A PD with no name yet uses just the id."""
     label = re.sub(r"[^A-Za-z0-9]+", "-", name or "").strip("-")
     slug = file_slug(pd_id)
     return DATA / "pd" / f"{slug}-{label}.json" if label else DATA / "pd" / f"{slug}.json"
@@ -234,7 +234,7 @@ def valid_value(value, split_allowed=True):
 
 def check(pd_id, pd, index):
     base = read_json(DATA / "base.json")
-    pd_path = pd_data_file(pd_id, pd["name"])
+    pd_path = DATA / "pd" / pd["file"] if pd.get("file") else pd_data_file(pd_id, pd["name"])
     if not pd_path.exists():  # a new PD's file has no name in it until zones.json is updated
         pd_path = pd_data_file(pd_id, None)
     pd_data = read_json(pd_path)
@@ -332,15 +332,12 @@ def check(pd_id, pd, index):
     if pd_data.get("family") not in families | {None}:
         print(f"ERROR family must be one of {sorted(families)}")
         sys.exit(1)
-    wanted = {"done": True, "name": pd_data.get("name", ""), "base": pd_data.get("base")}
+    wanted = {"done": True, "name": pd_data.get("name", ""), "base": pd_data.get("base"), "file": pd_path.name}
     if pd_data.get("family"):
         wanted["family"] = pd_data["family"]
     for key, value in wanted.items():
         if pd.get(key) != value:
             print(f"UPDATE zones.json entry for {pd_id}: set {key} to {value!r} (now {pd.get(key)!r})")
-    expected = pd_data_file(pd_id, pd_data.get("name"))
-    if pd_path != expected:
-        print(f"RENAME {pd_path.relative_to(ROOT)} to {expected.relative_to(ROOT)} (use git mv); the site loads the file by the name in zones.json")
     print(f"OK - {pd_id} has no errors. Nothing under docs/data was changed.")
 
 

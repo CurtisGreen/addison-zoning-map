@@ -95,15 +95,6 @@ export function zoneLabel(zoneId, { base, zoneIndex }) {
   return idWithName(zoneId, name);
 }
 
-/** "PD 461" + "Midway Meadows" -> data/pd/PD-461-Midway-Meadows.json; a PD with no name uses just the id */
-function pdFilePath(zoneId, name) {
-  const id = zoneId.replace("?", "").replaceAll(" ", "-");
-  const label = (name || "")
-    .replace(/[^A-Za-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-  return `data/pd/${label ? `${id}-${label}` : id}.json`;
-}
-
 /**
  * Everything known about one zone:
  * { id, kind, name, purpose, base, uses: {useName: permission}, legacyUses, dimensions, review, sources, index, pdData }
@@ -152,7 +143,7 @@ export async function getZone(zoneId) {
   };
   if (!index.done) return zone;
 
-  const pdData = await loadJson(pdFilePath(zoneId, index.name));
+  const pdData = await loadJson(`data/pd/${index.file}`);
   // A PD that must follow its plan allows only the uses the plan shows, not its base district's uses
   if (pdData.mustFollowPlan) pdData.pdUsesOnly = true;
   const baseDistrict = base.districts[pdData.base];

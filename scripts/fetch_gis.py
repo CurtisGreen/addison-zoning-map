@@ -249,6 +249,8 @@ def main():
             zone = zones.setdefault(zone_id, {"kind": "pd", "name": kept.get("name", ""), "base": kept.get("base"),
                                               "done": kept.get("done", False), "acres": 0, "mainOrdinance": None,
                                               "ordinances": {}, "placeTypes": []})
+            if kept.get("file"):
+                zone["file"] = kept["file"]
             main_ordinance = find_ordinance(pd_code) if pd_code else None
             if main_ordinance and not merged:
                 zone["mainOrdinance"] = main_ordinance["id"]

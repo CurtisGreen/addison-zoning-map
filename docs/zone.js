@@ -19,7 +19,7 @@ function createNotes(offset = 0) {
   const texts = [];
   return {
     /** Returns the number to put next to the item, or "" when there is no note */
-    mark(text) {
+    getFootnoteNumber(text) {
       if (!text) return "";
       if (!texts.includes(text)) texts.push(text);
       const noteNumber = offset + texts.indexOf(text) + 1;
@@ -99,7 +99,7 @@ function groupBySplit(entries) {
  */
 function dimensionTable(
   group,
-  { zone, base, markFor, markForPart, baseDimensions, labelSingle },
+  { zone, base, footnoteFor, footnoteForPart, baseDimensions, labelSingle },
 ) {
   const parts = partsOf(group[0][1].value);
   const header = parts.length
@@ -109,7 +109,7 @@ function dimensionTable(
       : "";
   const rows = group.map(([field, dimension]) => {
     const { label, unit } = base.dimensionFields[field];
-    const mark = markFor ? markFor(field) : "";
+    const footnote = footnoteFor ? footnoteFor(field) : "";
     const source = `<td class="source">${evidenceLink(dimension, zone, base)}</td>`;
     // Height in feet and height in stories are compared with each other
     const baseField = baseDimensions?.[field] ? field : SAME_QUANTITY[field];
@@ -117,19 +117,16 @@ function dimensionTable(
     const baseValue = baseDimensions
       ? (baseDimensions[baseField]?.value ?? "none")
       : undefined;
-    const baseUnit = base.dimensionFields[baseField]?.unit ?? unit;
-    const cell = (value) =>
-      `<td>${changeText(baseValue, value, unit, baseUnit)}</td>`;
+    const baseUnit = base.dimensionFields[baseField]?.unit;
+    const cell = (value, cellFootnote = "") =>
+      `<td>${changeText(baseValue, value, unit, baseUnit)}${cellFootnote}</td>`;
     return parts.length
-      ? `<tr><th>${escapeHtml(label)}${mark}</th>${parts
+      ? `<tr><th>${escapeHtml(label)}${footnote}</th>${parts
           .map((part) =>
-            cell(dimension.value[part]).replace(
-              "</td>",
-              `${markForPart ? markForPart(field, part) : ""}</td>`,
-            ),
+            cell(dimension.value[part], footnoteForPart?.(field, part)),
           )
           .join("")}${source}</tr>`
-      : `<tr><th>${escapeHtml(label)}</th>${cell(dimension.value).replace("</td>", `${mark}</td>`)}${source}</tr>`;
+      : `<tr><th>${escapeHtml(label)}</th>${cell(dimension.value, footnote)}${source}</tr>`;
   });
   return tableOf([header, ...rows]);
 }
@@ -245,7 +242,7 @@ function renderParking(zone, base) {
   );
   // A review note under the key "parking" is a footnote on the table's heading
   const notes = createNotes();
-  const heading = `Parking${notes.mark(zone.review.parking)}`;
+  const heading = `Parking${notes.getFootnoteNumber(zone.review.parking)}`;
   return `<h2>${heading}</h2>${tableOf([`<tr class="head"><th>Use</th><th>Spaces required</th><th></th></tr>`, ...body])}${notes.render()}`;
 }
 
@@ -340,7 +337,7 @@ function renderStandard({ id, standard, items, district, base }) {
 function renderUses(zone, base, standards) {
   const notes = createNotes();
   if (zone.legacyUses) {
-    const heading = `Allowed uses${notes.mark(zone.review.legacyUses)}`;
+    const heading = `Allowed uses${notes.getFootnoteNumber(zone.review.legacyUses)}`;
     const items = zone.legacyUses
       .map((use) => `<li>${escapeHtml(use)}</li>`)
       .join("");
@@ -355,7 +352,7 @@ function renderUses(zone, base, standards) {
     zone.kind === "pd" && zone.base && !zone.pdData?.pdUsesOnly
       ? ` (From base ${escapeHtml(zone.base)})`
       : "";
-  const heading = `Allowed uses${fromBase}${notes.mark(zone.review.uses)}`;
+  const heading = `Allowed uses${fromBase}${notes.getFootnoteNumber(zone.review.uses)}`;
   const byCategory = new Map();
   const applicableStandards = new Map();
   for (const use of base.uses) {
@@ -432,13 +429,13 @@ function renderDimensions(zone, base) {
   const shownNumbers = new Set(Object.values(zone.noteRefs).flat());
   const notes = createNotes(Math.max(0, ...shownNumbers)); // other notes continue after the UDC's numbers
   // A dimension's own `note` marks its row, and `partNotes` marks one column of it
-  const markFor = (key) =>
+  const footnoteFor = (key) =>
     (zone.noteRefs[key] ? `<sup>${zone.noteRefs[key].join(",")}</sup>` : "") +
-    notes.mark(zone.review[key]) +
-    notes.mark(zone.dimensions[key]?.note);
-  const markForPart = (key, part) =>
-    notes.mark(zone.dimensions[key]?.partNotes?.[part]);
-  const heading = `Dimensions${markFor("dimensions")}`;
+    notes.getFootnoteNumber(zone.review[key]) +
+    notes.getFootnoteNumber(zone.dimensions[key]?.note);
+  const footnoteForPart = (key, part) =>
+    notes.getFootnoteNumber(zone.dimensions[key]?.partNotes?.[part]);
+  const heading = `Dimensions${footnoteFor("dimensions")}`;
   const udcNotes = [...shownNumbers]
     .sort((a, b) => a - b)
     .map(
@@ -453,7 +450,13 @@ function renderDimensions(zone, base) {
   const groups = groupBySplit(entries);
   const labelSingle = hasSplitAndSingle(groups);
   const tables = groups.map((group) =>
-    dimensionTable(group, { zone, base, markFor, markForPart, labelSingle }),
+    dimensionTable(group, {
+      zone,
+      base,
+      footnoteFor,
+      footnoteForPart,
+      labelSingle,
+    }),
   );
   return `<h2>${heading}</h2>${tables.join("")}${udcNotes}${notes.render()}`;
 }
