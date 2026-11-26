@@ -96,97 +96,113 @@ export function zoneLabel(zoneId, { base, zones }) {
 }
 
 /**
- * Everything known about one zone:
- * { id, kind, name, purpose, base, uses: {useName: permission}, legacyUses, dimensions, review, sources, index, pdData }
- * A PD starts from its base district. Anything the PD doesn't change falls back to the base
- * (UDC §3.7.3.C and §3.7.4.D). A PD with no data yet has only its index entry and ordinance links.
+ * Everything known about one zone, or null for an id that is neither a district nor a PD:
+ * - zoneId, kind ("district" or "pd"), name, purpose, base, sources
+ * - zone: the zone's entry in zones.json
+ * - pdData: the PD's own file, when it has one
+ * - district: the UDC district whose rules apply, which is the zone itself or a PD's base district
  */
-export async function getZone(zoneId) {
+export async function getZoneData(zoneId) {
   const { base, zones } = await loadSiteData();
-  const index = zones[zoneId] || {
-    placeTypes: [],
-  };
-  const district = base.districts[zoneId];
-  if (district) {
-    const udcLink = {
-      label: `UDC §${district.section}`,
-      url: `${base.sources.udc.url}#page=${district.page}`,
-    };
+  const zone = zones[zoneId] || {};
+  const ownDistrict = base.districts[zoneId];
+  if (ownDistrict) {
     return {
-      id: zoneId,
+      zoneId,
       kind: "district",
+      name: ownDistrict.name,
+      purpose: ownDistrict.purpose,
+      sources: [
+        {
+          label: `UDC §${ownDistrict.section}`,
+          url: `${base.sources.udc.url}#page=${ownDistrict.page}`,
+        },
+      ],
+      zone,
+      district: ownDistrict,
+      pdData: null,
+    };
+  }
+  if (zone.kind !== "pd") return null;
+
+  const pdData = zone.done ? await loadJson(`data/pd/${zone.file}`) : null;
+  // A PD that must follow its plan allows only the uses the plan shows, not its base district's uses
+  if (pdData?.mustFollowPlan) pdData.pdUsesOnly = true;
+  return {
+    zoneId,
+    kind: "pd",
+    name: pdData?.name || zone.name,
+    purpose: pdData?.purpose,
+    base: pdData?.base,
+    sources: zone.ordinances.map((ordinance) => ({
+      label: `Ord. ${ordinance.id}`,
+      url: ordinance.url,
+    })),
+    zone,
+    district: base.districts[pdData?.base],
+    pdData,
+  };
+}
+
+/**
+ * The rules that apply to a zone: a district's own, or a PD's rules on top of its base district.
+ * A PD starts from its base district, and anything the PD doesn't change falls back to the base
+ * (UDC §3.7.3.C and §3.7.4.D). A PD with no data yet has no rules.
+ */
+export function zoneRules({ kind, district, pdData }) {
+  if (kind === "district") {
+    return {
+      uses: district.uses,
+      legacyUses: district.legacyUses,
+      dimensions: district.dimensions,
+      review: district.review || {},
+      tableNotes: district.tableNotes || {},
+      noteRefs: district.noteRefs || {},
+    };
+  }
+  if (!pdData) {
+    return {
+      uses: null,
+      dimensions: {},
       review: {},
       tableNotes: {},
       noteRefs: {},
-      ...district,
-      index,
-      sources: [udcLink],
     };
   }
-  if (index.kind !== "pd") return null;
-
-  const sources = index.ordinances.map((ordinance) => ({
-    label: `Ord. ${ordinance.id}`,
-    url: ordinance.url,
-  }));
-  const zone = {
-    id: zoneId,
-    kind: "pd",
-    name: index.name,
-    index,
-    sources,
-    uses: null,
-    dimensions: {},
-    review: {},
-    tableNotes: {},
-    noteRefs: {},
-  };
-  if (!index.done) return zone;
-
-  const pdData = await loadJson(`data/pd/${index.file}`);
-  // A PD that must follow its plan allows only the uses the plan shows, not its base district's uses
-  if (pdData.mustFollowPlan) pdData.pdUsesOnly = true;
-  const baseDistrict = base.districts[pdData.base];
-  const uses =
-    pdData.pdUsesOnly || !baseDistrict ? {} : { ...baseDistrict.uses };
-  // An entry with a UDC use `name` changes the base; one with only `text` is a use with no UDC match
+  const uses = pdData.pdUsesOnly || !district ? {} : { ...district.uses };
+  // Skip text-only use, the permissions are keyed by UDC use name
   for (const use of pdData.uses.filter((use) => use.name)) {
     if (use.permission === "none") delete uses[use.name];
     else uses[use.name] = use.permission;
   }
+
   for (const name of Object.keys(uses))
     uses[name] = planPermission(pdData, uses[name]);
+
   // Base district notes are dropped for dimensions the PD sets itself
-  const inheritedReview = Object.fromEntries(
-    Object.entries(baseDistrict?.review || {}).filter(
-      ([key]) => !(key in pdData.dimensions),
-    ),
-  );
-  const inheritedNoteRefs = Object.fromEntries(
-    Object.entries(baseDistrict?.noteRefs || {}).filter(
-      ([key]) => !(key in pdData.dimensions),
-    ),
-  );
+  const withoutPdDimensions = (notes = {}) =>
+    Object.fromEntries(
+      Object.entries(notes).filter(([key]) => !(key in pdData.dimensions)),
+    );
   return {
-    ...zone,
-    pdData,
-    name: pdData.name || index.name,
-    purpose: pdData.purpose,
-    base: pdData.base,
     uses,
-    dimensions: { ...baseDistrict?.dimensions, ...pdData.dimensions },
-    review: { ...inheritedReview, ...pdData.sectionNotes },
-    tableNotes: baseDistrict?.tableNotes || {},
-    noteRefs: inheritedNoteRefs,
+    dimensions: { ...district?.dimensions, ...pdData.dimensions },
+    review: {
+      ...withoutPdDimensions(district?.review),
+      ...pdData.sectionNotes,
+    },
+    tableNotes: district?.tableNotes || {},
+    noteRefs: withoutPdDimensions(district?.noteRefs),
   };
 }
 
-export const zoneTitle = (zone) => idWithName(zone.id, zone.name);
+export const zoneTitle = (zoneData) =>
+  idWithName(zoneData.zoneId, zoneData.name);
 
 /** The source to show in a popup: the UDC section, the PD's one ordinance, or the count when a PD has several */
-export function sourceHtml(zone) {
-  if (zone.kind === "district") return externalLink(zone.sources[0]);
-  const ordinances = zone.index.ordinances;
+export function sourceHtml(zoneData) {
+  if (zoneData.kind === "district") return externalLink(zoneData.sources[0]);
+  const ordinances = zoneData.zone.ordinances;
   if (ordinances.length > 1) return `${ordinances.length} ordinances`;
   const [only] = ordinances;
   return only ? externalLink({ label: `Ord. ${only.id}`, url: only.url }) : "";
@@ -204,11 +220,11 @@ export function externalLink({ label, url }) {
 }
 
 // Link to the PDF page a value came from: the PD ordinance it cites, else the UDC
-export function evidenceLink(evidence, zone, base) {
+export function evidenceLink(evidence, zoneData, base) {
   if (!evidence?.page) return "";
   const label = `p. ${evidence.page}`;
   if (evidence.ordinance) {
-    const ordinance = zone.index.ordinances.find(
+    const ordinance = zoneData.zone.ordinances.find(
       (o) => o.id === evidence.ordinance,
     );
     return externalLink({

@@ -6,7 +6,8 @@ import {
   evidenceLink,
   externalLink,
   formatValue,
-  getZone,
+  getZoneData,
+  zoneRules,
   loadJson,
   idWithName,
   loadSiteData,
@@ -41,30 +42,32 @@ function createNotes(offset = 0) {
 const tableOf = (rows) =>
   `<div class="table-wrap"><table>${rows.filter(Boolean).join("")}</table></div>`;
 
-function renderHeading(zone) {
+function renderHeading(zoneData) {
   // Purposes are exact quotes from the UDC or the PD ordinance
-  const purpose = zone.purpose ? `<p>“${escapeHtml(zone.purpose)}”</p>` : "";
-  return `<h1>${escapeHtml(zoneTitle(zone))}</h1>${purpose}`;
+  const purpose = zoneData.purpose
+    ? `<p>“${escapeHtml(zoneData.purpose)}”</p>`
+    : "";
+  return `<h1>${escapeHtml(zoneTitle(zoneData))}</h1>${purpose}`;
 }
 
-function renderFacts(zone, base) {
+function renderFacts(zoneData, base) {
   const rows = [];
-  if (zone.base) {
-    const name = base.districts[zone.base]?.name || "";
-    const title = idWithName(zone.base, name);
-    const link = `<a href="zone.html?id=${encodeURIComponent(zone.base)}">
+  if (zoneData.base) {
+    const name = base.districts[zoneData.base]?.name || "";
+    const title = idWithName(zoneData.base, name);
+    const link = `<a href="zone.html?id=${encodeURIComponent(zoneData.base)}">
         ${escapeHtml(title)}
       </a>`;
     rows.push(["Base district", link]);
   }
-  rows.push(["Source", zone.sources.map(externalLink).join(", ")]);
+  rows.push(["Source", zoneData.sources.map(externalLink).join(", ")]);
   // The ordinance's acreage, when its boundary includes the roads
-  const acresWithRoads = zone.pdData?.acresWithRoads;
+  const acresWithRoads = zoneData.pdData?.acresWithRoads;
   const withRoads = acresWithRoads
     ? ` (${acresWithRoads.toFixed(1)} including roads)`
     : "";
-  if (zone.kind === "pd")
-    rows.push(["Area", `${zone.index.acres} acres${withRoads}`]);
+  if (zoneData.kind === "pd")
+    rows.push(["Area", `${zoneData.zone.acres} acres${withRoads}`]);
   return `<dl>${rows.map(([label, value]) => `<dt>${label}</dt><dd>${value}</dd>`).join("")}</dl>`;
 }
 
@@ -99,7 +102,7 @@ function groupBySplit(entries) {
  */
 function dimensionTable(
   group,
-  { zone, base, footnoteFor, footnoteForPart, baseDimensions, labelSingle },
+  { zoneData, base, footnoteFor, footnoteForPart, baseDimensions, labelSingle },
 ) {
   const parts = partsOf(group[0][1].value);
   const header = parts.length
@@ -110,7 +113,7 @@ function dimensionTable(
   const rows = group.map(([field, dimension]) => {
     const { label, unit } = base.dimensionFields[field];
     const footnote = footnoteFor ? footnoteFor(field) : "";
-    const source = `<td class="source">${evidenceLink(dimension, zone, base)}</td>`;
+    const source = `<td class="source">${evidenceLink(dimension, zoneData, base)}</td>`;
     // Height in feet and height in stories are compared with each other
     const baseField = baseDimensions?.[field] ? field : SAME_QUANTITY[field];
     // A base with no value reads as "None"
@@ -151,7 +154,7 @@ function changeText(baseValue, newValue, unit, baseUnit) {
 }
 
 /** Uses a PD adds or changes, or other uses it lists */
-function useRows(pd, zone, base) {
+function useRows(pd, zoneData, base) {
   // A PD that lists all its own uses (pdUsesOnly) shows them once, under Allowed uses
   const listed = pd.pdUsesOnly
     ? []
@@ -184,15 +187,15 @@ function useRows(pd, zone, base) {
             : `<span class="before mark" title="${before.label} in ${escapeHtml(pd.base)}">${before.mark}</span>`;
         permission = `<span role="img" aria-label="${before.label} in ${escapeHtml(pd.base)}, now ${after.label.toLowerCase()}">${beforeMark} → ${afterMark}</span>`;
       }
-      return `<tr><td>${escapeHtml(use.text)}</td><td class="nowrap">${permission}</td><td class="source">${evidenceLink(use, zone, base)}</td></tr>`;
+      return `<tr><td>${escapeHtml(use.text)}</td><td class="nowrap">${permission}</td><td class="source">${evidenceLink(use, zoneData, base)}</td></tr>`;
     });
 }
 
 /** What a PD changes from its base district, plus uses with no UDC match, notes, and other review items */
-function renderPdRules(zone, base) {
-  const pd = zone.pdData;
+function renderPdRules(zoneData, base) {
+  const pd = zoneData.pdData;
   if (!pd) return "";
-  const rows = useRows(pd, zone, base);
+  const rows = useRows(pd, zoneData, base);
   const useTable = rows.length
     ? tableOf([
         `<tr class="head"><th>Use</th><th class="nowrap">${pd.base ? "Before → after" : "Permission"}</th><th></th></tr>`,
@@ -205,7 +208,7 @@ function renderPdRules(zone, base) {
   const changedGroups = groupBySplit(changed);
   const labelSingle = hasSplitAndSingle(changedGroups);
   const dimensionTables = changedGroups.map((group) =>
-    dimensionTable(group, { zone, base, baseDimensions, labelSingle }),
+    dimensionTable(group, { zoneData, base, baseDimensions, labelSingle }),
   );
   if (!useTable && !dimensionTables.length) return "";
   const heading = pd.base ? "Changes from base" : "Other uses and rules";
@@ -213,11 +216,11 @@ function renderPdRules(zone, base) {
 }
 
 /** A PD's ordinances, oldest first. A PD's data file can give a shorter description than the town map's. */
-function renderHistory(zone) {
-  if (zone.kind !== "pd" || !zone.index.ordinances.length) return "";
-  const rows = zone.index.ordinances.map((ordinance) => {
+function renderHistory(zoneData) {
+  if (zoneData.kind !== "pd" || !zoneData.zone.ordinances.length) return "";
+  const rows = zoneData.zone.ordinances.map((ordinance) => {
     const description =
-      zone.pdData?.history?.[ordinance.id] ?? ordinance.description;
+      zoneData.pdData?.history?.[ordinance.id] ?? ordinance.description;
     const link = externalLink({
       label: `Ord. ${ordinance.id}`,
       url: ordinance.url,
@@ -227,28 +230,28 @@ function renderHistory(zone) {
   return `<h2>History</h2>${tableOf(rows)}`;
 }
 
-function renderCurtisNotes(zone) {
-  const text = zone.pdData?.curtisNotes;
+function renderCurtisNotes(zoneData) {
+  const text = zoneData.pdData?.curtisNotes;
   return text ? `<h2>Curtis's notes</h2><p>${escapeHtml(text)}</p>` : "";
 }
 
 /** A PD's own parking ratios, one row per use */
-function renderParking(zone, base) {
-  const rows = zone.pdData?.parking || [];
+function renderParking(zoneData, rules, base) {
+  const rows = zoneData.pdData?.parking || [];
   if (!rows.length) return "";
   const body = rows.map(
     (row) =>
-      `<tr><td>${escapeHtml(row.use)}</td><td>${escapeHtml(row.requirement)}</td><td class="source">${evidenceLink(row, zone, base)}</td></tr>`,
+      `<tr><td>${escapeHtml(row.use)}</td><td>${escapeHtml(row.requirement)}</td><td class="source">${evidenceLink(row, zoneData, base)}</td></tr>`,
   );
   // A review note under the key "parking" is a footnote on the table's heading
   const notes = createNotes();
-  const heading = `Parking${notes.getFootnoteNumber(zone.review.parking)}`;
+  const heading = `Parking${notes.getFootnoteNumber(rules.review.parking)}`;
   return `<h2>${heading}</h2>${tableOf([`<tr class="head"><th>Use</th><th>Spaces required</th><th></th></tr>`, ...body])}${notes.render()}`;
 }
 
 /** A PD's general conditions from the ordinance, one per line */
-function renderNotes(zone) {
-  const items = zone.pdData?.notes || [];
+function renderNotes(zoneData) {
+  const items = zoneData.pdData?.notes || [];
   if (!items.length) return "";
   const line = (item) =>
     typeof item === "string"
@@ -334,29 +337,29 @@ function renderStandard({ id, standard, items, district, base }) {
   return `<details class="standard-fold" id="${standardAnchor(id)}"><summary>§${id} ${escapeHtml(standard.title)}</summary><p class="muted">${udcLink}</p>${renderStandardItems(items, district)}</details>`;
 }
 
-function renderUses(zone, base, standards) {
+function renderUses(zoneData, rules, base, standards) {
   const notes = createNotes();
-  if (zone.legacyUses) {
-    const heading = `Allowed uses${notes.getFootnoteNumber(zone.review.legacyUses)}`;
-    const items = zone.legacyUses
+  if (rules.legacyUses) {
+    const heading = `Allowed uses${notes.getFootnoteNumber(rules.review.legacyUses)}`;
+    const items = rules.legacyUses
       .map((use) => `<li>${escapeHtml(use)}</li>`)
       .join("");
     return `<h2>${heading}</h2><ul>${items}</ul>${notes.render()}`;
   }
-  if (!zone.uses) return "";
-  const district = zone.kind === "pd" ? zone.base : zone.id;
+  if (!rules.uses) return "";
+  const district = zoneData.kind === "pd" ? zoneData.base : zoneData.zoneId;
   // A PD with no base district has its own rules, so the UDC's use standards are not shown
   const showStandards = Boolean(district);
   // A PD that builds on a base district shows that district's uses plus its own changes
   const fromBase =
-    zone.kind === "pd" && zone.base && !zone.pdData?.pdUsesOnly
-      ? ` (From base ${escapeHtml(zone.base)})`
+    zoneData.kind === "pd" && zoneData.base && !zoneData.pdData?.pdUsesOnly
+      ? ` (From base ${escapeHtml(zoneData.base)})`
       : "";
-  const heading = `Allowed uses${fromBase}${notes.getFootnoteNumber(zone.review.uses)}`;
+  const heading = `Allowed uses${fromBase}${notes.getFootnoteNumber(rules.review.uses)}`;
   const byCategory = new Map();
   const applicableStandards = new Map();
   for (const use of base.uses) {
-    const permission = zone.uses[use.name];
+    const permission = rules.uses[use.name];
     if (!permission) continue;
     const { mark, className } = PERMISSIONS[permission];
     const standard = standards[use.standard];
@@ -369,8 +372,10 @@ function renderUses(zone, base, standards) {
       applicableStandards.set(use.standard, { standard, items });
       standardLink = ` <a class="muted" href="#${standardAnchor(use.standard)}">§${use.standard}</a>`;
     }
-    const pdSource = zone.pdData?.uses.find((pdUse) => pdUse.name === use.name);
-    const line = `<li><span class="${className}">${mark}</span> ${escapeHtml(use.name)}${standardLink} ${evidenceLink(pdSource, zone, base)}</li>`;
+    const pdSource = zoneData.pdData?.uses.find(
+      (pdUse) => pdUse.name === use.name,
+    );
+    const line = `<li><span class="${className}">${mark}</span> ${escapeHtml(use.name)}${standardLink} ${evidenceLink(pdSource, zoneData, base)}</li>`;
     if (!byCategory.has(use.category)) byCategory.set(use.category, []);
     byCategory.get(use.category).push(line);
   }
@@ -382,24 +387,24 @@ function renderUses(zone, base, standards) {
     .map((permission) => `${permission.mark} ${permission.label.toLowerCase()}`)
     .join(", ");
   // The asterisk on a use's check mark (P*) points to this line
-  const planNote = zone.pdData?.mustFollowPlan
+  const planNote = zoneData.pdData?.mustFollowPlan
     ? '<p class="muted">*Must follow development plan exactly</p>'
     : "";
   // A PD that lists all its own uses shows the ones with no UDC name as a last group
-  const ordinanceOnlyUses = zone.pdData?.pdUsesOnly
-    ? zone.pdData.uses.filter((use) => !use.name)
+  const ordinanceOnlyUses = zoneData.pdData?.pdUsesOnly
+    ? zoneData.pdData.uses.filter((use) => !use.name)
     : [];
   if (ordinanceOnlyUses.length)
     for (const use of ordinanceOnlyUses) {
       const { mark, className } =
-        PERMISSIONS[planPermission(zone.pdData, use.permission ?? "P")];
+        PERMISSIONS[planPermission(zoneData.pdData, use.permission ?? "P")];
       // With no base district and no group named, the uses need no sub-heading under "Allowed uses"
-      const category = use.group ?? (zone.base ? "Other uses" : "");
+      const category = use.group ?? (zoneData.base ? "Other uses" : "");
       if (!byCategory.has(category)) byCategory.set(category, []);
       byCategory
         .get(category)
         .push(
-          `<li><span class="${className}">${mark}</span> ${escapeHtml(use.text)} ${evidenceLink(use, zone, base)}</li>`,
+          `<li><span class="${className}">${mark}</span> ${escapeHtml(use.text)} ${evidenceLink(use, zoneData, base)}</li>`,
         );
     }
   const groups = [...byCategory].map(
@@ -407,7 +412,7 @@ function renderUses(zone, base, standards) {
       `${category ? `<h3>${escapeHtml(category)}</h3>` : ""}<ul class="uses">${lines.join("")}</ul>`,
   );
   // No uses to list and no note about them: leave the whole section out
-  if (!groups.length && !zone.review.uses) return "";
+  if (!groups.length && !rules.review.uses) return "";
   const folds = [...applicableStandards]
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([id, { standard, items }]) =>
@@ -424,23 +429,23 @@ function renderUses(zone, base, standards) {
 }
 
 /** The table's own notes keep the UDC's numbers, so AA's "Minimum of 10 feet" note is 1, as in the table */
-function renderDimensions(zone, base) {
-  const entries = Object.entries(zone.dimensions);
-  const shownNumbers = new Set(Object.values(zone.noteRefs).flat());
+function renderDimensions(zoneData, rules, base) {
+  const entries = Object.entries(rules.dimensions);
+  const shownNumbers = new Set(Object.values(rules.noteRefs).flat());
   const notes = createNotes(Math.max(0, ...shownNumbers)); // other notes continue after the UDC's numbers
   // A dimension's own `note` marks its row, and `partNotes` marks one column of it
   const footnoteFor = (key) =>
-    (zone.noteRefs[key] ? `<sup>${zone.noteRefs[key].join(",")}</sup>` : "") +
-    notes.getFootnoteNumber(zone.review[key]) +
-    notes.getFootnoteNumber(zone.dimensions[key]?.note);
+    (rules.noteRefs[key] ? `<sup>${rules.noteRefs[key].join(",")}</sup>` : "") +
+    notes.getFootnoteNumber(rules.review[key]) +
+    notes.getFootnoteNumber(rules.dimensions[key]?.note);
   const footnoteForPart = (key, part) =>
-    notes.getFootnoteNumber(zone.dimensions[key]?.partNotes?.[part]);
+    notes.getFootnoteNumber(rules.dimensions[key]?.partNotes?.[part]);
   const heading = `Dimensions${footnoteFor("dimensions")}`;
   const udcNotes = [...shownNumbers]
     .sort((a, b) => a - b)
     .map(
       (number) =>
-        `<p class="muted note"><sup>${number}</sup> “${escapeHtml(zone.tableNotes[number])}”</p>`,
+        `<p class="muted note"><sup>${number}</sup> “${escapeHtml(rules.tableNotes[number])}”</p>`,
     )
     .join("");
   if (!entries.length) {
@@ -451,7 +456,7 @@ function renderDimensions(zone, base) {
   const labelSingle = hasSplitAndSingle(groups);
   const tables = groups.map((group) =>
     dimensionTable(group, {
-      zone,
+      zoneData,
       base,
       footnoteFor,
       footnoteForPart,
@@ -464,26 +469,27 @@ function renderDimensions(zone, base) {
 async function initZonePage() {
   const page = document.getElementById("zone");
   const zoneId = new URLSearchParams(location.search).get("id");
-  const zone = zoneId && (await getZone(zoneId));
-  if (!zone) {
+  const zoneData = zoneId && (await getZoneData(zoneId));
+  if (!zoneData) {
     page.innerHTML = "<h1>Zone not found</h1>";
     return;
   }
+  const rules = zoneRules(zoneData);
   const [{ base }, standards] = await Promise.all([
     loadSiteData(),
     loadJson("data/standards.json"),
   ]);
-  document.title = zoneTitle(zone);
+  document.title = zoneTitle(zoneData);
   page.innerHTML = [
-    renderHeading(zone),
-    renderFacts(zone, base),
-    renderCurtisNotes(zone),
-    renderPdRules(zone, base),
-    renderUses(zone, base, standards),
-    renderDimensions(zone, base),
-    renderParking(zone, base),
-    renderNotes(zone),
-    renderHistory(zone),
+    renderHeading(zoneData),
+    renderFacts(zoneData, base),
+    renderCurtisNotes(zoneData),
+    renderPdRules(zoneData, base),
+    renderUses(zoneData, rules, base, standards),
+    renderDimensions(zoneData, rules, base),
+    renderParking(zoneData, rules, base),
+    renderNotes(zoneData),
+    renderHistory(zoneData),
   ].join("");
 }
 

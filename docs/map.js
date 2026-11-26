@@ -4,7 +4,7 @@ import {
   PERMISSIONS,
   escapeHtml,
   familyOf,
-  getZone,
+  getZoneData,
   loadJson,
   loadSiteData,
   sourceHtml,
@@ -68,9 +68,9 @@ function renderHeadlineUses(popup) {
 }
 
 async function renderPopup(zoneId) {
-  const zone = await getZone(zoneId);
-  const popup = zone.index.popup;
-  const parts = [`<b>${escapeHtml(zoneTitle(zone))}</b>`];
+  const zoneData = await getZoneData(zoneId);
+  const popup = zoneData.zone.popup;
+  const parts = [`<b>${escapeHtml(zoneTitle(zoneData))}</b>`];
   if (popup) {
     parts.push(renderHeadlineUses(popup));
     if (popup.limits) parts.push(`<div>${escapeHtml(popup.limits)}</div>`);
@@ -80,7 +80,7 @@ async function renderPopup(zoneId) {
     parts.push("<div>Rules set by ordinance</div>");
   }
   parts.push(
-    `<div class="links"><a href="zone.html?id=${encodeURIComponent(zone.id)}">Details →</a> ${sourceHtml(zone)}</div>`,
+    `<div class="links"><a href="zone.html?id=${encodeURIComponent(zoneData.zoneId)}">Details →</a> ${sourceHtml(zoneData)}</div>`,
   );
   return parts.join("");
 }
