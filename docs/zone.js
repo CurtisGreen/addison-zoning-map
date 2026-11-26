@@ -9,14 +9,10 @@ import {
   getZone,
   loadJson,
   idWithName,
-  isSplit,
   loadSiteData,
   showError,
-  zonePageUrl,
   zoneTitle,
 } from "./data.js";
-
-const noteNumber = (number) => `<sup>${number}</sup>`;
 
 /** `offset` leaves numbers free for notes that are already using them (the UDC table's own notes) */
 function createNotes(offset = 0) {
@@ -26,13 +22,16 @@ function createNotes(offset = 0) {
     mark(text) {
       if (!text) return "";
       if (!texts.includes(text)) texts.push(text);
-      return noteNumber(offset + texts.indexOf(text) + 1);
+      const noteNumber = offset + texts.indexOf(text) + 1;
+      return `<sup>${noteNumber}</sup>`;
     },
     render() {
       return texts
         .map(
           (text, index) =>
-            `<p class="muted note">${noteNumber(offset + index + 1)} ${escapeHtml(text)}</p>`,
+            `<p class="muted note">
+              <sup>${offset + index + 1}</sup> ${escapeHtml(text)}
+            </p>`,
         )
         .join("");
     },
@@ -52,7 +51,10 @@ function renderFacts(zone, base) {
   const rows = [];
   if (zone.base) {
     const name = base.districts[zone.base]?.name || "";
-    const link = `<a href="${zonePageUrl(zone.base)}">${escapeHtml(idWithName(zone.base, name))}</a>`;
+    const title = idWithName(zone.base, name);
+    const link = `<a href="zone.html?id=${encodeURIComponent(zone.base)}">
+        ${escapeHtml(title)}
+      </a>`;
     rows.push(["Base district", link]);
   }
   rows.push(["Source", zone.sources.map(externalLink).join(", ")]);
@@ -66,8 +68,11 @@ function renderFacts(zone, base) {
   return `<dl>${rows.map(([label, value]) => `<dt>${label}</dt><dd>${value}</dd>`).join("")}</dl>`;
 }
 
-/** A value split by area, lot type, or street type is an object; anything else is one value */
-const partsOf = (value) => (isSplit(value) ? Object.keys(value) : []);
+/** A value split by area, lot type, or street type is an object of parts; a number, "none", range or either-or is one value */
+const partsOf = (value) =>
+  typeof value === "object" && !("min" in value) && !("options" in value)
+    ? Object.keys(value)
+    : [];
 
 /** True when some dimensions are split by part and others are not, so the single-value table needs an "All" header */
 function hasSplitAndSingle(groups) {
@@ -139,15 +144,12 @@ const SAME_QUANTITY = {
  * "16,000 → 5,750 sq ft": the base value, an arrow, then the new value, with the unit once at the end.
  * A base that is itself split or not a plain number keeps its own unit. With no base value, just the new value.
  */
-function changeText(baseValue, newValue, unit, baseUnit = unit) {
+function changeText(baseValue, newValue, unit, baseUnit) {
   const to = escapeHtml(formatValue(newValue, unit));
   if (baseValue === undefined) return to;
-  const from = escapeHtml(
-    formatValue(
-      baseValue,
-      typeof baseValue === "number" && baseUnit === unit ? "" : baseUnit,
-    ),
-  );
+  const formattedUnit =
+    typeof baseValue === "number" && baseUnit === unit ? "" : baseUnit;
+  const from = escapeHtml(formatValue(baseValue, formattedUnit));
   return `<span class="before">${from} →</span> ${to}`;
 }
 
@@ -431,7 +433,7 @@ function renderDimensions(zone, base) {
   const notes = createNotes(Math.max(0, ...shownNumbers)); // other notes continue after the UDC's numbers
   // A dimension's own `note` marks its row, and `partNotes` marks one column of it
   const markFor = (key) =>
-    (zone.noteRefs[key] ? noteNumber(zone.noteRefs[key].join(",")) : "") +
+    (zone.noteRefs[key] ? `<sup>${zone.noteRefs[key].join(",")}</sup>` : "") +
     notes.mark(zone.review[key]) +
     notes.mark(zone.dimensions[key]?.note);
   const markForPart = (key, part) =>
@@ -441,7 +443,7 @@ function renderDimensions(zone, base) {
     .sort((a, b) => a - b)
     .map(
       (number) =>
-        `<p class="muted note">${noteNumber(number)} “${escapeHtml(zone.tableNotes[number])}”</p>`,
+        `<p class="muted note"><sup>${number}</sup> “${escapeHtml(zone.tableNotes[number])}”</p>`,
     )
     .join("");
   if (!entries.length) {

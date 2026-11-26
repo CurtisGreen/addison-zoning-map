@@ -86,17 +86,14 @@ export function showError(element, error) {
   element.innerHTML = `<p class="error">Couldn't load data. Try reloading the page.</p>`;
 }
 
-/** "R-2: Residential 2", or just the id when there is no name */
+// "R-2: Residential 2", or just the id when there is no name
 export const idWithName = (id, name) => (name ? `${id}: ${name}` : id);
 
-/** "CG: Commercial General" or "PD 461: Midway Meadows" */
+// "CG: Commercial General" or "PD 461: Midway Meadows"
 export function zoneLabel(zoneId, { base, zoneIndex }) {
   const name = base.districts[zoneId]?.name || zoneIndex.zones[zoneId]?.name;
   return idWithName(zoneId, name);
 }
-
-export const zonePageUrl = (zoneId) =>
-  `zone.html?id=${encodeURIComponent(zoneId)}`;
 
 /** "PD 461" + "Midway Meadows" -> data/pd/PD-461-Midway-Meadows.json; a PD with no name uses just the id */
 function pdFilePath(zoneId, name) {
@@ -208,15 +205,14 @@ const HTML_ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" };
 export const escapeHtml = (text) =>
   String(text).replace(/[&<>"]/g, (character) => HTML_ESCAPES[character]);
 
-const EXTERNAL_LINK_ICON =
-  '<svg class="external-icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const EXTERNAL_LINK_ICON = `<img class="external-icon" src="external-link.svg" alt="" />`;
 
 export function externalLink({ label, url }) {
   if (!url) return escapeHtml(label);
   return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(label)} ${EXTERNAL_LINK_ICON}</a>`;
 }
 
-/** Link to the PDF page a value came from: the PD ordinance it cites, else the UDC */
+// Link to the PDF page a value came from: the PD ordinance it cites, else the UDC
 export function evidenceLink(evidence, zone, base) {
   if (!evidence?.page) return "";
   const label = `p. ${evidence.page}`;
@@ -235,37 +231,27 @@ export function evidenceLink(evidence, zone, base) {
   });
 }
 
-function withUnit(text, unit) {
-  if (!unit) return text;
-  return unit === "%" ? `${text}%` : `${text} ${unit}`;
-}
+const getUnitSuffix = (unit) => {
+  if (!unit) return "";
+  // No space for %
+  if (unit === "%") return "%";
+  return " " + unit;
+};
 
-/** A value that differs by street, lot type, or similar: an object whose keys are the parts. A range or an either-or is not split. */
-export function isSplit(value) {
-  return (
-    Boolean(value) &&
-    typeof value === "object" &&
-    !("min" in value) &&
-    !("options" in value)
-  );
-}
-
-/** 70 -> "70 ft", "none" -> "None", {min: 5, max: 15} -> "5–15 ft", {options: [10, 20]} -> "10 or 20 ft", {Interior: 5, Street: 20} -> "Interior 5 ft, Street 20 ft" */
+// , {Interior: 5, Street: 20} -> "Interior 5 ft, Street 20 ft" */
 export function formatValue(value, unit) {
-  if (isSplit(value)) {
-    return Object.entries(value)
-      .map(([part, partValue]) => `${part} ${formatValue(partValue, unit)}`)
-      .join(", ");
-  }
+  const suffix = getUnitSuffix(unit);
   if (value === "none") return "None";
-  if (typeof value === "number") return withUnit(value.toLocaleString(), unit);
+  // 70 -> 70 ft
+  if (typeof value === "number") return value.toLocaleString() + suffix;
+  // { min: 5, max: 15 } -> 5–15 ft
   if ("min" in value)
-    return withUnit(
-      `${value.min.toLocaleString()}–${value.max.toLocaleString()}`,
-      unit,
-    );
-  return withUnit(
-    value.options.map((option) => option.toLocaleString()).join(" or "),
-    unit,
-  );
+    return `${value.min.toLocaleString()}–${value.max.toLocaleString()}${suffix}`;
+  // { options: [10, 20] } -> 10 or 20 ft
+  if ("options" in value)
+    return value.options.map((n) => n.toLocaleString()).join(" or ") + suffix;
+  // { Interior: 5, Street: 20 } -> Interior 5 ft, Street 20 ft
+  return Object.entries(value)
+    .map(([part, partValue]) => `${part} ${formatValue(partValue, unit)}`)
+    .join(", ");
 }

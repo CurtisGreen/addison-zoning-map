@@ -10,7 +10,6 @@ import {
   sourceHtml,
   showError,
   zoneLabel,
-  zonePageUrl,
   zoneTitle,
 } from "./data.js";
 
@@ -81,7 +80,7 @@ async function renderPopup(zoneId) {
     parts.push("<div>Rules set by ordinance</div>");
   }
   parts.push(
-    `<div class="links"><a href="${zonePageUrl(zone.id)}">Details →</a> ${sourceHtml(zone)}</div>`,
+    `<div class="links"><a href="zone.html?id=${encodeURIComponent(zone.id)}">Details →</a> ${sourceHtml(zone)}</div>`,
   );
   return parts.join("");
 }
@@ -112,7 +111,7 @@ function renderZoneList(data, polygonsByZone) {
     (zoneId) => data.zoneIndex.zones[zoneId].kind === "pd",
   );
   const listItem = (zoneId) =>
-    `<li><a href="${zonePageUrl(zoneId)}">${escapeHtml(zoneLabel(zoneId, data))}</a></li>`;
+    `<li><a href="zone.html?id=${encodeURIComponent(zoneId)}">${escapeHtml(zoneLabel(zoneId, data))}</a></li>`;
   document.getElementById("zone-list").innerHTML =
     `<h3>Districts</h3><ul>${districts.map(listItem).join("")}</ul>` +
     `<h3>Planned developments</h3><ul>${pds.map(listItem).join("")}</ul>`;
