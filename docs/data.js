@@ -99,7 +99,8 @@ export function zoneLabel(zoneId, { base, zones }) {
  * Everything known about one zone, or null for an id that is neither a district nor a PD:
  * - zoneId, kind ("district" or "pd"), name, purpose, base, sources
  * - zone: the zone's entry in zones.json
- * - pdData: the PD's own file, when it has one
+ * - ordinances: a PD's ordinances, from its file
+ * - pdData: the PD's rules, once its file is filled in
  * - district: the UDC district whose rules apply, which is the zone itself or a PD's base district
  */
 export async function getZoneData(zoneId) {
@@ -125,7 +126,9 @@ export async function getZoneData(zoneId) {
   }
   if (zone.kind !== "pd") return null;
 
-  const pdData = zone.done ? await loadJson(`data/pd/${zone.file}`) : null;
+  const pdFile = await loadJson(`data/pd/${zone.file}`);
+  // A PD that isn't finished has a file that only lists its ordinances
+  const pdData = zone.done ? pdFile : null;
   // A PD that must follow its plan allows only the uses the plan shows, not its base district's uses
   if (pdData?.mustFollowPlan) pdData.pdUsesOnly = true;
   return {
@@ -134,10 +137,11 @@ export async function getZoneData(zoneId) {
     name: pdData?.name || zone.name,
     purpose: pdData?.purpose,
     base: pdData?.base,
-    sources: zone.ordinances.map((ordinance) => ({
+    sources: pdFile.ordinances.map((ordinance) => ({
       label: `Ord. ${ordinance.id}`,
       url: ordinance.url,
     })),
+    ordinances: pdFile.ordinances,
     zone,
     district: base.districts[pdData?.base],
     pdData,
@@ -199,13 +203,9 @@ export function zoneRules({ kind, district, pdData }) {
 export const zoneTitle = (zoneData) =>
   idWithName(zoneData.zoneId, zoneData.name);
 
-/** The source to show in a popup: the UDC section, the PD's one ordinance, or the count when a PD has several */
+/** The UDC section a district's popup links to; a PD's popup has no source link */
 export function sourceHtml(zoneData) {
-  if (zoneData.kind === "district") return externalLink(zoneData.sources[0]);
-  const ordinances = zoneData.zone.ordinances;
-  if (ordinances.length > 1) return `${ordinances.length} ordinances`;
-  const [only] = ordinances;
-  return only ? externalLink({ label: `Ord. ${only.id}`, url: only.url }) : "";
+  return zoneData.kind === "district" ? externalLink(zoneData.sources[0]) : "";
 }
 
 const HTML_ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" };
@@ -224,7 +224,7 @@ export function evidenceLink(evidence, zoneData, base) {
   if (!evidence?.page) return "";
   const label = `p. ${evidence.page}`;
   if (evidence.ordinance) {
-    const ordinance = zoneData.zone.ordinances.find(
+    const ordinance = zoneData.ordinances.find(
       (o) => o.id === evidence.ordinance,
     );
     return externalLink({

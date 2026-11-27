@@ -77,14 +77,6 @@ def file_slug(pd_id):
     return pd_id.replace("?", "").replace(" ", "-")
 
 
-def pd_data_file(pd_id, name):
-    """Suggested docs/data/pd file for a PD: the id plus its name, 'PD 461' + 'Midway Meadows' -> PD-461-Midway-Meadows.json.
-    A PD with no name yet uses just the id."""
-    label = re.sub(r"[^A-Za-z0-9]+", "-", name or "").strip("-")
-    slug = file_slug(pd_id)
-    return DATA / "pd" / f"{slug}-{label}.json" if label else DATA / "pd" / f"{slug}.json"
-
-
 def has_split_acreage(text):
     return bool(SPLIT_ACREAGE.search(text)) and not re.search(r"\d\.\d+\s+acres?\b", text, re.IGNORECASE)
 
@@ -147,7 +139,7 @@ def point_in_polygon(point, rings):
     return inside
 
 
-def ordinances_on_map(pd_id, pd):
+def ordinances_on_map(pd_id, ordinances):
     """Ordinances the town map places inside the PD's polygon that the PD's chain lacks.
 
     The chain in the zoning layer is often incomplete, and an ordinance's point on the map is the only link to the land.
@@ -155,7 +147,7 @@ def ordinances_on_map(pd_id, pd):
     """
     geojson = read_json(DATA / "zones.geojson")
     shapes = [polygons_of(f["geometry"]) for f in geojson["features"] if f["properties"]["zone"] == pd_id]
-    in_chain = {o["id"] for o in pd["ordinances"]}
+    in_chain = {o["id"] for o in ordinances}
     found = []
     for feature in gis_api.ordinances(geometry=True, geojson=True):
         geometry, row = feature["geometry"], feature["properties"]
@@ -167,14 +159,16 @@ def ordinances_on_map(pd_id, pd):
 
 
 def fetch(pd_id, pd):
+    pd_file = DATA / "pd" / pd["file"]
+    ordinances = read_json(pd_file)["ordinances"]
     folder = PDFS / file_slug(pd_id)
     folder.mkdir(parents=True, exist_ok=True)
-    print(f"{pd_id}  {pd['acres']} acres  ({len(pd['ordinances'])} ordinances, oldest first; later ones amend earlier)")
-    for ordinance in pd["ordinances"]:
+    print(f"{pd_id}  {pd['acres']} acres  ({len(ordinances)} ordinances, oldest first; later ones amend earlier)")
+    for ordinance in ordinances:
         pdf = folder / f"{ordinance['id']}.pdf"
         if not pdf.exists():
             if not ordinance.get("url"):
-                print(f"  {ordinance['id']}: NO URL - add one in zones.json or find it on agendas.addisontx.gov")
+                print(f"  {ordinance['id']}: NO URL - add one in the PD file or find it on agendas.addisontx.gov")
                 continue
             request = urllib.request.Request(ordinance["url"], headers={"User-Agent": "Mozilla/5.0"})
             with urllib.request.urlopen(request, timeout=60) as response:
@@ -184,14 +178,12 @@ def fetch(pd_id, pd):
         print(f"  {ordinance['id']}  {ordinance['date']}  {len(texts)} pages{ocr_note}\n"
               f"     {ordinance['description'][:140]}\n"
               f"     text: {text_folder.relative_to(ROOT)}/pNNN.txt   pdf: {pdf.relative_to(ROOT)}")
-    extra = ordinances_on_map(pd_id, pd)
+    extra = ordinances_on_map(pd_id, ordinances)
     if extra:
         print("\nOrdinances the town map places inside this PD that are not in its chain (read them; some may be per-tenant permits):")
         for row in extra:
             print(f"  {row['ORD_ID'].strip()}  {(row['DESCRIPTIO'] or '').strip()[:110]}  [{(row['ADDRESS'] or '').strip()}]  {row['HYPERLINK'] or 'no link'}")
-    pd_file = pd_data_file(pd_id, pd["name"])
-    state = "exists" if pd_file.exists() else "does not exist yet; create it from the schema in the add-pd skill"
-    print(f"\nData file {pd_file.relative_to(ROOT)} {state}. Nothing under docs/data was changed.")
+    print(f"\nData file {pd_file.relative_to(ROOT)}: add the rules to it from the schema in the add-pd skill. Nothing under docs/data was changed.")
 
 
 def normalize(text):
@@ -234,12 +226,9 @@ def valid_value(value, split_allowed=True):
 
 def check(pd_id, pd):
     base = read_json(DATA / "base.json")
-    pd_path = DATA / "pd" / pd["file"] if pd.get("file") else pd_data_file(pd_id, pd["name"])
-    if not pd_path.exists():  # a new PD's file has no name in it until zones.json is updated
-        pd_path = pd_data_file(pd_id, None)
-    pd_data = read_json(pd_path)
+    pd_data = read_json(DATA / "pd" / pd["file"])
     use_names = {use["name"] for use in base["uses"]}
-    ordinance_ids = [o["id"] for o in pd["ordinances"]]
+    ordinance_ids = [o["id"] for o in pd_data["ordinances"]]
     pages_by_ordinance = {}
     for ordinance_id in ordinance_ids:
         pdf = PDFS / file_slug(pd_id) / f"{ordinance_id}.pdf"
@@ -332,7 +321,7 @@ def check(pd_id, pd):
     if pd_data.get("family") not in families | {None}:
         print(f"ERROR family must be one of {sorted(families)}")
         sys.exit(1)
-    wanted = {"done": True, "name": pd_data.get("name", ""), "base": pd_data.get("base"), "file": pd_path.name}
+    wanted = {"done": True, "name": pd_data.get("name", ""), "base": pd_data.get("base")}
     if pd_data.get("family"):
         wanted["family"] = pd_data["family"]
     for key, value in wanted.items():

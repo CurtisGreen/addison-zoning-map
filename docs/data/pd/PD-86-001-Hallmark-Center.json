@@ -6,6 +6,20 @@
   "mustFollowPlan": true,
   "pdUsesOnly": true,
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "086-001",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1986/086-001%20-%201986.pdf",
+      "date": "1986-01-14",
+      "description": "Change zoning from Commercial to Planned Development"
+    },
+    {
+      "id": "095-058",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-058%20-%201995.pdf",
+      "date": "1995-11-28",
+      "description": "Approval of development plans in an existing PD (086-001) and providing for special conditions"
+    }
+  ],
   "uses": [
     {
       "text": "Office (2,670,000 sq ft)",

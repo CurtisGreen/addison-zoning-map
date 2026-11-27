@@ -1,0 +1,23 @@
+{
+  "id": "PD 22-03",
+  "ordinances": [
+    {
+      "id": "077-385",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1977/385%20-%201977.pdf",
+      "date": "1978-05-09",
+      "description": "Change zoning from Commercial (C) and Apartment (A) to Local Retail (LR)"
+    },
+    {
+      "id": "019-022",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2019/O19-022%20-%202019.pdf",
+      "date": "2019-06-11",
+      "description": "Creating planned development district 019-22 based on local retail (LR) district regulations with modified development standards"
+    },
+    {
+      "id": "022-03",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2022/O22-03%20-%202022.pdf",
+      "date": "2022-01-11",
+      "description": "Amend PD (O19-022) , Providing for medical office as a permitted use."
+    }
+  ]
+}

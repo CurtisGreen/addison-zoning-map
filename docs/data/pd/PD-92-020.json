@@ -1,0 +1,23 @@
+{
+  "id": "PD 92-020",
+  "ordinances": [
+    {
+      "id": "092-020",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1992/092-020%20-%201992.pdf",
+      "date": "1992-04-14",
+      "description": "Change zoning from Commercial-1 to Planned Development"
+    },
+    {
+      "id": "094-052",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1994/094-052%20-%201994.pdf",
+      "date": "1994-08-09",
+      "description": "Amend so as to Change the zoning from Planned Development and Commercial-2 to Planned Development (PD) to allow for hotel use"
+    },
+    {
+      "id": "000-039",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2000/000-039%20-%202000.pdf",
+      "date": "2000-10-10",
+      "description": "Approve development plan in an existing Planned Development (PD), which has a hotel/motel as an allowed use."
+    }
+  ]
+}

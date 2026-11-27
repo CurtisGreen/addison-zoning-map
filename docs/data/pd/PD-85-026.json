@@ -1,0 +1,23 @@
+{
+  "id": "PD 85-026",
+  "ordinances": [
+    {
+      "id": "085-026",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-026%20-%201985.pdf",
+      "date": "1985-05-14",
+      "description": "Change zoning from PD-TH to PD-Office"
+    },
+    {
+      "id": "096-057",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-057%20-%201996.pdf",
+      "date": "1996-11-11",
+      "description": "Amendment to an existing PD (086-026) provide for revised allowed uses, approval of development plans, revised special conditions"
+    },
+    {
+      "id": "097-037",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1997/097-037%20-%201997.pdf",
+      "date": "1997-09-09",
+      "description": "Amend ORD 096-057 to provide for revised allowed uses and revised special conditions"
+    }
+  ]
+}

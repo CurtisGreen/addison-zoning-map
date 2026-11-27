@@ -1,0 +1,17 @@
+{
+  "id": "PD 011-002",
+  "ordinances": [
+    {
+      "id": "009-004",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2009/009-004%20Methodist%20Spinal%20Hospital.pdf",
+      "date": "2009-04-14",
+      "description": "Change zoning from Local Retail (LR) to Planned Development (PD) district and SUP for Hospital use medical office, office parking, and related uses."
+    },
+    {
+      "id": "011-002",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2011/011-002%20MHSS%20Addison%20LP%20revised%20lot%20line.pdf",
+      "date": "2011-01-11",
+      "description": "Amend ORD 009-004 to revise lot line on Tract 1 from 10 ft to 0 ft and to eliminate a requirement for a ten (10) foot landscape buffer."
+    }
+  ]
+}

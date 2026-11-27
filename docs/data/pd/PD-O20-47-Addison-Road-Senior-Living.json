@@ -6,6 +6,38 @@
   "mustFollowPlan": true,
   "pdUsesOnly": true,
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "083-017",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-017%20-%201983.pdf",
+      "date": "1983-03-22",
+      "description": "Change zoning from Commercial to Planned Development and approve site development plans"
+    },
+    {
+      "id": "085-056",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-056%20-%201985.pdf",
+      "date": "1985-08-27",
+      "description": "Amending Ordinance No. 083-017 so as to amend their site plan."
+    },
+    {
+      "id": "097-013",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1997/097-013%20-%201997.pdf",
+      "date": "1997-04-08",
+      "description": "Change zoning from PD (ORD 083-017 & 085-056) and C-1 to Planned Development"
+    },
+    {
+      "id": "008-054",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2008/008-054%201564-Z%20Dallas%20Spine%20Hospital.pdf",
+      "date": "2008-11-11",
+      "description": "Amending 083-017 and approving a SUP for a hospital in a planned development district and approving development plans for Hospital and medical office building in planned development district."
+    },
+    {
+      "id": "020-047",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2020/O20-47%20-%202020.pdf",
+      "date": "2020-10-13",
+      "description": "Rezoning Planned Dev District 008-054 to Planned Dev District 020-047 for a senior living facility"
+    }
+  ],
   "uses": [
     {
       "text": "Continuing care retirement community, inclusive of independent living, assisted living, and memory care facility, for adults 55 and older (the only residential use allowed)",

@@ -1,0 +1,23 @@
+{
+  "id": "PD 85-020",
+  "ordinances": [
+    {
+      "id": "085-020",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-020%20-%201985.pdf",
+      "date": "1985-04-09",
+      "description": "Change zoning from Industrial (I-1) to Planned Development (PD) and approve site development plan"
+    },
+    {
+      "id": "001-010",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2001/001-010%20-%202001.pdf",
+      "date": "2001-04-10",
+      "description": "Approving development plans within Planned Development district 085-020"
+    },
+    {
+      "id": "001-041",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2001/001-041%20-%202001.pdf",
+      "date": "2001-12-21",
+      "description": "Approving revised development plans for an office building in a planned development district (085-020)"
+    }
+  ]
+}

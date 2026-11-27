@@ -227,6 +227,11 @@ def main():
     excluded = unary_union(parks + [shape(f["geometry"]).buffer(0) for f in parcels])
     index_file = DATA / "zones.json"
     previous = json.loads(index_file.read_text(encoding="utf-8")) if index_file.exists() else {}
+    previous_ordinances = {
+        zone_id: json.loads((DATA / "pd" / zone["file"]).read_text(encoding="utf-8"))["ordinances"]
+        for zone_id, zone in previous.items()
+        if zone.get("file") and (DATA / "pd" / zone["file"]).exists()
+    }
 
     features, zones, place_type_totals, unmatched = [], {}, {}, set()
     global unmatched_codes
@@ -290,6 +295,13 @@ def main():
     pds = sorted((z for z in zones.items() if z[1]["kind"] == "pd"), key=lambda z: -z[1]["acres"])
 
     new_zones = dict(districts + pds)
+    # a PD's ordinances live in its own file, so zones.json holds only the file name
+    new_ordinances = {zone_id: zone.pop("ordinances") for zone_id, zone in new_zones.items() if zone["kind"] == "pd"}
+    stubs = {}
+    for zone_id, zone in new_zones.items():
+        if zone["kind"] == "pd" and not zone.get("file"):
+            zone["file"] = zone_id.replace("?", "").replace(" ", "-") + ".json"
+            stubs[zone["file"]] = {"id": zone_id, "ordinances": new_ordinances[zone_id]}
     new_geojson = {"type": "FeatureCollection", "features": features}
     if "--out" in sys.argv:
         out = Path(sys.argv[sys.argv.index("--out") + 1]).resolve()
@@ -298,13 +310,17 @@ def main():
         out.mkdir(parents=True, exist_ok=True)
         write_text(out / "zones.geojson", json.dumps(new_geojson, separators=(",", ":")))
         write_text(out / "zones.json", json.dumps(new_zones, indent=2))
-        print(f"Fresh files written to {out}")
-    report_differences(previous, new_zones, features)
+        write_text(out / "pd-ordinances.json", json.dumps(new_ordinances, indent=2))
+        (out / "pd").mkdir(exist_ok=True)
+        for file_name, stub in stubs.items():
+            write_text(out / "pd" / file_name, json.dumps(stub, indent=2))
+        print(f"Fresh files written to {out}: new PDs get a stub file in pd/, other PDs' ordinances are in pd-ordinances.json")
+    report_differences(previous, previous_ordinances, new_zones, new_ordinances, features)
     print(f"If you copy these in, set \"Data as of\" in docs/index.html to {datetime.date.today().isoformat()}")
     return
 
 
-def report_differences(previous, current, features):
+def report_differences(previous, previous_ordinances, current, current_ordinances, features):
     """Print how the town's data differs from docs/data. Changes nothing."""
     geojson_file = DATA / "zones.geojson"
     old_count = len(json.loads(geojson_file.read_text(encoding="utf-8"))["features"]) if geojson_file.exists() else 0
@@ -321,8 +337,8 @@ def report_differences(previous, current, features):
         if town["placeTypes"] != ours["placeTypes"]:
             lines.append(f"place types {ours['placeTypes']} -> {town['placeTypes']}")
         if town["kind"] == "pd":
-            town_ids = {o["id"] for o in town["ordinances"]}
-            our_ids = {o["id"] for o in ours["ordinances"]}
+            town_ids = {o["id"] for o in current_ordinances[zone_id]}
+            our_ids = {o["id"] for o in previous_ordinances.get(zone_id, [])}
             if town_ids - our_ids:
                 lines.append("ordinances only in the town data: " + ", ".join(sorted(town_ids - our_ids)))
             if our_ids - town_ids:

@@ -4,6 +4,14 @@
   "base": "R-1",
   "pdUsesOnly": true,
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "078-461",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1978/461%20-%201978.pdf",
+      "date": "1978-12-12",
+      "description": "Change zoning from Residential to Planned Development"
+    }
+  ],
   "uses": [
     {
       "name": "Dwelling, single-family (detached)",

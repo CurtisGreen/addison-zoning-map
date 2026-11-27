@@ -3,6 +3,14 @@
   "name": "Cross Roads Aviation",
   "base": "CG",
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "089-011",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1989/089-011%20-%201989.pdf",
+      "date": "1989-05-09",
+      "description": "Change zoning from Commercial (C) to Planned Development (PD) and approval of a site development plan"
+    }
+  ],
   "uses": [
     {
       "name": "Vehicle sales or leasing, indoors",

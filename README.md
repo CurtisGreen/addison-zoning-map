@@ -23,13 +23,13 @@ Open localhost:8000
 
 ## Data
 
-| File                            | What                                                     | Source                                         |
-| ------------------------------- | -------------------------------------------------------- | ---------------------------------------------- |
-| `docs/data/zones.geojson`       | Zone polygons and place type                             | Town GIS, edited by hand                       |
-| `docs/data/zones.json`          | Every zone: acres, place types, SUPs; PD ordinance links | Town GIS, edited by hand                       |
-| `docs/data/standards.json`      | Use-specific standards, UDC Article 4 (word for word)    | UDC amendment (Dec 2026)                       |
-| `docs/data/base.json`           | Uses, dimensions, place types                            | UDC amendment (Dec 2026), Advance Addison 2050 |
-| `docs/data/pd/<id>-<name>.json` | One PD's changes from its base district                  | PD ordinances (`add-pd` skill)                 |
+| File                            | What                                                   | Source                                         |
+| ------------------------------- | ------------------------------------------------------ | ---------------------------------------------- |
+| `docs/data/zones.geojson`       | Zone polygons and place type                           | Town GIS, edited by hand                       |
+| `docs/data/zones.json`          | Every zone: acres, place types, popups; PD file names  | Town GIS, edited by hand                       |
+| `docs/data/standards.json`      | Use-specific standards, UDC Article 4 (word for word)  | UDC amendment (Dec 2026)                       |
+| `docs/data/base.json`           | Uses, dimensions, place types                          | UDC amendment (Dec 2026), Advance Addison 2050 |
+| `docs/data/pd/<id>-<name>.json` | One PD's ordinances and changes from its base district | PD ordinances (`add-pd` skill)                 |
 
 `docs/data/udc-changes.json` lists what each UDC amendment changed, shown on `udc-changes.html`. Each change has a page in the amendment PDF; changes not yet applied to the map data carry `"onSite": false`. Check it with `python scripts/check_udc_changes.py 2026-12 <amendment.pdf>`.
 

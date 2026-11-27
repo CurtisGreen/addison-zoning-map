@@ -1,0 +1,29 @@
+{
+  "id": "PD O21-037",
+  "ordinances": [
+    {
+      "id": "093-018",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1993/093-018%20-%201993.pdf",
+      "date": "1993-03-09",
+      "description": "Amend PD 092-048, 091-068 & 626 in order to add residential uses"
+    },
+    {
+      "id": "015-030",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2015/O15-030%20111015%20Addison%20Town%20Center%20PD%20Amendment.pdf",
+      "date": "2015-11-10",
+      "description": "Case 1720-Z: Amend O93-018 to revise permitted uses, facade requirements, and parking regulations"
+    },
+    {
+      "id": "020-054",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2020/O20-054%20-%202020.pdf",
+      "date": "2020-11-10",
+      "description": "Rezoning from Planned Development O93-018, amended by O15-030, to Planned Development O20-54 based on belt line (BL) district regulations with modified development standard"
+    },
+    {
+      "id": "021-037",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2021/O21-037%20-%202021.pdf",
+      "date": "2021-10-12",
+      "description": "Restating PD O20-054; providing minimum lot size and cross-access easement requirements"
+    }
+  ]
+}

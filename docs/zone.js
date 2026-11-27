@@ -217,8 +217,8 @@ function renderPdRules(zoneData, base) {
 
 /** A PD's ordinances, oldest first. A PD's data file can give a shorter description than the town map's. */
 function renderHistory(zoneData) {
-  if (zoneData.kind !== "pd" || !zoneData.zone.ordinances.length) return "";
-  const rows = zoneData.zone.ordinances.map((ordinance) => {
+  if (zoneData.kind !== "pd" || !zoneData.ordinances.length) return "";
+  const rows = zoneData.ordinances.map((ordinance) => {
     const description =
       zoneData.pdData?.history?.[ordinance.id] ?? ordinance.description;
     const link = externalLink({

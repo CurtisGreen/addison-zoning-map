@@ -1,0 +1,17 @@
+{
+  "id": "PD 85-003",
+  "ordinances": [
+    {
+      "id": "078-460",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1978/460%20-%201978.pdf",
+      "date": "1978-12-12",
+      "description": "Change zoning from Residential to Planned Development"
+    },
+    {
+      "id": "085-003",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-003%20-%201985.pdf",
+      "date": "1985-01-08",
+      "description": "Amend ORD No.460 to the site plan to increase the amount of restaurant space"
+    }
+  ]
+}

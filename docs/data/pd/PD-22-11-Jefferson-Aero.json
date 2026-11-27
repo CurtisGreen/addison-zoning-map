@@ -4,6 +4,20 @@
   "base": "M-4",
   "mustFollowPlan": true,
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "092-025",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1992/092-025%20-%201992.pdf",
+      "date": "1992-04-14",
+      "description": "Change zoning (085-002) from Planned Development (PD) to Commercial-2 (C-2)"
+    },
+    {
+      "id": "022-11",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2022/O22-11%20-%202022.pdf",
+      "date": "2022-04-12",
+      "description": "Rezoning a 3.2 acre property from (C-2) DISTRICT to a (PD) district with modified Urban Center (UC) District standards."
+    }
+  ],
   "uses": [
     {
       "name": "Dwelling, multifamily",

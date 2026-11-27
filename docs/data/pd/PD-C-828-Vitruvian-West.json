@@ -3,6 +3,14 @@
   "name": "Vitruvian West",
   "base": "PD-CC",
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "082-828",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1982/828%20-%201982.pdf",
+      "date": "1982-09-21",
+      "description": "Change zoning from Apartment (A) to Planned Development-Condo"
+    }
+  ],
   "uses": [],
   "dimensions": {},
   "parking": [

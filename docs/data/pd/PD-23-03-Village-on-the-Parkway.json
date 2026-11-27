@@ -6,6 +6,44 @@
   "mustFollowPlan": true,
   "pdUsesOnly": true,
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "096-003",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-003%20-%201996.pdf",
+      "date": "1996-01-09",
+      "description": "Change zoning from local retail (LR) to Planned Development (PD)"
+    },
+    {
+      "id": "096-028",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-028%20-%201996.pdf",
+      "date": "1996-07-23",
+      "description": "Amend ORD 096-003 to delete certain conditions for development"
+    },
+    {
+      "id": "002-001",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2002/002-001%20-%202002.pdf",
+      "date": "2002-01-08",
+      "description": "Amend ORD 096-003 relating to Planned Development (PD) to provide for residential uses"
+    },
+    {
+      "id": "005-024",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2005/005-024%20-%202005.pdf",
+      "date": "2005-06-28",
+      "description": "Amendment to development plan adopted by ORD 002-001"
+    },
+    {
+      "id": "012-002",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2012/012-002%2C%20amendment%20zoning%20ordinance%205301%20Belt%20Line%20Drive.pdf",
+      "date": "2012-01-24",
+      "description": "Case 1648-Z: Rezone existing PD (096-003, 096-028, 002-001, 005-024) to new PD 012-002"
+    },
+    {
+      "id": "023-03",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-03%20-%202023.pdf",
+      "date": "2023-01-10",
+      "description": "Amending and restating PD O20-08 for an office and retail building and site improvements for a 31.608 acre property"
+    }
+  ],
   "uses": [
     {
       "text": "Antique shop",

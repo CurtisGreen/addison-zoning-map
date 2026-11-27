@@ -1,0 +1,23 @@
+{
+  "id": "PD O16-039",
+  "ordinances": [
+    {
+      "id": "085-001",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-001%20-%201985.pdf",
+      "date": "1985-01-08",
+      "description": "Case 884-Z: Rezoning from I-1 to PD with development plans"
+    },
+    {
+      "id": "014-056",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2014/O14-056%20Planned%20Development%20Case%201702-Z%20Tollway%20Center.pdf",
+      "date": "2014-12-09",
+      "description": "Repealing O85-001 to create a new PD for office uses with approved site plan"
+    },
+    {
+      "id": "016-039",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/O16-039%2010112016%20Tollway%20Center%20Cafe.pdf",
+      "date": "2016-10-11",
+      "description": "Case 1748-Z: Amend PD O14-056 to provide additional use and grant SUP for sale of alcohol beverages for on-premises consumption only"
+    }
+  ]
+}

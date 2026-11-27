@@ -3,6 +3,20 @@
   "name": "One Addison Place",
   "base": "M-4",
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "004-048",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2004/004-048%20-%202004.pdf",
+      "date": "2004-11-09",
+      "description": "Change the zone from C-1 to PD, SUP for restaurant & sale of alcoholic beverages on premises consumption only"
+    },
+    {
+      "id": "023-39",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-39%20-%202023.pdf",
+      "date": "2023-09-12",
+      "description": "Restating NO. O20-53 to allow multifamilly residential use witin a 5-story commercial building"
+    }
+  ],
   "uses": [
     {
       "name": "Dwelling, multifamily",

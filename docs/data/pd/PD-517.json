@@ -1,0 +1,17 @@
+{
+  "id": "PD 517",
+  "ordinances": [
+    {
+      "id": "079-517",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1979/517%20-%201979.pdf",
+      "date": "1979-07-27",
+      "description": "Change zoning from Industrial (I-1) to Planned Development (PD)"
+    },
+    {
+      "id": "086-058",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1986/086-058%20-%201986.pdf",
+      "date": "1986-07-22",
+      "description": "Amending PD Ordinance No. 517 by amending the site plan to add a drive-thru banking facility."
+    }
+  ]
+}

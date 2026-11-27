@@ -5,6 +5,20 @@
   "base": null,
   "pdUsesOnly": true,
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "093-072",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1993/093-072%20-%201993.pdf",
+      "date": "1993-11-23",
+      "description": "Change zoning from Single Family Residential (R-1) to Planned Development (PD)"
+    },
+    {
+      "id": "094-041",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1994/094-041%20-%201994.pdf",
+      "date": "1994-06-28",
+      "description": "Amend ORD 093-072 to provide for approval of site development plans and special conditions"
+    }
+  ],
   "uses": [
     {
       "text": "Multiple family dwelling (apartments)",

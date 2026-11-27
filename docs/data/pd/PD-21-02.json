@@ -1,0 +1,17 @@
+{
+  "id": "PD 21-02",
+  "ordinances": [
+    {
+      "id": "092-051",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1992/092-051%20-%201992.pdf",
+      "date": "1992-08-11",
+      "description": "Change zoning from Industrial-1 (I-1) to Local Retail (LR)"
+    },
+    {
+      "id": "021-002",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2021/O21-002%20-%202021.pdf",
+      "date": "2021-01-12",
+      "description": "Amending the Comprehensive Zoning Ordinance to rezone 5.95 acres of Property from local retail district to planned development district 021-02, based on local retail district standards with modified uses; providing a savings clause"
+    }
+  ]
+}

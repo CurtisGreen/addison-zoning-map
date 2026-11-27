@@ -1,0 +1,23 @@
+{
+  "id": "PD 95-054?",
+  "ordinances": [
+    {
+      "id": "095-054",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-054%20-%201995.pdf",
+      "date": "1995-11-14",
+      "description": "Amend to change the zoning from Planned Development, Ordinance 085-073, to a revised Planned Development District and approval of site development plans"
+    },
+    {
+      "id": "096-006",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1996/096-006%20-%201996.pdf",
+      "date": "1996-02-13",
+      "description": "Amend PD 095-054 to revise development plans"
+    },
+    {
+      "id": "099-025",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1999/099-025%20-%201999.pdf",
+      "date": "1999-08-10",
+      "description": "Change zoning from Planned Development (PD) (085-073) to a revised Planned Development (PD) district"
+    }
+  ]
+}

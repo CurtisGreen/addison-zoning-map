@@ -5,6 +5,104 @@
   "base": null,
   "pdUsesOnly": true,
   "purpose": "The purpose of this Planned Development District No. 007-034 … is to create a mixed use environment under a unified plan consisting of retail, restaurant, residential and office uses within a pedestrian-oriented village setting",
+  "ordinances": [
+    {
+      "id": "068-084",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1968/84%20-%201968.pdf",
+      "date": "1968-01-01",
+      "description": "Assign zoning classification as Apartment (A)"
+    },
+    {
+      "id": "074-171",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1974/171%20-%201974.pdf",
+      "date": "1974-01-21",
+      "description": "Change zoning to Apartment (A) to allow for 3 story apartment construction"
+    },
+    {
+      "id": "076-267",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1976/267%20-%201976.pdf",
+      "date": "1976-06-08",
+      "description": "Variance to Aparatment (A) zoning to allow smaller, 3 story units (The Pier Apartments)"
+    },
+    {
+      "id": "083-074",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1983/083-074%20-%201983.pdf",
+      "date": "1983-11-22",
+      "description": "Change the zoning from “LR” Local Retail to “PD” Planned Development"
+    },
+    {
+      "id": "007-034",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2007/007-034%20Change%20of%20Zoning%20for%20Brookhaven%20Club.pdf",
+      "date": "2007-10-09",
+      "description": "Change in zoning of the property to pd planned development and proposes to build a mixed use development in phases on the property under a unified plan consisting of retail, restaurant, residential and office uses."
+    },
+    {
+      "id": "008-022",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2008/008-022%20United%20Dominion%20Dev.%20Plans.pdf",
+      "date": "2008-06-10",
+      "description": "Multi-family building in a planned development zoning district, ORD 007-034"
+    },
+    {
+      "id": "009-002",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2009/009-002%20Amending%20Planned%20Dev.-udr-bcd.pdf",
+      "date": "2009-02-10",
+      "description": "Amend planned development ordinance 007-034, an amendment to the town's comprehensive zoning ordinance by amending Exhibit D street standards, street A -  residential boulevard."
+    },
+    {
+      "id": "009-036",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2009/009-036%20Approval%20of%20Dev.%20plans%20for%20a%20multi-family%20project%20%40%203900%20bcd.pdf",
+      "date": "2009-10-13",
+      "description": "Approval of development plan for a multi-family building in PD district (007-034)"
+    },
+    {
+      "id": "010-005",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2010/010-005%20Brookhaven%20Club%20Drive%20Name%20Change%20to%20Vitruvian%20Way.pdf",
+      "date": "2010-02-09",
+      "description": "Change name of Brookhaven Club Dr to Vitruvian Way"
+    },
+    {
+      "id": "011-032",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2011/011-032%204010%20Vitruvian%20Way%20Development%20Plan.pdf",
+      "date": "2011-04-12",
+      "description": "Development plan for a multi-family building in a planned development zoning district (ORD 007-034)"
+    },
+    {
+      "id": "013-026",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2013/013-026%2C%20amending%20comprehensive%20zoning%20ord.%20town%27s%20code%20of%20ordinances.pdf",
+      "date": "2013-07-09",
+      "description": "Amending 007-034 for residential, retail, office, civic and mixed uses"
+    },
+    {
+      "id": "016-017",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/O16-017%20Ordinance.pdf",
+      "date": "2016-05-24",
+      "description": "Case 1735-Z: Amend PD 007-034, Exhibit B, revising uses & standards, Exhibit C revise Concept Plan"
+    },
+    {
+      "id": "016-019",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/Ordinance%20016-019.pdf",
+      "date": "2016-05-24",
+      "description": "Case 1734-Z: Development Plan Approval for Vitruvian West I, multifamily development and amenities center. Approval of a waiver to development standards."
+    },
+    {
+      "id": "016-018",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/O16-018%2005242016%20Brookhaven%20Village.pdf",
+      "date": "2016-05-24",
+      "description": "Development Plan Approval for a Retail Center with Waiver to Development Standards"
+    },
+    {
+      "id": "018-041",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2018/O18-041%20Vitruvian%20West%202%20%26%203%20Ordinance.pdf",
+      "date": "2018-11-13",
+      "description": "Case 1786-Z: Development Plan Approval for Phase 2 & 3 of Vitruvian West Multifamily development"
+    },
+    {
+      "id": "021-045",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2021/O21-045%20-%202021.pdf",
+      "date": "2021-12-14",
+      "description": "Amending planned development (PD) district ordinance 007-034 (as amended) to approve a revised concept plan and provide for approval of a development plan and waivers to the development standards, including but not limited to, street build-to lines, exte"
+    }
+  ],
   "uses": [
     {
       "text": "Townhouse",

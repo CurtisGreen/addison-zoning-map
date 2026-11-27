@@ -5,6 +5,14 @@
   "base": null,
   "pdUsesOnly": true,
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "094-011",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1994/094-011%20-%201994.pdf",
+      "date": "1994-02-08",
+      "description": "Change of zoning from Commercial-1 (C-1) to PD"
+    }
+  ],
   "uses": [
     {
       "text": "Antique shop",

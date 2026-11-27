@@ -4,6 +4,14 @@
   "family": "commercial",
   "base": null,
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "084-010",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-010%20-%201984.pdf",
+      "date": "1984-03-13",
+      "description": "Change zoning from Commercial (C) to Planned Development (PD)"
+    }
+  ],
   "uses": [],
   "dimensions": {},
   "parking": [

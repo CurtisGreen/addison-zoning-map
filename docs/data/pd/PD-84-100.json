@@ -1,0 +1,23 @@
+{
+  "id": "PD 84-100",
+  "ordinances": [
+    {
+      "id": "084-100",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-100%20-%201984.pdf",
+      "date": "1984-12-11",
+      "description": "Changing the zoning from 'I-1' Industrial to 'PD' Planned Development"
+    },
+    {
+      "id": "095-012",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-012%20-%201995.pdf",
+      "date": "1995-03-14",
+      "description": "Special use permit for a hotel"
+    },
+    {
+      "id": "097-026",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1997/097-026%20-%201997.pdf",
+      "date": "1997-06-10",
+      "description": "Amend ORD 084-100 to provide for revised legal description, development plans & Special Conditions"
+    }
+  ]
+}

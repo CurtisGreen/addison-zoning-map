@@ -1,6 +1,6 @@
 ---
 name: add-pd
-description: Add one Addison Planned Development (PD) to the zoning site. Use when the user says "add PD 461", "/add-pd PD 93-018", "populate the next PD", or asks to fill in data for a PD. Downloads the PD's ordinances, reads them, writes docs/data/pd/<id>.json with an ordinance, page, and verbatim quote for every value, then runs the checker. Never commits.
+description: Add one Addison Planned Development (PD) to the zoning site. Use when the user says "add PD 461", "/add-pd PD 93-018", "populate the next PD", or asks to fill in data for a PD. Downloads the PD's ordinances, reads them, fills in the PD file in docs/data/pd with an ordinance, page, and verbatim quote for every value, then runs the checker. Never commits.
 ---
 
 # Add a Planned Development
@@ -10,7 +10,7 @@ description: Add one Addison Planned Development (PD) to the zoning site. Use wh
 - macOS: `brew install poppler tesseract`
 - Windows: `scoop install poppler tesseract` (or `choco install poppler tesseract`), then reopen the terminal
 
-Goal: one draft file, `docs/data/pd/<slug>.json` (named as in step 4), that the user can check against the PDFs quickly. Accuracy beats completeness: leave a value out and add a note rather than guess.
+Goal: fill in the PD's file in `docs/data/pd/` (the `file` field of its `zones.json` entry; it already lists the PD's ordinances) so the user can check against the PDFs quickly. Accuracy beats completeness: leave a value out and add a note rather than guess.
 
 ## 1. Pick the PD
 
@@ -39,7 +39,7 @@ python scripts/gis_api.py                                                       
 python scripts/pd.py fetch "PD 461"
 ```
 
-It downloads each ordinance in the PD's chain to `pdfs/<id>/`, writes page text to `pdfs/<id>/<ordinance>/pNNN.txt` (OCR for scanned pages, marked `[OCR]`), into the ignored `pdfs/` folder. It never writes under `docs/data`; create `docs/data/pd/<id>.json` yourself. If an ordinance has no URL, tell the user; do not search the web for it unless they ask. Add every ordinance or attachment you need but cannot get (no PDF, an exhibit missing from the PDF, a document the ordinance relies on) to `missing-ordinances.md`, with the PD and where it is cited; move it to "Found" when the user supplies it.
+It downloads each ordinance in the PD's chain to `pdfs/<id>/`, writes page text to `pdfs/<id>/<ordinance>/pNNN.txt` (OCR for scanned pages, marked `[OCR]`), into the ignored `pdfs/` folder. It never writes under `docs/data`; add the rules to the PD's file in `docs/data/pd/` yourself. If an ordinance has no URL, tell the user; do not search the web for it unless they ask. Add every ordinance or attachment you need but cannot get (no PDF, an exhibit missing from the PDF, a document the ordinance relies on) to `missing-ordinances.md`, with the PD and where it is cited; move it to "Found" when the user supplies it.
 
 After the chain it lists the town-map ordinances whose point lies inside the PD's polygon but that the chain lacks. The zoning layer's chain is often incomplete, and these points are the only link to the land. Read each one and decide whether it belongs: an amendment or a site plan for the PD does, and so does an earlier or later ordinance that sets the PD's uses or standards; a per-tenant permit does not (see the SUP rule above). Add the ones that belong to the PD's `ordinances` in `zones.json` (id, url, date and description from `gis_api.py ordinances`) and read them with the rest; if the PD is made of several separate ordinances for different lots, say so in the report. Tell the user which you added and which you left out, and why.
 
@@ -51,11 +51,11 @@ After the chain it lists the town-map ordinances whose point lies inside the PD'
 - OCR drops lines silently, most often in tables and at page bottoms. For every page you take a value from, compare the text against the PDF page itself.
 - Exhibits (site plans, development standards tables) are often at the end. Read them.
 
-## 4. Write `docs/data/pd/<slug>.json`
+## 4. Fill in the PD's file in `docs/data/pd/`
 
-Slug = id with spaces as `-` and `?` removed, then `-` and the PD's name with each run of other characters as `-` (`PD 461`, "Midway Meadows" -> `PD-461-Midway-Meadows.json`). A PD with no name uses just the id (`PD-461.json`). The site finds the file by the `file` field in the PD's `zones.json` entry (the file name only, such as `PD-461-Midway-Meadows.json`), so renaming the file means updating `file` too; `scripts/pd.py check` prints an `UPDATE` line when they differ.
+Every PD already has a file named in the `file` field of its `zones.json` entry (such as `PD-461-Midway-Meadows.json`). An unfinished PD's file holds only its `id` and its `ordinances` (id, url, date, description). Keep both and add the rest below. Renaming the file means updating `file` in `zones.json` too.
 
-Scripts never write to `docs/data`. If you generate the JSON with a script, write it to `tmp/<slug>/` (ignored by git), then write `docs/data/pd/<slug>.json` yourself using that as the reference. Temporary files go in `tmp/` or `pdfs/` inside the repo, never the system scratchpad.
+Scripts never write to `docs/data`. If you generate the JSON with a script, write it to `tmp/<id>/` (ignored by git), then write the PD's file in `docs/data/pd/` yourself using that as the reference. Temporary files go in `tmp/` or `pdfs/` inside the repo, never the system scratchpad.
 
 ```json
 {
@@ -93,7 +93,7 @@ Scripts never write to `docs/data`. If you generate the JSON with a script, writ
 
 Rules:
 
-- **Evidence on every entry.** `ordinance` = ordinance id from the PD's `ordinances` in `docs/data/zones.json`; `page` = page number within that ordinance PDF (1-based, as in `pNNN.txt`); `quote` = exact text copied from that page, 12 to 200 characters, specific enough to prove the value (include the number or the use wording, not just "Bank"). The checker rejects quotes it cannot find or that are too short.
+- **Evidence on every entry.** `ordinance` = ordinance id from the PD file's own `ordinances`; `page` = page number within that ordinance PDF (1-based, as in `pNNN.txt`); `quote` = exact text copied from that page, 12 to 200 characters, specific enough to prove the value (include the number or the use wording, not just "Bank"). The checker rejects quotes it cannot find or that are too short.
 - **`base`** = the UDC district the PD explicitly builds on ("uses permitted in the LR district", "C-1 standards apply"). Old ordinances name pre-UDC districts: map them with the table below and say which old district was named in `curtisNotes`, not in a note. When the ordinance names no district, say nothing about a base.
   - The zoning _before_ the PD (earlier ordinances in the chain) is not a base.
   - The base's uses, dimensions, and notes all show on the PD's page, so a wrong base shows wrong limits. When unsure, use `null` and explain in `curtisNotes`.
@@ -134,7 +134,7 @@ Rules:
 python scripts/pd.py check "PD 461"
 ```
 
-Fix every `ERROR` and run again. The script never edits `docs/data`. On a clean run it prints any `UPDATE zones.json` lines (`done`, `name`, `base`, `file`); make those edits yourself so the map colors the PD by base and the site loads its details.
+Fix every `ERROR` and run again. The script never edits `docs/data`. On a clean run it prints any `UPDATE zones.json` lines (`done`, `name`, `base`); make those edits yourself so the map colors the PD by base and the site loads its details.
 
 Then run `python scripts/build_popups.py` to add the PD's map-popup summary (`popup` in `zones.json`). It only fills zones that have none, so hand edits are kept. Check the values against the ordinance and edit them in `zones.json` where the uses don't map cleanly to UDC names (for example a PD that lists "Multifamily" in `otherUses`).
 

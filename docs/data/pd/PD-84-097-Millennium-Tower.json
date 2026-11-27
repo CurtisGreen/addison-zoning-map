@@ -5,6 +5,20 @@
   "base": null,
   "pdUsesOnly": true,
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "084-097",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1984/084-097%20-%201984.pdf",
+      "date": "1984-12-04",
+      "description": "Changing the zoning from 'I-1' Industrial to 'PD' Planned Development"
+    },
+    {
+      "id": "098-032",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1998/098-032%20-%201998.pdf",
+      "date": "1998-08-11",
+      "description": "Amend ordinance 087-097, in order to revise section 1 to revise the legal description; section 3 to revise the allowed square footages for development; and section 4 to revise special conditions."
+    }
+  ],
   "uses": [
     {
       "text": "Office space",

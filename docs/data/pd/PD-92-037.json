@@ -1,0 +1,23 @@
+{
+  "id": "PD 92-037",
+  "ordinances": [
+    {
+      "id": "092-037",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1992/092-037%20-%201992.pdf",
+      "date": "1992-06-09",
+      "description": "Change zoning from Industrial-1 (I-1) to Planned Development (PD)"
+    },
+    {
+      "id": "095-023",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-023%20-%201995.pdf",
+      "date": "1995-05-09",
+      "description": "Amendment to Planned Development (092-037) to allow for concrete tilt-wall facades"
+    },
+    {
+      "id": "098-049",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1998/098-049%20-%201998.pdf",
+      "date": "1998-11-10",
+      "description": "Amendment to PD (092-037) to provide approval for revised development plans"
+    }
+  ]
+}

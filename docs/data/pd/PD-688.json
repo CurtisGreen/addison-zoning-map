@@ -1,0 +1,17 @@
+{
+  "id": "PD 688",
+  "ordinances": [
+    {
+      "id": "081-688",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1981/688%20-%201981.pdf",
+      "date": "1981-07-28",
+      "description": "Change zoning from Industrial (I-1) to Commercial"
+    },
+    {
+      "id": "097-013",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1997/097-013%20-%201997.pdf",
+      "date": "1997-04-08",
+      "description": "Change zoning from PD (ORD 083-017 & 085-056) and C-1 to Planned Development"
+    }
+  ]
+}

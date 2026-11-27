@@ -5,6 +5,14 @@
   "base": null,
   "pdUsesOnly": true,
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "080-604",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1980/604%20-%201980.pdf",
+      "date": "1980-08-12",
+      "description": "Change zoning from Residential (R-1) to Planned Development (PD)"
+    }
+  ],
   "uses": [
     {
       "text": "Single-family unit on a platted lot",

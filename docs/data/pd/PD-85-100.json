@@ -1,0 +1,17 @@
+{
+  "id": "PD 85-100",
+  "ordinances": [
+    {
+      "id": "085-100",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-100%20-%201985.pdf",
+      "date": "1985-12-10",
+      "description": "Change the zoning from Industrial to Planned Development"
+    },
+    {
+      "id": "095-035",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1995/095-035%20-%201995.pdf",
+      "date": "1995-08-08",
+      "description": "Amend ORD 085-100 to provide for a parking ratio of one space per 350 sq ft of usable space and delete a requirement for landscaping"
+    }
+  ]
+}

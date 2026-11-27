@@ -3,6 +3,44 @@
   "name": "Addison Junction",
   "base": "M-4",
   "purpose": "",
+  "ordinances": [
+    {
+      "id": "023-08",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-08%20-%202023.pdf",
+      "date": "2023-02-13",
+      "description": "Changing from C-1, PD, and UC to a new PD to allow trainsit oriented mixed use development"
+    },
+    {
+      "id": "023-11",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-11%20-%202023.pdf",
+      "date": "2023-02-13",
+      "description": "Development plan for multifamily residential building, retail/restaurants, road realignment"
+    },
+    {
+      "id": "023-09",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-09%20-%202023.pdf",
+      "date": "2023-02-13",
+      "description": "Approval of a development plan for lots 1 and 5X, block A, Addison Circle Station-Phase 1, to allow for the development of an office building with ground floor retail/restaurant uses, a parking structure, and site access drives."
+    },
+    {
+      "id": "023-12",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-12%20-%202023.pdf",
+      "date": "2023-02-13",
+      "description": "Construction of emergency access drives, pedestrian ways, Festival Way streetscape improvements"
+    },
+    {
+      "id": "023-10",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2023/O23-10%20-%202023.pdf",
+      "date": "2023-02-13",
+      "description": "Approval of development plan for multifamily residential building with retail/restaurant uses and streetscape improvements."
+    },
+    {
+      "id": "026-007",
+      "url": "https://mcclibraryfunctions.azurewebsites.us/api/munidocDownload/31101/8d2fc8993f793/pdf",
+      "date": "2026-02-10",
+      "description": "Rezoning 15.5 acres from Commercial General and Planned Development to a new transit-oriented mixed-use Planned Development (Case 1947-Z, Addison Junction)"
+    }
+  ],
   "uses": [
     {
       "name": "Recreation facility, outdoor",
