@@ -1,0 +1,72 @@
+{
+  "id": "PD O21-034",
+  "name": "Loro",
+  "base": "CL",
+  "purpose": "",
+  "ordinances": [
+    {
+      "id": "021-034",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2021/O21-034%20-%202021.pdf",
+      "date": "2021-09-14",
+      "description": "SUP for restaurant/sale of alcoholic beverages on-premises. Repealed NOS. 430, 095-062. LR to PD."
+    }
+  ],
+  "uses": [
+    {
+      "name": "Alcohol sales, on-premise consumption",
+      "text": "Restaurant with the sale of alcoholic beverages for on-premises consumption",
+      "permission": "S",
+      "ordinance": "021-034",
+      "page": 1,
+      "quote": "authorizing a restaurant and the sale of alcoholic beverages for on-premises consumption"
+    },
+    {
+      "name": "Storage, outdoor",
+      "text": "Outside storage of wood and other smoker accessory materials",
+      "permission": "P",
+      "ordinance": "021-034",
+      "page": 2,
+      "quote": "Outside storage of wood and other smoker accessory materials"
+    }
+  ],
+  "dimensions": {},
+  "parking": [
+    {
+      "use": "All uses",
+      "requirement": "10 per 1,000 sq ft interior floor area, outdoor dining and outdoor waiting area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 100,
+          "unit": "sq ft interior floor area, outdoor dining and outdoor waiting area"
+        }
+      ],
+      "ordinance": "021-034",
+      "page": 2,
+      "quote": "one space per 100 squarefeet of interior floor area, outdoor dining"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Alcohol sales permit",
+      "items": [
+        "The permit covers only the area marked on the final site plan, up to 7,764 sq ft.",
+        "Alcohol may be sold only in restaurants that get at least 60% of gross revenue from food, and the bookkeeping records must be open to the Town for inspection.",
+        "Signs may not advertise alcohol sales or use the words \"bar\" or \"tavern\".",
+        "If the property is not used for the permit's purpose within a year of the ordinance, or the alcohol license is revoked, terminated or cancelled, the City Council may hold hearings on changing the zoning and repealing the permit."
+      ]
+    },
+    {
+      "heading": "Landscaping and screening",
+      "items": [
+        "At least 18% of the gross lot area must be landscaped.",
+        "A street landscape buffer of variable width and landscaping around the parking lot must follow the landscape plan.",
+        "Outside storage of wood and smoker accessory materials must be screened from the right-of-way and adjacent properties by building facade elements, fences or screening walls."
+      ]
+    }
+  ],
+  "curtisNotes": "Loro's PD builds on the legacy Local Retail (LR) district, which CL replaced, so some uses and dimensions may differ from the original rules.",
+  "history": {
+    "021-034": "Rezoned 1.24 acres from LR to a PD with a restaurant alcohol permit"
+  }
+}

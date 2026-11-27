@@ -1488,13 +1488,25 @@
   },
   "PD O21-034": {
     "kind": "pd",
-    "name": "",
-    "base": null,
-    "done": false,
-    "file": "PD-O21-034.json",
+    "name": "Loro",
+    "base": "CL",
+    "done": true,
+    "file": "PD-O21-034-Loro.json",
     "acres": 1.2,
     "mainOrdinance": "021-034",
-    "placeTypes": ["Urban Village"]
+    "placeTypes": ["Urban Village"],
+    "popup": {
+      "residential": "",
+      "residentialPermit": "",
+      "adu": "",
+      "retail": "P",
+      "restaurant": "P",
+      "office": "P",
+      "industry": "",
+      "hotel": "S",
+      "daycare": "P",
+      "limits": "Max height 35 ft, Front 25 ft"
+    }
   },
   "PD 84-099": {
     "kind": "pd",
