@@ -77,6 +77,13 @@ def file_slug(pd_id):
     return pd_id.replace("?", "").replace(" ", "-")
 
 
+def pd_file_name(pd_id, name):
+    """'PD 461' + 'Midway Meadows' -> PD-461-Midway-Meadows.json; a PD with no name uses just the id"""
+    label = re.sub(r"[^A-Za-z0-9]+", "-", name or "").strip("-")
+    slug = file_slug(pd_id)
+    return f"{slug}-{label}.json" if label else f"{slug}.json"
+
+
 def has_split_acreage(text):
     return bool(SPLIT_ACREAGE.search(text)) and not re.search(r"\d\.\d+\s+acres?\b", text, re.IGNORECASE)
 
@@ -187,7 +194,8 @@ def fetch(pd_id, pd):
 
 
 def normalize(text):
-    return re.sub(r"\s+", " ", re.sub(r"[^\w%.]+", " ", text.lower())).strip()
+    text = re.sub(r"\bi(?=\d)", "1", text.lower())  # typewritten page text reads "10" as "i0"
+    return re.sub(r"\s+", " ", re.sub(r"[^\w%.]+", " ", text)).strip()
 
 
 def quote_on_page(quote, page_text):
@@ -324,9 +332,14 @@ def check(pd_id, pd):
     wanted = {"done": True, "name": pd_data.get("name", ""), "base": pd_data.get("base")}
     if pd_data.get("family"):
         wanted["family"] = pd_data["family"]
+    expected_file = pd_file_name(pd_id, pd_data.get("name"))
+    if pd_data.get("name") and pd["file"] != expected_file:
+        wanted["file"] = expected_file
     for key, value in wanted.items():
         if pd.get(key) != value:
             print(f"UPDATE zones.json entry for {pd_id}: set {key} to {value!r} (now {pd.get(key)!r})")
+    if "file" in wanted and pd["file"] != wanted["file"]:
+        print(f"RENAME docs/data/pd/{pd['file']} to docs/data/pd/{wanted['file']} (use git mv)")
     print(f"OK - {pd_id} has no errors. Nothing under docs/data was changed.")
 
 

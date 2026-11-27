@@ -538,7 +538,7 @@
     "name": "The Colonnade",
     "base": null,
     "done": true,
-    "file": "PD-739.json",
+    "file": "PD-739-The-Colonnade.json",
     "acres": 13.1,
     "mainOrdinance": "081-739",
     "placeTypes": ["High Intensity Urban Center"],
@@ -655,13 +655,26 @@
   },
   "PD 601": {
     "kind": "pd",
-    "name": "",
+    "name": "Renaissance",
     "base": null,
-    "done": false,
-    "file": "PD-601.json",
+    "done": true,
+    "file": "PD-601-Renaissance.json",
     "acres": 10.0,
     "mainOrdinance": "080-601",
-    "placeTypes": ["High Intensity Urban Center"]
+    "placeTypes": ["High Intensity Urban Center"],
+    "family": "commercial",
+    "popup": {
+      "residential": "",
+      "residentialPermit": "",
+      "adu": "",
+      "retail": "P",
+      "restaurant": "P",
+      "office": "P",
+      "industry": "",
+      "hotel": "P",
+      "daycare": "",
+      "limits": "Max height 165 ft, Front 25–125 ft"
+    }
   },
   "PD 85-020": {
     "kind": "pd",
@@ -928,7 +941,7 @@
     "name": "AMLI Addison",
     "base": "M-4",
     "done": true,
-    "file": "PD-O17-06.json",
+    "file": "PD-O17-06-AMLI-Addison.json",
     "acres": 5.0,
     "mainOrdinance": "017-006",
     "placeTypes": ["Urban Village"],

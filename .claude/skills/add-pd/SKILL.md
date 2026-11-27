@@ -53,7 +53,7 @@ After the chain it lists the town-map ordinances whose point lies inside the PD'
 
 ## 4. Fill in the PD's file in `docs/data/pd/`
 
-Every PD already has a file named in the `file` field of its `zones.json` entry (such as `PD-461-Midway-Meadows.json`). An unfinished PD's file holds only its `id` and its `ordinances` (id, url, date, description). Keep both and add the rest below. Renaming the file means updating `file` in `zones.json` too.
+Every PD already has a file named in the `file` field of its `zones.json` entry (such as `PD-461-Midway-Meadows.json`). An unfinished PD's file holds only its `id` and its `ordinances` (id, url, date, description). Keep both and add the rest below. The file is named `<id>-<name>.json`: the id with spaces as `-` and `?` removed, then `-`, then the name with each run of other characters as `-` (`PD 461`, "Midway Meadows" -> `PD-461-Midway-Meadows.json`). When the PD gets a `name` (see `name` below), rename the file to that with `git mv` and update `file` in `zones.json`. With no name, keep the file name as it is.
 
 Scripts never write to `docs/data`. If you generate the JSON with a script, write it to `tmp/<id>/` (ignored by git), then write the PD's file in `docs/data/pd/` yourself using that as the reference. Temporary files go in `tmp/` or `pdfs/` inside the repo, never the system scratchpad.
 
@@ -113,7 +113,7 @@ Rules:
 - **`acres` in `zones.json`** = the area of the PD's polygon on the town map, which is the value already there; leave it unchanged. Compare it with the acreage in the latest ordinance that states one, rounded to 0.1 (31.608 -> 31.6). When the two differ, say so in the step 6 report, with both numbers. Do not change `acres` to match the ordinance, and add no note for it.
 - **`curtisNotes`** = the user's own commentary, shown above Allowed uses. Never change one that exists. Write a new one only for how the PD relates to its base district: which district it builds on, that an old district was replaced (UC by M-4, LR by CL), and that the uses and dimensions shown may differ from the old rules. One or two short sentences in the style of `PD-461-Midway-Meadows.json`, with no base-district footnote under `review`. The user edits it afterwards.
 - **`history`** (optional) = a short description per ordinance, keyed by ordinance id, for the "History" list at the bottom of the page. Without it the page shows the town map's own description of the ordinance. Write what the ordinance did, in under 15 words, leading with its most substantive change (height or parking only when that was the change). No trailing period on a single sentence.
-- **`name`** = the development name the ordinance uses, if any. Otherwise `""`.
+- **`name`** = the development name the ordinance uses, if any. If it uses none, pick the name the development is commonly known by, looking only in the ordinances themselves (plan and exhibit titles, the applicant's business name, the town map's descriptions and addresses); do not search the web for it unless the user asks. Use the name you find, and say in the report where it came from. If you find no common name, use `""` and keep the file name as it is.
 - **`purpose`** = the ordinance's own purpose or intent sentence, word for word (the site shows it in quotation marks). Shorten only by cutting words and marking the cut with `…`. Use `""` if the ordinance states none. The checker looks for it in the ordinance text.
 - Plain short text in neutral terms (house, townhouse, apartment, condominium), except inside quotes. No marketing words.
 
@@ -134,7 +134,7 @@ Rules:
 python scripts/pd.py check "PD 461"
 ```
 
-Fix every `ERROR` and run again. The script never edits `docs/data`. On a clean run it prints any `UPDATE zones.json` lines (`done`, `name`, `base`); make those edits yourself so the map colors the PD by base and the site loads its details.
+Fix every `ERROR` and run again. The script never edits `docs/data`. On a clean run it prints any `UPDATE zones.json` lines (`done`, `name`, `base`, and `file` when the PD has a name); make those edits yourself so the map colors the PD by base and the site loads its details. When it prints a `RENAME` line, run that `git mv` before the checks below, then run the check again.
 
 Then run `python scripts/build_popups.py` to add the PD's map-popup summary (`popup` in `zones.json`). It only fills zones that have none, so hand edits are kept. Check the values against the ordinance and edit them in `zones.json` where the uses don't map cleanly to UDC names (for example a PD that lists "Multifamily" in `otherUses`).
 
@@ -148,6 +148,9 @@ Tell the user, in a few lines:
 - number of use changes (or allowed uses, if `pdUsesOnly`) and dimension values
 - every note (`note`, `partNotes` and `sectionNotes`)
 - any acreage discrepancy: the map polygon's acres in `zones.json` against the ordinance's stated acres
+- the name you picked and where it came from, and the file name it gave (or that you found no common name, so the file keeps its id-only name)
 - the local preview command: `python scripts/serve.py` then open `zone.html?id=<id>`
 
 Remind them the file is a draft to check against the PDFs. Do not commit or push.
+
+Then ask once, as the last thing you say: keep the name "X" (file `PD-<id>-X.json`) or rename it? If you found no name, ask whether they want to give one; the file keeps its id-only name until they do. On a new name, update `name` in the PD file and in `zones.json`, `git mv` the file, update `file`, and run `check` again.

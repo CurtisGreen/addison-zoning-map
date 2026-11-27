@@ -1,0 +1,195 @@
+{
+  "id": "PD 601",
+  "name": "Renaissance",
+  "base": null,
+  "pdUsesOnly": true,
+  "family": "commercial",
+  "purpose": "",
+  "ordinances": [
+    {
+      "id": "080-601",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1980/601%20-%201980.pdf",
+      "date": "1980-07-15",
+      "description": "Change zoning from Commercial (C) to Planned Development (PD)"
+    },
+    {
+      "id": "008-005",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2008/008-005%20Final-Hotel%20Intercontinental.pdf",
+      "date": "2008-03-11",
+      "description": "Amend ORD 601 - to provide for revised building heights and revised parking requirements."
+    }
+  ],
+  "uses": [
+    {
+      "text": "Office",
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "Office 2. Hotel (including related restaurants"
+    },
+    {
+      "text": "Hotel (including related restaurants, alcoholic beverage sales, and retail sales facilities)",
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "Hotel (including related restaurants, alcoholic beverage sales"
+    },
+    {
+      "text": "General Retail",
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "3. General Retail"
+    },
+    {
+      "text": "Restaurant (including related alcoholic beverage sales for on-premises consumption)",
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "Restaurant (including related alcoholic beverage sales for on-premises consumption)"
+    },
+    {
+      "text": "Surface parking to meet off-street parking requirements",
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "Surface parking to meet off-street parking require"
+    },
+    {
+      "text": "Parking structure to meet off-street parking requirements",
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "Parking structure to meet off-street parking requirements"
+    },
+    {
+      "text": "Access, utility, and drainage easements",
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "Access, utility, and drainage easements"
+    },
+    {
+      "text": "Accessory buildings, equipment, and uses customarily incident to the above uses",
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "Accessory buildings, equipment, and uses customarily"
+    }
+  ],
+  "dimensions": {
+    "heightMax": {
+      "value": 165,
+      "note": "Ordinance 008-005 limits structures to 790 ft above mean sea level. The ground on the site is 621–630 ft above sea level, so the limit is about 165 ft above the ground",
+      "ordinance": "008-005",
+      "page": 1,
+      "quote": "No structure shall exceed a height of 790 feet above mean sea level"
+    },
+    "frontSetbackMin": {
+      "value": {
+        "Dallas Parkway (from its center line)": 125,
+        "Major access drive": 25
+      },
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "125 feet from the center line of Dallas Parkway"
+    },
+    "sideSetbackMin": {
+      "value": 10,
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "Minimum 10 feet side yard set-back"
+    },
+    "rearSetbackMin": {
+      "value": 10,
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "Minimum 10 feet rear yard set-back"
+    },
+    "lotCoverageMax": {
+      "value": 50,
+      "ordinance": "080-601",
+      "page": 3,
+      "quote": "Maximum land coverage for any use shall be 50%"
+    }
+  },
+  "parking": [
+    {
+      "use": "Office",
+      "requirement": "3.3 per 1,000 sq ft net floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft net floor area"
+        }
+      ],
+      "ordinance": "080-601",
+      "page": 4,
+      "quote": "space for each 300 square feet of net floor area"
+    },
+    {
+      "use": "Hotel guest rooms",
+      "requirement": "1 per guest room",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 1,
+          "unit": "guest room"
+        }
+      ],
+      "ordinance": "008-005",
+      "page": 2,
+      "quote": "One space per each guest room"
+    },
+    {
+      "use": "Hotel banquet and meeting space",
+      "requirement": "3.3 per 1,000 sq ft floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft floor area"
+        }
+      ],
+      "ordinance": "008-005",
+      "page": 2,
+      "quote": "One space per each 300 square feet of floor area of banquet and meeting"
+    },
+    {
+      "use": "General retail",
+      "requirement": "5 per 1,000 sq ft floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 200,
+          "unit": "sq ft floor area"
+        }
+      ],
+      "ordinance": "080-601",
+      "page": 4,
+      "quote": "one space per each 200 square feet of floor area"
+    },
+    {
+      "use": "Restaurants",
+      "requirement": "10 per 1,000 sq ft floor area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 100,
+          "unit": "sq ft floor area"
+        }
+      ],
+      "ordinance": "080-601",
+      "page": 4,
+      "quote": "ratio of one space per each 100 square feet of floor area"
+    }
+  ],
+  "sectionNotes": {
+    "parking": "Net floor area is gross floor area less air shafts, elevator shafts, stairwells, mechanical rooms, electrical and telephone rooms, and storage rooms. Retail and restaurant ratios do not apply to facilities inside a hotel, and a hotel needs no spaces for malls, atriums, patios, lobbies, circulation areas, incidental retail, bars or restaurants."
+  },
+  "notes": [
+    "Structures below ground, steps, walks, driveways, parking areas, curbing, planters, walls, fences and hedges up to 4 ft high, landscaping, guardhouses and exterior lighting are exempt from the setbacks.",
+    "All building sides must be faced with face brick, stone, concrete, aluminum, glass or similar quality face materials.",
+    "Wood frame construction of exterior walls is prohibited.",
+    "All public and private utilities must be underground.",
+    "Refuse containers must be screened from public streets by a solid fence or wall at least 6 ft high.",
+    "Landscaping is required on every site within 180 days of first occupancy or completion of the buildings, with automatic underground sprinklers for landscaped areas."
+  ],
+  "history": {
+    "080-601": "Rezoned 11.02 acres from Commercial to a PD for hotel, office and retail",
+    "008-005": "Changed the height limit to 790 ft above sea level and revised hotel parking"
+  }
+}

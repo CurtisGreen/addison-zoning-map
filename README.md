@@ -31,6 +31,8 @@ Open localhost:8000
 | `docs/data/base.json`           | Uses, dimensions, place types                          | UDC amendment (Dec 2026), Advance Addison 2050 |
 | `docs/data/pd/<id>-<name>.json` | One PD's ordinances and changes from its base district | PD ordinances (`add-pd` skill)                 |
 
+A PD's file is named for its id and, once it has one, its name (`PD-461-Midway-Meadows.json`); the PD's entry in `zones.json` names it in `file`.
+
 `docs/data/udc-changes.json` lists what each UDC amendment changed, shown on `udc-changes.html`. Each change has a page in the amendment PDF; changes not yet applied to the map data carry `"onSite": false`. Check it with `python scripts/check_udc_changes.py 2026-12 <amendment.pdf>`.
 
 ## Check the map against the town
