@@ -1,5 +1,10 @@
 {
   "id": "PD 739",
+  "name": "The Colonnade",
+  "base": null,
+  "pdUsesOnly": true,
+  "family": "commercial",
+  "purpose": "",
   "ordinances": [
     {
       "id": "081-739",
@@ -13,5 +18,267 @@
       "date": "1996-09-10",
       "description": "Amend ORD 739 to provide for revised plan for Phase III of an office complex"
     }
-  ]
+  ],
+  "uses": [
+    {
+      "text": "Antique shop",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Antique shop"
+    },
+    {
+      "text": "Art gallery",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "2. Art gallery"
+    },
+    {
+      "text": "Bakery, retail sales only",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Bakery, retail sales only"
+    },
+    {
+      "text": "Bank, office, wholesale sales office or sample room, barber beauty shops",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Bank, office, wholesale sales office or sample room"
+    },
+    {
+      "text": "Bird and pet shops, retail",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Bird and pet shops, retail"
+    },
+    {
+      "text": "Book or stationery store",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Book or stationery store"
+    },
+    {
+      "text": "Cafeteria",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "7. Cafeteria"
+    },
+    {
+      "text": "Camera shop",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "8. Camera shop"
+    },
+    {
+      "text": "Candy, cigars and tobaccos, retail sales only",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Candy, cigars and tobaccos, retail sales only"
+    },
+    {
+      "text": "Caterer and wedding service",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Caterer and wedding service"
+    },
+    {
+      "text": "Cleaning, dyeing and laundry pick-up station for receiving and delivery of articles to be cleaned",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Cleaning, dyeing and laundry pick-up station for receiving"
+    },
+    {
+      "text": "Cleaning and pressing shops having an area of not more than 6,000 square feet",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Cleaning and pressing shops having an area of not more than"
+    },
+    {
+      "text": "Department store, novelty or variety shop, retail sales only",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Department store, novelty or variety shop, retail sales only"
+    },
+    {
+      "text": "Drug store, retail sales only",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Drug store, retail sales only"
+    },
+    {
+      "text": "Film developing and printing",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Film developing and printing"
+    },
+    {
+      "text": "Florist, retail sales only",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Florist, retail sales only"
+    },
+    {
+      "text": "Furniture store, retail only",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Furniture store, retail only"
+    },
+    {
+      "text": "Hardware, sporting goods, toys, paints, wall paper, clothing, retail sales only",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Hardware, sporting goods, toys, paints, wall paper, clothing"
+    },
+    {
+      "text": "Household and office furniture, furnishings and appliances, retail",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Household and office furniture"
+    },
+    {
+      "text": "Jewelry, optical goods, photographic supplies, retail sales",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Jewelry, optical goods, photographic supplies, retail sales"
+    },
+    {
+      "text": "Letter and mimeograph shop",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Letter and mimeograph shop"
+    },
+    {
+      "text": "Library, rental",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Library, rental"
+    },
+    {
+      "text": "Meat market, retail sales only",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "Meat market, retail sales only"
+    },
+    {
+      "text": "Motor bank",
+      "ordinance": "081-739",
+      "page": 3,
+      "quote": "24. Motor bank"
+    },
+    {
+      "text": "Office building",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Office building"
+    },
+    {
+      "text": "Photographers or artists studio",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Photographers or artists studio"
+    },
+    {
+      "text": "Parking lot without public garage or automobile facilities for the parking of passenger cars and trucks of less than one (1) ton capacity only",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Parking lot without public garage or automobile facilities"
+    },
+    {
+      "text": "Professional offices for architect, attorney, engineer, real estate, doctor, dentist, chiropractor or similar use",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Professional offices for architect, attorney, engineer, real"
+    },
+    {
+      "text": "Public garage, parking, no repairs",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Public garage, parking, no repairs"
+    },
+    {
+      "text": "Piano and musical instruments, retail sales only",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Piano and musical instruments, retail sales only"
+    },
+    {
+      "text": "Restaurant without curb or drive-in service (service to be entirely within the building)",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Restaurant without curb or drive-in service"
+    },
+    {
+      "text": "Retail store or shop for custom work or the making of articles to be sold for retail on the premises",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Retail store or shop for custom work or the making of"
+    },
+    {
+      "text": "Seamstress, dressmaker or tailor",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Seamstress, dressmaker or tailor"
+    },
+    {
+      "text": "Shoe repair shop, retail sales only",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Shoe repair shop, retail sales only"
+    },
+    {
+      "text": "Studios, dance, music, drama, health, massage, and reducing",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Studios, dance, music, drama, health, massage, and reducing"
+    },
+    {
+      "text": "Studio for the display and sale of glass, china, art objects, cloth and draperies",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Studio for the display and sale of glass, china, art objects"
+    },
+    {
+      "text": "Wearing apparel, including clothing, shoes, hats, millinery and accessories",
+      "ordinance": "081-739",
+      "page": 4,
+      "quote": "Wearing apparel, including clothing, shoes, hats, millinery"
+    }
+  ],
+  "dimensions": {
+    "heightMaxStories": {
+      "value": 16,
+      "note": "No structure, including mechanical penthouses and antennas, may exceed the height the FAA allows",
+      "ordinance": "096-042",
+      "page": 2,
+      "quote": "No building shall exceed sixteen (16) stories in height"
+    }
+  },
+  "parking": [
+    {
+      "use": "All uses",
+      "requirement": "3.3 per 1,000 sq ft net leasable area",
+      "rates": [
+        {
+          "spaces": 1,
+          "per": 300,
+          "unit": "sq ft net leasable area"
+        }
+      ],
+      "ordinance": "096-042",
+      "page": 2,
+      "quote": "one (1) space per every 300 square feet of net leasable area"
+    }
+  ],
+  "notes": [
+    "Development follows the revised plans for The Colonnade Phase III.",
+    "All building sides must be faced with face brick, stone, concrete, aluminum, glass, stucco or similar quality face materials; wood veneer over an approved structural frame is allowed where the Building Code allows it.",
+    "The applicant must dedicate right-of-way for a free right-turn lane and a single-point-urban interchange on the north side of the property.",
+    "All driveways, parking areas, access easements and walkways must be illuminated.",
+    "Refuse containers must be screened from public streets by a solid fence or wall at least 6 ft high.",
+    "Mechanical equipment must be located and screened so it does not disturb occupants of adjoining buildings.",
+    "No accessory use may keep articles, goods or materials in the open or exposed to public view."
+  ],
+  "history": {
+    "081-739": "Rezoned 12.969 acres from Commercial to a PD for retail and office uses",
+    "096-042": "Rewrote the special conditions: 16-story limit and revised Phase III plans"
+  }
 }

@@ -535,13 +535,26 @@
   },
   "PD 739": {
     "kind": "pd",
-    "name": "",
+    "name": "The Colonnade",
     "base": null,
-    "done": false,
+    "done": true,
     "file": "PD-739.json",
     "acres": 13.1,
     "mainOrdinance": "081-739",
-    "placeTypes": ["High Intensity Urban Center"]
+    "placeTypes": ["High Intensity Urban Center"],
+    "family": "commercial",
+    "popup": {
+      "residential": "",
+      "residentialPermit": "",
+      "adu": "",
+      "retail": "P",
+      "restaurant": "P",
+      "office": "P",
+      "industry": "",
+      "hotel": "",
+      "daycare": "",
+      "limits": "Max height 16 stories"
+    }
   },
   "PD 83-039": {
     "kind": "pd",
@@ -912,13 +925,25 @@
   },
   "PD O17-06": {
     "kind": "pd",
-    "name": "",
-    "base": null,
-    "done": false,
+    "name": "AMLI Addison",
+    "base": "M-4",
+    "done": true,
     "file": "PD-O17-06.json",
     "acres": 5.0,
     "mainOrdinance": "017-006",
-    "placeTypes": ["Urban Village"]
+    "placeTypes": ["Urban Village"],
+    "popup": {
+      "residential": "5+ units",
+      "residentialPermit": "",
+      "adu": "",
+      "retail": "P",
+      "restaurant": "P",
+      "office": "P",
+      "industry": "",
+      "hotel": "S",
+      "daycare": "P",
+      "limits": "No height limit, Build-to 0–10 ft"
+    }
   },
   "PD 496": {
     "kind": "pd",

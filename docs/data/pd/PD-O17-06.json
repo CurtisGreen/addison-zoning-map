@@ -1,11 +1,33 @@
 {
   "id": "PD O17-06",
+  "name": "AMLI Addison",
+  "base": "M-4",
+  "purpose": "",
   "ordinances": [
+    {
+      "id": "077-305",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1977/305%20-%201977.pdf",
+      "date": "1977-01-04",
+      "description": "Change zoning from Residential to Commercial"
+    },
     {
       "id": "017-006",
       "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2017/O17-006%2002142017%20AMLI%205015%20Spectrum%20Drive.pdf",
       "date": "2017-02-14",
       "description": "Case 1753-Z: Rezoning from C-1 (305) to PD O17-006, approval of dev plan for multifamily and future retail space"
     }
-  ]
+  ],
+  "uses": [],
+  "dimensions": {},
+  "notes": [
+    "The development is limited to a maximum of 349 multifamily units and about 5,500 sq ft of future retail space.",
+    "The multifamily building and parking garage must be LEED certified.",
+    "The units may have no linoleum or Formica surfaces, must have energy efficient appliances, and must have granite, stone or better countertops.",
+    "The plan notes that changes to ground-floor residential and to ground-floor facades can be approved administratively by the zoning administrator."
+  ],
+  "curtisNotes": "AMLI Addison was created from the legacy Urban Center (UC) district, which M-4 replaced, so some uses and dimensions may differ from the original rules.",
+  "history": {
+    "077-305": "Rezoned the land from Residential to Commercial",
+    "017-006": "Created PD on UC rules: 349 apartments, 5,500 sq ft retail, LEED conditions"
+  }
 }

@@ -156,14 +156,13 @@ function changeText(baseValue, newValue, unit, baseUnit) {
 /** Uses a PD adds or changes, or other uses it lists */
 function useRows(pd, zoneData, base) {
   // A PD that lists all its own uses (pdUsesOnly) shows them once, under Allowed uses
-  const listed = pd.pdUsesOnly
-    ? []
-    : pd.uses.map((use) => ({ text: use.name, ...use }));
+  if (pd.pdUsesOnly) return [];
+
   // Several UDC uses can come from one ordinance phrase (`text`), which is shown once
   const seen = new Set();
-  return listed
+  return pd.uses
     .filter((use) => {
-      const key = `${use.text}|${use.permission ?? "P"}`;
+      const key = `${use.text ?? use.name}|${use.permission ?? "P"}`;
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
@@ -187,7 +186,7 @@ function useRows(pd, zoneData, base) {
             : `<span class="before mark" title="${before.label} in ${escapeHtml(pd.base)}">${before.mark}</span>`;
         permission = `<span role="img" aria-label="${before.label} in ${escapeHtml(pd.base)}, now ${after.label.toLowerCase()}">${beforeMark} → ${afterMark}</span>`;
       }
-      return `<tr><td>${escapeHtml(use.text)}</td><td class="nowrap">${permission}</td><td class="source">${evidenceLink(use, zoneData, base)}</td></tr>`;
+      return `<tr><td>${escapeHtml(use.text ?? use.name)}</td><td class="nowrap">${permission}</td><td class="source">${evidenceLink(use, zoneData, base)}</td></tr>`;
     });
 }
 

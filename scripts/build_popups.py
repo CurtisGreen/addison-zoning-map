@@ -134,7 +134,7 @@ def zone_data(zone_id, base, zone):
     base_district = base["districts"].get(pd_data.get("base"))
     plan_only = pd_data.get("pdUsesOnly") or pd_data.get("mustFollowPlan")  # only the PD's own uses count
     uses = {} if plan_only or not base_district else dict(base_district["uses"])
-    for use in pd_data["uses"]:
+    for use in [use for use in pd_data["uses"] if use.get("name")]:  # text-only uses have no UDC name to change
         if use["permission"] == "none":
             uses.pop(use["name"], None)
         else:
