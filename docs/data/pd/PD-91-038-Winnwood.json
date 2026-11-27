@@ -1,0 +1,154 @@
+{
+  "id": "PD 91-038",
+  "name": "Winnwood",
+  "base": null,
+  "pdUsesOnly": true,
+  "family": "residential",
+  "purpose": "",
+  "ordinances": [
+    {
+      "id": "091-038",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1991/091-038%20-%201991.pdf",
+      "date": "1991-07-23",
+      "description": "Change zoning from Residential (R-16) to Planned Development (PD) with residential uses"
+    }
+  ],
+  "uses": [
+    {
+      "text": "A single family residence",
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "A single family residence"
+    },
+    {
+      "text": "Public park, playgrounds or neighborhood recreation center owned and operated by the City of Addison",
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "Public park, playgrounds or neighborhood recreation center owned and operated by the City of Addison"
+    },
+    {
+      "text": "Public park, playgrounds or neighborhood recreation center, all others",
+      "permission": "S",
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "all others by special use permit only"
+    },
+    {
+      "text": "Fire stations",
+      "permission": "S",
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "Fire stations by Special Use Permit only"
+    },
+    {
+      "text": "Water wells, water storage and pumping facilities owned by the City of Addison",
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "Water wells, water storage and pumping facilities owned by the City of Addison"
+    },
+    {
+      "text": "Water wells, water storage and pumping facilities, all other above ground facilities",
+      "permission": "S",
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "all other above ground facilities by special use permit only"
+    },
+    {
+      "text": "Private swimming pools",
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "Private swimming pools"
+    },
+    {
+      "text": "Farm, truck, garden orchard or nursery and greenhouse for the growing of plants, shrubs, and trees, provided no retail or wholesale business is maintained on the premises",
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "Farm, truck, garden orchard or nursery and greenhouse for"
+    },
+    {
+      "text": "Temporary buildings to be used for construction purposes only",
+      "permission": "T",
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "Temporary buildings to be used for construction purposes only"
+    },
+    {
+      "text": "Uses customarily incidental to any of the above uses when situated in the same dwelling and not involving the conduct of a business, including customary home occupations",
+      "permission": "A",
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "including customary home occupations engaged in by occupants of the dwelling"
+    }
+  ],
+  "dimensions": {
+    "frontSetbackMin": {
+      "value": {
+        "Winnwood Road, east side": 35,
+        "Winnwood Road, west side": 50
+      },
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "Winnwood, east side - 35 feet"
+    },
+    "sideSetbackMin": {
+      "value": {
+        "Interior": 10,
+        "Next to a side street": 20
+      },
+      "note": "10 feet min. or 10%",
+      "ordinance": "091-038",
+      "page": 6,
+      "quote": "Side Yard 10 feet min. or 10%, Side Yard adjacent to a side street 20 feet"
+    },
+    "rearSetbackMin": {
+      "value": 20,
+      "note": "20 feet min. or 20%",
+      "ordinance": "091-038",
+      "page": 7,
+      "quote": "Rear Yard 20 feet min. or 20%"
+    },
+    "lotAreaMin": {
+      "value": 27500,
+      "ordinance": "091-038",
+      "page": 7,
+      "quote": "Area of Lot 27,500 sq. ft. min."
+    },
+    "lotWidthMin": {
+      "value": 100,
+      "ordinance": "091-038",
+      "page": 7,
+      "quote": "Width of Lot 100 feet min."
+    },
+    "lotDepthMin": {
+      "value": 150,
+      "ordinance": "091-038",
+      "page": 7,
+      "quote": "Min. Lot Depth 150 feet"
+    },
+    "unitSizeMin": {
+      "value": 2700,
+      "ordinance": "091-038",
+      "page": 7,
+      "quote": "Min. Area of Dwelling 2,700 square feet"
+    },
+    "heightMaxStories": {
+      "value": 2.5,
+      "ordinance": "091-038",
+      "page": 7,
+      "quote": "Height 2 1/2 story"
+    },
+    "masonryMin": {
+      "value": 80,
+      "ordinance": "091-038",
+      "page": 7,
+      "quote": "Construction 80% masonry"
+    }
+  },
+  "notes": [
+    "Garages must face the side or rear of the lot.",
+    "Temporary construction buildings must be removed when construction is finished or abandoned, and real estate field offices must be removed when the Building Inspector asks."
+  ],
+  "history": {
+    "091-038": "Rezoned 42.8 acres from R-16 to a PD for single-family lots on Winnwood Road"
+  }
+}

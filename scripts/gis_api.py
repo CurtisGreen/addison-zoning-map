@@ -116,6 +116,11 @@ def bza_zoning(where="1=1", fields="*", geometry=False, geojson=False):
     return query(PLANNING + "Landbase/MapServer/2", where, fields, geometry, geojson)
 
 
+def subdivisions(where="1=1", fields="*", geometry=False, geojson=False):
+    """Subdivisions (Landbase layer 4)."""
+    return query(PLANNING + "Landbase/MapServer/4", where, fields, geometry, geojson)
+
+
 def parcels(where="1=1", fields="*", geometry=False, geojson=False):
     """Addison Parcels (Landbase layer 8)."""
     return query(PLANNING + "Landbase/MapServer/8", where, fields, geometry, geojson)
