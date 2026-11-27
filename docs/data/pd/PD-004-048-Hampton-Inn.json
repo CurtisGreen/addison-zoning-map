@@ -55,7 +55,7 @@
     }
   ],
   "dimensions": {
-    "masonryMin": {
+    "masonryAllWallsMin": {
       "value": 90,
       "ordinance": "004-048",
       "page": 5,

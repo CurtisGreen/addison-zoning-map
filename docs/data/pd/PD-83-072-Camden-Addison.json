@@ -70,7 +70,7 @@
       "quote": "parallel to the side lot line, the side yard shall be",
       "note": "The side yard is the greater of 20 ft or 10% of the building side length along the lot line."
     },
-    "masonryMin": {
+    "masonryAllWallsMin": {
       "value": 80,
       "ordinance": "094-041",
       "page": 3,

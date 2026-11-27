@@ -1,0 +1,132 @@
+{
+  "id": "PD O16-040",
+  "name": "Trinity Christian Academy",
+  "base": null,
+  "pdUsesOnly": true,
+  "family": "residential",
+  "purpose": "",
+  "ordinances": [
+    {
+      "id": "016-040",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2016/O16-040%20TCA%20PD.pdf",
+      "date": "2016-10-11",
+      "description": "Case 1738-Z: Rezone R-1 (66) to PD (O16-040) for private school with modified development standards"
+    }
+  ],
+  "uses": [
+    {
+      "text": "Private schools, including, but not limited to the \"school facility\" use as defined in Article XXX of the Zoning Ordinance",
+      "ordinance": "016-040",
+      "page": 8,
+      "quote": "Private schools, including, but not limited to the"
+    },
+    {
+      "text": "Existing portable school buildings",
+      "permission": "T",
+      "ordinance": "016-040",
+      "page": 8,
+      "quote": "Existing portable school buildings shall be allowed by right"
+    },
+    {
+      "text": "Any other portable building",
+      "permission": "S",
+      "ordinance": "016-040",
+      "page": 8,
+      "quote": "any other portable building shall be allowed only upon"
+    },
+    {
+      "text": "Recreation space and facilities",
+      "permission": "A",
+      "ordinance": "016-040",
+      "page": 9,
+      "quote": "Recreation space and facilities"
+    },
+    {
+      "text": "Parking and parking structures",
+      "permission": "A",
+      "ordinance": "016-040",
+      "page": 9,
+      "quote": "Parking and parking structures"
+    },
+    {
+      "text": "Other uses customarily incidental and subordinate to permitted uses and any special uses",
+      "permission": "A",
+      "ordinance": "016-040",
+      "page": 9,
+      "quote": "Other uses customarily incidental and subordinate to permitted uses"
+    }
+  ],
+  "dimensions": {
+    "heightMax": {
+      "value": 60,
+      "note": "Measured to the midpoint of the roof. Turrets, spires and towers may be up to 15 ft higher if their floor plan is 10% or less of the ground floor area of the building they are part of",
+      "ordinance": "016-040",
+      "page": 9,
+      "quote": "60 feet as measured to the midpoint of the roof"
+    },
+    "lotCoverageMax": {
+      "value": 70,
+      "note": "Above-ground parking structures count toward lot coverage",
+      "ordinance": "016-040",
+      "page": 9,
+      "quote": "Maximum Lot Coverage 70%"
+    },
+    "floorAreaMax": {
+      "value": 585000,
+      "note": "Parking structures and covered walkways are not counted",
+      "ordinance": "016-040",
+      "page": 9,
+      "quote": "Maximum Allowable Building Area 585,000 square feet"
+    },
+    "masonryAllWallsMin": {
+      "value": 80,
+      "ordinance": "016-040",
+      "page": 10,
+      "quote": "At least 80 percent of the exterior walls of all structures shall be of masonry"
+    },
+    "claddingMaterialsMax": {
+      "value": 3,
+      "note": "Excludes glass and roofing materials",
+      "ordinance": "016-040",
+      "page": 10,
+      "quote": "shall be composed of not more than three materials"
+    }
+  },
+  "notes": [
+    "Maximum enrollment is 1,574 students.",
+    "Building setbacks are the permissible building zone shown on the Concept Plan.",
+    "Development must substantially comply with the Concept Plan, and a development plan approved by the Planning and Zoning Commission and the City Council is needed before any building or other permit.",
+    "The applicant must give the Town a traffic management plan for the Zoning Administrator's approval and follow it.",
+    "Development may be phased. Existing structures that do not match the Concept Plan may stay until their phase is built.",
+    {
+      "heading": "Parking",
+      "items": [
+        "The property must always have at least 932 parking spaces.",
+        "The parking garage must be built before the building permit for the consolidated athletic center, with at least 1,024 spaces before that center's occupancy permit.",
+        "During construction the Zoning Administrator may approve a temporary parking plan that uses gravel lots and tandem parking.",
+        "Garage ramps may not be expressed on facades facing public streets or adjacent properties, and steel garages and steel guard cables are prohibited."
+      ]
+    },
+    {
+      "heading": "Exterior appearance",
+      "items": [
+        "Masonry includes brick, stone, cultured stone, glazing and plate glass, three-coat stucco and split face concrete masonry units. A parking structure may use other cladding if the Town finds it compatible.",
+        "Accent materials such as stucco, metal paneling, tile and fiber cement siding are limited to 15% of each wall facing or visible from public streets and 40% of walls not visible from public areas.",
+        "Aluminum siding, fiberboard or Masonite siding, wood roof shingles and unfinished concrete block are prohibited as primary cladding. Wood shingles and composite shingles with less than a 50-year life are prohibited as roofing.",
+        "Glass must be clear or tinted, not reflective."
+      ]
+    },
+    {
+      "heading": "Athletic fields and lighting",
+      "items": [
+        "Dugouts, bleachers, backstops and similar athletic structures may be moved anywhere within the building zone.",
+        "When the football field press box and bleachers are built, the field speakers move to the west side and face east.",
+        "Additional athletic lighting needs the Zoning Administrator's approval. If it is denied, the City Council may decide only after a public hearing held at least 10 days after notice to owners within 200 ft.",
+        "Tennis court lighting may not exceed 60 ft in height, must be shielded, and must be off by 10 p.m. Monday to Saturday and all day Sunday."
+      ]
+    }
+  ],
+  "history": {
+    "016-040": "Rezoned 41.13 acres from R-1 to a private school PD, 1,574 students"
+  }
+}

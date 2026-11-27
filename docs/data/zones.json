@@ -309,13 +309,26 @@
   },
   "PD O16-040": {
     "kind": "pd",
-    "name": "",
+    "name": "Trinity Christian Academy",
     "base": null,
-    "done": false,
-    "file": "PD-O16-040.json",
+    "done": true,
+    "file": "PD-O16-040-Trinity-Christian-Academy.json",
     "acres": 38.4,
     "mainOrdinance": "016-040",
-    "placeTypes": ["Urban Village"]
+    "placeTypes": ["Urban Village"],
+    "family": "residential",
+    "popup": {
+      "residential": "",
+      "residentialPermit": "",
+      "adu": "",
+      "retail": "",
+      "restaurant": "",
+      "office": "",
+      "industry": "",
+      "hotel": "",
+      "daycare": "",
+      "limits": "Max height 60 ft"
+    }
   },
   "PD 93-018": {
     "kind": "pd",
