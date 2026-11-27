@@ -32,3 +32,7 @@ Rules for any page, script or content change in this repo.
 ## Design standards
 
 - **Spacing scale:** 0, 1, 4, 8, 12, 16 and 24px. Use only these for margin, padding and gap. Round a value that falls between steps to the nearest one, and up on a tie (6px becomes 8px). Border widths and font sizes are not spacing.
+
+## Talking about the data
+
+- **Name PDs by their name.** Say "Loro" or "Winnwood", not "PD O21-034" or "PD 91-038". Use the ID only for a PD with no name yet. IDs stay in commands, file names, data keys and code.

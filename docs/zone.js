@@ -215,8 +215,8 @@ function renderPdRules(zoneData, base) {
 }
 
 /** A PD's ordinances, oldest first. A PD's data file can give a shorter description than the town map's. */
-function renderHistory(zoneData) {
-  if (zoneData.kind !== "pd" || !zoneData.ordinances.length) return "";
+function renderHistory(zoneData, base) {
+  if (zoneData.kind !== "pd") return "";
   const rows = zoneData.ordinances.map((ordinance) => {
     const description =
       zoneData.pdData?.history?.[ordinance.id] ?? ordinance.description;
@@ -226,7 +226,16 @@ function renderHistory(zoneData) {
     });
     return `<tr><td>${ordinance.date?.slice(0, 4) ?? ""}</td><td>${escapeHtml(description)}</td><td class="source">${link}</td></tr>`;
   });
-  return `<h2>History</h2>${tableOf(rows)}`;
+  const legacy = zoneData.pdData?.legacyBase;
+  if (legacy) {
+    const district = base.districts[zoneData.base];
+    const text = `UDC replaces legacy ${legacy} with ${district.name} (${zoneData.base})`;
+    const link = externalLink({ label: `Ord. ${base.udcMap.ordinance}` });
+    rows.push(
+      `<tr><td>${base.udcMap.date.slice(0, 4)}</td><td>${escapeHtml(text)}</td><td class="source">${link}</td></tr>`,
+    );
+  }
+  return rows.length ? `<h2>History</h2>${tableOf(rows)}` : "";
 }
 
 function renderCurtisNotes(zoneData) {
@@ -488,7 +497,7 @@ async function initZonePage() {
     renderDimensions(zoneData, rules, base),
     renderParking(zoneData, rules, base),
     renderNotes(zoneData),
-    renderHistory(zoneData),
+    renderHistory(zoneData, base),
   ].join("");
 }
 

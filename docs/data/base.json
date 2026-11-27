@@ -9,6 +9,10 @@
       "url": "https://developmentservices.addisontx.gov/files/sharedassets/devservices/v/1/documents/adopted-codes/place-types-excerpt.pdf"
     }
   },
+  "udcMap": {
+    "ordinance": "O25-015",
+    "date": "2025-08-12"
+  },
   "dimensionFields": {
     "lotAreaMin": {
       "label": "Lot area, min",

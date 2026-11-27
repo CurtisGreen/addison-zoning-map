@@ -2,6 +2,7 @@
   "id": "PD 23-39",
   "name": "One Addison Place",
   "base": "M-4",
+  "legacyBase": "Urban Center (UC)",
   "purpose": "",
   "ordinances": [
     {
@@ -98,5 +99,5 @@
     "004-048": "Rezoned 2.8 acres at 4960 Arapaho from C-1 to a PD with restaurant permits",
     "023-39": "Restated PD 020-53 to allow one fifth-floor dwelling in a 5-story commercial building"
   },
-  "curtisNotes": "One Addison Place PD was originally based on the legacy Urban Center (UC) district. UC was replaced by M-4 so some things might be different from the original plan. This PD also used the transit center's 10% minimum parking reduction (provided: 45 space, required: 49 - 5 = 44), I'm unsure if it's now non-coforming or if the 10% reduction stays with the PD."
+  "curtisNotes": "This PD also used the transit center's 10% minimum parking reduction (provided: 45 space, required: 49 - 5 = 44), I'm unsure if it's now non-coforming or if the 10% reduction stays with the PD."
 }
