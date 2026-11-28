@@ -390,13 +390,26 @@
   },
   "PD 93-057": {
     "kind": "pd",
-    "name": "",
+    "name": "Sojourn Plaza",
     "base": null,
-    "done": false,
-    "file": "PD-93-057.json",
+    "done": true,
+    "file": "PD-93-057-Sojourn-Plaza.json",
     "acres": 28.9,
     "mainOrdinance": "093-057",
-    "placeTypes": ["Urban Village", "Aviation and Industry"]
+    "placeTypes": ["Urban Village", "Aviation and Industry"],
+    "family": "commercial",
+    "popup": {
+      "residential": "",
+      "residentialPermit": "",
+      "adu": "",
+      "retail": "P",
+      "restaurant": "",
+      "office": "P",
+      "industry": "",
+      "hotel": "",
+      "daycare": "",
+      "limits": ""
+    }
   },
   "PD 386": {
     "kind": "pd",

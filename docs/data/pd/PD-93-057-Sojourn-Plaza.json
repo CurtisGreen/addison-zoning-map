@@ -1,0 +1,375 @@
+{
+  "id": "PD 93-057",
+  "name": "Sojourn Plaza",
+  "base": null,
+  "pdUsesOnly": true,
+  "family": "commercial",
+  "purpose": "",
+  "ordinances": [
+    {
+      "id": "085-037",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1985/085-037%20-%201985.pdf",
+      "date": "1985-06-25",
+      "description": "Change zoning from Commercial (C) to Planned Development (PD)"
+    },
+    {
+      "id": "093-057",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1993/093-057%20-%201993.pdf",
+      "date": "1993-09-28",
+      "description": "Amend ORD 085-037 to add printing as an allowed uses, development standards, approval of development plans, and special conditions."
+    },
+    {
+      "id": "098-008",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1998/098-008%20-%201998.pdf",
+      "date": "1998-03-10",
+      "description": "Approve revised development plans (085-037 & 093-057)"
+    },
+    {
+      "id": "099-020",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/1999/099-020%20-%201999.pdf",
+      "date": "1999-05-11",
+      "description": "Amend ORD 085-037 & 093-057 to approve revised development plans"
+    },
+    {
+      "id": "002-018",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2002/002-018%20-%202002.pdf",
+      "date": "2002-05-14",
+      "description": "Amend ORD 093-057, approving development plans in an existing Planned Development (PD) for an office/service/showroom building"
+    },
+    {
+      "id": "002-037",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2002/002-037%20-%202002.pdf",
+      "date": "2002-10-08",
+      "description": "Amend ORD 085-037 & 093-057 section 4 to provide for approval of development plans in an existing planned development."
+    },
+    {
+      "id": "007-022",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2007/007-022%20Seneca%20Investments%20Services,%20Inc.pdf",
+      "date": "2007-08-14",
+      "description": "Ordinance approving revised development plans (ORD NO. 085-037,as amended by ordinance 093-057, as amended by ordinance 099-020)"
+    },
+    {
+      "id": "008-018",
+      "url": "https://gis.addisontx.gov/GIS_Documents/Ordinances/2008/008-018%20BestPress,%20Inc..pdf",
+      "date": "2008-05-13",
+      "description": "Amending Ordinance 093-057, sections 3 and 5 to provide for allowed uses, development standards and approval of development plans."
+    }
+  ],
+  "uses": [
+    {
+      "text": "Antique shop",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Antique shop Aquarium"
+    },
+    {
+      "text": "Aquarium",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Aquarium Art Callery"
+    },
+    {
+      "text": "Art gallery",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Art Callery Baker"
+    },
+    {
+      "text": "Baker",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Baker Bank Barber and beauty shop"
+    },
+    {
+      "text": "Bank",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Bank Barber and beauty shop"
+    },
+    {
+      "text": "Barber and beauty shop",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Barber and beauty shop"
+    },
+    {
+      "text": "Book or stationary store",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Book or stationary store"
+    },
+    {
+      "text": "Camera shop",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Camera shop Candy, cigars and tobacco shop"
+    },
+    {
+      "text": "Candy, cigars and tobacco shop",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Candy, cigars and tobacco shop"
+    },
+    {
+      "text": "Caterer and wedding service, office only",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Caterer and wedding service, office only"
+    },
+    {
+      "text": "Cleaning and pressing shops having an area of not more than 6,000 square feet",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Cleaning and pressing shops having an area of not more than 6,000 square feet"
+    },
+    {
+      "text": "Drug store",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Drug store Electrical lighting fixtures"
+    },
+    {
+      "text": "Electrical lighting fixtures and supplies for consumer use",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Electrical lighting fixtures and supplies for consumer use"
+    },
+    {
+      "text": "Exterminating company",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Exterminating company"
+    },
+    {
+      "text": "Film developing and printing",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Film developing and printing"
+    },
+    {
+      "text": "Fix-it shops, bicycle repairs, saw filing, lawn mower sharpening",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Fix-it shops, bicycle repairs, saw filing, lawn mower sharpening"
+    },
+    {
+      "text": "Florist",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Florist Furniture repairs and upholstering"
+    },
+    {
+      "text": "Furniture repairs and upholstering",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Furniture repairs and upholstering"
+    },
+    {
+      "text": "Frozen food lockers",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Frozen food lockers"
+    },
+    {
+      "text": "Gallery, for the display and sale of artworks",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Gallery, for the dsiplan and sale of artworks"
+    },
+    {
+      "text": "General Services shops for maids, tax preparers, bookkeeping",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Genreal Services shops for main, tax preparers, bookkeeping"
+    },
+    {
+      "text": "Grocery store",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Grocery store"
+    },
+    {
+      "text": "Hardware, sporting goods, toys, paints, wallpaper, clothing stores",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Hardware, sporting goods, toys, paints, wallpaper, clothing stores"
+    },
+    {
+      "text": "Household and office furniture, furnishings and appliances",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Household and office furniture, furnishings and appliances"
+    },
+    {
+      "text": "Jewelry, optical goods, photographic supplies",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Jewelry, optical goods, photographic supplies"
+    },
+    {
+      "text": "Laundromat, equipped with automatic washing machines of the type customarily found in a home and where the customers may personally supervise the washing and handling of their laundry",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Laundromat, equipped with automatic washing machines of the type"
+    },
+    {
+      "text": "Meat market",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Meat Market Medical and Dental offices"
+    },
+    {
+      "text": "Medical and Dental offices",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Medical and Dental offices"
+    },
+    {
+      "text": "Mortuary",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Mortuary Novelty or variety store"
+    },
+    {
+      "text": "Novelty or variety store",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Novelty or variety store"
+    },
+    {
+      "text": "Office building",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Office building Office/service/showroom"
+    },
+    {
+      "text": "Office/service/showroom",
+      "note": "The office/showroom component is limited to a facility for the regular transaction of business and for the display of uncontainerized merchandise in a finished building setting, and the service component of this use is limited to not more than seventy-five percent of the floor area of the use",
+      "ordinance": "008-018",
+      "page": 2,
+      "quote": "Office/service/showroom, the office/showroom component is limited to a"
+    },
+    {
+      "text": "Photographers or artists studio",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Photographers or artists studio"
+    },
+    {
+      "text": "Public garage, parking no repairs",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Public garage, parking no repairs"
+    },
+    {
+      "text": "Piano and musical instruments",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Piano and musical instruments"
+    },
+    {
+      "text": "Plumbing shop, without warehouse facilities (to include materials for ordinary repairs, but not storage for materials for contracting work)",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Plumbing shop, without warehouse facilities"
+    },
+    {
+      "text": "Printing and publishing operations, including book publishing warehouse",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Printing and publishing operations, including book publishing warehouse"
+    },
+    {
+      "text": "Retail shop for custom work or the making of articles to be sold for retail on the premises",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Retail shop for custom work or the making of articles"
+    },
+    {
+      "text": "Seamstress, dressmaker or tailor",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Seamstress, dressmaker or tailor"
+    },
+    {
+      "text": "Shoe repair shop",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Shoe repair shop Studios, dance, music"
+    },
+    {
+      "text": "Studios, dance, music, drama, health, and reducing",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Studios, dance, music, drama, health, and reducing"
+    },
+    {
+      "text": "Studio for the display and sale of glass, china, sculpture, art objects, cloth and draperies",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Studio for the display and sale of glass, china, sculpture"
+    },
+    {
+      "text": "Video equipment and cassettes, sales and rental",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Video equipment and cassettes, sales and rental"
+    },
+    {
+      "text": "Wearing apparel, including clothing, shoes, hats, millinery, and accessories",
+      "ordinance": "008-018",
+      "page": 3,
+      "quote": "Wearing apparel, including clothing, shoes, hats, millinery"
+    }
+  ],
+  "dimensions": {},
+  "notes": [
+    "At the time of building permit application, the applicant must submit complete civil design drawings.",
+    {
+      "heading": "Sojourn Drive, 1.76 acres (Dallas Gymnastics Center)",
+      "items": [
+        "Shared entrances are required at both the east and west property lines, with non-exclusive ingress-egress easements to adjacent properties.",
+        "All mechanical equipment on the building must be screened by an architecturally compatible screen or a parapet wall."
+      ]
+    },
+    {
+      "heading": "Sojourn Drive, 8.128 acres (about 870 ft east of Westgrove Drive)",
+      "items": [
+        "On-site detention storage for stormwater runoff is required as part of an overall master drainage plan, with the detention pond on Lot 1.",
+        "An additional 4 ft of right-of-way along Westgrove Drive must be dedicated, and 5 ft sidewalks are required along all public streets.",
+        "Master water and sanitary sewer plans are required, and driveway entrances on Sojourn Drive must be high enough to avoid ponding from the street.",
+        "The site must have two points of access to the adjacent undeveloped property, and any utility easement to be abandoned needs a relocation plan."
+      ]
+    },
+    {
+      "heading": "Airborne Drive, 1.067 acres",
+      "items": [
+        "At building permit, the applicant must submit a landscape plan showing the percentage of the site that is landscaped, stamped by a landscape architect licensed in Texas, and an irrigation plan."
+      ]
+    },
+    {
+      "heading": "16800 Westgrove, 1.236 acres",
+      "items": [
+        "An FAA Determination of No Hazard is required before the certificate of occupancy.",
+        "The owner must grant the Town an avigation easement before the building permit.",
+        "An acoustical expert must certify a 30 dB noise level reduction before the building permit and again before the certificate of occupancy."
+      ]
+    },
+    {
+      "heading": "4201 Airborn Drive (Best Press)",
+      "items": [
+        "The approved plans add a 42,655 sq ft warehouse addition to the existing building."
+      ]
+    }
+  ],
+  "history": {
+    "085-037": "Rezoned 18.256 acres from Commercial to a PD with Commercial uses",
+    "093-057": "Listed the allowed uses, adding printing, and tied standards to Commercial-1",
+    "098-008": "Approved revised plans for the Dallas Gymnastics Center on 1.76 acres",
+    "099-020": "Approved revised plans for 8.128 acres on Sojourn Drive, with drainage conditions",
+    "002-018": "Approved development plans for 1.067 acres on Airborne Drive",
+    "002-037": "Replaced the special condition with civil design drawings at building permit",
+    "007-022": "Approved revised plans for 1.236 acres at 16800 Westgrove, with airport conditions",
+    "008-018": "Revised the allowed uses and replaced Commercial-1 standards with the drawings"
+  }
+}

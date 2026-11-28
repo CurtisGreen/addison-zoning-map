@@ -383,7 +383,7 @@ function renderUses(zoneData, rules, base, standards) {
     const pdSource = zoneData.pdData?.uses.find(
       (pdUse) => pdUse.name === use.name,
     );
-    const line = `<li><span class="${className}">${mark}</span> ${escapeHtml(use.name)}${standardLink} ${evidenceLink(pdSource, zoneData, base)}</li>`;
+    const line = `<li><span class="${className}">${mark}</span> ${escapeHtml(use.name)}${notes.getFootnoteNumber(pdSource?.note)}${standardLink} ${evidenceLink(pdSource, zoneData, base)}</li>`;
     if (!byCategory.has(use.category)) byCategory.set(use.category, []);
     byCategory.get(use.category).push(line);
   }
@@ -412,7 +412,7 @@ function renderUses(zoneData, rules, base, standards) {
       byCategory
         .get(category)
         .push(
-          `<li><span class="${className}">${mark}</span> ${escapeHtml(use.text)} ${evidenceLink(use, zoneData, base)}</li>`,
+          `<li><span class="${className}">${mark}</span> ${escapeHtml(use.text)}${notes.getFootnoteNumber(use.note)} ${evidenceLink(use, zoneData, base)}</li>`,
         );
     }
   const groups = [...byCategory].map(
